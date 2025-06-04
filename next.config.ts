@@ -6,7 +6,7 @@ const nextConfig = {
   output: "export",
   assetPrefix:
     process.env.NODE_ENV === "production"
-      ? "https://dusaan00.github.io/pletivo"
+      ? "https://dusaan00.github.io/pletivo/"
       : "",
   images: {
     unoptimized: true,
