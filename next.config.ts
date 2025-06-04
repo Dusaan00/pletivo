@@ -2,22 +2,26 @@
  * @type {import('next').NextConfig}
  */
 
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig = {
-  basePath: isProd ? "/pletivo/" : "",
-  assetPrefix: isProd ? "/pletivo/" : "",
   output: "export",
-  distDir: "dist",
+  assetPrefix:
+    process.env.NODE_ENV === "production"
+      ? "https://dusaan00.github.io/pletivo"
+      : "",
   images: {
     unoptimized: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  headers: () => [
+    {
+      source: "/_next/static/media/:path*",
+      headers: [
+        {
+          key: "Access-Control-Allow-Origin",
+          value: "*",
+        },
+      ],
+    },
+  ],
 };
 
 module.exports = nextConfig;
