@@ -31,6 +31,14 @@ const sourceSans3 = Source_Sans_3({
   display: "swap",
 });
 
+const josefin = josefinSans({ subsets: ["latin"], variable: "--font-josefin" });
+const urban = urbanist({ subsets: ["latin"], variable: "--font-urbanist" });
+const soraFont = sora({ subsets: ["latin"], variable: "--font-sora" });
+const sourceSans = sourceSans3({
+  subsets: ["latin"],
+  variable: "--font-source-sans",
+});
+
 export const metadata: Metadata = {
   title: "Pletivo Grygov | Výroba Pletiva | Zakázková výroba",
   description:
