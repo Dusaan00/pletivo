@@ -1,0 +1,534 @@
+@use "./variables" as *;
+
+.header {
+  font-size: 1.4rem;
+  font-family: "Helvetica", sans-serif;
+  height: 7rem;
+  color: #f7f7f7;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #333;
+  border-bottom: 0.75px solid #555;
+  position: relative;
+}
+
+.heeding {
+  font-size: 2.7rem;
+  margin: 0;
+}
+
+.plot-title {
+  background-image: linear-gradient(
+    to right,
+    $color-green-dark,
+    $color-primary-green
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.container-ploty {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.logoo {
+  height: 3.25rem;
+  width: auto;
+}
+
+.heeder__link {
+  margin-left: 3rem;
+  font-size: 1.2rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+
+  @media (max-width: 950px) {
+    font-size: 1rem;
+    padding: 1rem 0.3rem;
+  }
+
+  @media (max-width: 900px) {
+    margin-left: 1.5rem;
+  }
+}
+
+.heeder__icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  fill: $color-grey-light-1;
+  margin-right: 0.5rem;
+
+  @media (max-width: 1273px) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  @media (max-width: 760px) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  @media (max-width: 440px) {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  @media (max-width: 370px) {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  @media (max-width: 330px) {
+    width: 1.65rem;
+    height: 1.65rem;
+  }
+}
+
+.home {
+  margin-left: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  padding: 2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  align-self: stretch;
+  height: 100%;
+
+  @media (max-width: 950px) {
+    font-size: 1rem;
+    padding: 1rem 0.3rem;
+  }
+
+  @media (max-width: 900px) {
+    margin-left: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 1050px) {
+    padding: 0 1rem;
+  }
+}
+
+.home-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  fill: $color-grey-light-1;
+  margin-right: 0.5rem;
+
+  @media (max-width: 1273px) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  @media (max-width: 760px) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  @media (max-width: 440px) {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  @media (max-width: 370px) {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-right: 0rem;
+  }
+
+  @media (max-width: 330px) {
+    width: 1.65rem;
+    height: 1.65rem;
+  }
+}
+
+.domuu {
+  font-size: 1.95rem;
+  margin-left: 4px;
+  padding-top: 4px;
+
+  @media (max-width: 1200px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 710px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 1050px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.425rem;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 335px) {
+    font-size: 1rem;
+  }
+}
+
+.user-nav {
+  align-self: stretch;
+  font-size: 1.95rem;
+  margin-right: -80px;
+
+  & > * {
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__box {
+    display: flex;
+
+    &--item {
+      margin-right: 20px;
+      list-style-type: none;
+      height: 100%;
+      display: flex;
+      color: #f7f7f7;
+      position: relative;
+
+      &:hover {
+        .dropdown {
+          display: block;
+        }
+      }
+    }
+
+    &--link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      text-transform: uppercase;
+      transition: 0.35s;
+    }
+  }
+}
+
+/* Dropdown styles */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &.is-open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  li {
+    padding: 1rem 2rem;
+    text-align: left;
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}
+
+.dropdown-item {
+  color: #f7f7f7;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: "Helvetica", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #28b485;
+  }
+}
+
+.dropdown-close-row {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.dropdown-close-btn {
+  background: none;
+  border: none;
+  color: #f7f7f7;
+  font-size: 4.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s;
+  &:hover {
+    color: #28b485;
+  }
+}
+
+.inquiry-bold {
+  font-weight: 700;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .heeding {
+    &:hover,
+    &:active {
+      color: #f7f7f7;
+      box-shadow: 0 0.25rem 2rem;
+    }
+  }
+
+  .user-nav__box--link {
+    &:hover,
+    &:active {
+      color: #28b485;
+      box-shadow: 0 1rem 2rem;
+    }
+
+    &::after {
+      background-color: #28b485;
+    }
+  }
+}
+
+@media (max-width: 1273px) {
+  .user-nav {
+    font-size: 1.8rem;
+    margin-right: -40px;
+  }
+
+  .user-nav__box--item {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1131px) {
+  .user-nav {
+    font-size: 1.7rem;
+  }
+
+  .heeding {
+    font-size: 2.5rem;
+  }
+
+  .heeder__link {
+    margin-left: 1.2rem;
+  }
+
+  .domuu {
+    margin-top: 4px;
+  }
+
+  .user-nav__box--item {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .header {
+    height: 12.5rem;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .container-ploty {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .heeding {
+    font-size: 2rem;
+  }
+
+  .user-nav {
+    font-size: 1.8rem;
+    margin-right: 0;
+    margin-top: -0.5rem;
+  }
+
+  .user-nav__box {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .user-nav__box--item {
+    margin-right: 5px;
+  }
+
+  .user-nav > * {
+    padding: 0 1rem;
+  }
+
+  .inquiry-bold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    font-size: 1.2rem;
+    height: 4.2rem;
+    height: 12rem;
+  }
+
+  .heeding {
+    font-size: 2rem;
+  }
+
+  .logoo {
+    height: 2rem;
+  }
+
+  .user-nav {
+    font-size: 1.7rem;
+    margin-right: -20px;
+  }
+
+  .user-nav__box--item {
+    margin-right: 10px;
+  }
+
+  .user-nav > * {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 710px) {
+  .header {
+    height: 12rem;
+  }
+
+  .heeding {
+    font-size: 1.75rem;
+  }
+
+  .user-nav {
+    font-size: 1.55rem;
+  }
+}
+
+@media (max-width: 630px) {
+  .user-nav {
+    font-size: 1.55rem;
+  }
+}
+
+@media (max-width: 536px) {
+  .header {
+    height: 10rem;
+  }
+  .user-nav {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .user-nav {
+    font-size: 1.425rem;
+  }
+}
+
+@media (max-width: 429px) {
+  .header {
+    height: 9rem;
+  }
+
+  .user-nav {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .heeding {
+    font-size: 1.5rem;
+  }
+
+  .user-nav {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .user-nav {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 344px) {
+  .heeding {
+    font-size: 1.35rem;
+  }
+  .user-nav {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .heeding {
+    margin-left: 5px;
+  }
+
+  .user-nav {
+    font-size: 1rem;
+  }
+
+  .phone {
+    font-size: 1.025rem !important;
+  }
+}

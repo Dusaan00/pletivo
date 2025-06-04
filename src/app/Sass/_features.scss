@@ -1,0 +1,130 @@
+@use "./variables" as *;
+
+body {
+  background-color: #f7f7f7;
+}
+
+.features {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 15.5rem auto; /* Center the section horizontally */
+  max-width: 135rem; /* Control the maximum width */
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-gold;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #4d4d4d;
+  }
+}
+
+.heading--4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.openings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 3.5rem 1rem;
+  margin-top: -6rem;
+}
+
+.openings-itemh {
+  letter-spacing: 5px;
+}
+
+.openings__item {
+  position: relative;
+  color: #f7f7f7;
+  font-size: 2.8rem;
+
+  &:first-of-type {
+    letter-spacing: 2px;
+  }
+}
+
+.openings__hodiny {
+  font-size: 2.4rem;
+}
+
+@media (max-width: 500px) {
+  .features {
+    margin: 5rem auto;
+    padding: 0 0rem;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  }
+
+  .feature {
+    grid-row-gap: 0.8rem;
+    grid-column-gap: 1.8rem;
+  }
+
+  .feature__icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .feature__text {
+    font-size: 1.5rem;
+  }
+
+  .heading--4 {
+    font-size: 1.6rem;
+  }
+
+  .openings {
+    margin-top: -3rem;
+  }
+
+  .openings__item {
+    font-size: 2.2rem;
+  }
+
+  .openings__hodiny {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .openings__item {
+    font-size: 2rem;
+  }
+
+  .openings__hodiny {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .openings__item {
+    font-size: 1.85rem;
+  }
+
+  .openings__hodiny {
+    font-size: 1.65rem;
+  }
+}

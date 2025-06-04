@@ -1,0 +1,114 @@
+@use "./variables" as *;
+
+body {
+  background-color: #f7f7f7;
+}
+
+.over-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-family: "Helvetica", sans-serif;
+}
+
+.over-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 7rem;
+  font-weight: bold;
+  color: black;
+
+  @media (max-width: 1104px) {
+    font-size: 33px;
+  }
+
+  @media (max-width: 725px) {
+    margin-top: 6px;
+    font-size: 4.5rem;
+  }
+}
+
+.over-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 50px; /* Gap between items */
+  width: 100%; /* Full width */
+  max-width: 1200px;
+  justify-items: center;
+
+  @media (max-width: 1104px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    gap: 35px;
+  }
+
+  @media (max-width: 725px) {
+    grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+  }
+}
+
+.over-item {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 725px) {
+    margin-top: -2.25rem;
+    flex-direction: column-reverse; // ⬅️ This flips subtitle above image
+    align-items: center; // Optional: centers both on narrow screens
+  }
+
+  @media (max-width: 420px) {
+    align-items: center;
+  }
+}
+
+.over-item a {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: block;
+  position: relative;
+  margin: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.8);
+}
+
+.over-photo {
+  display: block;
+  cursor: pointer;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 1.75s ease;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+
+  @media (max-width: 725px) {
+    &:hover {
+      transform: none;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.over-subtitle {
+  margin-top: 20px;
+  color: black;
+  font-size: 25px;
+  font-style: italic;
+
+  @media (max-width: 725px) {
+    margin-top: 10px;
+    font-size: 3rem;
+  }
+}

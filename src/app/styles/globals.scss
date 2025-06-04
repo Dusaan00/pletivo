@@ -1,0 +1,41 @@
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+$color-grey-dark-2: #6d5d4b;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px / 16px = 62.5% => 1 rem = 10px
+  padding: 0px 30px;
+
+  @media only screen and (max-width: 1250px) {
+    padding: 0px 20px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    padding: 0px 10px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 15px 5px;
+  }
+}
+
+body {
+  font-family: var(--font-nunito);
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
