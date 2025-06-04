@@ -6,6 +6,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   basePath: isProd ? "/pletivo" : "",
+  assetPrefix: isProd ? "/pletivo/" : "",
   output: "export",
   distDir: "dist",
   images: {
