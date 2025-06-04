@@ -31,13 +31,14 @@ const sourceSans3 = Source_Sans_3({
   display: "swap",
 });
 
-const josefin = josefinSans({ subsets: ["latin"], variable: "--font-josefin" });
-const urban = urbanist({ subsets: ["latin"], variable: "--font-urbanist" });
-const soraFont = sora({ subsets: ["latin"], variable: "--font-sora" });
-const sourceSans = sourceSans3({
-  subsets: ["latin"],
-  variable: "--font-source-sans",
-});
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const josefin = josefinSans;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const urban = urbanist;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const soraFont = sora;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const sourceSans = sourceSans3;
 
 export const metadata: Metadata = {
   title: "Pletivo Grygov | Výroba Pletiva | Zakázková výroba",
