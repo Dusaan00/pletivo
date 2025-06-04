@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "sass:color"; // Import color module for color.adjust
 
 .intro-section {
   display: grid;
@@ -71,8 +72,8 @@
 
   /* Ensure content stays above the pseudo-elements */
   > * {
-    position: relative;
     z-index: 2;
+    position: relative;
   }
 
   .intro-loga-div {
@@ -138,7 +139,7 @@
     margin: 0 auto;
     margin-bottom: 1rem;
     font-style: italic;
-    color: lighten(#f7f7f7, 20%);
+    color: color.adjust(#f7f7f7, $lightness: 20%); // Replaced lighten
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
@@ -234,8 +235,8 @@
         font-weight: bold;
         text-decoration: none;
         margin-top: 0.75rem;
-        width: 90%; // Match the width of the intro-list and title
-        max-width: 1000px; // Match the max-width of the intro-list and title
+        width: 90%;
+        max-width: 1000px;
 
         &:hover {
           background: #008040;
@@ -391,8 +392,8 @@
         padding: 0.8rem 1.5rem;
         margin: 0.5rem auto;
         display: block;
-        width: 90%; // Maintain consistent width on smaller screens
-        max-width: none; // Allow full width on mobile
+        width: 90%;
+        max-width: none;
       }
     }
   }
@@ -435,7 +436,7 @@
       .btn {
         font-size: clamp(1rem, 4vw, 1.6rem);
         padding: 0.6rem 1.2rem;
-        width: 90%; // Maintain consistent width
+        width: 90%;
         max-width: none;
       }
     }
