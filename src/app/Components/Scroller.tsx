@@ -1,35 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 
 export default function Scroller() {
-  const [lenis, setLenis] = useState<Lenis | null>(null);
-  const [rafId, setRafId] = useState<number | null>(null);
+  const rafId = useRef<number | null>(null);
 
   useEffect(() => {
     const scroller = new Lenis();
-    setLenis(scroller);
 
     const raf = (time: number) => {
       scroller.raf(time);
-      const frameId = requestAnimationFrame(raf);
-      if (rafId !== frameId) {
-        setRafId(frameId);
-      }
+      rafId.current = requestAnimationFrame(raf);
     };
 
-    const frameId = requestAnimationFrame(raf);
-    setRafId(frameId);
+    rafId.current = requestAnimationFrame(raf);
 
     return () => {
-      if (rafId !== null) {
-        cancelAnimationFrame(rafId);
+      if (rafId.current !== null) {
+        cancelAnimationFrame(rafId.current);
       }
-
-      if (scroller) {
-        scroller.destroy();
-      }
+      scroller.destroy();
     };
   }, []);
 
