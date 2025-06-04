@@ -1,42 +1,35 @@
 @use "./variables" as *;
 
 // Responsive mixins
-
 @mixin respond-to($breakpoint) {
   @if $breakpoint == tiny-phone {
     @media (max-width: 23.25em) {
       @content;
-    } // 360px and smaller - absolute minimum
-  }
-
-  @if $breakpoint == small-phone {
+    } // 360px and smaller
+  } @else if $breakpoint == small-phone {
     @media (max-width: 24.375em) {
       @content;
-    } // 390px - extra small screens
-  }
-  @if $breakpoint == phone {
+    } // 390px
+  } @else if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
     } // 600px
-  }
-  @if $breakpoint == tab-port {
+  } @else if $breakpoint == tab-port {
     @media (max-width: 56.25em) {
       @content;
     } // 900px
-  }
-  @if $breakpoint == mid-break {
+  } @else if $breakpoint == mid-break {
     @media (max-width: 68.125em) {
       @content;
     } // 1090px
-  }
-  @if $breakpoint == tab-land {
+  } @else if $breakpoint == tab-land {
     @media (max-width: 75em) {
       @content;
     } // 1200px
   }
 }
 
-// Fluid sizing functions using clamp
+// Fluid sizing function using clamp
 @function fluid-size($min-size, $max-size, $min-width: 320, $max-width: 1400) {
   $slope: ($max-size - $min-size) / ($max-width - $min-width);
   $slope-vw: $slope * 100;
@@ -48,6 +41,7 @@
   );
 }
 
+// Styles for .section-about
 .section-about {
   display: flex;
   justify-content: center;
@@ -56,14 +50,12 @@
   color: #333;
   padding: fluid-size(1.5, 4) fluid-size(1, 2);
   width: 100%;
-  max-width: 100vw; // <--- Prevent horizontal overflow
+  max-width: 100vw;
   overflow-x: hidden;
 
   @include respond-to(small-phone) {
     padding: 1rem 0.5rem;
-    overflow-x: hidden;
   }
-
   @include respond-to(tiny-phone) {
     padding: 0.8rem 0.2rem;
   }
@@ -79,32 +71,27 @@
   padding: fluid-size(2, 5);
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  border: solid 1px #f7f7f7;
+  border: 1px solid #f7f7f7;
 
   @include respond-to(mid-break) {
     padding: fluid-size(2, 3);
   }
-
   @include respond-to(phone) {
     padding: fluid-size(1.5, 2.5);
   }
-
   @include respond-to(small-phone) {
     padding: 1.2rem;
     gap: 1.2rem;
-    width: calc(100% - 10px);
     margin: 0 auto;
-    overflow-x: hidden;
   }
-
   @include respond-to(tiny-phone) {
     padding: 0.8rem;
     gap: 0.8rem;
     border-radius: 4px;
-    max-width: 100%;
   }
 }
 
+// Additional styles
 .section-about-header {
   text-align: center;
   margin-bottom: fluid-size(1, 2);
@@ -124,17 +111,12 @@
     @include respond-to(mid-break) {
       font-size: fluid-size(3, 4);
     }
-
     @include respond-to(phone) {
       font-size: fluid-size(2.5, 3);
     }
-
     @include respond-to(small-phone) {
       font-size: 2.3rem;
-      word-wrap: break-word;
-      padding: 0 0.5rem;
     }
-
     @include respond-to(tiny-phone) {
       font-size: 2rem;
       line-height: 1.1;
@@ -151,18 +133,14 @@
     grid-template-columns: 1fr;
     gap: fluid-size(1.5, 2);
   }
-
   @include respond-to(tab-port) {
     grid-template-columns: 1fr;
   }
-
   @include respond-to(small-phone) {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
-
   @include respond-to(tiny-phone) {
-    grid-template-columns: 1fr !important;
     gap: 0.8rem;
   }
 }
@@ -175,19 +153,15 @@
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
 
   @include respond-to(mid-break) {
-    order: 2; // Move text below image at mid-break
+    order: 2;
   }
-
   @include respond-to(tab-port) {
-    order: 2; // Keep text below image on smaller screens
+    order: 2;
   }
-
   @include respond-to(small-phone) {
     padding: 1rem;
     border-radius: 6px;
-    width: 100%;
   }
-
   @include respond-to(tiny-phone) {
     padding: 0.6rem;
     border-radius: 4px;
@@ -205,19 +179,14 @@
   @include respond-to(mid-break) {
     font-size: 1.6rem;
   }
-
   @include respond-to(phone) {
     font-size: 1.8rem;
   }
-
   @include respond-to(small-phone) {
     font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 12px;
-    word-wrap: break-word;
-    hyphens: auto;
   }
-
   @include respond-to(tiny-phone) {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -231,8 +200,15 @@
   margin-top: fluid-size(1, 1.5);
   border-top: 1.5px solid #e0e0e0;
   padding-top: fluid-size(0.75, 1);
-  overflow-x: hidden;
   padding-inline: 0.5rem;
+
+  @include respond-to(mid-break) {
+    margin-top: fluid-size(0.8, 1);
+    padding-top: 0.5rem;
+  }
+  @include respond-to(phone) {
+    padding-inline: 0.25rem;
+  }
 }
 
 .section-about-logo {
@@ -242,15 +218,12 @@
   @include respond-to(mid-break) {
     max-width: 90%;
   }
-
   @include respond-to(phone) {
     max-width: 80%;
   }
-}
-
-.section-about-left,
-.section-about-right {
-  overflow: hidden;
+  @include respond-to(small-phone) {
+    max-width: 100%;
+  }
 }
 
 .section-about-right {
@@ -259,20 +232,17 @@
   align-items: center;
 
   @include respond-to(mid-break) {
-    order: 1; // Move image above text at mid-break
+    order: 1;
     margin-bottom: fluid-size(1, 1.5);
   }
-
   @include respond-to(tab-port) {
-    order: 1; // Keep image above text on smaller screens
+    order: 1;
     margin-bottom: fluid-size(1, 1.5);
   }
-
   @include respond-to(small-phone) {
     width: 100%;
     margin-bottom: 1rem;
   }
-
   @include respond-to(tiny-phone) {
     margin-bottom: 0.6rem;
   }
@@ -286,14 +256,18 @@
     @include respond-to(mid-break) {
       max-width: 90%;
     }
-
     @include respond-to(small-phone) {
       max-width: 100%;
       border-radius: 6px;
     }
-
     @include respond-to(tiny-phone) {
       border-radius: 4px;
     }
   }
+}
+
+// Common overflow prevention
+.section-about-left,
+.section-about-right {
+  overflow: hidden;
 }
