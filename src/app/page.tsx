@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Intro from "./Components/Intro";
 import Over from "./Components/Overview";
 import Proc from "./Components/Proc";
