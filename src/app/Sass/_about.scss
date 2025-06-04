@@ -1,14 +1,13 @@
 @use "./variables" as *;
+@use "sass:math"; // Import math module for math.div
 
 // Responsive mixins
-
 @mixin respond-to($breakpoint) {
   @if $breakpoint == tiny-phone {
     @media (max-width: 23.25em) {
       @content;
     } // 360px and smaller - absolute minimum
   }
-
   @if $breakpoint == small-phone {
     @media (max-width: 24.375em) {
       @content;
@@ -38,9 +37,12 @@
 
 // Fluid sizing functions using clamp
 @function fluid-size($min-size, $max-size, $min-width: 320, $max-width: 1400) {
-  $slope: ($max-size - $min-size) / ($max-width - $min-width);
+  $slope: math.div(
+    $max-size - $min-size,
+    $max-width - $min-width
+  ); // Use math.div
   $slope-vw: $slope * 100;
-  $intercept-rem: $min-size - ($slope * $min-width) / 16;
+  $intercept-rem: $min-size - math.div($slope * $min-width, 16); // Use math.div
   @return clamp(
     #{$min-size}rem,
     #{$intercept-rem}rem + #{$slope-vw}vw,
@@ -48,6 +50,7 @@
   );
 }
 
+// Rest of the file remains unchanged
 .section-about {
   display: flex;
   justify-content: center;
@@ -56,7 +59,7 @@
   color: #333;
   padding: fluid-size(1.5, 4) fluid-size(1, 2);
   width: 100%;
-  max-width: 100vw; // <--- Prevent horizontal overflow
+  max-width: 100vw;
   overflow-x: hidden;
 
   @include respond-to(small-phone) {
@@ -175,11 +178,11 @@
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
 
   @include respond-to(mid-break) {
-    order: 2; // Move text below image at mid-break
+    order: 2;
   }
 
   @include respond-to(tab-port) {
-    order: 2; // Keep text below image on smaller screens
+    order: 2;
   }
 
   @include respond-to(small-phone) {
@@ -259,12 +262,12 @@
   align-items: center;
 
   @include respond-to(mid-break) {
-    order: 1; // Move image above text at mid-break
+    order: 1;
     margin-bottom: fluid-size(1, 1.5);
   }
 
   @include respond-to(tab-port) {
-    order: 1; // Keep image above text on smaller screens
+    order: 1;
     margin-bottom: fluid-size(1, 1.5);
   }
 
