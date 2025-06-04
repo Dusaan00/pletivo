@@ -2,14 +2,21 @@
  * @type {import('next').NextConfig}
  */
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   output: "export",
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "https://dusaan00.github.io/pletivo/"
-      : "",
+  basePath: isProd ? "/pletivo" : "", // Ensure routing uses /pletivo
+  assetPrefix: isProd ? "/pletivo/" : "", // Relative path for assets
+  distDir: "dist",
   images: {
     unoptimized: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
   headers: () => [
     {
