@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "../Sass/_panely.scss";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 function Panely() {
   return (
@@ -15,7 +16,7 @@ function Panely() {
       <div className="panely-container">
         <div className="panely-item">
           <Image
-            src="/pletivaa/panelgreen.png"
+            src={`${basePath}/pletivaa/panelgreen.png`}
             alt="Pletivo zelené"
             width={300}
             height={500}
@@ -29,7 +30,7 @@ function Panely() {
 
         <div className="panely-item">
           <Image
-            src="/pletivaa/gg.webp"
+            src={`${basePath}/pletivaa/gg.webp`}
             alt="Pletivo antracit"
             width={300}
             height={500}
@@ -43,7 +44,7 @@ function Panely() {
 
         <div className="panely-item">
           <Image
-            src="/pletivaa/zinc.png"
+            src={`${basePath}/pletivaa/zinc.png`}
             alt="Pletivo Alugreen"
             width={300}
             height={500}
@@ -58,7 +59,7 @@ function Panely() {
 
         <div className="panely-item">
           <Image
-            src="/pletivaa/dvad.png"
+            src={`${basePath}/pletivaa/dvad.png`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -72,7 +73,7 @@ function Panely() {
 
         <div className="panely-item">
           <Image
-            src="/sloupky/jeklantracit.webp"
+            src={`${basePath}/sloupky/jeklantracit.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -86,7 +87,7 @@ function Panely() {
 
         <div className="panely-item">
           <Image
-            src="/sloupky/jeklzinc.webp"
+            src={`${basePath}/sloupky/jeklzinc.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -100,7 +101,7 @@ function Panely() {
 
         <div className="panely-item">
           <Image
-            src="/sloupky/jeklgreen.webp"
+            src={`${basePath}/sloupky/jeklgreen.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -117,7 +118,7 @@ function Panely() {
         <div className="xplain-item">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/panelgreen.png"
+              src={`${basePath}/pletivaa/panelgreen.png`}
               alt="Pletivo zelené"
               width={300}
               height={400}
@@ -135,7 +136,7 @@ function Panely() {
         <div className="xplain-item reverse">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/gg.webp"
+              src={`${basePath}/pletivaa/gg.webp`}
               alt="Pletivo antracit"
               width={300}
               height={400}
@@ -153,7 +154,7 @@ function Panely() {
         <div className="xplain-item">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/zinc.png"
+              src={`${basePath}/pletivaa/zinc.png`}
               alt="Pletivo Alugreen"
               width={300}
               height={400}
@@ -171,7 +172,7 @@ function Panely() {
         <div className="xplain-item reverse">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/dvad.png"
+              src={`${basePath}/pletivaa/dvad.png`}
               alt="Pletivo Bezinal"
               width={300}
               height={400}

@@ -1,6 +1,7 @@
 import "../Sass/_pletiva.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 function Pletiva() {
   return (
@@ -16,7 +17,7 @@ function Pletiva() {
       <div className="pletivaa-container">
         <div className="pletivaa-item">
           <Image
-            src="/pletivaa/green.jpg"
+            src={`${basePath}/pletivaa/green.jpg`}
             alt="Pletivo zelené"
             width={300}
             height={500}
@@ -30,7 +31,7 @@ function Pletiva() {
 
         <div className="pletivaa-item">
           <Image
-            src="/pletivaa/antracit.jpg"
+            src={`${basePath}/pletivaa/antracit.jpg`}
             alt="Pletivo antracit"
             width={300}
             height={500}
@@ -44,7 +45,7 @@ function Pletiva() {
 
         <div className="pletivaa-item">
           <Image
-            src="/pletivaa/alugreen.jpg"
+            src={`${basePath}/pletivaa/alugreen.jpg`}
             alt="Pletivo Alugreen"
             width={300}
             height={500}
@@ -58,7 +59,7 @@ function Pletiva() {
 
         <div className="pletivaa-item">
           <Image
-            src="/pletivaa/bezinal.jpg"
+            src={`${basePath}/pletivaa/bezinal.jpg`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -72,7 +73,7 @@ function Pletiva() {
 
         <div className="pletivaa-item">
           <Image
-            src="/pletivaa/zeberkove.webp"
+            src={`${basePath}/pletivaa/zeberkove.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -89,7 +90,7 @@ function Pletiva() {
         <div className="xplain-item">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/zelenev.jpg"
+              src={`${basePath}/pletivaa/zelenev.jpg`}
               alt="Pletivo zelené"
               width={300}
               height={400}
@@ -107,7 +108,7 @@ function Pletiva() {
         <div className="xplain-item reverse">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/antracitv.jpg"
+              src={`${basePath}/pletivaa/antracitv.jpg`}
               alt="Pletivo antracit"
               width={300}
               height={400}
@@ -125,7 +126,7 @@ function Pletiva() {
         <div className="xplain-item">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/alugreenv.jpg"
+              src={`${basePath}/pletivaa/alugreenv.jpg`}
               alt="Pletivo Alugreen"
               width={300}
               height={400}
@@ -143,7 +144,7 @@ function Pletiva() {
         <div className="xplain-item reverse">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/bezinalv.jpg"
+              src={`${basePath}/pletivaa/bezinalv.jpg`}
               alt="Pletivo Bezinal"
               width={300}
               height={400}
@@ -161,7 +162,7 @@ function Pletiva() {
         <div className="xplain-item">
           <div className="xplain-img">
             <Image
-              src="/pletivaa/zeberkove.webp"
+              src={`${basePath}/pletivaa/zeberkove.webp`}
               alt="Pletivo Alugreen"
               width={300}
               height={400}
