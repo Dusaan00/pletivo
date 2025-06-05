@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "../Sass/_desky.scss";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 function Desky() {
   return (
@@ -15,7 +16,7 @@ function Desky() {
       <div className="desky-container">
         <div className="desky-item">
           <Image
-            src="/deskyy/deskybeton.webp"
+            src={`${basePath}/deskyy/deskybeton.webp`}
             alt="Pletivo zelené"
             width={300}
             height={500}
@@ -29,7 +30,7 @@ function Desky() {
 
         <div className="desky-item">
           <Image
-            src="/deskyy/plast.webp"
+            src={`${basePath}/deskyy/plast.webp`}
             alt="Pletivo antracit"
             width={300}
             height={500}
@@ -43,7 +44,7 @@ function Desky() {
 
         <div className="desky-item">
           <Image
-            src="/deskyy/drzaky.webp"
+            src={`${basePath}/deskyy/drzaky.webp`}
             alt="Pletivo Alugreen"
             width={300}
             height={500}
@@ -60,7 +61,7 @@ function Desky() {
         <div className="xplain-item">
           <div className="xplain-img">
             <Image
-              src="/deskyy/deskybeton.webp"
+              src={`${basePath}/deskyy/deskybeton.webp`}
               alt="Pletivo zelené"
               width={300}
               height={400}
@@ -78,7 +79,7 @@ function Desky() {
         <div className="xplain-item reverse">
           <div className="xplain-img">
             <Image
-              src="/deskyy/plast.webp"
+              src={`${basePath}/deskyy/plast.webp`}
               alt="Pletivo antracit"
               width={300}
               height={400}
@@ -96,7 +97,7 @@ function Desky() {
         <div className="xplain-item">
           <div className="xplain-img">
             <Image
-              src="/deskyy/drzaky.webp"
+              src={`${basePath}/deskyy/drzaky.webp`}
               alt="Pletivo Alugreen"
               width={300}
               height={400}

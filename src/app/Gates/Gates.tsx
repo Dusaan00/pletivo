@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "../Sass/_gates.scss";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 function Gates() {
   return (
@@ -14,7 +15,7 @@ function Gates() {
       <div className="gates-container">
         <div className="gates-item">
           <Image
-            src="/gates/gatentracit.webp"
+            src={`${basePath}/gates/gatentracit.webp`}
             alt="Pletivo zelené"
             width={300}
             height={500}
@@ -30,7 +31,7 @@ function Gates() {
 
         <div className="gates-item">
           <Image
-            src="/gates/gatezn.webp"
+            src={`${basePath}/gates/gatezn.webp`}
             alt="Pletivo antracit"
             width={300}
             height={500}
@@ -44,7 +45,7 @@ function Gates() {
 
         <div className="gates-item">
           <Image
-            src="/gates/brankavypln.webp"
+            src={`${basePath}/gates/brankavypln.webp`}
             alt="Pletivo Alugreen"
             width={300}
             height={500}
@@ -59,7 +60,7 @@ function Gates() {
 
         <div className="gates-item">
           <Image
-            src="/gates/jekl.webp"
+            src={`${basePath}/gates/jekl.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -73,7 +74,7 @@ function Gates() {
 
         <div className="gates-item">
           <Image
-            src="/gates/ggate.webp"
+            src={`${basePath}/gates/ggate.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -87,7 +88,7 @@ function Gates() {
 
         <div className="gates-item">
           <Image
-            src="/gates/jeklgate.webp"
+            src={`${basePath}/gates/jeklgate.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -101,7 +102,7 @@ function Gates() {
 
         <div className="gates-item">
           <Image
-            src="/gates/jeklgateii.webp"
+            src={`${basePath}/gates/jeklgateii.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -115,7 +116,7 @@ function Gates() {
 
         <div className="gates-item">
           <Image
-            src="/gates/jeklgg.webp"
+            src={`${basePath}/gates/jeklgg.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
