@@ -40,10 +40,12 @@ const soraFont = sora;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const sourceSans = sourceSans3;
 
+const isProd = process.env.NODE_ENV === "production";
+
 export const metadata: Metadata = {
   title: "Pletivo Grygov | Výroba Pletiva | Zakázková výroba",
   description:
-    "Výroba pletiva, prodej pletiva a panelů 3D/2D, zámečnická vžroba, výroba bran a branek",
+    "Výroba pletiva, prodej pletiva a panelů 3D/2D, zámečnická výroba, výroba bran a branek",
 };
 
 export default function RootLayout({
@@ -72,7 +74,11 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body>
+      <body
+        style={
+          { "--base-path": isProd ? "/pletivo" : "" } as React.CSSProperties
+        }
+      >
         <Scroller />
         <Header />
         <main>{children}</main>
