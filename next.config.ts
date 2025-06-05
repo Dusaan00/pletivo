@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
   output: "export",
   basePath: isProd ? "/pletivo" : "", // Ensure routing uses /pletivo
-  assetPrefix: isProd ? "/pletivo" : "", // Relative path for assets
+  assetPrefix: isProd ? "/pletivo/" : "", // Relative path for assets
   distDir: "dist",
   images: {
     unoptimized: true,
