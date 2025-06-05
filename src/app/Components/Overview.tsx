@@ -1,6 +1,7 @@
 import "../Sass/_overview.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 function Overview() {
   return (
@@ -10,7 +11,7 @@ function Overview() {
         <div className="over-item">
           <Link href="/PletivaPage">
             <Image
-              src="./pletivo-grygov.jpg"
+              src={`${basePath}/pletivo-grygov.jpg`}
               width={350}
               height={350}
               className="over-photo"
