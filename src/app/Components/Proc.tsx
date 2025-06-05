@@ -1,6 +1,7 @@
 import "../Sass/_proc.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 function Proc() {
   return (
@@ -21,28 +22,28 @@ function Proc() {
               <div className="proc-photo-grid">
                 {" "}
                 <Image
-                  src="/vyroba-pletiva.jpg"
+                  src={`${basePath}/vyroba-pletiva.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"
                   alt="Výroba Pletiva Grygov"
                 />{" "}
                 <Image
-                  src="/vyroba-pletiva2.jpg"
+                  src={`${basePath}/vyroba-pletiva2.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"
                   alt="Výroba Pletiva Grygov"
                 />{" "}
                 <Image
-                  src="/vyroba-pletiva3.jpg"
+                  src={`${basePath}/vyroba-pletiva3.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"
                   alt="Výroba Pletiva Grygov"
                 />{" "}
                 <Image
-                  src="/vyroba-pletiva4.jpg"
+                  src={`${basePath}/vyroba-pletiva4.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"
