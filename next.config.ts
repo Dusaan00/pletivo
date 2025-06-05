@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/pletivo" : "", // Ensure routing uses /pletivo
+  basePath: isProd ? "/pletivo/" : "", // Ensure routing uses /pletivo
   images: {
     unoptimized: true,
   },
