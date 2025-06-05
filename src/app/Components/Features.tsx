@@ -45,7 +45,7 @@ function Features() {
 
         <div className="feature">
           <svg className="feature__icon">
-            <use href={`${basePath}/sprite.svg#icon-talks`}></use>
+            <use href={`${basePath}/sprite2.svg#icon-talks`}></use>
           </svg>
           <h4 className="heading--4">Osobní konzultace</h4>
           <p className="feature__text">
