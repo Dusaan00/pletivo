@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/pletivo/" : "", // Ensure routing uses /pletivo
+  basePath: isProd ? "/pletivo" : "",
   images: {
     unoptimized: true,
   },
@@ -16,17 +16,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  headers: () => [
-    {
-      source: "/_next/static/media/:path*",
-      headers: [
-        {
-          key: "Access-Control-Allow-Origin",
-          value: "*",
-        },
-      ],
-    },
-  ],
 };
 
 module.exports = nextConfig;
