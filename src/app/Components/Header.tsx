@@ -35,9 +35,12 @@ function Header() {
               { href: "/Prehled", label: "Celý sortiment" },
               { href: "/PletivaPage", label: "Pletiva" },
               { href: "/PanelyPage", label: "Panely 3D/2D" },
-              { href: "/GatesPage", label: "Brány & Branky" },
+              { href: "/Brany", label: "Brány & Branky" },
               { href: "/DeskyPage", label: "Podhrabové desky" },
-              { href: "/SloupkyPage", label: "Sloupky & příslušenství" },
+              {
+                href: "/SloupkyPrislusenstvi",
+                label: "Sloupky & příslušenství",
+              },
             ]}
           />
           <li className="user-nav__box--item">

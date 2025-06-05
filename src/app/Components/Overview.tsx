@@ -35,7 +35,7 @@ function Overview() {
         </div>
 
         <div className="over-item">
-          <Link href="/GatesPage">
+          <Link href="/Brany">
             <Image
               src={`${basePath}/gates/ggate.webp`}
               width={350}
@@ -61,7 +61,7 @@ function Overview() {
         </div>
 
         <div className="over-item">
-          <Link href="/SloupkyPage">
+          <Link href="/SloupkyPrislusenstvi">
             <Image
               src={`${basePath}/sloupky-pletivo-grygov.jpg`}
               width={350}
