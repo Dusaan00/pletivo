@@ -202,7 +202,7 @@ function Sloupky() {
             height={500}
             className="sloupky-img"
           />
-          <p className="sloupky-text">Napínací rát – Zinkový</p>
+          <p className="sloupky-text">Napínací drát – Zinkový</p>
           <Link href="/form">
             <button className="sloupky-button">Odeslat poptávku</button>
           </Link>
