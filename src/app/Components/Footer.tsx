@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "../Sass/_footer.scss";
 import ScrollToTop from "../functions/Scroller";
+import { basePath } from "../functions/Env";
 
 function Footer() {
   return (
@@ -12,7 +13,7 @@ function Footer() {
           <div className="logo__container">
             <ScrollToTop href="/" className="logo__link">
               <Image
-                src="/loga/Ploty-logo.webp"
+                src={`${basePath}/loga/Ploty-logo.webp`}
                 alt="Ploty Grygov Logo"
                 className="logo"
                 loading="lazy"
@@ -32,7 +33,7 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <svg className="footer__icon">
-              <use href="/sprite.svg#icon-location_on"></use>
+              <use href={`${basePath}/sprite.svg#icon-location_on`}></use>
             </svg>
             <p className="address">
               <span>Za Tratí 255,</span>
@@ -44,7 +45,7 @@ function Footer() {
         <li className="footer__item">
           <a href="#" className="footer__link">
             <svg className="footer__icon">
-              <use href="/sprite.svg#icon-call"></use>
+              <use href={`${basePath}/sprite.svg#icon-location_on`}></use>
             </svg>
             <p className="phone"> +420 608 705 547</p>
           </a>
@@ -53,7 +54,7 @@ function Footer() {
         <li className="footer__item">
           <Link href="mailto:plotygrygov@gmail.com" className="footer__link">
             <svg className="footer__icon">
-              <use href="/sprite.svg#icon-email"></use>
+              <use href={`${basePath}/sprite.svg#icon-email`}></use>
             </svg>
             <p className="address">plotygrygov@gmail.com</p>
           </Link>
@@ -62,7 +63,7 @@ function Footer() {
         <li className="footer__item">
           <Link href="/form" className="footer__link">
             <svg className="footer__icon">
-              <use href="/sprite.svg#icon-paper-plane"></use>
+              <use href={`${basePath}/sprite.svg#icon-paper-plane`}></use>
             </svg>
             <p className="address">Odeslat poptávku</p>
           </Link>
@@ -71,7 +72,7 @@ function Footer() {
         <li className="footer__item">
           <Link href="/Prehled" className="footer__link">
             <svg className="footer__icon">
-              <use href="/sprite2.svg#icon-cart"></use>
+              <use href={`${basePath}/sprite2.svg#icon-cart`}></use>
             </svg>
             <p className="address galeria">Sortiment</p>
           </Link>
@@ -82,7 +83,9 @@ function Footer() {
         <li className="footer-legal__item">
           <Link href="/PrivacyPolicy" className="footer-legal__link">
             <svg className="footer-legal__icon">
-              <use href="/sprite.svg#icon-policy-svgrepo-com"></use>
+              <use
+                href={`${basePath}/sprite.svg#icon-policy-svgrepo-com`}
+              ></use>
             </svg>
             <p className="legal-text">GDPR</p>
           </Link>
