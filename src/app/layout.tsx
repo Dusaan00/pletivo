@@ -52,7 +52,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="cs">
+    <html lang="cs" data-env={process.env.NODE_ENV}>
       <head>
         {process.env.NODE_ENV === "production" && <base href="/pletivo" />}
         <link
