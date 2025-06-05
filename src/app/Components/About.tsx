@@ -1,5 +1,6 @@
 import "../Sass/_about.scss";
 import Image from "next/image";
+import { basePath } from "../functions/Env";
 
 function About() {
   return (
@@ -31,7 +32,7 @@ function About() {
             </p>
             <div className="section-about-logo-container">
               <Image
-                src="/pletivomore.png"
+                src={`${basePath}/pletivomore.png`}
                 alt="Logo firmy Výroba Pletiva Grygov"
                 width={300}
                 height={135}
@@ -41,7 +42,7 @@ function About() {
           </div>
           <div className="section-about-right">
             <Image
-              src="/pletivogrygov.jpg"
+              src={`${basePath}/pletivogrygov.jpg`}
               alt="Title image for Výroba Pletiva Grygov"
               width={750}
               height={450}
