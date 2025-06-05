@@ -24,7 +24,7 @@ function Overview() {
         <div className="over-item">
           <Link href="/PanelyPage">
             <Image
-              src="./panely-pletivo-grygov.png"
+              src={`${basePath}/panely-pletivo-grygov.png`}
               width={350}
               height={350}
               className="over-photo"
@@ -37,7 +37,7 @@ function Overview() {
         <div className="over-item">
           <Link href="/GatesPage">
             <Image
-              src="./gates/ggate.webp"
+              src={`${basePath}/gates/ggate.webp`}
               width={350}
               height={350}
               className="over-photo"
@@ -50,7 +50,7 @@ function Overview() {
         <div className="over-item">
           <Link href="/DeskyPage">
             <Image
-              src="./podhrabove-desky-pletivo-grygov.jpg"
+              src={`${basePath}/podhrabove-desky-pletivo-grygov.jpg`}
               width={350}
               height={350}
               className="over-photo"
@@ -63,7 +63,7 @@ function Overview() {
         <div className="over-item">
           <Link href="/SloupkyPage">
             <Image
-              src="./sloupky-pletivo-grygov.jpg"
+              src={`${basePath}/sloupky-pletivo-grygov.jpg`}
               width={350}
               height={350}
               className="over-photo"
@@ -80,7 +80,7 @@ function Overview() {
             rel="noopener noreferrer"
           >
             <Image
-              src="./stavby-pletivo-grygov.png"
+              src={`${basePath}/stavby-pletivo-grygov.png`}
               width={350}
               height={350}
               className="over-photo"
