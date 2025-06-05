@@ -7,7 +7,7 @@ function Intro() {
     <section className="intro-section">
       <div className="intro-loga-div">
         <Image
-          src="./loga/logou.png"
+          src="loga/logou.png"
           width={375}
           height={150}
           className="intro-loga-img"
