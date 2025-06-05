@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "../Sass/_sloupky.scss";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 function Sloupky() {
   return (
@@ -15,7 +16,7 @@ function Sloupky() {
       <div className="sloupky-container">
         <div className="sloupky-item">
           <Image
-            src="/sloupky/sloupekantracit.webp"
+            src={`${basePath}/sloupky/sloupekantracit.webp`}
             alt="Pletivo zelené"
             width={300}
             height={500}
@@ -29,7 +30,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/vzperantracit.webp"
+            src={`${basePath}/sloupky/vzperantracit.webp`}
             alt="Pletivo antracit"
             width={300}
             height={500}
@@ -43,7 +44,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/sloupekpvp.webp"
+            src={`${basePath}/sloupky/sloupekpvp.webp`}
             alt="Pletivo Alugreen"
             width={300}
             height={500}
@@ -55,7 +56,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/vzperapvp.webp"
+            src={`${basePath}/sloupky/vzperapvp.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -69,7 +70,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/sloupekzinc.webp"
+            src={`${basePath}/sloupky/sloupekzinc.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -83,7 +84,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/vzperazn.webp"
+            src={`${basePath}/sloupky/vzperazn.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -97,7 +98,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/sloupekgreen.webp"
+            src={`${basePath}/sloupky/sloupekgreen.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -111,7 +112,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/vzperagreen.webp"
+            src={`${basePath}/sloupky/vzperagreen.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -125,7 +126,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/jeklantracit.webp"
+            src={`${basePath}/sloupky/jeklantracit.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -139,7 +140,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/jeklzinc.webp"
+            src={`${basePath}/sloupky/jeklzinc.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -153,7 +154,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/jeklgreen.webp"
+            src={`${basePath}/sloupky/jeklgreen.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -167,7 +168,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/dratantra.webp"
+            src={`${basePath}/sloupky/dratantra.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -181,7 +182,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/dratgreen.webp"
+            src={`${basePath}/sloupky/dratgreen.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
@@ -195,7 +196,7 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src="/sloupky/dratzink.webp"
+            src={`${basePath}/sloupky/dratzink.webp`}
             alt="Pletivo Bezinal"
             width={300}
             height={500}
