@@ -20,7 +20,7 @@ function Header() {
         </a>
         <Link href="/" className="home">
           <svg className="home-icon">
-            <use href={`${basePath}/sprite.svg#icon-home`}></use>
+            <use href={`${basePath}/sprite2.svg#icon-home`}></use>
           </svg>
           <p className="domuu">DOMŮ</p>
         </Link>
