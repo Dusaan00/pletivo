@@ -10,7 +10,7 @@
   align-items: center;
   background: linear-gradient(#2b2b2b);
   background-image: linear-gradient(#2b2b2bf8),
-    url("#{$base-path}/loga/logou.png");
+    url("${process.env.NODE_ENV === 'production' ? '/pletivo' : ''}/bakgrund.png");
   background-size: cover;
   background-position: top;
   color: #f7f7f7;
