@@ -2,6 +2,7 @@
 import React, { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import "../Sass/_form.scss";
 import Link from "next/link";
+import { basePath } from "../functions/Env";
 
 interface FocusedState {
   name: boolean;
@@ -84,7 +85,7 @@ const Form: React.FC = () => {
         <div className="left-side">
           <div className="address details">
             <svg className="add ikon">
-              <use href="/sprite.svg#icon-location_on"></use>
+              <use href={`${basePath}/sprite.svg#icon-location_on`}></use>
             </svg>
             <div className="topic">Adresa</div>
             <div className="text-one">Za Tratí 255</div>
@@ -93,7 +94,7 @@ const Form: React.FC = () => {
 
           <div className="phone details">
             <svg className="phony ikon">
-              <use href="/sprite.svg#icon-call"></use>
+              <use href={`${basePath}/sprite.svg#icon-call`}></use>
             </svg>
             <div className="topic">Telefon</div>
             <div className="text-one">+420 608 705 547</div>
@@ -102,7 +103,7 @@ const Form: React.FC = () => {
 
           <div className="email details">
             <svg className="email ikon">
-              <use href="/sprite.svg#icon-email"></use>
+              <use href={`${basePath}/sprite.svg#icon-email`}></use>
             </svg>
             <div className="topic">Email</div>
             <div className="text-one">plotygrygov@gmail.com</div>
