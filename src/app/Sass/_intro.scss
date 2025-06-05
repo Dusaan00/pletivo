@@ -9,8 +9,7 @@
     minmax(0, 1fr);
   align-items: center;
   background: linear-gradient(#2b2b2b);
-  background-image: linear-gradient(#2b2b2bf8),
-    url("${process.env.NODE_ENV === 'production' ? '/pletivo' : ''}/bakgrund.png");
+  background-image: linear-gradient(#2b2b2bf8), url("/pletivo/bakgrund.png");
   background-size: cover;
   background-position: top;
   color: #f7f7f7;
