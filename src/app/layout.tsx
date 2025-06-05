@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
-        {process.env.NODE_ENV === "production" && <base href="/pletivo/" />}
+        {process.env.NODE_ENV === "production" && <base href="/pletivo" />}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
