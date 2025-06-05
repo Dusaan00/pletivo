@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "../Sass/_header.scss";
 import Dropdown from "../functions/Dropdown";
+import { basePath } from "../functions/Env";
 
 function Header() {
   return (
@@ -13,13 +14,13 @@ function Header() {
         </p>
         <a href="#" className="heeder__link">
           <svg className="heeder__icon">
-            <use href="/sprite.svg#icon-call"></use>
+            <use href={`${basePath}/sprite.svg#icon-call`}></use>
           </svg>
           <p className="phone"> +420 608 705 547</p>
         </a>
         <Link href="/" className="home">
           <svg className="home-icon">
-            <use href="/sprite2.svg#icon-home"></use>
+            <use href={`${basePath}/sprite.svg#icon-home`}></use>
           </svg>
           <p className="domuu">DOMŮ</p>
         </Link>
