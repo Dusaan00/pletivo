@@ -1,4 +1,5 @@
 import "../Sass/_features.scss";
+import { basePath } from "../functions/Env";
 
 function Features() {
   return (
@@ -6,7 +7,7 @@ function Features() {
       <section className="features">
         <div className="feature">
           <svg className="feature__icon">
-            <use href="/sprite.svg#icon-assignment"></use>
+            <use href={`${basePath}/sprite.svg#icon-assignment`}></use>
           </svg>
           <h4 className="heading--4">Jsme na trhu od roku 1930</h4>
           <p className="feature__text">
@@ -18,7 +19,7 @@ function Features() {
 
         <div className="feature">
           <svg className="feature__icon">
-            <use href="/sprite.svg#icon-emoji_events"></use>
+            <use href={`${basePath}/sprite.svg#icon-emoji_events`}></use>
           </svg>
           <h4 className="heading--4">
             Odborně poradíme s výběrem vhodného materiálu
@@ -31,7 +32,7 @@ function Features() {
 
         <div className="feature">
           <svg className="feature__icon">
-            <use href="/sprite.svg#icon-handyman"></use>
+            <use href={`${basePath}/sprite.svg#icon-handyman`}></use>
           </svg>
           <h4 className="heading--4">Materiál si sami vyrábíme</h4>
           <p className="feature__text">
@@ -44,7 +45,7 @@ function Features() {
 
         <div className="feature">
           <svg className="feature__icon">
-            <use href="/sprite2.svg#icon-talks"></use>
+            <use href={`${basePath}/sprite.svg#icon-talks`}></use>
           </svg>
           <h4 className="heading--4">Osobní konzultace</h4>
           <p className="feature__text">
@@ -57,7 +58,7 @@ function Features() {
 
         <div className="feature">
           <svg className="feature__icon">
-            <use href="/sprite.svg#icon-brightness_high"></use>
+            <use href={`${basePath}/sprite.svg#icon-brightness_high`}></use>
           </svg>
           <h4 className="heading--4">Zakázková výroba</h4>
           <p className="feature__text">
@@ -70,7 +71,7 @@ function Features() {
 
         <div className="feature">
           <svg className="feature__icon">
-            <use href="/sprite.svg#icon-location_on"></use>
+            <use href={`${basePath}/sprite.svg#icon-location_on`}></use>
           </svg>
           <h4 className="heading--4">
             Sídlo máme v obci Grygov (u Olomouce), doprava po celé České
