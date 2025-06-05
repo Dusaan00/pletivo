@@ -36,7 +36,7 @@ function Header() {
               { href: "/PletivaPage", label: "Pletiva" },
               { href: "/PanelyPage", label: "Panely 3D/2D" },
               { href: "/Brany", label: "Brány & Branky" },
-              { href: "/DeskyPage", label: "Podhrabové desky" },
+              { href: "/PodhraboveDesky", label: "Podhrabové desky" },
               {
                 href: "/SloupkyPrislusenstvi",
                 label: "Sloupky & příslušenství",

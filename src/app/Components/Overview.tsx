@@ -48,7 +48,7 @@ function Overview() {
         </div>
 
         <div className="over-item">
-          <Link href="/DeskyPage">
+          <Link href="/PodhraboveDesky">
             <Image
               src={`${basePath}/podhrabove-desky-pletivo-grygov.jpg`}
               width={350}
