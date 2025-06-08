@@ -70,8 +70,10 @@ function Desky() {
           <div className="xplain-text">
             <h3 className="antra">Podhrabové desky - betonové</h3>
             <p>
-              Odolné a estetické pletivo s plastovou vrstvou v tmavě zelené
-              barvě, ideální pro zahrady a parky.
+              K oplocení Vašeho pozemku vám můžeme dodat i podhrabové betonové
+              desky, což přidává plotu odolnost a ochranu navíc, zároveň dodají
+              vašemu plotu i estetiku a upravený vzhled. Na usazování desek jsou
+              většinou potřeba 2 lidi.
             </p>
           </div>
         </div>
@@ -88,8 +90,10 @@ function Desky() {
           <div className="xplain-text">
             <h3 className="antra">Podhrabové desky – plastové</h3>
             <p>
-              Moderní vzhled s antracitovou barvou, vhodné pro rezidenční i
-              komerční použití.
+              Plastové desky mají nižší hmotnost než betonové podhrabové desky,
+              stále však jde o desky s dlouhou životností a estetickým
+              provedením. Plastové desky díky svým vlastnostem nerezaví a
+              nedochází u nich ke korozi.
             </p>
           </div>
         </div>
@@ -106,8 +110,8 @@ function Desky() {
           <div className="xplain-text">
             <h3 className="antra">Držáky podhrabových desek</h3>
             <p>
-              Kombinace hliníkového vzhledu a zeleného povrchu pro odolnost a
-              přírodní integraci.
+              Držáky na podhrabové desky se dávají mezi sloupky a do těchto
+              držáku se následně jednoduše vloží podhrabové desky.
             </p>
           </div>
         </div>

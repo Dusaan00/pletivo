@@ -127,8 +127,9 @@ function Panely() {
           <div className="xplain-text">
             <h3 className="green">Panely 3D - zelené</h3>
             <p>
-              Odolné a estetické pletivo s plastovou vrstvou v tmavě zelené
-              barvě, ideální pro zahrady a parky.
+              3D plotové panely v zelené barvě představují moderní, pevné a
+              estetické řešení oplocení. Ideální pro rodinné domy, zahrady i
+              firemní areály.
             </p>
           </div>
         </div>
@@ -145,8 +146,9 @@ function Panely() {
           <div className="xplain-text">
             <h3 className="antra">Panely 3D - antracit</h3>
             <p>
-              Moderní vzhled s antracitovou barvou, vhodné pro rezidenční i
-              komerční použití.
+              3D plotové panely v antracitové barvě představují moderní, pevné a
+              estetické řešení oplocení. Ideální pro rodinné domy, zahrady i
+              firemní areály.
             </p>
           </div>
         </div>
@@ -163,8 +165,10 @@ function Panely() {
           <div className="xplain-text">
             <h3 className="antra">Panely 3D - zinkové</h3>
             <p>
-              Kombinace hliníkového vzhledu a zeleného povrchu pro odolnost a
-              přírodní integraci.
+              3D panely v zinkovém provedení se vyznačují skvělou odolností vůži
+              korozi a dlouhou životností, zároveň je to elegantní a funkční
+              řešení pro moderní oplocení rodinných domů, firemních objektů i
+              veřejných prostor.
             </p>
           </div>
         </div>
@@ -181,8 +185,10 @@ function Panely() {
           <div className="xplain-text">
             <h3 className="antra">Panely 2D - zinkové</h3>
             <p>
-              Pletivo s vrstvou zinku a hliníku poskytující dlouhodobou ochranu
-              proti korozi.
+              Tyto 2D zinkové panely mají díky dvojitým vodorovným drátům
+              skvělou pevnost, tuhost a odolnost. Tento typ panelu využiteje
+              hlavně tam, kde se klade důráz na bezpečnost, jsou tedy vhodné do
+              průmyslových areálů, kolem sportovišť a kolem veřejných objektů.
             </p>
           </div>
         </div>

@@ -99,8 +99,9 @@ function Pletiva() {
           <div className="xplain-text">
             <h3 className="green">Poplastované pletivo zelené</h3>
             <p>
-              Odolné a estetické pletivo s plastovou vrstvou v tmavě zelené
-              barvě, ideální pro zahrady a parky.
+              Klasické zelené pletivo, vyrobeno přímo u nás. Odolné a estetické
+              pletivo s plastovou vrstvou v tmavě zelené barvě, ideální pro
+              oplocení zahrad i firemních objektů.
             </p>
           </div>
         </div>
@@ -117,8 +118,8 @@ function Pletiva() {
           <div className="xplain-text">
             <h3 className="antra">Poplastované pletivo antracit</h3>
             <p>
-              Moderní vzhled s antracitovou barvou, vhodné pro rezidenční i
-              komerční použití.
+              Tohle pletivo s moderním vzhledem a antracitovou barvou má skvělé
+              využití při oplocení rezidenčních i komerčních objektů.
             </p>
           </div>
         </div>
@@ -135,8 +136,9 @@ function Pletiva() {
           <div className="xplain-text">
             <h3 className="green">Pletivo Alugreen</h3>
             <p>
-              Kombinace hliníkového vzhledu a zeleného povrchu pro odolnost a
-              přírodní integraci.
+              Pletivo Alugreen v kombinaci s hliníkovým vzhledem a zeleným
+              povrchem vám zaručuí vysokou odolnost a zároveň estetický vzhled
+              oplocení.
             </p>
           </div>
         </div>
@@ -153,8 +155,8 @@ function Pletiva() {
           <div className="xplain-text">
             <h3 className="antra">Pletivo Bezinal</h3>
             <p>
-              Pletivo s vrstvou zinku a hliníku poskytující dlouhodobou ochranu
-              proti korozi.
+              Pletivo Bezinal s vrstvou zinku a hliníku poskytuje dlouhodobou
+              ochranu proti korozi.
             </p>
           </div>
         </div>
@@ -171,8 +173,8 @@ function Pletiva() {
           <div className="xplain-text">
             <h3 className="antra">Žebérkové ploty</h3>
             <p>
-              Kombinace hliníkového vzhledu a zeleného povrchu pro odolnost a
-              přírodní integraci.
+              Tento typ pletiva se hodí, jako efektivní a odolné řešení pro
+              krytí prostorů.
             </p>
           </div>
         </div>

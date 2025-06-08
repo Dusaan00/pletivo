@@ -58,7 +58,7 @@ function Proc() {
               {" "}
               <h3 className="proc-right-h">
                 {" "}
-                Jak pletivo vyrábíme a jaké typy pletiva nabízíme{" "}
+                Jak pletivo vyrábíme a jaké typy pletiva nabízíme?{" "}
               </h3>{" "}
               <p className="proc-right-p">
                 {" "}

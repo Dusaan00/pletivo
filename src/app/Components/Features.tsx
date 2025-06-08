@@ -26,7 +26,8 @@ function Features() {
           </h4>
           <p className="feature__text">
             Díky našim mnohaletým zkušenostem jsme schopni profesionálně poradit
-            s výběrem materiálu na základě Vašich potřeb a požadavků.
+            s výběrem materiálu dle Vaší situace a na základě Vašich potřeb a
+            požadavků.
           </p>
         </div>
 
@@ -47,7 +48,7 @@ function Features() {
           <svg className="feature__icon">
             <use href={`${basePath}/sprite2.svg#icon-talks`}></use>
           </svg>
-          <h4 className="heading--4">Osobní konzultace</h4>
+          <h4 className="heading--4">Zákaznicky orientovaný přístup</h4>
           <p className="feature__text">
             Pošlete nám nezávaznou poptávku přes formulář, zavolejte nám, nebo
             nám napište email. Na zprávy přes online formulář a emaily
