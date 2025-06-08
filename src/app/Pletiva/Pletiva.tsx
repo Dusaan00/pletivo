@@ -11,8 +11,7 @@ function Pletiva() {
         V případě zájmu o materiál nám odešlete poptávku přes formulář,
         zavolejte, nebo napište email. Materiál jsme schopni Vám ještě ten samý
         den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám,
-        do místa určení. Minimální délka pletiva, co se u nás dá zakoupit, je X
-        m.
+        do místa určení.
       </p>
       <div className="pletivaa-container">
         <div className="pletivaa-item">
