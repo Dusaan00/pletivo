@@ -111,7 +111,7 @@ function Desky() {
             <h3 className="antra">Držáky podhrabových desek</h3>
             <p>
               Držáky na podhrabové desky se dávají mezi sloupky a do těchto
-              držáku se následně jednoduše vloží podhrabové desky.
+              držáků se následně jednoduše vloží podhrabové desky.
             </p>
           </div>
         </div>
