@@ -12,12 +12,12 @@ function Header() {
             <span className="plot-title">Pletivo</span>Grygov
           </Link>
         </p>
-        <a href="#" className="heeder__link">
+        <Link href="/form" className="heeder__link">
           <svg className="heeder__icon">
             <use href={`${basePath}/sprite.svg#icon-call`}></use>
           </svg>
           <p className="phone"> +420 608 705 547</p>
-        </a>
+        </Link>
         <Link href="/" className="home">
           <svg className="home-icon">
             <use href={`${basePath}/sprite2.svg#icon-home`}></use>
