@@ -41,6 +41,7 @@ const soraFont = sora;
 const sourceSans = sourceSans3;
 
 const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "" : "";
 
 export const metadata: Metadata = {
   title: "Pletivo Grygov | Výroba Pletiva | Zakázková výroba",
@@ -54,34 +55,26 @@ export default function RootLayout({
   return (
     <html lang="cs" data-env={process.env.NODE_ENV}>
       <head>
-        {process.env.NODE_ENV === "production" && <base href="/pletivo" />}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${isProd ? "/pletivo" : ""}/apple-touch-icon.png`}
+          href={`${basePath}/apple-touch-icon.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href={`${isProd ? "/pletivo" : ""}/favicon-32x32.png`}
+          href={`${basePath}/favicon-32x32.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href={`${isProd ? "/pletivo" : ""}/favicon-16x16.png`}
+          href={`${basePath}/favicon-16x16.png`}
         />
-        <link
-          rel="manifest"
-          href={`${isProd ? "/pletivo" : ""}/site.webmanifest`}
-        />
+        <link rel="manifest" href={`${basePath}/site.webmanifest`} />
       </head>
-      <body
-        style={
-          { "--base-path": isProd ? "/pletivo" : "" } as React.CSSProperties
-        }
-      >
+      <body>
         <Scroller />
         <Header />
         <main>{children}</main>
