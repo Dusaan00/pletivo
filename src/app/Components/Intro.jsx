@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import "../Sass/_intro.scss";
+import { basePath } from "../functions/Env";
 
 function Intro() {
   return (
     <section className="intro-section">
       <div className="intro-loga-div">
         <Image
-          src={`${
-            process.env.NODE_ENV === "production" ? "/pletivo" : ""
-          }/loga/logou.png`}
+          src={`${basePath}/loga/logou.png`}
           width={375}
           height={150}
           className="intro-loga-img"
