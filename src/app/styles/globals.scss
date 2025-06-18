@@ -39,3 +39,14 @@ html,
 body {
   overflow-x: hidden;
 }
+
+.modal-open {
+  overflow: hidden;
+  height: 100%;
+  pointer-events: none; // Disable pointer events on background
+
+  // Allow pointer events on the modal itself
+  .okno-overlay {
+    pointer-events: auto;
+  }
+}
