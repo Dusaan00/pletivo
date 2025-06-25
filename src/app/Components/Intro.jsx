@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import "../Sass/_intro.scss";
 import { basePath } from "../functions/Env";
-import Okno from "../functions/Okno";
 
 function Intro() {
   return (
@@ -41,11 +40,6 @@ function Intro() {
           </Link>
         </div>
       </section>
-
-      <Okno
-        title="Máme zavřeno do 24.6. 2025"
-        message="Momentálně máme zavřeno. Poptávky a objednávky začneme zpracovávat co nejdříve, tedy. 25.6., děkujeme za pochopení."
-      />
     </>
   );
 }
