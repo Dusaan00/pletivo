@@ -3,12 +3,19 @@ import React, { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import "../Sass/_form.scss";
 import Link from "next/link";
 import { basePath } from "../functions/Env";
+import Window from "../functions/FormWindow";
 
 interface FocusedState {
   name: boolean;
   email: boolean;
   phoneNum: boolean;
   message: boolean;
+}
+
+interface ModalState {
+  isOpen: boolean;
+  title: string;
+  message: string;
 }
 
 const Form: React.FC = () => {
@@ -22,6 +29,11 @@ const Form: React.FC = () => {
     email: false,
     phoneNum: false,
     message: false,
+  });
+  const [modal, setModal] = useState<ModalState>({
+    isOpen: false,
+    title: "",
+    message: "",
   });
 
   useEffect(() => {
@@ -64,14 +76,26 @@ const Form: React.FC = () => {
 
       if (result.success) {
         console.log("Success", result);
-        alert("Formulář byl úspěšně odeslán!");
+        setModal({
+          isOpen: true,
+          title: "Děkujeme za vaši zprávu",
+          message: "V pracovních dnech odpovídáme do 24 hodin",
+        });
         resetForm();
       } else {
-        alert("Odeslání se nezdařilo. Zkuste to prosím znovu.");
+        setModal({
+          isOpen: true,
+          title: "Chyba",
+          message: "Odeslání se nezdařilo. Zkuste to prosím znovu.",
+        });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Odeslání se nezdařilo. Zkuste to prosím znovu.");
+      setModal({
+        isOpen: true,
+        title: "Chyba",
+        message: "Odeslání se nezdařilo. Zkuste to prosím znovu.",
+      });
     }
   };
 
@@ -200,6 +224,11 @@ const Form: React.FC = () => {
           </form>
         </div>
       </div>
+      <Window
+        title={modal.title}
+        message={modal.message}
+        initiallyOpen={modal.isOpen}
+      />
     </div>
   );
 };
