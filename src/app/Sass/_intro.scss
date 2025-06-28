@@ -1,6 +1,5 @@
 @use "./variables" as *;
 @use "sass:color"; // Import color module for color.adjust
-@use "./okno"; //
 
 .intro-section {
   display: grid;
