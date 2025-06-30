@@ -1,54 +1,81 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface NavbarScrollProps {
-  children: React.ReactNode;
+  targetId?: string;
 }
 
-const NavbarScroll: React.FC<NavbarScrollProps> = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+const NavbarScroll: React.FC<NavbarScrollProps> = ({ targetId = "hdr" }) => {
+  const lastScrollYRef = useRef(0);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
+    const header = document.getElementById(targetId);
+
+    if (!header) {
+      console.warn(`Header with ID "${targetId}" not found`);
+      return;
+    }
+
+    // Ensure header has proper initial styles
+    header.style.position = "sticky";
+    header.style.top = "0";
+    header.style.zIndex = "6666";
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const scrollDifference = Math.abs(
+        currentScrollY - lastScrollYRef.current
+      );
 
-      // Show header when scrolling up or at the top
-      if (currentScrollY < lastScrollY || currentScrollY < 10) {
-        setIsVisible(true);
-      }
-      // Hide header when scrolling down (but not if at the very top)
-      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
+      // Only act if there's a meaningful scroll difference (prevents jitter)
+      if (scrollDifference < 5) return;
+
+      const scrollingUp = currentScrollY < lastScrollYRef.current;
+      const scrollingDown = currentScrollY > lastScrollYRef.current;
+      const isAtTop = currentScrollY < 50;
+      const hasScrolledEnough = currentScrollY > 100;
+
+      if (scrollingUp || isAtTop) {
+        // Show header
+        if (isHidden) {
+          header.style.transform = "translateY(0)";
+          header.style.transition = "transform 0.3s ease-in-out";
+          setIsHidden(false);
+        }
+      } else if (scrollingDown && hasScrolledEnough) {
+        // Hide header
+        if (!isHidden) {
+          header.style.transform = "translateY(-100%)";
+          header.style.transition = "transform 0.3s ease-in-out";
+          setIsHidden(true);
+        }
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollYRef.current = currentScrollY;
     };
 
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Throttle scroll events for better performance
+    let ticking = false;
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-    // Cleanup
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+    window.addEventListener("scroll", throttledScroll, { passive: true });
 
-  return (
-    <div
-      className={`navbar-scroll-wrapper ${
-        isVisible ? "navbar-visible" : "navbar-hidden"
-      }`}
-      style={{
-        position: "sticky",
-        top: 0,
-        zIndex: 6666,
-        transform: isVisible ? "translateY(0)" : "translateY(-100%)",
-        transition: "transform 0.3s ease-in-out",
-      }}
-    >
-      {children}
-    </div>
-  );
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+    };
+  }, [targetId, isHidden]);
+
+  return null;
 };
 
 export default NavbarScroll;

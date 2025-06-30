@@ -6,7 +6,8 @@ import NavbarScroll from "../functions/NavbarScroll";
 
 function Header() {
   return (
-    <NavbarScroll>
+    <>
+      <NavbarScroll />
       <header className="header" id="hdr">
         <div className="container-ploty">
           <p className="heeding">
@@ -63,7 +64,7 @@ function Header() {
           </ul>
         </nav>
       </header>
-    </NavbarScroll>
+    </>
   );
 }
 
