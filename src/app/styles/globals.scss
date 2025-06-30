@@ -35,9 +35,12 @@ body {
   line-height: 1.6;
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
+}
+
+body {
+  overflow-x: clip; /* or remove it entirely */
 }
 
 .modal-open {
