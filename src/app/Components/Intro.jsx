@@ -26,7 +26,7 @@ function Intro() {
           <hr className="intro-divider" />
           <ul className="intro-list">
             <li>
-              <span>Prodej pletiva z vlastní výroby a 3D/2D panelů</span>
+              <span>Výroba pletiva, panely 3D/2D, brány, branky</span>
             </li>
             <li>
               <span>Stavby plotů na klíč a zámečnické práce</span>
