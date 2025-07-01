@@ -22,14 +22,14 @@ function Proc() {
               <div className="proc-photo-grid">
                 {" "}
                 <Image
-                  src={`${basePath}/vyroba-pletiva.jpg`}
+                  src={`${basePath}/vyroba-pletiva2.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"
                   alt="Výroba Pletiva Grygov"
                 />{" "}
                 <Image
-                  src={`${basePath}/vyroba-pletiva2.jpg`}
+                  src={`${basePath}/pletivaa/pletvo.webp`}
                   width={500}
                   height={300}
                   className="proc-photo"
@@ -80,9 +80,9 @@ function Proc() {
               <p className="proc-right-p">
                 {" "}
                 Velice často, jak pro soukromé osoby, tak pro firmy, vyrábíme na
-                zakázku. Můžeme pro Vás zajistit dodání pletiv, panelů 3D/2D,
-                bran, branek a dalšího příslušenství spojeného s montážemi
-                oplocení.{" "}
+                zakázku. Můžeme Vám dodat růzmá pletiva, panely 3D/2D, brány,
+                branky, sloupky a všechna ostatní důležitá příslušenství pro
+                stavbu oplocení.{" "}
               </p>{" "}
               <Link href="/form" className="btn--text btn--gallery">
                 {" "}
