@@ -81,7 +81,7 @@ function Proc() {
                 {" "}
                 Velice často, jak pro soukromé osoby, tak pro firmy, vyrábíme na
                 zakázku. Můžeme Vám dodat různá pletiva, panely 3D/2D, brány,
-                branky, sloupky a všechna ostatní důležitá příslušenství pro
+                branky, sloupky a všechna ostatní nezbytná příslušenství pro
                 stavbu oplocení.{" "}
               </p>{" "}
               <Link href="/form" className="btn--text btn--gallery">

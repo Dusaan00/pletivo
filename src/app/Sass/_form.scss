@@ -207,3 +207,51 @@ textarea:invalid[data-focused="true"] ~ .achtung {
 .privacy-link {
   color: #5029bc;
 }
+
+@media (max-width: 455px) {
+  .containar {
+    width: 95%;
+    padding: 20px 25px 30px 25px; /* Adjust padding for smaller screens */
+  }
+
+  .left-side {
+    width: 100%;
+    flex-direction: row; /* Ensure row direction */
+    justify-content: space-evenly; /* Evenly space the items */
+    flex-wrap: wrap; /* Allow wrapping to 2 per row */
+    margin-top: 28px;
+
+    &::before {
+      display: none; /* Hide the vertical line */
+    }
+  }
+
+  .details {
+    width: 45%; /* Approximately half the container width for 2 per row */
+    margin: 10px 0; /* Reduce margin for tighter layout */
+    text-align: center;
+  }
+
+  .ikon {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .text-one,
+  .text-two {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 355px) {
+  .topic {
+    line-height: 1.4;
+  }
+
+  .ikon {
+    height: 2.75rem;
+    width: 2.75rem;
+    margin-bottom: 0.45rem;
+  }
+}
