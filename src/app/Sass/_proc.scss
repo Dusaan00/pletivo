@@ -377,7 +377,7 @@
   }
 }
 
-/* Medium screens */
+/* Medium screens - keep 2 columns for images */
 @media screen and (max-width: 992px) {
   .proc-section {
     grid-template-columns:
@@ -401,12 +401,14 @@
     }
   }
 
+  /* Keep 2 columns for images */
   .proc-photo-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: min(2rem, 3vw);
   }
 }
 
-/* Mobile layout */
+/* Mobile layout - ALWAYS maintain 2 columns for images */
 @media screen and (max-width: 768px) {
   .proc-section {
     grid-template-columns: 1fr;
@@ -428,8 +430,17 @@
 
         .proc-photo-wrapper {
           .proc-photo-grid {
-            grid-template-columns: 1fr;
-            gap: 1rem;
+            /* ALWAYS 2 columns - flexible and responsive */
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: clamp(0.5rem, 2vw, 1.5rem);
+            max-width: 100%;
+
+            .proc-photo {
+              width: 100%;
+              height: auto;
+              aspect-ratio: 4/3;
+              min-width: 0; /* Allows items to shrink below their content size */
+            }
           }
         }
       }
@@ -449,6 +460,31 @@
           font-size: 1.8rem;
         }
       }
+    }
+  }
+}
+
+/* Ensure 2 columns are maintained even on very small screens */
+@media screen and (max-width: 480px) {
+  .proc-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: clamp(0.25rem, 1.5vw, 1rem);
+
+    .proc-photo {
+      aspect-ratio: 3/2;
+      min-width: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .proc-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: clamp(0.2rem, 1vw, 0.8rem);
+
+    .proc-photo {
+      aspect-ratio: 5/4;
+      min-width: 0;
     }
   }
 }
@@ -529,6 +565,16 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .proc-title {
+    font-size: 2.5rem !important;
+  }
+
+  .proc-right {
+    margin-top: -0.15rem !important;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .proc-title {
     font-size: 3rem !important;
@@ -550,5 +596,17 @@
 @media screen and (max-width: 430px) {
   .proc-title {
     font-size: 2.25rem !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contacts {
+    margin-top: -4rem !important;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contacts {
+    margin-top: -5rem !important;
   }
 }
