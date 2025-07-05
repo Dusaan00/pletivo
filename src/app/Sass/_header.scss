@@ -64,19 +64,19 @@
 }
 
 .heeder__icon {
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 3rem;
+  height: 3rem;
   fill: $color-grey-light-1;
   margin-right: 0.5rem;
 
   @media (max-width: 1273px) {
-    width: 3rem;
-    height: 3rem;
+    width: 2.7rem;
+    height: 2.7rem;
   }
 
   @media (max-width: 1000px) {
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 2.6rem;
+    height: 2.6rem;
   }
 
   @media (max-width: 760px) {
@@ -130,8 +130,8 @@
 }
 
 .home-icon {
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 3rem;
+  height: 3rem;
   fill: $color-grey-light-1;
   margin-right: 0.5rem;
 
@@ -211,7 +211,7 @@
 
 .user-nav {
   align-self: stretch;
-  font-size: 1.95rem;
+  font-size: 1.8rem;
   margin-right: -80px;
 
   & > * {
