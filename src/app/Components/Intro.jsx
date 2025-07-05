@@ -32,7 +32,7 @@ function Intro() {
               <span>Stavby plotů na klíč a zámečnické práce</span>
             </li>
             <li>
-              <span>Desítky let zkušeností v oboru</span>
+              <span>Desítky let praxe v oboru</span>
             </li>
           </ul>
           <Link href="/form" className="btn btn--cta btn--animated">
