@@ -8,9 +8,10 @@ function Gates() {
     <section className="gates">
       <h2 className="gates-title">Brány & branky</h2>
       <p className="gates-intro">
-        Brány a branky vyrábíme převážně na zakázku dle konkretních potřeb
-        zákazníka. Níže můžete vidět příklady bran a branek, které pro Vás
-        můžeme realizovat i společně s montáží.
+        Brány a branky vyrábíme převážně na zakázku. Níže můžete vidět příklady
+        bran a branek, které pro Vás můžeme realizovat i společně s kompletní
+        stavbou oplocení. Brány uvedené níže jsou pouze příklady, jsme schopni
+        vyrobit a dodat i mnoho jiných bran/branek.
       </p>
       <div className="gates-container">
         <div className="gates-item">
