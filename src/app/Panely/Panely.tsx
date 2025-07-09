@@ -8,8 +8,8 @@ function Panely() {
     <section className="panely">
       <h2 className="panely-title">Panely 3D/2D</h2>
       <p className="panely-intro">
-        V případě zájmu o materiál nám odešlete poptávku přes formulář,
-        zavolejte, nebo napište email. Materiál jsme schopni Vám ještě ten samý
+        V případě zájmu o panely 3D/2D nám odešlete poptávku přes formulář,
+        zavolejte, nebo napište email. Panely jsme schopni Vám ještě ten samý
         den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám,
         do místa určení.
       </p>
@@ -30,11 +30,11 @@ function Panely() {
 
         <div className="panely-item">
           <Image
-            src={`${basePath}/pletivaa/gg.webp`}
+            src={`${basePath}/pletivaa/ant.png`}
             alt="Pletivo antracit"
             width={300}
             height={500}
-            className="panely-img"
+            className="panely-img gg"
           />
           <p className="panely-text">Panely 3D - antracit</p>
           <Link href="/form">
