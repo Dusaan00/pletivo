@@ -8,8 +8,8 @@ function Pletiva() {
     <section className="pletivaa">
       <h2 className="pletivaa-title">Pletiva</h2>
       <p className="pletivaa-intro">
-        V případě zájmu o materiál nám odešlete poptávku přes formulář,
-        zavolejte, nebo napište email. Materiál jsme schopni Vám ještě ten samý
+        V případě zájmu o pletivo nám odešlete poptávku přes formulář,
+        zavolejte, nebo napište email. Pletivo jsme schopni Vám ještě ten samý
         den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám,
         do místa určení.
       </p>
@@ -98,9 +98,9 @@ function Pletiva() {
           <div className="xplain-text">
             <h3 className="green">Poplastované pletivo zelené</h3>
             <p>
-              Klasické zelené pletivo, vyrobeno přímo u nás. Odolné a estetické
-              pletivo s plastovou vrstvou v tmavě zelené barvě, ideální pro
-              oplocení zahrad i firemních objektů.
+              Klasické zelené pletivo. Je odolné a estetické s plastovou vrstvou
+              v tmavě zelené barvě, ideální pro oplocení zahrad i firemních
+              objektů.
             </p>
           </div>
         </div>
@@ -136,7 +136,7 @@ function Pletiva() {
             <h3 className="green">Pletivo Alugreen</h3>
             <p>
               Pletivo Alugreen v kombinaci s hliníkovým vzhledem a zeleným
-              povrchem vám zaručuí vysokou odolnost a zároveň estetický vzhled
+              povrchem zaručuje vysokou odolnost a zároveň estetický vzhled
               oplocení.
             </p>
           </div>
@@ -173,7 +173,7 @@ function Pletiva() {
             <h3 className="antra">Žebérkové ploty</h3>
             <p>
               Tento typ pletiva se hodí, jako efektivní a odolné řešení pro
-              krytí prostorů.
+              krytí a zabezpečení prostorů.
             </p>
           </div>
         </div>
