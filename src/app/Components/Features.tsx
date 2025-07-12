@@ -26,8 +26,8 @@ function Features() {
           </h4>
           <p className="feature__text">
             Díky našim mnohaletým zkušenostem jsme schopni profesionálně poradit
-            s výběrem materiálu dle Vaší situace a na základě Vašich potřeb a
-            požadavků.
+            s výběrem materiálu dle Vaší situace a na základě Vašich aktuálních
+            potřeb.
           </p>
         </div>
 
