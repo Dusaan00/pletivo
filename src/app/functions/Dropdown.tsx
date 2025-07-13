@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import "../Sass/_header.scss";
+import { basePath } from "../functions/Env";
 
 type DropdownProps = {
   triggerText: string;
@@ -33,6 +34,7 @@ export default function Dropdown({
         !dropdownRef.current.contains(event.target)
       ) {
         setIsOpen(false);
+        setMouseIsInside(false); // Reset mouseIsInside on outside click
       }
     };
 
@@ -51,8 +53,9 @@ export default function Dropdown({
   // Handle close button click - prevent event bubbling
   const handleCloseClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
+    e.preventDefault(); // Prevent any default behavior
     setIsOpen(false);
-    // Don't change mouseIsInside state - let it remain true since mouse is still inside
+    setMouseIsInside(false); // Reset mouseIsInside to ensure arrow resets
   };
 
   // Handle mouse enter - only open if mouse wasn't already inside
@@ -78,7 +81,12 @@ export default function Dropdown({
         aria-expanded={isOpen}
         aria-controls="sortiment-dropdown"
       >
-        {triggerText}
+        <span className="dropdown-container">
+          {triggerText}
+          <svg className="dropdown-arrow">
+            <use href={`${basePath}/sprite2.svg#icon-arrow-right`}></use>
+          </svg>
+        </span>
       </Link>
       <ul
         id="sortiment-dropdown"

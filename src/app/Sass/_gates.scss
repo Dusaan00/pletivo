@@ -21,6 +21,11 @@
       font-size: 5.25rem;
     }
 
+    @media (max-width: 438px) {
+      line-height: 1.1;
+      padding-bottom: 2rem;
+    }
+
     @media (max-width: 420px) {
       font-size: 4.15rem;
     }
