@@ -10,8 +10,7 @@ function Gates() {
       <p className="gates-intro">
         Brány a branky vyrábíme převážně na zakázku. Níže můžete vidět příklady
         bran a branek, které pro Vás můžeme realizovat i společně s kompletní
-        stavbou oplocení. Brány uvedené níže jsou pouze příklady, jsme schopni
-        vyrobit a dodat i mnoho jiných bran/branek.
+        stavbou oplocení. Dodáváme brány dvoukřídlé i jednokřídlé.
       </p>
       <div className="gates-container">
         <div className="gates-item">
