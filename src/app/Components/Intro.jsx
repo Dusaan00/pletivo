@@ -26,10 +26,12 @@ function Intro() {
           <hr className="intro-divider" />
           <ul className="intro-list">
             <li>
-              <span>Výroba pletiva, panely 3D/2D, brány, branky</span>
+              <span>
+                Výroba pletiva, panely 3D/2D, brány, branky, mobilní oplocení
+              </span>
             </li>
             <li>
-              <span>Stavby plotů na klíč a zámečnické práce</span>
+              <span>Stavby plotů na klíč, a zámečnické práce</span>
             </li>
             <li>
               <span>Desítky let praxe v oboru</span>
