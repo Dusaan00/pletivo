@@ -8,10 +8,12 @@ function Sloupky() {
     <section className="sloupky">
       <h2 className="sloupky-title">Sloupky & příslušenství</h2>
       <p className="sloupky-intro">
-        V případě zájmu o materiál nám odešlete poptávku přes formulář,
-        zavolejte, nebo napište email. Materiál jsme schopni Vám ještě ten samý
-        den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám,
-        do místa určení.
+        K oplocení (pletivo, panely 3D/2D) samozřejmě dodáváme i veškerá
+        potřebná příslušenství, jako jsou sloupky, vzpěry, vázací dráty, ostnaté
+        dráty, atd. V případě zájmu o materiál nám odešlete poptávku přes
+        formulář, zavolejte, nebo napište email. Materiál jsme schopni Vám ještě
+        ten samý den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě
+        k Vám, do místa určení.
       </p>
       <div className="sloupky-container">
         <div className="sloupky-item">
@@ -30,6 +32,18 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
+            src={`${basePath}/sloupky/sloupekpvp.webp`}
+            alt="Pletivo Alugreen"
+            width={300}
+            height={500}
+            className="sloupky-img"
+          />
+          <p className="sloupky-text">Sloupek PVC – ⌀42</p>
+          <button className="sloupky-button">Odeslat poptávku</button>
+        </div>
+
+        <div className="sloupky-item">
+          <Image
             src={`${basePath}/sloupky/vzperantracit.webp`}
             alt="Pletivo antracit"
             width={300}
@@ -40,18 +54,6 @@ function Sloupky() {
           <Link href="/form">
             <button className="sloupky-button">Odeslat poptávku</button>
           </Link>
-        </div>
-
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/sloupekpvp.webp`}
-            alt="Pletivo Alugreen"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Sloupek PVC – ⌀42</p>
-          <button className="sloupky-button">Odeslat poptávku</button>
         </div>
 
         <div className="sloupky-item">
@@ -84,20 +86,6 @@ function Sloupky() {
 
         <div className="sloupky-item">
           <Image
-            src={`${basePath}/sloupky/vzperazn.webp`}
-            alt="Pletivo Bezinal"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Vzpěra zinková – ⌀38mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
-        </div>
-
-        <div className="sloupky-item">
-          <Image
             src={`${basePath}/sloupky/sloupekgreen.webp`}
             alt="Pletivo Bezinal"
             width={300}
@@ -119,6 +107,20 @@ function Sloupky() {
             className="sloupky-img"
           />
           <p className="sloupky-text">Vzpěra zelená – ⌀38mm</p>
+          <Link href="/form">
+            <button className="sloupky-button">Odeslat poptávku</button>
+          </Link>
+        </div>
+
+        <div className="sloupky-item">
+          <Image
+            src={`${basePath}/sloupky/vzperazn.webp`}
+            alt="Pletivo Bezinal"
+            width={300}
+            height={500}
+            className="sloupky-img"
+          />
+          <p className="sloupky-text">Vzpěra zinková – ⌀38mm</p>
           <Link href="/form">
             <button className="sloupky-button">Odeslat poptávku</button>
           </Link>
