@@ -44,6 +44,7 @@ function Header() {
                   href: "/SloupkyPrislusenstvi",
                   label: "Sloupky & příslušenství",
                 },
+                { href: "/MobilniOploceni", label: "Mobilní oplocení" },
               ]}
             />
             <li className="user-nav__box--item">

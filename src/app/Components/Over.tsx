@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { basePath } from "../functions/Env";
 
-function Overview() {
+function Over() {
   return (
     <div className="over-container">
       <h1 className="over-title">Naše produkty</h1>
@@ -107,4 +107,4 @@ function Overview() {
   );
 }
 
-export default Overview;
+export default Over;

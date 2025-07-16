@@ -1,0 +1,51 @@
+@use "./variables" as *;
+
+.mobile {
+  color: #333;
+  background-color: #f7f7f7;
+  padding: 2rem;
+  font-family: "Source_Sans_3", sans-serif;
+}
+
+.mobile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.mobile-text {
+  margin-right: 2rem;
+}
+
+.mobile-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px 0px #ccc;
+}
+
+.mobile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.mobile-title {
+  font-size: clamp(1.5rem, 5vw, 4rem);
+}
+
+.mobile-intro {
+  font-size: clamp(1rem, 3vw, 2.25rem);
+}
+
+@media (min-width: 1024px) {
+  .mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 72.5vh;
+  }
+}

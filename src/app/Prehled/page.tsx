@@ -1,9 +1,9 @@
-import Overview from "../Components/Overview";
+import Over from "../Components/Over";
 
 export const metadata = {
   title: "Pletivo Grygov | Výroba Pletiva | Zakázková výroba",
 };
 
 export default function Page() {
-  return <Overview />;
+  return <Over />;
 }
