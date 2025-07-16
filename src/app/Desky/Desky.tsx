@@ -93,7 +93,8 @@ function Desky() {
               Plastové desky mají nižší hmotnost než betonové podhrabové desky,
               stále však jde o desky s dlouhou životností a estetickým
               provedením. Plastové desky díky svým vlastnostem nerezaví a
-              nedochází u nich ke korozi.
+              nedochází u nich ke korozi. Díky nižší hmotnosti není usazovaní
+              těchto desek tolik fyzicky náročné.
             </p>
           </div>
         </div>
