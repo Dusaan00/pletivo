@@ -36,8 +36,8 @@ function Header() {
               defaultHref="/Prehled"
               items={[
                 { href: "/Prehled", label: "Celý sortiment" },
-                { href: "/PletivaPage", label: "Pletiva" },
-                { href: "/PanelyPage", label: "Panely 3D/2D" },
+                { href: "/Pletivo", label: "Pletiva" },
+                { href: "/Panely3D2D", label: "Panely 3D/2D" },
                 { href: "/Brany", label: "Brány & Branky" },
                 { href: "/PodhraboveDesky", label: "Podhrabové desky" },
                 {

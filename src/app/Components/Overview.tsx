@@ -9,7 +9,7 @@ function Overview() {
       <h1 className="over-title">Naše produkty</h1>
       <div className="over-grid">
         <div className="over-item">
-          <Link href="/PletivaPage">
+          <Link href="/Pletivo">
             <Image
               src={`${basePath}/pletivo-grygov.jpg`}
               width={350}
@@ -22,7 +22,7 @@ function Overview() {
         </div>
 
         <div className="over-item">
-          <Link href="/PanelyPage">
+          <Link href="/Panely3D2D">
             <Image
               src={`${basePath}/panely-pletivo-grygov.png`}
               width={350}
