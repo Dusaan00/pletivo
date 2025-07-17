@@ -44,9 +44,23 @@ const isProd = process.env.NODE_ENV === "production";
 const basePath = isProd ? "" : "";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pletivogrygov.cz"),
   title: "Výroba Pletiva Grygov | Pletivo, Panely 3D/2D, Brány, Sloupky",
   description:
     "Pletivo od českého výrobce. Nabízíme pletiva, panely 3D/2D, brány, branky, sloupky a příslušenství pro kompletní stavbu plotu s rychlým dodáním.",
+  robots: "index, follow",
+  openGraph: {
+    title: "Výroba Pletiva Grygov | Pletivo, Panely 3D/2D, Brány, Sloupky",
+    description:
+      "Pletivo od českého výrobce. Nabízíme pletiva, panely 3D/2D, brány, branky, sloupky a příslušenství pro kompletní stavbu plotu s rychlým dodáním.",
+    images: [{ url: "/opengraph-image.png" }],
+    url: "https://pletivogrygov.cz/",
+    type: "website",
+    siteName: "pletivogrygov",
+  },
+  alternates: {
+    canonical: "https://pletivogrygov.cz/",
+  },
 };
 
 export default function RootLayout({
@@ -55,6 +69,16 @@ export default function RootLayout({
   return (
     <html lang="cs" data-env={process.env.NODE_ENV}>
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="Content-Language" content="cs" />
+        <meta name="D.Kulíšek" content="Pletivo Grygov" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -73,6 +97,8 @@ export default function RootLayout({
           href={`${basePath}/favicon-16x16.png`}
         />
         <link rel="manifest" href={`${basePath}/site.webmanifest`} />
+        <link rel="me" href="https://www.instagram.com/pletivo_grygov/" />
+        <link rel="me" href="https://www.facebook.com/PletivoGrygov.cz" />
       </head>
       <body>
         <Scroller />
