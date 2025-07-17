@@ -37,16 +37,18 @@ function About() {
                 width={300}
                 height={135}
                 className="section-about-para-ii-pic"
+                loading="lazy"
               />
             </div>
           </div>
           <div className="section-about-right">
             <Image
               src={`${basePath}/pletivogrygov.jpg`}
-              alt="Title image for Výroba Pletiva Grygov"
+              alt="Výroba Pletiva - historie firmy"
               width={750}
               height={450}
               className="intro-image"
+              loading="lazy"
             />
           </div>
         </div>

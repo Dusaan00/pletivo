@@ -17,7 +17,7 @@ function Panely() {
         <div className="panely-item">
           <Image
             src={`${basePath}/pletivaa/panelgreen.png`}
-            alt="Pletivo zelené"
+            alt="3D panely v zelené barvě"
             width={300}
             height={500}
             className="panely-img"
@@ -31,7 +31,7 @@ function Panely() {
         <div className="panely-item">
           <Image
             src={`${basePath}/pletivaa/ant.png`}
-            alt="Pletivo antracit"
+            alt="Panely 3D antracit"
             width={300}
             height={500}
             className="panely-img gg"
@@ -45,7 +45,7 @@ function Panely() {
         <div className="panely-item">
           <Image
             src={`${basePath}/pletivaa/zinc.png`}
-            alt="Pletivo Alugreen"
+            alt="Panely 3D zinkové"
             width={300}
             height={500}
             objectFit="cover"
@@ -60,7 +60,7 @@ function Panely() {
         <div className="panely-item">
           <Image
             src={`${basePath}/pletivaa/dvad.png`}
-            alt="Pletivo Bezinal"
+            alt="Panely 2D zinkové"
             width={300}
             height={500}
             className="panely-img"
@@ -74,7 +74,7 @@ function Panely() {
         <div className="panely-item">
           <Image
             src={`${basePath}/sloupky/jeklantracit.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupky antracit"
             width={300}
             height={500}
             className="panely-img"
@@ -88,7 +88,7 @@ function Panely() {
         <div className="panely-item">
           <Image
             src={`${basePath}/sloupky/jeklzinc.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupky zinkové"
             width={300}
             height={500}
             className="panely-img"
@@ -102,7 +102,7 @@ function Panely() {
         <div className="panely-item">
           <Image
             src={`${basePath}/sloupky/jeklgreen.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupky zelené"
             width={300}
             height={500}
             className="panely-img"
@@ -119,9 +119,10 @@ function Panely() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/panelgreen.png`}
-              alt="Pletivo zelené"
+              alt="3D panely v zelené barvě"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
@@ -138,9 +139,10 @@ function Panely() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/gg.webp`}
-              alt="Pletivo antracit"
+              alt="Panely 3D antracit"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
@@ -157,13 +159,14 @@ function Panely() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/zinc.png`}
-              alt="Pletivo Alugreen"
+              alt="Panely 3D zinkové"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
-            <h3 className="antra">Panely 3D - zinkové</h3>
+            <h3 className="antra">Panely 3D zinkové</h3>
             <p>
               3D panely v zinkovém provedení se vyznačují skvělou odolností vůži
               korozi a dlouhou životností, zároveň je to elegantní a funkční
@@ -177,13 +180,14 @@ function Panely() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/dvad.png`}
-              alt="Pletivo Bezinal"
+              alt="Panely 2D zinkové"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
-            <h3 className="antra">Panely 2D - zinkové</h3>
+            <h3 className="antra">Panely 2D zinkové</h3>
             <p>
               Tyto 2D zinkové panely mají díky dvojitým vodorovným drátům
               skvělou pevnost, tuhost a odolnost. Tento typ panelu využiteje

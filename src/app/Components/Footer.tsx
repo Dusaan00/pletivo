@@ -14,7 +14,7 @@ function Footer() {
             <ScrollToTop href="/" className="logo__link">
               <Image
                 src={`${basePath}/loga/Ploty-logo.webp`}
-                alt="Ploty Grygov Logo"
+                alt="Pletivo Grygov Logo"
                 className="logo"
                 loading="lazy"
                 width={130}

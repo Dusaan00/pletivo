@@ -97,7 +97,7 @@ function Over() {
               width={350}
               height={350}
               className="over-photo"
-              alt="Sloupky k oplocení na prodej"
+              alt="Mobilní oplocení"
             />
           </Link>
           <h2 className="over-subtitle">Mobilní oplocení</h2>

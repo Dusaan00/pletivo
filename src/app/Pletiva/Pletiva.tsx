@@ -20,7 +20,7 @@ function Pletiva() {
         <div className="pletivaa-item">
           <Image
             src={`${basePath}/pletivaa/green.jpg`}
-            alt="Pletivo zelené"
+            alt="Poplastované pletivo zelené"
             width={300}
             height={500}
             className="pletivaa-img"
@@ -34,7 +34,7 @@ function Pletiva() {
         <div className="pletivaa-item">
           <Image
             src={`${basePath}/pletivaa/antracit.jpg`}
-            alt="Pletivo antracit"
+            alt="Poplastované pletivo antracit"
             width={300}
             height={500}
             className="pletivaa-img"
@@ -62,7 +62,7 @@ function Pletiva() {
         <div className="pletivaa-item">
           <Image
             src={`${basePath}/pletivaa/bezinal.jpg`}
-            alt="Pletivo Bezinal"
+            alt="Pletivo Bezinal ze slitiny zinku a hliníku"
             width={300}
             height={500}
             className="pletivaa-img"
@@ -76,7 +76,7 @@ function Pletiva() {
         <div className="pletivaa-item">
           <Image
             src={`${basePath}/pletivaa/zeberkove.webp`}
-            alt="Pletivo Bezinal"
+            alt="Žebérkové pletivo"
             width={300}
             height={500}
             className="pletivaa-img"
@@ -93,9 +93,10 @@ function Pletiva() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/zelenev.jpg`}
-              alt="Pletivo zelené"
+              alt="Poplastované pletivo zelené"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
@@ -112,9 +113,10 @@ function Pletiva() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/antracitv.jpg`}
-              alt="Pletivo antracit"
+              alt="Poplastované pletivo antracit"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
@@ -133,6 +135,7 @@ function Pletiva() {
               alt="Pletivo Alugreen"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
@@ -149,9 +152,10 @@ function Pletiva() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/bezinalv.jpg`}
-              alt="Pletivo Bezinal"
+              alt="Pletivo Bezinal ze slitiny zinku a hlíniku"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">
@@ -167,9 +171,10 @@ function Pletiva() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/pletivaa/zeberkove.webp`}
-              alt="Pletivo Alugreen"
+              alt="Žebérkové pletivo"
               width={300}
               height={400}
+              loading="lazy"
             />
           </div>
           <div className="xplain-text">

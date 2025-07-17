@@ -26,28 +26,32 @@ function Proc() {
                   width={500}
                   height={300}
                   className="proc-photo"
-                  alt="Výroba Pletiva Grygov"
+                  alt="Pletivo a sloupky ke stavbě plotu"
+                  loading="lazy"
                 />{" "}
                 <Image
                   src={`${basePath}/pletivaa/pletvo.webp`}
                   width={500}
                   height={300}
                   className="proc-photo"
-                  alt="Výroba Pletiva Grygov"
+                  alt="Balíky pletiv ke stavbě plotu"
+                  loading="lazy"
                 />{" "}
                 <Image
                   src={`${basePath}/vyroba-pletiva3.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"
-                  alt="Výroba Pletiva Grygov"
+                  alt="Nezbytná příslušenství ke stavbě plotu"
+                  loading="lazy"
                 />{" "}
                 <Image
                   src={`${basePath}/vyroba-pletiva4.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"
-                  alt="Výroba Pletiva Grygov"
+                  alt="Výroba pletiva v Pletivo Grygov"
+                  loading="lazy"
                 />{" "}
               </div>{" "}
             </div>{" "}

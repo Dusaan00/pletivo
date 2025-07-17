@@ -16,7 +16,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/gatentracit.webp`}
-            alt="Pletivo zelené"
+            alt="Brána dvoukřídlá antracit"
             width={300}
             height={500}
             className="gates-img"
@@ -32,7 +32,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/gatezn.webp`}
-            alt="Pletivo antracit"
+            alt="Branka Zinková"
             width={300}
             height={500}
             className="gates-img"
@@ -46,7 +46,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/brankavypln.webp`}
-            alt="Pletivo Alugreen"
+            alt="Branka s výplní ze svařovaného pletiva"
             width={300}
             height={500}
             objectFit="cover"
@@ -61,7 +61,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/jekl.webp`}
-            alt="Pletivo Bezinal"
+            alt="Jeklová branka"
             width={300}
             height={500}
             className="gates-img"
@@ -75,7 +75,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/ggate.webp`}
-            alt="Pletivo Bezinal"
+            alt="Jeklová brána"
             width={300}
             height={500}
             className="gates-img"
@@ -89,7 +89,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/jeklgate.webp`}
-            alt="Pletivo Bezinal"
+            alt="Jeklová brána"
             width={300}
             height={500}
             className="gates-img"
@@ -103,7 +103,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/jeklgateii.webp`}
-            alt="Pletivo Bezinal"
+            alt="Jeklová brána"
             width={300}
             height={500}
             className="gates-img"
@@ -117,7 +117,7 @@ function Gates() {
         <div className="gates-item">
           <Image
             src={`${basePath}/gates/jeklgg.webp`}
-            alt="Pletivo Bezinal"
+            alt="Jeklová brána"
             width={300}
             height={500}
             className="gates-img"

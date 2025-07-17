@@ -17,7 +17,7 @@ function Desky() {
         <div className="desky-item">
           <Image
             src={`${basePath}/deskyy/deskybeton.webp`}
-            alt="Pletivo zelené"
+            alt="Betonové podhrabové desky"
             width={300}
             height={500}
             className="desky-img"
@@ -31,7 +31,7 @@ function Desky() {
         <div className="desky-item">
           <Image
             src={`${basePath}/deskyy/plast.webp`}
-            alt="Pletivo antracit"
+            alt="Plastové podhrabové desky"
             width={300}
             height={500}
             className="desky-img"
@@ -45,7 +45,7 @@ function Desky() {
         <div className="desky-item">
           <Image
             src={`${basePath}/deskyy/drzaky.webp`}
-            alt="Pletivo Alugreen"
+            alt="Držáky podhrabových desek"
             width={300}
             height={500}
             className="desky-img"
@@ -62,7 +62,7 @@ function Desky() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/deskyy/deskybeton.webp`}
-              alt="Pletivo zelené"
+              alt="Betonové podhrabové desky"
               width={300}
               height={400}
             />
@@ -82,7 +82,7 @@ function Desky() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/deskyy/plast.webp`}
-              alt="Pletivo antracit"
+              alt="Plastové podhrabové desky"
               width={300}
               height={400}
             />
@@ -103,7 +103,7 @@ function Desky() {
           <div className="xplain-img">
             <Image
               src={`${basePath}/deskyy/drzaky.webp`}
-              alt="Pletivo Alugreen"
+              alt="Držáky podhrabových desek"
               width={300}
               height={400}
             />

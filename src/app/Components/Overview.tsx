@@ -55,6 +55,7 @@ function Overview() {
               height={350}
               className="over-photo"
               alt="Prodej podhrabových desek"
+              loading="lazy"
             />
           </Link>
           <h2 className="over-subtitle">Podhrabové desky</h2>
@@ -68,6 +69,7 @@ function Overview() {
               height={350}
               className="over-photo"
               alt="Sloupky k oplocení na prodej"
+              loading="lazy"
             />
           </Link>
           <h2 className="over-subtitle">Sloupky & příslušenství</h2>
@@ -85,6 +87,7 @@ function Overview() {
               height={350}
               className="over-photo"
               alt="Stavby plotů na klíč"
+              loading="lazy"
             />
           </Link>
           <h2 className="over-subtitle">Stavby plotů na klíč</h2>
@@ -97,7 +100,8 @@ function Overview() {
               width={350}
               height={350}
               className="over-photo"
-              alt="Sloupky k oplocení na prodej"
+              alt="Mobilní oplocení"
+              loading="lazy"
             />
           </Link>
           <h2 className="over-subtitle">Mobilní oplocení</h2>

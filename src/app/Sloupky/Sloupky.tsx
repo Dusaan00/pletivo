@@ -19,7 +19,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/sloupekantracit.webp`}
-            alt="Pletivo zelené"
+            alt="Sloupek antracit"
             width={300}
             height={500}
             className="sloupky-img"
@@ -33,7 +33,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/sloupekpvp.webp`}
-            alt="Pletivo Alugreen"
+            alt="Sloupek PVC"
             width={300}
             height={500}
             className="sloupky-img"
@@ -45,7 +45,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/vzperantracit.webp`}
-            alt="Pletivo antracit"
+            alt="Vzpěra antracit"
             width={300}
             height={500}
             className="sloupky-img"
@@ -59,7 +59,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/vzperapvp.webp`}
-            alt="Pletivo Bezinal"
+            alt="Vzpěra PVC"
             width={300}
             height={500}
             className="sloupky-img"
@@ -73,7 +73,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/sloupekzinc.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupek zinkový"
             width={300}
             height={500}
             className="sloupky-img"
@@ -87,7 +87,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/sloupekgreen.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupek zelený"
             width={300}
             height={500}
             className="sloupky-img"
@@ -101,7 +101,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/vzperagreen.webp`}
-            alt="Pletivo Bezinal"
+            alt="Vzpěra zelená"
             width={300}
             height={500}
             className="sloupky-img"
@@ -115,7 +115,7 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/vzperazn.webp`}
-            alt="Pletivo Bezinal"
+            alt="Vzpěra zinková"
             width={300}
             height={500}
             className="sloupky-img"
@@ -129,10 +129,11 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/jeklantracit.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupek JEKL - antracit"
             width={300}
             height={500}
             className="sloupky-img"
+            loading="lazy"
           />
           <p className="sloupky-text">Sloupek JEKL - antracit</p>
           <Link href="/form">
@@ -143,10 +144,11 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/jeklzinc.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupek JEKL - zinkový"
             width={300}
             height={500}
             className="sloupky-img"
+            loading="lazy"
           />
           <p className="sloupky-text">Sloupek JEKL - zinkový</p>
           <Link href="/form">
@@ -157,10 +159,11 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/jeklgreen.webp`}
-            alt="Pletivo Bezinal"
+            alt="Sloupek JEKL - zelený"
             width={300}
             height={500}
             className="sloupky-img"
+            loading="lazy"
           />
           <p className="sloupky-text">Sloupek JEKL - zelený</p>
           <Link href="/form">
@@ -171,10 +174,11 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/dratantra.webp`}
-            alt="Pletivo Bezinal"
+            alt="Napínací drát antracit"
             width={300}
             height={500}
             className="sloupky-img"
+            loading="lazy"
           />
           <p className="sloupky-text">Napínací drát – antracit</p>
           <Link href="/form">
@@ -185,10 +189,11 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/dratgreen.webp`}
-            alt="Pletivo Bezinal"
+            alt="Napínací drát zelený"
             width={300}
             height={500}
             className="sloupky-img"
+            loading="lazy"
           />
           <p className="sloupky-text">Napínací drát – zelený</p>
           <Link href="/form">
@@ -199,10 +204,11 @@ function Sloupky() {
         <div className="sloupky-item">
           <Image
             src={`${basePath}/sloupky/dratzink.webp`}
-            alt="Pletivo Bezinal"
+            alt="Napínací drát zinkový"
             width={300}
             height={500}
             className="sloupky-img"
+            loading="lazy"
           />
           <p className="sloupky-text">Napínací drát – Zinkový</p>
           <Link href="/form">
