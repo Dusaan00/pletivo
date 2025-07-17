@@ -4,6 +4,7 @@ import "../app/styles/globals.scss";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Scroller from "./Components/Scroller";
+import Head from "next/head";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -68,7 +69,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="cs" data-env={process.env.NODE_ENV}>
-      <head>
+      <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="Content-Language" content="cs" />
@@ -99,7 +100,132 @@ export default function RootLayout({
         <link rel="manifest" href={`${basePath}/site.webmanifest`} />
         <link rel="me" href="https://www.instagram.com/pletivo_grygov/" />
         <link rel="me" href="https://www.facebook.com/PletivoGrygov.cz" />
-      </head>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Pletivo Grygov",
+              description:
+                "Firma Pletivo Grygov se zabývá výrobou pletiva a zámečnictvím. Prodává pletivo, 3D/2D panely, brány, sloupky a příslušenství pro kompletní montáž plotu. Firma je zaměřena na kvalitu, rychlé dodání a zákaznicky orientovaný přístup. Dopravu materiálu a stavby plotů na klíč zajišťuje po celé Moravě.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Za Tratí 255",
+                addressLocality: "Grygov",
+                postalCode: "783 73",
+                addressCountry: "CZ",
+              },
+              telephone: "+420608705547",
+              url: "https://pletivogrygov.cz/",
+              paymentAccepted: [
+                "Hotovost",
+                "Kreditní karta",
+                "Bankovní převod",
+              ],
+              openingHours: "Po-Pá 07:30-16:00",
+              sameAs: [
+                "https://www.facebook.com/PletivoGrygov.cz",
+                "https://www.instagram.com/pletivo_grygov/",
+              ],
+              serviceType: [
+                {
+                  "@type": "Service",
+                  name: "Výroba a prodej pletiva",
+                  description:
+                    "Vyrábíme a prodáváme pletiva. Nabízíme poplastovaná pletiva v zelené a antracitové barvě, odolné pletivo bezinal ze slitiny hliníku a mědi. Výšky 150-200cm",
+                  offers: {
+                    "@type": "Offer",
+                    price: "Cena dle individuálního vyčíslení",
+                    priceCurrency: "CZK",
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  },
+                },
+                {
+                  "@type": "Service",
+                  name: "Prodej panelů 3D/2D",
+                  description:
+                    "Prodáváme panely 3D/2D v antracitové a zelené barvě, které poskytují pěknou vizuální bariéru kolem pozemku, dále nabízíme panely 3D/2D pozinkované, které jsou ideální v místech, kde se klade důraz na bezpečnost.",
+                  offers: {
+                    "@type": "Offer",
+                    price: "Cena dle individuálního vyčíslení",
+                    priceCurrency: "CZK",
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  },
+                },
+                {
+                  "@type": "Service",
+                  name: "Brány a branky",
+                  description:
+                    "Vyrábíme brány a branky k oplocení na zakázku. Dodáváme dvoukřídlé i jendokřídlé brány, brány s výplní z pletiva, z panelu, jeklové brány, zinkové brány a mnoho dalších.",
+                  offers: {
+                    "@type": "Offer",
+                    price: "Cena dle individuálního vyčíslení",
+                    priceCurrency: "CZK",
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  },
+                },
+                {
+                  "@type": "Service",
+                  name: "Podhrabové desky",
+                  description:
+                    "Dodáváme podhrabové desky, které se dají použít na oplocení v kombinaci s pletivem nebo panely 3D/2D. Máme k dispozici betonové podhrabové desky i lehčí plastové podhrabové desky.",
+                  offers: {
+                    "@type": "Offer",
+                    price: "Cena dle individuálního vyčíslení",
+                    priceCurrency: "CZK",
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  },
+                },
+                {
+                  "@type": "Service",
+                  name: "Sloupky a příslušenství",
+                  description:
+                    "Nabízíme sloupky a vzpěry v zelené a antracitové bravě, zinkové sloupky a vzpěry, napínací dráty, ostnaté dráty, úchytky, a vše nezbytné příslušenství pro úspěšnou montáž plotu.",
+                  offers: {
+                    "@type": "Offer",
+                    price: "Cena dle individuálního vyčíslení",
+                    priceCurrency: "CZK",
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  },
+                },
+                {
+                  "@type": "Service",
+                  name: "Mobilní oplocení",
+                  description:
+                    "Nabízíme mobilní oplocení pro firmy či veřejnou správu do míst, které je potřeba na určitou dobu vyznačit a zabezpečit. Mobilní oplocení tak skvěle plní svou funkci flexibilního a rychlého řešení zabezpeční prostor.",
+                  offers: {
+                    "@type": "Offer",
+                    price: "Cena dle individuálního vyčíslení",
+                    priceCurrency: "CZK",
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  },
+                },
+                {
+                  "@type": "Service",
+                  name: "Stavby plotů na klíč",
+                  description:
+                    "Profesionální stavby plotů na klíč. Stavíme ploty z pleteného pletiva, ploty z 3D panelů.",
+                  offers: {
+                    "@type": "Offer",
+                    price: "Cena dle individuálního vyčíslení",
+                    priceCurrency: "CZK",
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+      </Head>
       <body>
         <Scroller />
         <Header />
