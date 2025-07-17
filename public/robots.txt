@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pletivogrygov.cz
+
+# Sitemaps
+Sitemap: https://pletivogrygov.cz/sitemap.xml
