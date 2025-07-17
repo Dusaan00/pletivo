@@ -8,7 +8,7 @@ function Desky() {
     <section className="desky">
       <h2 className="desky-title">Podhrabové desky</h2>
       <p className="desky-intro">
-        V případě zájmu o materiál nám odešlete poptávku přes formulář,
+        V případě zájmu o podhrabové desky nám odešlete poptávku přes formulář,
         zavolejte, nebo napište email. Materiál jsme schopni Vám ještě ten samý
         den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám,
         do místa určení.

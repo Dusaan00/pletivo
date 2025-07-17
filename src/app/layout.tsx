@@ -44,9 +44,9 @@ const isProd = process.env.NODE_ENV === "production";
 const basePath = isProd ? "" : "";
 
 export const metadata: Metadata = {
-  title: "Pletivo Grygov | Výroba Pletiva | Zakázková výroba",
+  title: "Výroba Pletiva Grygov | Pletivo, Panely 3D/2D, Brány, Sloupky",
   description:
-    "Výroba pletiva, prodej pletiva a panelů 3D/2D, zámečnická výroba, výroba bran a branek",
+    "Pletivo od českého výrobce. Nabízíme pletiva, panely 3D/2D, brány, branky, sloupky a příslušenství pro kompletní stavbu plotu s rychlým dodáním.",
 };
 
 export default function RootLayout({

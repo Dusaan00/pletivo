@@ -8,10 +8,13 @@ function Pletiva() {
     <section className="pletivaa">
       <h2 className="pletivaa-title">Pletiva</h2>
       <p className="pletivaa-intro">
-        V případě zájmu o pletivo nám odešlete poptávku přes formulář,
-        zavolejte, nebo napište email. Pletivo jsme schopni Vám ještě ten samý
-        den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám,
-        do místa určení.
+        Pletivo si sami vyrábíme v naší firmě. Mám k dispozici poplastovaná
+        pletiva, pletivo alugreen (vyšší cena) a velmi odolné pletivo bezinal ze
+        slitiny zinku a hliníku. Dále na zakázku vyrábíme žebérková pletiva. V
+        případě zájmu o pletivo nám odešlete poptávku přes formulář, zavolejte,
+        nebo napište email. Pletivo jsme schopni Vám ještě ten samý den
+        nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám, do
+        místa určení.
       </p>
       <div className="pletivaa-container">
         <div className="pletivaa-item">
