@@ -107,6 +107,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
+              image: {
+                "@type": "ImageObject",
+                url: "https://pletivogrygov.cz/opengraph-image.png",
+                width: 1200,
+                height: 630,
+              },
               name: "Pletivo Grygov",
               description:
                 "Firma Pletivo Grygov se zabývá výrobou pletiva a zámečnictvím. Prodává pletivo, 3D/2D panely, brány, sloupky a příslušenství pro kompletní montáž plotu. Firma je zaměřena na kvalitu, rychlé dodání a zákaznicky orientovaný přístup. Dopravu materiálu a stavby plotů na klíč zajišťuje po celé Moravě.",
@@ -212,7 +218,7 @@ export default function RootLayout({
                   "@type": "Service",
                   name: "Stavby plotů na klíč",
                   description:
-                    "Profesionální stavby plotů na klíč. Stavíme ploty z pleteného pletiva, ploty z 3D panelů.",
+                    "Profesionální stavby plotů na klíč. Stavíme ploty z pleteného pletiva, ploty z 3D panelů, betonové ploty.",
                   offers: {
                     "@type": "Offer",
                     price: "Cena dle individuálního vyčíslení",
