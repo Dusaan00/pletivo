@@ -116,6 +116,8 @@ export default function RootLayout({
               name: "Pletivo Grygov",
               description:
                 "Firma Pletivo Grygov se zabývá výrobou pletiva a zámečnictvím. Prodává pletivo, 3D/2D panely, brány, sloupky a příslušenství pro kompletní montáž plotu. Firma je zaměřena na kvalitu, rychlé dodání a zákaznicky orientovaný přístup. Dopravu materiálu a stavby plotů na klíč zajišťuje po celé Moravě.",
+              keywords:
+                "pletivo, poplastované pletivom, panely 3D, panely2D, plot na klíč, podhrabové desky, sloupky, vzpěry, ploty, Ploty Grygov, Ploty Olomouc, výroba pletiva, výroba pletiva Grygov, mobilní oplocení, stavba plotu na klíč, brána, branka",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Za Tratí 255",
@@ -135,6 +137,14 @@ export default function RootLayout({
                 "https://www.facebook.com/PletivoGrygov.cz",
                 "https://www.instagram.com/pletivo_grygov/",
               ],
+              twitter: {
+                card: "summary_large_image",
+                title:
+                  "Výroba Pletiva Grygov | Pletivo, Panely 3D/2D, Brány, Sloupky",
+                description:
+                  "Pletivo od českého výrobce. Nabízíme pletiva, panely 3D/2D, brány, branky, sloupky a příslušenství pro kompletní stavbu plotu s rychlým dodáním.",
+                images: ["/opengraph-image.png"],
+              },
               serviceType: [
                 {
                   "@type": "Service",
