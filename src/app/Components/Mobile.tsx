@@ -7,7 +7,7 @@ function Mobile() {
     <section className="mobile">
       <div className="mobile-container">
         <div className="mobile-text">
-          <h2 className="mobile-title">Mobilní oplocení</h2>
+          <h1 className="mobile-title">Mobilní oplocení</h1>
           <p className="mobile-intro">
             Můžeme vám poskytnout i mobilní oplocení. Vyzvednutí je možné
             kdykoliv během našich pracovních hodin, stačí nás kontaktovat.

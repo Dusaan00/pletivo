@@ -6,7 +6,7 @@ import { basePath } from "../functions/Env";
 function Panely() {
   return (
     <section className="panely">
-      <h2 className="panely-title">Panely 3D/2D</h2>
+      <h1 className="panely-title">Panely 3D/2D</h1>
       <p className="panely-intro">
         V případě zájmu o panely 3D/2D nám odešlete poptávku přes formulář,
         zavolejte, nebo napište email. Panely jsme schopni Vám ještě ten samý

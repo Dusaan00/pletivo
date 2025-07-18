@@ -6,7 +6,7 @@ import { basePath } from "../functions/Env";
 function Gates() {
   return (
     <section className="gates">
-      <h2 className="gates-title">Brány & branky</h2>
+      <h1 className="gates-title">Brány & branky</h1>
       <p className="gates-intro">
         Brány a branky vyrábíme převážně na zakázku. Níže můžete vidět příklady
         bran a branek, které pro Vás můžeme realizovat i společně s kompletní

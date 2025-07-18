@@ -6,7 +6,7 @@ import { basePath } from "../functions/Env";
 function Pletiva() {
   return (
     <section className="pletivaa">
-      <h2 className="pletivaa-title">Pletiva</h2>
+      <h1 className="pletivaa-title">Pletiva</h1>
       <p className="pletivaa-intro">
         Pletivo si sami vyrábíme v naší firmě. Mám k dispozici poplastovaná
         pletiva, pletivo alugreen (vyšší cena) a velmi odolné pletivo bezinal ze

@@ -6,7 +6,7 @@ import { basePath } from "../functions/Env";
 function Desky() {
   return (
     <section className="desky">
-      <h2 className="desky-title">Podhrabové desky</h2>
+      <h1 className="desky-title">Podhrabové desky</h1>
       <p className="desky-intro">
         V případě zájmu o podhrabové desky nám odešlete poptávku přes formulář,
         zavolejte, nebo napište email. Materiál jsme schopni Vám ještě ten samý

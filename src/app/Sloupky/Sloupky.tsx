@@ -6,7 +6,7 @@ import { basePath } from "../functions/Env";
 function Sloupky() {
   return (
     <section className="sloupky">
-      <h2 className="sloupky-title">Sloupky & příslušenství</h2>
+      <h1 className="sloupky-title">Sloupky & příslušenství</h1>
       <p className="sloupky-intro">
         K oplocení (pletivo, panely 3D/2D) samozřejmě dodáváme i veškerá
         potřebná příslušenství, jako jsou sloupky, vzpěry, vázací dráty, ostnaté
