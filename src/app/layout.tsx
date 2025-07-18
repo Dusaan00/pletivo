@@ -49,6 +49,8 @@ export const metadata: Metadata = {
   title: "Výroba Pletiva Grygov | Pletivo, Panely 3D/2D, Brány, Sloupky",
   description:
     "Pletivo od českého výrobce. Nabízíme pletiva, panely 3D/2D, brány, branky, sloupky a příslušenství pro kompletní stavbu plotu s rychlým dodáním.",
+  keywords:
+    "pletivo, poplastované pletivom, panely 3D, panely2D, plot na klíč, podhrabové desky, sloupky, vzpěry, ploty, Ploty Grygov, Ploty Olomouc, výroba pletiva, výroba pletiva Grygov, mobilní oplocení, stavba plotu na klíč, brána, branka",
   robots: "index, follow",
   openGraph: {
     title: "Výroba Pletiva Grygov | Pletivo, Panely 3D/2D, Brány, Sloupky",
