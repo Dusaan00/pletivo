@@ -1,0 +1,85 @@
+.cenik-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Helvetica", sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.table-wrapper {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  /* "Název" gets 2fr for more space, others get 1fr */
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr)
+    minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.table-header {
+  background: #f5f5f5;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 2px solid #ddd;
+}
+
+.table-header span {
+  padding: 10px;
+  text-align: left;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  white-space: normal; /* Allows text to wrap */
+  overflow-wrap: break-word; /* Breaks long words if needed */
+  line-height: 1.4; /* Improves readability when wrapped */
+
+  @media (max-width: 350px) {
+    line-height: 1.25;
+  }
+}
+
+.table-row {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+
+.table-row:hover {
+  background: #f9f9f9;
+}
+
+.cell {
+  padding: 10px;
+  text-align: left;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  white-space: normal; /* Allows text to wrap */
+  overflow-wrap: break-word; /* Breaks long words if needed */
+  line-height: 1.4; /* Improves readability when wrapped */
+}
+
+/* Adjustments for screens 600px and below */
+@media (max-width: 600px) {
+  .table-header span,
+  .cell {
+    font-size: 0.75rem; /* 12px - smaller font for better fit */
+    padding: 5px; /* Reduced padding to save space */
+  }
+}
+
+/* Further adjustments for screens 400px and below (close to 320px) */
+@media (max-width: 400px) {
+  .table-header span,
+  .cell {
+    font-size: 0.7rem; /* 11.2px - smallest readable size */
+    padding: 3px; /* Minimal padding for maximum content space */
+  }
+}

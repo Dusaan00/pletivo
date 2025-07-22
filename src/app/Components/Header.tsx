@@ -35,7 +35,7 @@ function Header() {
               triggerText="Sortiment"
               defaultHref="/Prehled"
               items={[
-                { href: "/Prehled", label: "Celý sortiment" },
+                { href: "/Cenik", label: "Ceník" },
                 { href: "/Pletivo", label: "Pletiva" },
                 { href: "/Panely3D2D", label: "Panely 3D/2D" },
                 { href: "/Brany", label: "Brány & Branky" },
