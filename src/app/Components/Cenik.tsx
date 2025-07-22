@@ -106,7 +106,7 @@ const Cenik = () => {
       <div className="table-wrapper">
         <div className="table-header">
           <span>Označení</span>
-          <span>Název</span>
+          <span>Produkt</span>
           <span>Cena za metr</span>
           <span>Množství</span>
           <span>Celkem s DPH</span>
