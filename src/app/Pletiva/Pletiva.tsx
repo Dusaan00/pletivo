@@ -14,7 +14,11 @@ function Pletiva() {
         případě zájmu o pletivo nám odešlete poptávku přes formulář, zavolejte,
         nebo napište email. Pletivo jsme schopni Vám ještě ten samý den
         nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám, do
-        místa určení.
+        místa určení. <br />
+        <span style={{ display: "block", fontWeight: "bold" }}>
+          Nabízíme následující výšky pletiv: 1.00m, 1.25m, 1.50m, 1.60m, 1.80m,
+          2.00m.
+        </span>
       </p>
       <div className="pletivaa-container">
         <div className="pletivaa-item">
