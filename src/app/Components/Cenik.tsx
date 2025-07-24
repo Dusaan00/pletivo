@@ -139,8 +139,14 @@ const Cenik = () => {
     },
     {
       name: "Panely 3D antracit 1730/2500",
-      unitPrice: 580.0,
-      totalDPH: 580.0,
+      unitPrice: 620.0,
+      totalDPH: 620.0,
+      dph: "21%",
+    },
+    {
+      name: "Panely 3D antracit 2030/2500",
+      unitPrice: 690.0,
+      totalDPH: 690.0,
       dph: "21%",
     },
   ];
