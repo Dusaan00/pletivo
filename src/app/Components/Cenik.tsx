@@ -155,7 +155,7 @@ const Cenik = () => {
     <div className="cenik-container">
       <h2 className="title">Pletivo Grygov Ceník</h2>
       <div className="vysvetlivky">
-        <h3 className="cenik-container-xplain">Vysvětlivky:</h3>
+        <h3 className="cenik-container-xplain">Poznámky:</h3>
         <p className="cenik-container-xplain-txt">
           Např. Pletivo zelené PVC 2.00m-2,5-55 má výšku 2 m, průměr drátu 2.5
           mm a velikost oka 55 mm.
