@@ -86,6 +86,90 @@ const Cenik = () => {
       totalDPH: 2625.0,
       dph: "21%",
     },
+    {
+      name: "Pletivo bezinal 1.00m-2,0-55",
+      unitPrice: 62.0,
+      m2: 1,
+      totalDPH: 62.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.25m-2,0-55",
+      unitPrice: 78.0,
+      m2: 1,
+      totalDPH: 78.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.50m-2,0-55",
+      unitPrice: 93.0,
+      m2: 1,
+      totalDPH: 93.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.60m-2,0-55",
+      unitPrice: 99.0,
+      m2: 1,
+      totalDPH: 99.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.80m-2,0-55",
+      unitPrice: 112.0,
+      m2: 1,
+      totalDPH: 112.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 2.00m-2,0-55",
+      unitPrice: 124.0,
+      m2: 1,
+      totalDPH: 124.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.00m-2,2-55",
+      unitPrice: 80.0,
+      m2: 1,
+      totalDPH: 80.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.25m-2,2-55",
+      unitPrice: 100.0,
+      m2: 1,
+      totalDPH: 100.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.50m-2,2-55",
+      unitPrice: 120.0,
+      m2: 1,
+      totalDPH: 120.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.60m-2,2-55",
+      unitPrice: 128.0,
+      m2: 1,
+      totalDPH: 128.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 1.80m-2,2-55",
+      unitPrice: 144.0,
+      m2: 1,
+      totalDPH: 144.0,
+      dph: "21%",
+    },
+    {
+      name: "Pletivo bezinal 2.00m-2,2-55",
+      unitPrice: 160.0,
+      m2: 1,
+      totalDPH: 160.0,
+      dph: "21%",
+    },
   ];
 
   const panelyData = [
@@ -151,6 +235,207 @@ const Cenik = () => {
     },
   ];
 
+  const sloupkyData = [
+    {
+      name: "Sloupek PVC 48/1500",
+      unitPrice: 170.0,
+      totalDPH: 170.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek PVC 48/1750",
+      unitPrice: 195.0,
+      totalDPH: 195.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek ZN/PVC 48/2000+ucpávka",
+      unitPrice: 230.0,
+      totalDPH: 230.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek ZN/PVC 48/2300+ucpávka",
+      unitPrice: 265.0,
+      totalDPH: 265.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek ZN/PVC 48/2500+ucpávka",
+      unitPrice: 285.0,
+      totalDPH: 285.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek PVC 48/2000",
+      unitPrice: 235.0,
+      totalDPH: 235.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek PVC 48/2300",
+      unitPrice: 275.0,
+      totalDPH: 275.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek PVC 48/2500",
+      unitPrice: 295.0,
+      totalDPH: 295.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek zelený PVC 60x40/2000",
+      unitPrice: 280.0,
+      totalDPH: 280.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek zelený PVC 60x40/2300",
+      unitPrice: 315.0,
+      totalDPH: 315.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek zelený PVC 60x40/2600",
+      unitPrice: 360.0,
+      totalDPH: 360.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek antracit PVC 60x40/2000",
+      unitPrice: 280.0,
+      totalDPH: 280.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek antracit PVC 60x40/2300",
+      unitPrice: 315.0,
+      totalDPH: 315.0,
+      dph: "21%",
+    },
+    {
+      name: "Sloupek antracit PVC 60x40/2600",
+      unitPrice: 360.0,
+      totalDPH: 360.0,
+      dph: "21%",
+    },
+    {
+      name: "Objímka zelená PVC 60x40 mm průběžná",
+      unitPrice: 55.0,
+      totalDPH: 55.0,
+      dph: "21%",
+    },
+    {
+      name: "Objímka antracit PVC 60x40 mm průběžná",
+      unitPrice: 55.0,
+      totalDPH: 55.0,
+      dph: "21%",
+    },
+    {
+      name: "Vzpěra PVC 38/1750+spoj. materiál",
+      unitPrice: 190.0,
+      totalDPH: 190.0,
+      dph: "21%",
+    },
+    {
+      name: "Vzpěra PVC 38/2000+spoj. materiál",
+      unitPrice: 210.0,
+      totalDPH: 210.0,
+      dph: "21%",
+    },
+    {
+      name: "Vzpěra PVC 38/2300+spoj. materiál",
+      unitPrice: 240.0,
+      totalDPH: 240.0,
+      dph: "21%",
+    },
+    {
+      name: "Vzpěra PVC 38/2500+spoj. materiál",
+      unitPrice: 260.0,
+      totalDPH: 260.0,
+      dph: "21%",
+    },
+    {
+      name: "Napínací drát PVC 26 m",
+      unitPrice: 140.0,
+      totalDPH: 140.0,
+      dph: "21%",
+    },
+    {
+      name: "Napínací drát PVC 52 m",
+      unitPrice: 250.0,
+      totalDPH: 250.0,
+      dph: "21%",
+    },
+    {
+      name: "Napínací drát PVC 78 m",
+      unitPrice: 340.0,
+      totalDPH: 340.0,
+      dph: "21%",
+    },
+    {
+      name: "Napínací drát PVC 52 m antracit",
+      unitPrice: 260.0,
+      totalDPH: 260.0,
+      dph: "21%",
+    },
+    {
+      name: "Napínací drát PVC 78 m antracit",
+      unitPrice: 350.0,
+      totalDPH: 350.0,
+      dph: "21%",
+    },
+    {
+      name: "Napínací šroub PVC",
+      unitPrice: 22.0,
+      totalDPH: 22.0,
+      dph: "21%",
+    },
+    {
+      name: "Napínací šroub PVC antracit",
+      unitPrice: 29.0,
+      totalDPH: 29.0,
+      dph: "21%",
+    },
+    {
+      name: "Vázací drát PVC 50 m",
+      unitPrice: 140.0,
+      totalDPH: 140.0,
+      dph: "21%",
+    },
+    {
+      name: "Příchytka nap. drátu+šroubek",
+      unitPrice: 7.0,
+      totalDPH: 7.0,
+      dph: "21%",
+    },
+    {
+      name: "Objímka PVC 48 mm plechová",
+      unitPrice: 22.0,
+      totalDPH: 22.0,
+      dph: "21%",
+    },
+    {
+      name: "Krytka vzpěry al+pvc 38 mm",
+      unitPrice: 45.0,
+      totalDPH: 45.0,
+      dph: "21%",
+    },
+    {
+      name: "Krytka vzpěry 38 mm",
+      unitPrice: 18.0,
+      totalDPH: 18.0,
+      dph: "21%",
+    },
+    {
+      name: "Ucpávka PVC",
+      unitPrice: 20.0,
+      totalDPH: 20.0,
+      dph: "21%",
+    },
+  ];
+
   return (
     <div className="cenik-container">
       <h2 className="title">Pletivo Grygov Ceník</h2>
@@ -164,7 +449,9 @@ const Cenik = () => {
           Pletivo zelené a pletivo antracit jsou pletiva poplastovaná.
         </p>
         <p className="cenik-container-xplain-txt">
-          1 balík pletiva je dlouhý 25 m.
+          1 balík pletiva je dlouhý 25 m, (2 balíky = 50 m), pokud však budete
+          potřebovat např. 30 m pletiva, kontaktujte nás, a my pro vás pletivo o
+          takové délce vyrobíme.
         </p>
       </div>
       <div className="table-wrapper">
@@ -197,6 +484,26 @@ const Cenik = () => {
         </div>
         <div className="table-body">
           {panelyData.map((item, index) => (
+            <div key={index} className="table-row">
+              <span className="cell nazev">{item.name}</span>
+              <span className="cell">{item.unitPrice} Kč</span>
+              <span className="cell">{item.totalDPH} Kč</span>
+              <span className="cell">{item.dph}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="table-wrapper">
+        <div className="table-header">
+          <span>Sloupky, vzpěry, příslušenství</span>
+          <span>Cena za kus</span>
+
+          <span>Celkem s DPH</span>
+          <span>DPH</span>
+        </div>
+        <div className="table-body">
+          {sloupkyData.map((item, index) => (
             <div key={index} className="table-row">
               <span className="cell nazev">{item.name}</span>
               <span className="cell">{item.unitPrice} Kč</span>
