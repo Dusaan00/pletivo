@@ -449,70 +449,83 @@ const Cenik = () => {
           Pletivo zelené a pletivo antracit jsou pletiva poplastovaná.
         </p>
         <p className="cenik-container-xplain-txt">
-          1 balík pletiva je dlouhý 25 m, (2 balíky = 50 m), pokud však budete
-          potřebovat např. 30 m pletiva, kontaktujte nás, a my pro vás pletivo o
-          takové délce vyrobíme.
+          1 balík pletiva je dlouhý 25 m (např. 2 balíky = 50 m), pokud však
+          budete potřebovat např. 30 m pletiva, kontaktujte nás, a my pro vás
+          pletivo o takové délce vyrobíme.
         </p>
       </div>
-      <div className="table-wrapper">
-        <div className="table-header">
-          <span>Pletiva</span>
-          <span>Cena za metr</span>
-          <span>Množství</span>
-          <span>Celkem s DPH</span>
-          <span>DPH</span>
-        </div>
-        <div className="table-body">
-          {pletivaData.map((item, index) => (
-            <div key={index} className="table-row">
-              <span className="cell nazev">{item.name}</span>
-              <span className="cell">{item.unitPrice} Kč</span>
-              <span className="cell">{item.m2} m</span>
-              <span className="cell">{item.totalDPH} Kč</span>
-              <span className="cell">{item.dph}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="table-wrapper">
-        <div className="table-header">
-          <span>Panely 3D/2D</span>
-          <span>Cena za kus</span>
 
-          <span>Celkem s DPH</span>
-          <span>DPH</span>
+      <details className="dropdown-section">
+        <summary className="dropdown-summary">Pletiva</summary>
+        <div className="table-wrapper">
+          <div className="table-header">
+            <span>Pletiva</span>
+            <span>Cena za metr</span>
+            <span>Množství</span>
+            <span>Celkem s DPH</span>
+            <span>DPH</span>
+          </div>
+          <div className="table-body">
+            {pletivaData.map((item, index) => (
+              <div key={index} className="table-row">
+                <span className="cell nazev">{item.name}</span>
+                <span className="cell">{item.unitPrice} Kč</span>
+                <span className="cell">{item.m2} m</span>
+                <span className="cell">{item.totalDPH} Kč</span>
+                <span className="cell">{item.dph}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="table-body">
-          {panelyData.map((item, index) => (
-            <div key={index} className="table-row">
-              <span className="cell nazev">{item.name}</span>
-              <span className="cell">{item.unitPrice} Kč</span>
-              <span className="cell">{item.totalDPH} Kč</span>
-              <span className="cell">{item.dph}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      </details>
 
-      <div className="table-wrapper">
-        <div className="table-header">
-          <span>Sloupky, vzpěry, příslušenství</span>
-          <span>Cena za kus</span>
+      <details className="dropdown-section">
+        <summary className="dropdown-summary">Panely 3D/2D</summary>
+        <div className="table-wrapper">
+          <div className="table-header">
+            <span>Panely 3D/2D</span>
+            <span>Cena za kus</span>
 
-          <span>Celkem s DPH</span>
-          <span>DPH</span>
+            <span>Celkem s DPH</span>
+            <span>DPH</span>
+          </div>
+          <div className="table-body">
+            {panelyData.map((item, index) => (
+              <div key={index} className="table-row">
+                <span className="cell nazev">{item.name}</span>
+                <span className="cell">{item.unitPrice} Kč</span>
+                <span className="cell">{item.totalDPH} Kč</span>
+                <span className="cell">{item.dph}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="table-body">
-          {sloupkyData.map((item, index) => (
-            <div key={index} className="table-row">
-              <span className="cell nazev">{item.name}</span>
-              <span className="cell">{item.unitPrice} Kč</span>
-              <span className="cell">{item.totalDPH} Kč</span>
-              <span className="cell">{item.dph}</span>
-            </div>
-          ))}
+      </details>
+
+      <details className="dropdown-section">
+        <summary className="dropdown-summary">
+          Sloupky, vzpěry, příslušenství
+        </summary>
+        <div className="table-wrapper">
+          <div className="table-header">
+            <span>Sloupky, vzpěry, příslušenství</span>
+            <span>Cena za kus</span>
+
+            <span>Celkem s DPH</span>
+            <span>DPH</span>
+          </div>
+          <div className="table-body">
+            {sloupkyData.map((item, index) => (
+              <div key={index} className="table-row">
+                <span className="cell nazev">{item.name}</span>
+                <span className="cell">{item.unitPrice} Kč</span>
+                <span className="cell">{item.totalDPH} Kč</span>
+                <span className="cell">{item.dph}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </details>
     </div>
   );
 };

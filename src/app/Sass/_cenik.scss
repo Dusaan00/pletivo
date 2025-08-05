@@ -19,6 +19,7 @@
   background-color: #f0f7f0;
   border-radius: 5px;
   max-width: 600px;
+  margin-bottom: 1.5rem;
 }
 
 .cenik-container-xplain {
@@ -30,19 +31,60 @@
   font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
+.dropdown-section {
+  margin-bottom: 1rem;
+}
+
+.dropdown-summary {
+  display: flex;
+  justify-content: space-between; /* Pushes arrow to the right */
+  align-items: center; /* Centers items vertically */
+  background-color: #333;
+  color: #28b485;
+  padding: 2rem;
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+  position: relative; /* Ensures proper positioning context */
+}
+
+.dropdown-summary:hover {
+  background-color: lighten(#333, 10%);
+}
+
+.dropdown-summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown-summary::after {
+  content: "▸";
+  font-size: 1.5em;
+  transition: transform 0.3s;
+}
+
+.dropdown-section[open] .dropdown-summary::after {
+  transform: rotate(90deg);
+}
+
 .table-wrapper {
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-x: hidden;
 }
 
 .table-header,
 .table-row {
   display: grid;
-  /* "Produkt" gets 2fr for more space, others get 1fr */
   grid-template-columns:
     minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
     minmax(0, 1fr);
   gap: 10px;
   padding: 10px;
+}
+
+.table-wrapper.columns-4 .table-header,
+.table-wrapper.columns-4 .table-row {
+  grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr));
 }
 
 .table-header {
@@ -56,9 +98,9 @@
   padding: 10px;
   text-align: left;
   font-size: clamp(1rem, 2vw, 1.5rem);
-  white-space: normal; /* Allows text to wrap */
-  overflow-wrap: break-word; /* Breaks long words if needed */
-  line-height: 1.4; /* Improves readability when wrapped */
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.4;
 
   @media (max-width: 350px) {
     line-height: 1.25;
@@ -79,25 +121,23 @@
   padding: 10px;
   text-align: left;
   font-size: clamp(0.9rem, 2vw, 1.2rem);
-  white-space: normal; /* Allows text to wrap */
-  overflow-wrap: break-word; /* Breaks long words if needed */
-  line-height: 1.4; /* Improves readability when wrapped */
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.4;
 }
 
-/* Adjustments for screens 600px and below */
 @media (max-width: 600px) {
   .table-header span,
   .cell {
-    font-size: 0.75rem; /* 12px - smaller font for better fit */
-    padding: 5px; /* Reduced padding to save space */
+    font-size: 0.75rem;
+    padding: 5px;
   }
 }
 
-/* Further adjustments for screens 400px and below (close to 320px) */
 @media (max-width: 400px) {
   .table-header span,
   .cell {
-    font-size: 0.7rem; /* 11.2px - smallest readable size */
-    padding: 3px; /* Minimal padding for maximum content space */
+    font-size: 0.7rem;
+    padding: 3px;
   }
 }
