@@ -459,7 +459,7 @@ const Cenik = () => {
         <summary className="dropdown-summary">Pletiva</summary>
         <div className="table-wrapper">
           <div className="table-header">
-            <span>Pletiva</span>
+            <span>Pletivo</span>
             <span>Cena za metr</span>
             <span>Množství</span>
             <span>Celkem s DPH</span>

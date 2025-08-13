@@ -8,13 +8,13 @@ function Pletiva() {
     <section className="pletivaa">
       <h1 className="pletivaa-title">Pletiva</h1>
       <p className="pletivaa-intro">
-        Pletivo si sami vyrábíme v naší firmě. Mám k dispozici poplastovaná
-        pletiva, pletivo alugreen (vyšší cena) a velmi odolné pletivo bezinal ze
-        slitiny zinku a hliníku. Dále na zakázku vyrábíme žebérková pletiva. V
-        případě zájmu o pletivo nám odešlete poptávku přes formulář, zavolejte,
-        nebo napište email. Pletivo jsme schopni Vám ještě ten samý den
-        nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám, do
-        místa určení. <br />
+        Pletivo si sami vyrábíme v naší firmě. Máme k dispozici poplastovaná
+        pletiva v zelené a antracitové barvě, a velmi odolné pletivo bezinal ze
+        slitiny zinku a hliníku. Dále na zakázku vyrábíme žebérkové pletivo,
+        které je vhodné k zabezpeční a krytí prostoru. V případě zájmu o pletivo
+        nám odešlete poptávku přes formulář, zavolejte, nebo napište email.
+        Pletivo jsme schopni Vám ještě ten samý den nachystat k vyzvednutí, nebo
+        se rovnou domluvíme na dopravě k Vám, do místa určení. <br />
         <span style={{ display: "block", fontWeight: "bold" }}>
           Nabízíme následující výšky pletiv: 1.00m, 1.25m, 1.50m, 1.60m, 1.80m,
           2.00m.
@@ -44,20 +44,6 @@ function Pletiva() {
             className="pletivaa-img"
           />
           <p className="pletivaa-text">Poplastované pletivo antracit</p>
-          <Link href="/form">
-            <button className="pletivaa-button">Odeslat poptávku</button>
-          </Link>
-        </div>
-
-        <div className="pletivaa-item">
-          <Image
-            src={`${basePath}/pletivaa/alugreen.jpg`}
-            alt="Pletivo Alugreen"
-            width={300}
-            height={500}
-            className="pletivaa-img"
-          />
-          <p className="pletivaa-text">Pletivo Alugreen</p>
           <Link href="/form">
             <button className="pletivaa-button">Odeslat poptávku</button>
           </Link>
@@ -128,26 +114,6 @@ function Pletiva() {
             <p>
               Tohle pletivo s moderním vzhledem a antracitovou barvou má skvělé
               využití při oplocení rezidenčních i komerčních objektů.
-            </p>
-          </div>
-        </div>
-
-        <div className="xplain-item">
-          <div className="xplain-img">
-            <Image
-              src={`${basePath}/pletivaa/alugreenv.jpg`}
-              alt="Pletivo Alugreen"
-              width={300}
-              height={400}
-              loading="lazy"
-            />
-          </div>
-          <div className="xplain-text">
-            <h3 className="green">Pletivo Alugreen</h3>
-            <p>
-              Pletivo Alugreen v kombinaci s hliníkovým vzhledem a zeleným
-              povrchem zaručuje vysokou odolnost a zároveň estetický vzhled
-              oplocení.
             </p>
           </div>
         </div>

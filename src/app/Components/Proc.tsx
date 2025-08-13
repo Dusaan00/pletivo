@@ -46,7 +46,7 @@ function Proc() {
                   loading="lazy"
                 />{" "}
                 <Image
-                  src={`${basePath}/vyroba-pletiva4.jpg`}
+                  src={`${basePath}/gates/brana.webp`}
                   width={500}
                   height={300}
                   className="proc-photo"
@@ -70,12 +70,13 @@ function Proc() {
                 výrobu pletiva zaručují maximální tuhost drátu a vyslédkem je
                 kvalitní a odolné pletivo pro oplocení Vašeho pozemku.
                 Nejčastěji zajišťujeme výrobu poplastovaných pletiv v
-                antracitové a zelené barvě, dále například pletivo bezinal a
-                alugreen.{" "}
+                antracitové a zelené barvě, dále například vysoce odolné pletivo
+                Bezinal, které je vhodné pro zabezpečení prostor hlavně v
+                průmyslových oblastech.{" "}
               </p>{" "}
-              <Link href="/Prehled" className="btn--text btn--gallery">
+              <Link href="/Cenik" className="btn--text btn--gallery">
                 {" "}
-                Sortiment &rarr;{" "}
+                Ceník materiálu &rarr;{" "}
               </Link>{" "}
             </div>{" "}
             <div className="proc-right-ii">
