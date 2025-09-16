@@ -88,7 +88,7 @@ function Features() {
         <h2 className="openings__item">PROVOZNÍ HODINY:</h2>
         <p className="openings__item">Pondělí - Pátek</p>
         <p className="openings__item openings__hodiny">
-          7:30 - 16:00 nebo po tel. domluvě
+          8:00 - 15:30 nebo po tel. domluvě
         </p>
       </div>
     </>

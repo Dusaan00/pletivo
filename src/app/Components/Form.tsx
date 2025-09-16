@@ -113,7 +113,7 @@ const Form: React.FC = () => {
             </svg>
             <div className="topic">Provozní hodiny</div>
             <div className="text-one">Po - Pá</div>
-            <div className="text-two">7:30 - 16:00</div>
+            <div className="text-two">8:00 - 15:30</div>
           </div>
 
           <div className="address details">
