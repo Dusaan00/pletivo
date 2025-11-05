@@ -34,7 +34,7 @@ function Overview() {
           <h2 className="over-subtitle">
             Panely 3D/2D -{" "}
             <Link href="/AkcePanely" className="akce-red">
-              nyní v akci
+              nyní v akcii
             </Link>
           </h2>
         </div>
