@@ -22,7 +22,7 @@ function Proc() {
               <div className="proc-photo-grid">
                 {" "}
                 <Image
-                  src={`${basePath}/vyroba-pletiva2.jpg`}
+                  src={`${basePath}/panely/panelyy.jpg`}
                   width={500}
                   height={300}
                   className="proc-photo"

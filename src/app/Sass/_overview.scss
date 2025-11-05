@@ -32,6 +32,15 @@ body {
   }
 }
 
+.akce-red {
+  color: rgb(255, 40, 40);
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .over-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
@@ -72,7 +81,7 @@ body {
   }
 }
 
-.over-item a {
+.over-item > a {
   width: 350px;
   height: 350px;
   overflow: hidden;
@@ -117,9 +126,19 @@ body {
   font-size: 25px;
   font-style: italic;
 
+  .akce-red {
+    color: rgb(255, 40, 40);
+    text-decoration: underline;
+    display: inline; // Ensure it stays inline
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   @media (max-width: 739px) {
     margin-top: 10px;
-    font-size: clamp(1.5rem, 4vw, 2rem); /* Dynamic font size */
+    font-size: clamp(1.5rem, 4vw, 2rem);
   }
 
   @media (max-width: 519px) {

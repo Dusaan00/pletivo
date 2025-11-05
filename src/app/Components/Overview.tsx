@@ -11,7 +11,7 @@ function Overview() {
         <div className="over-item">
           <Link href="/Pletivo">
             <Image
-              src={`${basePath}/pletivo-grygov.jpg`}
+              src={`${basePath}/pletivaa/pletvo.webp`}
               width={350}
               height={350}
               className="over-photo"
@@ -31,7 +31,12 @@ function Overview() {
               alt="Prodej panelů 3D/2D"
             />
           </Link>
-          <h2 className="over-subtitle">Panely 3D/2D</h2>
+          <h2 className="over-subtitle">
+            Panely 3D/2D -{" "}
+            <Link href="/AkcePanely" className="akce-red">
+              nyní v akci
+            </Link>
+          </h2>
         </div>
 
         <div className="over-item">

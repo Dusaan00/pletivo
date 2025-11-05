@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Urbanist, Sora, Josefin_Sans, Source_Sans_3 } from "next/font/google";
+import {
+  Urbanist,
+  Sora,
+  Josefin_Sans,
+  Source_Sans_3,
+  Montserrat,
+  Poppins,
+} from "next/font/google";
 import "../app/styles/globals.scss";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -32,6 +39,20 @@ const sourceSans3 = Source_Sans_3({
   display: "swap",
 });
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const josefin = josefinSans;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -40,6 +61,10 @@ const urban = urbanist;
 const soraFont = sora;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const sourceSans = sourceSans3;
+
+const mont = montserrat;
+
+const pop = poppins;
 
 const isProd = process.env.NODE_ENV === "production";
 const basePath = isProd ? "" : "";

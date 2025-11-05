@@ -1,0 +1,92 @@
+@use "./variables" as *;
+
+.akce-panely-container {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding: 2.5rem 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.akce-panely-container-titles {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.akce-panely-title {
+  margin-bottom: 1.35rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-decoration: underline;
+}
+
+.akce-panely-text {
+  font-size: clamp(1rem, 2.5vw, 1.45rem); // Fluidní pro podtitulek (p)
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // vystředí obsah horizontálně
+  gap: 1.5rem;
+  width: 100%;
+}
+
+// Podnadpisy a seznamy – omezená šířka + zarovnání doleva
+.list-container-nadpisy {
+  margin: 0;
+  padding: 0;
+  max-width: 550px; // můžeš upravit podle potřeby
+  width: 100%; // zabere max. 425px, ale méně pokud obsah je kratší
+  text-align: left; // zarovnání textu doleva
+  font-size: clamp(1.2rem, 3vw, 1.95rem); // Fluidní pro nadpisy seznamů (h3)
+}
+.akce-panely-list {
+  margin: 0;
+  padding: 0;
+  max-width: 550px;
+  width: 100%;
+  text-align: left;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  list-style: none;
+  margin-bottom: 1.25rem;
+}
+
+.zelena {
+  color: #006443;
+}
+
+.ntracit {
+  color: #2f2f2f;
+}
+
+li {
+  margin-bottom: 0.4em; // jemný rozestup mezi položkami
+}
+
+.akce-panely-contact {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: clamp(1.6rem, 2.5vw, 1.55rem);
+  text-decoration: underline;
+  margin-bottom: 3rem;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(150px, 25vw, 300px), 1fr)
+  ); // Dynamická minmax s clamp: min 150px (pro malé zařízení), prefer 25vw (fluidní), max 300px (pro desktop)
+  gap: clamp(0.5rem, 2vw, 1.5rem); // Fluidní gap pro mezery
+  width: 100%;
+  max-width: 1200px; // Omezení max šířky pro centrovaní na velkých obrazovkách
+  margin: 2rem auto 0; // Centrovaní a odsazení od shora
+  justify-items: center; // Centrovaní položek uvnitř gridu
+}
+
+.grid-image {
+  width: 100%; // Obrázky zaberou celou šířku buňky
+  height: auto; // Zachování aspect ratio
+  object-fit: cover; // Pokrytí bez deformace
+  border-radius: 3px; // Volitelný zaoblený roh pro estetiku
+}
