@@ -15,6 +15,16 @@ function Sloupky() {
         ten samý den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě
         k Vám, do místa určení.
       </p>
+      <div className="sloupky-intro-akce-container">
+        <h3 className="sloupky-intro-akce">
+          Nyní máme panely a sloupky v akci!
+        </h3>
+        <Link href="/AkcePanely">
+          <p className="sloupky-intro-akce-txt">
+            <span className="sloupky-intro-akce-spn">Zobrazit ceník</span>
+          </p>
+        </Link>
+      </div>
       <div className="sloupky-container">
         <div className="sloupky-item">
           <Image

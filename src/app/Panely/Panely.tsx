@@ -13,6 +13,16 @@ function Panely() {
         den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě k Vám,
         do místa určení.
       </p>
+      <div className="panely-intro-akce-container">
+        <h3 className="panely-intro-akce">
+          Nyní máme panely a sloupky v akci!
+        </h3>
+        <Link href="/AkcePanely">
+          <p className="panely-intro-akce-txt">
+            <span className="panely-intro-akce-spn">Zobrazit ceník</span>
+          </p>
+        </Link>
+      </div>
       <div className="panely-container">
         <div className="panely-item">
           <Image

@@ -98,6 +98,34 @@
     }
   }
 
+  .panely-intro-akce-container {
+    width: 100vw; /* spans full viewport width */
+    margin-left: calc(50% - 50vw); /* align to the very left edge */
+    margin-right: calc(50% - 50vw);
+    background-color: #f1f1f1; /* example color */
+    text-align: center;
+    padding: 1rem 0.75rem !important;
+    color: black;
+    margin-bottom: 1.5rem;
+  }
+
+  .panely-intro-akce {
+    font-size: clamp(1.25rem, 2vw + 1rem, 2.25rem);
+  }
+
+  .panely-intro-akce-txt {
+    text-decoration: underline;
+    font-size: clamp(1.25rem, 2vw + 1rem, 2.25rem);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .panely-intro-akce-spn {
+    color: rgb(255, 1, 56);
+  }
+
   &-container {
     display: grid;
     grid-template-columns: repeat(
