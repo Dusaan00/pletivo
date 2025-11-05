@@ -1,7 +1,7 @@
 import Cenik from "../Components/Cenik";
 
 export const metadata = {
-  title: "Výroba Pletiva Grygov - Ceník",
+  title: "Pletivo Grygov - Ceník",
   description:
     "Pletivo od českého výrobce. Nabízíme pletiva, panely 3D/2D, brány, branky, sloupky a příslušenství pro kompletní stavbu plotu s rychlým dodáním.",
   keywords:
