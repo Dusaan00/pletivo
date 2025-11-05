@@ -61,9 +61,9 @@ const urban = urbanist;
 const soraFont = sora;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const sourceSans = sourceSans3;
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const mont = montserrat;
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const pop = poppins;
 
 const isProd = process.env.NODE_ENV === "production";
