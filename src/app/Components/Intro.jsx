@@ -2,6 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import "../Sass/_intro.scss";
 import { basePath } from "../functions/Env";
+import Slider from "../functions/Slider";
+
+const sliderItems = [
+  { src: "/panelyintroo.png", label: "Panely 3D" },
+  { src: "/land/pletvo.webp", label: "Pletiva" },
+  { src: "/land/sloupkyland.webp", label: "Sloupky" },
+  { src: "/land/gateland.webp", label: "Brány a branky" },
+  { src: "/land/mobile.webp", label: "Mobilní oplocení" },
+];
 
 function Intro() {
   return (
@@ -32,7 +41,7 @@ function Intro() {
             </div>
           </div>
           <div className="intro-img">
-            <img src="panelyintroo.png" alt="Plot z 3D pletiva" />
+            <Slider items={sliderItems} />
           </div>
         </div>
       </section>
