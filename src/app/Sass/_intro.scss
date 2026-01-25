@@ -94,6 +94,8 @@
   box-shadow: 0 0 10px $color-goldd;
   cursor: pointer;
   transition: 0.2s;
+  color: black; /* přidej tuto řádku */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .actn-btns button:hover {
