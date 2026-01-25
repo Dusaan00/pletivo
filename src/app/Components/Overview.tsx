@@ -6,7 +6,7 @@ import { basePath } from "../functions/Env";
 function Overview() {
   return (
     <div className="over-container">
-      <h1 className="over-title">Naše produkty</h1>
+      <h1 className="over-title">Sortiment</h1>
       <div className="over-grid">
         <div className="over-item">
           <Link href="/Pletivo">

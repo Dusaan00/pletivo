@@ -3,6 +3,7 @@ import "../Sass/_header.scss";
 import Dropdown from "../functions/Dropdown";
 import { basePath } from "../functions/Env";
 import NavbarScroll from "../functions/NavbarScroll";
+import Image from "next/image";
 
 function Header() {
   return (
@@ -10,6 +11,15 @@ function Header() {
       <NavbarScroll />
       <header className="header" id="hdr">
         <div className="container-ploty">
+          <Link href="/">
+            <Image
+              src={`${basePath}/loga/plotlogo.webp`}
+              alt="Pletivo Grygov Logo"
+              className="logoo"
+              width={325}
+              height={100}
+            />
+          </Link>
           <p className="heeding">
             <Link href="/" className="heeding-link">
               <span className="plot-title">Pletivo</span>Grygov
@@ -21,11 +31,11 @@ function Header() {
             </svg>
             <p className="phone"> +420 608 705 547</p>
           </Link>
-          <Link href="/" className="home">
+          <Link href="/" className="homee">
             <svg className="home-icon">
               <use href={`${basePath}/sprite2.svg#icon-home`}></use>
             </svg>
-            <p className="domuu">DOMŮ</p>
+            <p className="domuu">Domů</p>
           </Link>
         </div>
 
