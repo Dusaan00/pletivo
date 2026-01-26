@@ -26,11 +26,11 @@ function Intro() {
               Jsme dodavatelem kompletního oplocení pro soukromé osoby i firmy
             </h2>
             <p className="intro-description">
-              Dodáváme pletiva PVC, panely 3D/2D, sloupky, brány, branky,
-              vzpěry, podhrabové desky, napínací dráty, mobilní oplocení a
-              všechna ostatní příslušenství nezbytná pro kompletní montáže plotů
-              na klíč, vše za rozumné ceny. Pomůžeme vám s výběrem materiálu a
-              vhodným řešením oplocení.
+              Dodáváme pletiva PVC/zinková, panely 3D/2D, sloupky, brány,
+              branky, vzpěry, podhrabové desky, napínací dráty, mobilní oplocení
+              a všechna ostatní příslušenství nezbytná pro kompletní montáže
+              plotů na klíč, vše za rozumné ceny. Pomůžeme vám s výběrem
+              materiálu a vhodným řešením oplocení.
             </p>
             <div className="actn-btns">
               <Link href="/Prehled">

@@ -165,3 +165,52 @@
 .dot.active {
   background-color: $color-primary-green;
 }
+
+.slider-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  cursor: pointer;
+
+  width: clamp(3rem, 5vw, 4.2rem);
+  height: clamp(3rem, 5vw, 4.2rem);
+  border-radius: 50%;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 2;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background: white;
+    color: $color-primary-green;
+    transform: translateY(-50%) scale(1.05);
+  }
+}
+
+.slider-arrow.left {
+  left: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.slider-arrow.right {
+  right: clamp(0.5rem, 2vw, 1.5rem);
+}
