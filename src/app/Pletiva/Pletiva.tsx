@@ -1,6 +1,4 @@
 import "../Sass/_pletiva.scss";
-import Image from "next/image";
-import Link from "next/link";
 import { basePath } from "../functions/Env";
 import { RiCheckboxCircleLine } from "react-icons/ri";
 
@@ -53,6 +51,11 @@ function Pletiva() {
             className="pletiva-about-image-i"
           />
         </div>
+      </div>
+      <div className="pletivo-needed">
+        <h2 className="pletivo-needed-h2">
+          Co potřebujete k pletivu dokoupit pro úspěšnou stavbu plotu?
+        </h2>
       </div>
     </section>
   );
