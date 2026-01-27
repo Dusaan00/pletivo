@@ -263,17 +263,18 @@
     margin-top: 1rem;
   }
 
+  .pletivo-needed-text {
+    margin: 0 auto;
+    order: 1; // text nahoře
+  }
+
   .pletivo-slider {
-    order: 0;
+    order: 2; // slider dole
   }
 
   .pletivo-slider img {
     width: 280px;
     height: 280px;
-  }
-
-  .pletivo-needed-text {
-    margin: 0 auto;
   }
 
   .pletivo-needed-ul {
