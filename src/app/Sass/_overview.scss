@@ -11,9 +11,33 @@
   flex-direction: column; // ⬅️ DŮLEŽITÉ
   align-items: center; // horizontální střed
   justify-content: flex-start;
+  position: relative;
 
   font-family: "Montserrat", sans-serif;
   color: black;
+  background-image: url("/plotherobestleft.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.over-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.98),
+    rgba(250, 245, 245, 0.9725)
+  );
+
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.over-wrapper > * {
+  position: relative;
+  z-index: 2;
 }
 
 .over-grid {
