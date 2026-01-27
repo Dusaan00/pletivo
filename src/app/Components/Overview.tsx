@@ -23,7 +23,7 @@ function Overview() {
               <li>Dostupné výšky od 1 m do 2 m</li>
             </ul>
             <div className="product-btn">
-              <Link href="/Prehled">
+              <Link href="/Pletivo">
                 <button className="product-btnbtn">Detaily produktu</button>
               </Link>
             </div>
@@ -46,7 +46,7 @@ function Overview() {
               <li>Dostupné výšky od 1 m do 2 m</li>
             </ul>
             <div className="product-btn">
-              <Link href="/Prehled">
+              <Link href="/Pletivo">
                 <button className="product-btnbtn">Detaily produktu</button>
               </Link>
             </div>
@@ -66,7 +66,7 @@ function Overview() {
               <li>Možnost postavit i s podhrabovými deskami</li>
             </ul>
             <div className="product-btn">
-              <Link href="/Prehled">
+              <Link href="/Panely3D2D">
                 <button className="product-btnbtn">Detaily produktu</button>
               </Link>
             </div>
@@ -90,7 +90,7 @@ function Overview() {
               <li>Vyrábíme a dodáváme na objednávku</li>
             </ul>
             <div className="product-btn">
-              <Link href="/Prehled">
+              <Link href="/Pletivo">
                 <button className="product-btnbtn">Detaily produktu</button>
               </Link>
             </div>
@@ -109,7 +109,7 @@ function Overview() {
               <li>Vhodné pro stavby, akce i soukromé účely</li>
             </ul>
             <div className="product-btn">
-              <Link href="/Prehled">
+              <Link href="/MobilniOploceni">
                 <button className="product-btnbtn">Detaily produktu</button>
               </Link>
             </div>
@@ -131,7 +131,7 @@ function Overview() {
               <li>Sloupky, podhrabové desky, vázací dráty, atd.</li>
             </ul>
             <div className="product-btn">
-              <Link href="/Prehled">
+              <Link href="/SloupkyPrislusenstvi">
                 <button className="product-btnbtn">Detaily produktu</button>
               </Link>
             </div>
