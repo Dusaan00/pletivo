@@ -73,6 +73,53 @@
   color: $color-primary-green;
 }
 
+.pletivo-needed {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+.pletivo-needed-text {
+  max-width: 600px;
+  order: 2;
+  margin-top: -5rem;
+}
+
+.pletivo-needed-h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  margin-bottom: 2rem;
+}
+
+.pletivo-needed-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pletivo-needed-item {
+  font-size: clamp(1.3rem, 1.8vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.pletivo-needed-item svg {
+  flex-shrink: 0;
+  font-size: 1.3em;
+  margin-top: 0.1em;
+  color: $color-primary-green;
+  margin-right: 0.8rem;
+}
+
 .pletiva-about-image {
   display: flex;
   justify-content: center;
@@ -83,6 +130,112 @@
   height: 335px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.pletivo-slider {
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
+
+.pletivo-slider .slider {
+  width: 335px;
+}
+
+.pletivo-slider img {
+  width: 335px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider img {
+  width: min(45rem, 90%);
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px 0px #ccc;
+  transition: opacity 0.3s ease;
+}
+
+.slider-label {
+  margin-top: 1.2rem;
+  font-size: clamp(1.5rem, 2vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: $color-primary-green;
+}
+
+.slider-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  cursor: pointer;
+
+  width: clamp(3rem, 5vw, 4.2rem);
+  height: clamp(3rem, 5vw, 4.2rem);
+  border-radius: 50%;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 2;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background: white;
+    color: $color-primary-green;
+    transform: translateY(-50%) scale(1.05);
+  }
+}
+
+.slider-arrow.left {
+  left: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.slider-arrow.right {
+  right: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 @media (max-width: 900px) {
@@ -102,6 +255,34 @@
 
   .pletiva-about-data {
     margin: 0 auto;
+  }
+
+  .pletivo-needed {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .pletivo-slider {
+    order: 0;
+  }
+
+  .pletivo-slider img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .pletivo-needed-text {
+    margin: 0 auto;
+  }
+
+  .pletivo-needed-ul {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .pletivo-needed-item {
+    text-align: left;
   }
 }
 

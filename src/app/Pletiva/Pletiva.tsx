@@ -1,6 +1,14 @@
 import "../Sass/_pletiva.scss";
 import { basePath } from "../functions/Env";
 import { RiCheckboxCircleLine } from "react-icons/ri";
+import Slider from "../functions/Slider";
+
+const sliderItems = [
+  { src: "/land/sloupkyland.webp", label: "Sloupky" },
+  { src: "/land/vzperagreen.webp", label: "Vzpěry" },
+  { src: "/land/dratgreen.webp", label: "Napínací dráty" },
+  { src: "/land/vazaci.webp", label: "Vázací dráty" },
+];
 
 function Pletiva() {
   return (
@@ -53,9 +61,32 @@ function Pletiva() {
         </div>
       </div>
       <div className="pletivo-needed">
-        <h2 className="pletivo-needed-h2">
-          Co potřebujete k pletivu dokoupit pro úspěšnou stavbu plotu?
-        </h2>
+        <div className="pletivo-needed-text">
+          <h2 className="pletivo-needed-h2">
+            Co potřebujete k pletivu dokoupit pro úspěšnou stavbu plotu?
+          </h2>
+          <ul className="pletivo-needed-ul">
+            <li className="pletivo-needed-item">
+              <RiCheckboxCircleLine />
+              <span>Sloupky zelené/antracit</span>
+            </li>
+            <li className="pletivo-needed-item">
+              <RiCheckboxCircleLine />
+              <span>Vzpěry zelené/antracit</span>
+            </li>
+            <li className="pletivo-needed-item">
+              <RiCheckboxCircleLine />
+              <span>Napínací drát</span>
+            </li>
+            <li className="pletivo-needed-item">
+              <RiCheckboxCircleLine />
+              <span>Vázací drát</span>
+            </li>
+          </ul>
+        </div>
+        <div className="pletivo-slider">
+          <Slider items={sliderItems} />
+        </div>
       </div>
     </section>
   );
