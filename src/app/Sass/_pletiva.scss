@@ -238,6 +238,168 @@
   right: clamp(0.5rem, 2vw, 1.5rem);
 }
 
+//////////// PRODUCT CARTS
+.pletivo-products {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: center;
+  gap: 3rem;
+
+  justify-items: center;
+}
+
+.pletivo-product {
+  position: relative;
+  overflow: hidden;
+  background-color: #f7f7f7;
+
+  width: 280px;
+  height: auto;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0px 40px;
+  border-radius: 5px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pletivo-product::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top left,
+    $color-green-light,
+    $color-green-dark
+  );
+
+  transform: scale(0);
+  transform-origin: bottom right; // START: pravý dolní roh
+  transition: transform 0.3s ease;
+
+  z-index: 1;
+}
+
+.pletivo-product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.pletivo-product:hover h3,
+.pletivo-product:hover p {
+  color: white;
+}
+
+.pletivo-product:hover::before {
+  transform: scale(1);
+}
+
+.pletivo-product > * {
+  position: relative;
+  z-index: 2;
+}
+
+.pletivo-product-image {
+  width: 100%;
+  height: 275px; /* KLÍČ */
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pletivo-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.pletivo-product-text {
+  margin-top: 1.5rem;
+  padding: 20px;
+}
+
+.pletivo-product-pricing {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pletivo-product-pricing h3 {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  line-height: 1.4;
+  min-height: 4.2rem;
+}
+
+.pletivo-product p {
+  margin-top: 1rem;
+  font-size: 1.45rem;
+  line-height: 1.7;
+}
+
+.pletivo-product-price h4 {
+  font-size: 1.95rem;
+  letter-spacing: 1px;
+  padding-top: 1.5rem;
+}
+
+.btn-buy {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn-buy button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  font-weight: 600;
+  padding: 10px 25px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+
+  outline: none;
+  background-color: $color-goldd;
+  background-image: linear-gradient(to right, $color-gold-darkk, $color-goldd);
+  border: 1.5px solid rgba($color-gold-dark, 0.7);
+  box-shadow: 0 0 10px $color-goldd;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black; /* přidej tuto řádku */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-buy button:hover {
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-buy button svg {
+  font-size: 1.2em;
+}
+
+/////////////////////////////////// MEDIAAAAAAA
+
+@media (max-width: 1290px) {
+  .pletivo-products {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
 @media (max-width: 900px) {
   .pletiva-container {
     grid-template-columns: 1fr;
@@ -285,10 +447,18 @@
   .pletivo-needed-item {
     text-align: left;
   }
+
+  .pletivo-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
   .pletiva-advantages {
+    grid-template-columns: 1fr;
+  }
+
+  .pletivo-products {
     grid-template-columns: 1fr;
   }
 }

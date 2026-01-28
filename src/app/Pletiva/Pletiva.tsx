@@ -1,6 +1,6 @@
 import "../Sass/_pletiva.scss";
 import { basePath } from "../functions/Env";
-import { RiCheckboxCircleLine } from "react-icons/ri";
+import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 import Slider from "../functions/Slider";
 
 const sliderItems = [
@@ -82,10 +82,124 @@ function Pletiva() {
               <RiCheckboxCircleLine />
               <span>Vázací drát</span>
             </li>
+            <li className="pletivo-needed-item">
+              <RiCheckboxCircleLine />
+              <span>Napínáky</span>
+            </li>
           </ul>
         </div>
         <div className="pletivo-slider">
           <Slider items={sliderItems} />
+        </div>
+      </div>
+
+      <div className="pletivo-products">
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/pletivaa/zelenep.webp`}
+              alt="Pletivo PVC zelené"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Pletivo Poplastované Zelené 25m</h3>
+            </div>
+            <p>
+              Kvalitní pletivo PVC s průměrem 2.5mm a rozměrem oka 55mm.
+              Dostupné výšky pletiva od 100 do 200cm.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>1325,- Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/pletivaa/antracitv.webp`}
+              alt="Pletivo PVC antracit"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Pletivo Poplastované Antracit 25m</h3>
+            </div>
+            <p>
+              Kvalitní pletivo PVC s průměrem 2.5mm a rozměrem oka 55mm.
+              Dostupné výšky pletiva od 100 do 200cm.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>1325,- Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/pletivaa/bezinalv.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Pletivo Zinkové Bezinal 25m, 2.0mm</h3>
+            </div>
+            <p>
+              Kvalitní pletivo bezinal s průměrem 2.0mm a rozměrem oka 55mm.
+              Dostupné výšky pletiva bezinal od 100 do 200cm.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>1550,- Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/pletivaa/bezinalv.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Pletivo Zinkové Bezinal 25m, 2.2mm</h3>
+            </div>
+            <p>
+              Kvalitní pletivo bezinal s průměrem 2.2mm a rozměrem oka 55mm.
+              Dostupné výšky pletiva bezinal od 100 do 200cm.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>1999,- Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
       </div>
     </section>
