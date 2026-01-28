@@ -91,7 +91,7 @@ function Footer() {
           </Link>
         </li>
       </ul>
-      <p className="copyright">&copy; Copyright 2025 PletivoGrygov.cz</p>
+      <p className="copyright">&copy; Copyright 2026 PletivoGrygov.cz</p>
     </footer>
   );
 }
