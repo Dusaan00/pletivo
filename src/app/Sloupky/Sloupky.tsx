@@ -1,229 +1,435 @@
-import Image from "next/image";
-import "../Sass/_sloupky.scss";
-import Link from "next/link";
 import { basePath } from "../functions/Env";
+import "../Sass/_pletiva.scss";
+import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 
 function Sloupky() {
   return (
-    <section className="sloupky">
-      <h1 className="sloupky-title">Sloupky & příslušenství</h1>
-      <p className="sloupky-intro">
-        K oplocení (pletivo, panely 3D/2D) samozřejmě dodáváme i veškerá
-        potřebná příslušenství, jako jsou sloupky, vzpěry, vázací dráty, ostnaté
-        dráty, atd. V případě zájmu o materiál nám odešlete poptávku přes
-        formulář, zavolejte, nebo napište email. Materiál jsme schopni Vám ještě
-        ten samý den nachystat k vyzvednutí, nebo se rovnou domluvíme na dopravě
-        k Vám, do místa určení.
-      </p>
-      <div className="sloupky-intro-akce-container">
-        <h3 className="sloupky-intro-akce">
-          Nyní máme panely a sloupky v akci!
-        </h3>
-        <Link href="/AkcePanely">
-          <p className="sloupky-intro-akce-txt">
-            <span className="sloupky-intro-akce-spn">Zobrazit ceník</span>
+    <section className="pletiva-section" id="pletiva-about">
+      <div className="pletiva-container pletiva-gird">
+        <div className="pletiva-about-data">
+          <h1 className="pletiva-title-h1">Sloupky a příslušenství</h1>
+          <h2 className="pletiva-title-h2">
+            Kompletní příslušenství k úspěšné stavbě plotu
+          </h2>
+          <p className="pletiva-description">
+            Dodáváme všechna nezbytná příslušenství pro stavbu plotu. Napínací
+            dráty, napínáky, vázací dráty, vzpěry, čepičky, objímky, stínící
+            tkaniny i bezpečnostní prvky jako jsou ostnaté dráty.
           </p>
-        </Link>
+          <ul className="pletiva-advantages">
+            <li className="pletiva-advantages-item">
+              <RiCheckboxCircleLine />
+              <span>Moderní, estetický vzhled</span>
+            </li>
+
+            <li className="pletiva-advantages-item">
+              <RiCheckboxCircleLine />
+              <span>Jednoduchá instalace</span>
+            </li>
+
+            <li className="pletiva-advantages-item">
+              <RiCheckboxCircleLine />
+              <span>Velice spolehlivé zabezpečení pozemku</span>
+            </li>
+
+            <li className="pletiva-advantages-item">
+              <RiCheckboxCircleLine />
+              <span>Možnost instalace s podhrabovými deskami</span>
+            </li>
+          </ul>
+        </div>
+        <div className="pletiva-about-image">
+          <img
+            src={`${basePath}/panelyintroo.png`}
+            alt="Pletiva PVC a zinková"
+            className="pletiva-about-image-i"
+          />
+        </div>
       </div>
-      <div className="sloupky-container">
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/sloupekantracit.webp`}
-            alt="Sloupek antracit"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Sloupek antracit – ⌀48mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+
+      <div className="pletivo-products">
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/sloupekantracit.webp`}
+              alt="Pletivo PVC zelené"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek antracit – ⌀48mm</h3>
+            </div>
+            <p>
+              Panel pvc v zelené barvě, šířka 2.50m, dostupné výšky panelů od 1m
+              do 2m. Idealní pro oplocení rodinného domu, zahrady, i firemního
+              areálu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 490,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/sloupekpvp.webp`}
-            alt="Sloupek PVC"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Sloupek PVC – ⌀42</p>
-          <button className="sloupky-button">Odeslat poptávku</button>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/vzperantracit.webp`}
+              alt="Pletivo PVC antracit"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Vzpěra antracit – ⌀38mm</h3>
+            </div>
+            <p>
+              Panel pvc v antracitové barvě, šířka 2.50m, dostupné výšky panelů
+              od 1m do 2m. Idealní pro oplocení rodinného domu, zahrady, i
+              firemního areálu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 490,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/vzperantracit.webp`}
-            alt="Vzpěra antracit"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Vzpěra antracit – ⌀38mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/sloupekpvp.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek PVC – ⌀42mm</h3>
+            </div>
+            <p>
+              Panel 3D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky
+              panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely
+              jsou velice odolné s dlouhou životností. Ideální pro oplocení
+              např. v oblastech průmyslu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>Na poptávku</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/vzperapvp.webp`}
-            alt="Vzpěra PVC"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Vzpěra PVC – ⌀42mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/vzperapvp.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Vzpěra PVC – ⌀42mm</h3>
+            </div>
+            <p>
+              Panel 2D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky
+              panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely
+              jsou velice odolné s dlouhou životností. Ideální pro oplocení
+              např. v oblastech průmyslu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>Na poptávku</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/sloupekzinc.webp`}
-            alt="Sloupek zinkový"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Sloupek zinkový – ⌀48mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/sloupekzinc.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek zinkový – ⌀48mm</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/sloupekgreen.webp`}
-            alt="Sloupek zelený"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Sloupek zelený ⌀48mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/sloupekgreen.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek zelený ⌀48mm</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>Na poptávku</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/vzperagreen.webp`}
-            alt="Vzpěra zelená"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Vzpěra zelená – ⌀38mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/vzperagreen.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Vzpěra zelená – ⌀38mm</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/vzperazn.webp`}
-            alt="Vzpěra zinková"
-            width={300}
-            height={500}
-            className="sloupky-img"
-          />
-          <p className="sloupky-text">Vzpěra zinková – ⌀38mm</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/vzperazn.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Vzpěra zinková – ⌀38mm</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/jeklantracit.webp`}
-            alt="Sloupek JEKL - antracit"
-            width={300}
-            height={500}
-            className="sloupky-img"
-            loading="lazy"
-          />
-          <p className="sloupky-text">Sloupek JEKL - antracit</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/jeklantracit.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek JEKL - antracit</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/jeklzinc.webp`}
-            alt="Sloupek JEKL - zinkový"
-            width={300}
-            height={500}
-            className="sloupky-img"
-            loading="lazy"
-          />
-          <p className="sloupky-text">Sloupek JEKL - zinkový</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/jeklzinc.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek JEKL - zinkový</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>Na poptávku</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/jeklgreen.webp`}
-            alt="Sloupek JEKL - zelený"
-            width={300}
-            height={500}
-            className="sloupky-img"
-            loading="lazy"
-          />
-          <p className="sloupky-text">Sloupek JEKL - zelený</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/jeklgreen.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek JEKL - zelený</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/dratantra.webp`}
-            alt="Napínací drát antracit"
-            width={300}
-            height={500}
-            className="sloupky-img"
-            loading="lazy"
-          />
-          <p className="sloupky-text">Napínací drát – antracit</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratgreen.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – zelený</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/dratgreen.webp`}
-            alt="Napínací drát zelený"
-            width={300}
-            height={500}
-            className="sloupky-img"
-            loading="lazy"
-          />
-          <p className="sloupky-text">Napínací drát – zelený</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratantra.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – antracit</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
 
-        <div className="sloupky-item">
-          <Image
-            src={`${basePath}/sloupky/dratzink.webp`}
-            alt="Napínací drát zinkový"
-            width={300}
-            height={500}
-            className="sloupky-img"
-            loading="lazy"
-          />
-          <p className="sloupky-text">Napínací drát – Zinkový</p>
-          <Link href="/form">
-            <button className="sloupky-button">Odeslat poptávku</button>
-          </Link>
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratzink.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – Zinkový</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
         </div>
       </div>
     </section>

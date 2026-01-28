@@ -201,6 +201,33 @@ function Pletiva() {
             </button>
           </div>
         </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/land/zeberkove.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Žeberkové pletivo</h3>
+            </div>
+            <p>
+              Tento typ pletiva vyrábíme v naší dílně a dodáváme na objednávku.
+              V případě zájmu o pletivo nás kontaktujte.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>Na poptávku</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
