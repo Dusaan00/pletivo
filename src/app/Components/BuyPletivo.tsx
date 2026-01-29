@@ -1,6 +1,7 @@
 import "../Sass/_buypletivo.scss";
 import { basePath } from "../functions/Env";
 import { RiShoppingCart2Line } from "react-icons/ri";
+import Link from "next/link";
 
 function BuyPletivo() {
   return (
@@ -29,17 +30,19 @@ function BuyPletivo() {
                 email, nebo nám zavolat. Na možnosti nákupu online momentálně
                 pracujeme.
               </p>
-              <label htmlFor="height" className="height">
-                Vyberte výšku:
-              </label>
-              <select id="height" name="height">
-                <option value="1.00">1.00m</option>
-                <option value="1.20">1.25m</option>
-                <option value="1.40">1.50m</option>
-                <option value="1.40">1.60m</option>
-                <option value="1.40">1.80m</option>
-                <option value="1.40">2.00m</option>
-              </select>
+              <div className="height-select">
+                <label htmlFor="height" className="height">
+                  Vyberte výšku:
+                </label>
+                <select id="height" name="height">
+                  <option value="1.00">1.00m</option>
+                  <option value="1.20">1.25m</option>
+                  <option value="1.40">1.50m</option>
+                  <option value="1.40">1.60m</option>
+                  <option value="1.40">1.80m</option>
+                  <option value="1.40">2.00m</option>
+                </select>
+              </div>
               <form>
                 <div className="color-select">
                   <p>Barva:</p>
@@ -57,9 +60,11 @@ function BuyPletivo() {
                   <p>Množství</p>
                   <input type="number" defaultValue={1} min="1"></input>
                 </div>
-                <button>
-                  Objednat <RiShoppingCart2Line />
-                </button>
+                <Link href="/form" className="order-link">
+                  <button>
+                    Objednat <RiShoppingCart2Line />
+                  </button>
+                </Link>
               </form>
             </div>
           </div>
