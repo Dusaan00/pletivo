@@ -27,7 +27,7 @@ function Pletiva() {
             objektů i např. sportovišť.
           </p>
           <p className="pletiva-description">
-            Máme k dispozici pletiva pvc i zinkové - bezinal.
+            Máme k dispozici pletiva pvc i zinková - bezinal.
             <br />
             Výšky pletiva 1m - 2m.
           </p>
