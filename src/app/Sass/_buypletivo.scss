@@ -185,3 +185,51 @@ form button:hover {
 form button svg {
   font-size: 1.7rem;
 }
+
+@media (max-width: 1024px) {
+  .section-spletivo-product {
+    max-width: 900px;
+  }
+
+  .section-spletivo-gal {
+    transform: scale(1.03);
+  }
+
+  .section-spletivo-details {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-spletivo-product {
+    flex-direction: column;
+    margin-top: 1.6rem;
+  }
+
+  .section-spletivo-gal {
+    width: 50%; // ⬅️ přesně polovina šířky
+    max-width: 50%;
+    margin-left: 0; // ⬅️ začíná zleva
+
+    transform: none;
+    box-shadow: none;
+
+    aspect-ratio: 3 / 4; // ⬅️ výška ~50 % desktopu
+  }
+
+  .section-spletivo-gal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; // ⬅️ CELÁ fotka
+    display: block;
+  }
+
+  .section-spletivo-details {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
