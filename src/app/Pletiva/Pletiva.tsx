@@ -2,6 +2,7 @@ import "../Sass/_pletiva.scss";
 import { basePath } from "../functions/Env";
 import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 import Slider from "../functions/Slider";
+import Link from "next/link";
 
 const sliderItems = [
   { src: "/land/sloupkyland.webp", label: "Sloupky" },
@@ -114,10 +115,12 @@ function Pletiva() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/PletivaPVC">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
