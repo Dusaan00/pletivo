@@ -144,10 +144,12 @@ function Pletiva() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/PletivaPVC">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
