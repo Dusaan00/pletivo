@@ -74,15 +74,22 @@
   color: #333;
   line-height: 1.6;
   font-weight: 700;
+  margin-top: 1.2rem;
 }
 
 .section-spletivo-details h3 {
   color: #00d874;
   margin-bottom: 1.5rem;
+  margin-top: 1.6rem;
 }
 
 .section-spletivo-details p {
   font-size: 1.3rem;
+}
+
+.height {
+  font-size: 1.2rem;
+  margin-right: 1rem;
 }
 
 .color-select {
@@ -121,4 +128,60 @@
   box-shadow:
     0 0 0 4px #fff,
     0 0 0 6px #000;
+}
+
+.quantity-select {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.quantity-select p {
+  width: 75px;
+}
+
+.quantity-select input {
+  background: #eee;
+  border: 0;
+  outline: 0;
+  padding: 2px 2px 2px 15px;
+  width: 50px;
+  border-radius: 3px;
+}
+.section-spletivo-details form {
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  font-weight: 600;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+
+  outline: none;
+  background-color: $color-goldd;
+  background-image: linear-gradient(to right, $color-gold-darkk, $color-goldd);
+  border: 1.5px solid rgba($color-gold-dark, 0.7);
+  box-shadow: 0 0 10px $color-goldd;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black; /* přidej tuto řádku */
+  -webkit-tap-highlight-color: transparent;
+  align-self: flex-end;
+}
+
+form button:hover {
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+form button svg {
+  font-size: 1.7rem;
 }

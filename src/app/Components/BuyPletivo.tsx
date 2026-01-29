@@ -1,5 +1,6 @@
 import "../Sass/_buypletivo.scss";
 import { basePath } from "../functions/Env";
+import { RiShoppingCart2Line } from "react-icons/ri";
 
 function BuyPletivo() {
   return (
@@ -28,7 +29,7 @@ function BuyPletivo() {
                 email, nebo nám zavolat. Na možnosti nákupu online momentálně
                 pracujeme.
               </p>
-              <label htmlFor="height" className="h">
+              <label htmlFor="height" className="height">
                 Vyberte výšku:
               </label>
               <select id="height" name="height">
@@ -51,6 +52,14 @@ function BuyPletivo() {
                     <span className="color-2"></span>
                   </label>
                 </div>
+
+                <div className="quantity-select">
+                  <p>Množství</p>
+                  <input type="number" defaultValue={1} min="1"></input>
+                </div>
+                <button>
+                  Objednat <RiShoppingCart2Line />
+                </button>
               </form>
             </div>
           </div>
