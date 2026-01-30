@@ -19,28 +19,23 @@ function Sloupky() {
           <ul className="pletiva-advantages">
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <span>Moderní, estetický vzhled</span>
+              <span>Sloupky pro ploty z pletiva i panelů</span>
             </li>
 
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <span>Jednoduchá instalace</span>
+              <span>Dodatečné bezpečnostní prvky oplocení</span>
             </li>
 
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <span>Velice spolehlivé zabezpečení pozemku</span>
-            </li>
-
-            <li className="pletiva-advantages-item">
-              <RiCheckboxCircleLine />
-              <span>Možnost instalace s podhrabovými deskami</span>
+              <span>Napínací dráty, vázací dráty, objímky, čepičky</span>
             </li>
           </ul>
         </div>
         <div className="pletiva-about-image">
           <img
-            src={`${basePath}/panelyintroo.png`}
+            src={`${basePath}/panely/panely4.webp`}
             alt="Pletiva PVC a zinková"
             className="pletiva-about-image-i"
           />
