@@ -173,10 +173,12 @@ function Pletiva() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/PletivaBezinal">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -200,10 +202,12 @@ function Pletiva() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/PletivaBezinal">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 

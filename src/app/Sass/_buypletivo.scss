@@ -232,6 +232,59 @@ form button svg {
   font-size: 1.7rem;
 }
 
+.diameter-select {
+  margin-top: 0.8rem;
+}
+
+.diameter-select p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
+.diameter-options {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.diameter-options label {
+  position: relative;
+  cursor: pointer;
+}
+
+.diameter-options input {
+  display: none;
+}
+
+.diameter-options span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 7px;
+  border-radius: 6px;
+
+  border: 2px solid #ddd;
+  background: #fff;
+
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #333;
+
+  transition: 0.2s;
+}
+
+.diameter-options label:hover span {
+  border-color: #aaa;
+}
+
+.diameter-options input:checked + span {
+  border-color: $color-primary-green;
+  background: rgba($color-primary-green, 0.1);
+  box-shadow: 0 0 0 3px rgba($color-primary-green, 0.25);
+}
+
 @media (max-width: 1024px) {
   .section-spletivo-product {
     max-width: 900px;
