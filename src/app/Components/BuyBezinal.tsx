@@ -13,7 +13,7 @@ function BuyBezinal() {
               <p>
                 Zinková Pletiva Bezinal máme ve variantách s průměrem drátu
                 2.0mm a 2.2mm. Pletiva Bezinal pleteme v našich dílnách už mnoho
-                let, takže kvalití a odolné pletivo zaručujeme. Zinkové pletivo
+                let, takže kvalitní a odolné pletivo zaručujeme. Zinkové pletivo
                 Bezinal se díky svým vlastnostem využívá hlavně u firemních
                 objektů a v průmyslových oblastech vzhledem k jeho vysoké
                 odolnosti a ochraně.
