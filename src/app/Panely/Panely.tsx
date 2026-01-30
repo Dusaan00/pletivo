@@ -1,6 +1,7 @@
 import "../Sass/_pletiva.scss";
 import { basePath } from "../functions/Env";
 import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
+import Link from "next/link";
 
 function Panely() {
   return (
@@ -67,7 +68,7 @@ function Panely() {
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Panel 3D Zelený</h3>
+              <h3>Panel 3D Zelený, drát 4mm</h3>
             </div>
             <p>
               Panel pvc v zelené barvě, šířka 2.50m, dostupné výšky panelů od 1m
@@ -79,10 +80,12 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/PanelyProduct">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -95,7 +98,7 @@ function Panely() {
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Panel 3D Antracit</h3>
+              <h3>Panel 3D Antracit, drát 4mm</h3>
             </div>
             <p>
               Panel pvc v antracitové barvě, šířka 2.50m, dostupné výšky panelů
@@ -107,10 +110,12 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/PanelyProduct">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
