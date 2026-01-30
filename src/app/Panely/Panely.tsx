@@ -180,6 +180,33 @@ function Panely() {
         <div className="pletivo-product">
           <div className="pletivo-product-image">
             <img
+              src={`${basePath}/sloupky/jeklgreen.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek JEKL - zelený</h3>
+            </div>
+            <p>
+              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
+              60x40.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <button>
+              Koupit
+              <RiShoppingCart2Line />
+            </button>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
               src={`${basePath}/sloupky/jeklantracit.webp`}
               alt="Pletivo zinkové bezinal"
             />
@@ -221,33 +248,6 @@ function Panely() {
             </p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
-            </div>
-          </div>
-          <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
-          </div>
-        </div>
-
-        <div className="pletivo-product">
-          <div className="pletivo-product-image">
-            <img
-              src={`${basePath}/sloupky/jeklgreen.webp`}
-              alt="Pletivo zinkové bezinal"
-            />
-          </div>
-          <div className="pletivo-product-text">
-            <div className="pletivo-product-pricing">
-              <h3>Sloupek JEKL - zelený</h3>
-            </div>
-            <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
-            </p>
-            <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
