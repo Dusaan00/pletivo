@@ -1,6 +1,7 @@
 import Intro from "./Components/Intro";
 import Over from "./Components/Overview";
 import Doprava from "./Components/Doprava";
+import Pay from "./Components/Pay";
 import Proc from "./Components/Proc";
 import Features from "./Components/Features";
 import About from "./Components/About";
@@ -12,6 +13,7 @@ export default function Home() {
       <Intro />
       <Over />
       <Doprava />
+      <Pay />
       <Proc />
       <Features />
       <About />

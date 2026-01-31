@@ -1,5 +1,4 @@
 import "../Sass/_doprava.scss";
-import { basePath } from "../functions/Env";
 import { RiMapPinLine, RiRoadsterLine, RiRoadsterFill } from "react-icons/ri";
 
 function Doprava() {
