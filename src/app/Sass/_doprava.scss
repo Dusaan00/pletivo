@@ -1,0 +1,63 @@
+@use "./variables" as *;
+
+.section-doprava {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.doprava-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.doprava-h2 {
+  margin-block-end: 5rem;
+  font-size: 3rem;
+}
+
+.doprava-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doprava-card {
+  padding: 3rem 2.5rem;
+  box-shadow:
+    0 0 0 0.05rem hsla(214, 88%, 27%, 0.08),
+    0 0 1.25rem hsla(216, 14%, 14%, 0.06);
+  border-radius: 5px;
+  background-color: #fff;
+  height: 100%;
+}
+
+.doprava-card-icon {
+  width: 6rem;
+  height: 6rem;
+  background-color: #55c57a;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin-inline: auto;
+  box-shadow: 0 8px 20px rgba(85, 197, 122, 0.35);
+}
+
+.doprava-card-title {
+  margin-block: 1.6rem 1rem;
+  font-size: 1.5rem;
+  margin-top: 2.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.doprava-card-text {
+  font-size: 1.4rem;
+}
