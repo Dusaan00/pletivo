@@ -141,10 +141,12 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -170,10 +172,12 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -197,10 +201,12 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -224,10 +230,12 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -251,10 +259,12 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

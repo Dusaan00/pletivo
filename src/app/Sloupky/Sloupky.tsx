@@ -1,6 +1,7 @@
 import { basePath } from "../functions/Env";
 import "../Sass/_pletiva.scss";
 import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
+import Link from "next/link";
 
 function Sloupky() {
   return (
@@ -64,10 +65,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -92,10 +95,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -121,10 +126,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -150,10 +157,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -177,10 +186,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -204,10 +215,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -231,10 +244,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -258,10 +273,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -285,10 +302,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -312,10 +331,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -339,10 +360,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -366,10 +389,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -393,10 +418,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -420,10 +447,12 @@ function Sloupky() {
             </div>
           </div>
           <div className="btn-buy">
-            <button>
-              Koupit
-              <RiShoppingCart2Line />
-            </button>
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
