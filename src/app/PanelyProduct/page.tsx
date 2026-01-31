@@ -1,4 +1,5 @@
 import BuyPanely from "../Components/BuyPanely";
+import Pay from "../Components/Pay";
 
 export const metadata = {
   title: "Pletivo Grygov - Panely 3D/2D",
@@ -28,5 +29,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <BuyPanely />;
+  return (
+    <>
+      <BuyPanely />
+      <Pay />
+    </>
+  );
 }
