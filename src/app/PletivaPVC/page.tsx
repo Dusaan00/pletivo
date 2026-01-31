@@ -1,4 +1,5 @@
 import BuyPletivo from "../Components/BuyPletivo";
+import Pay from "../Components/Pay";
 
 export const metadata = {
   title: "Pletivo Grygov - Pletivo PVC",
@@ -28,5 +29,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <BuyPletivo />;
+  return (
+    <>
+      <BuyPletivo />
+      <Pay />
+    </>
+  );
 }
