@@ -37,7 +37,7 @@ function Sloupky() {
         <div className="pletiva-about-image">
           <img
             src={`${basePath}/panely/panely4.webp`}
-            alt="Pletiva PVC a zinková"
+            alt="Sloupky pro stavby plotů"
             className="pletiva-about-image-i"
           />
         </div>
@@ -48,7 +48,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/sloupekantracit.webp`}
-              alt="Pletivo PVC zelené"
+              alt="Sloupek antracit"
             />
           </div>
           <div className="pletivo-product-text">
@@ -78,7 +78,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/vzperantracit.webp`}
-              alt="Pletivo PVC antracit"
+              alt="Vzpěra antracit"
             />
           </div>
           <div className="pletivo-product-text">
@@ -108,7 +108,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/sloupekpvp.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek PVC"
             />
           </div>
           <div className="pletivo-product-text">
@@ -137,10 +137,7 @@ function Sloupky() {
 
         <div className="pletivo-product">
           <div className="pletivo-product-image">
-            <img
-              src={`${basePath}/sloupky/vzperapvp.webp`}
-              alt="Pletivo zinkové bezinal"
-            />
+            <img src={`${basePath}/sloupky/vzperapvp.webp`} alt="Vzpěra PVC" />
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
@@ -170,7 +167,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/sloupekzinc.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek zinkový"
             />
           </div>
           <div className="pletivo-product-text">
@@ -199,7 +196,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/sloupekgreen.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek zelený"
             />
           </div>
           <div className="pletivo-product-text">
@@ -228,7 +225,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/vzperagreen.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Vzpěra zelená"
             />
           </div>
           <div className="pletivo-product-text">
@@ -257,7 +254,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/vzperazn.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Vzpěra zinková"
             />
           </div>
           <div className="pletivo-product-text">
@@ -286,7 +283,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/jeklantracit.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek JEKL - antracit"
             />
           </div>
           <div className="pletivo-product-text">
@@ -315,7 +312,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/jeklzinc.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek JEKL - zinkový"
             />
           </div>
           <div className="pletivo-product-text">
@@ -344,7 +341,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/jeklgreen.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek JEKL - zelený"
             />
           </div>
           <div className="pletivo-product-text">
@@ -373,7 +370,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/dratgreen.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Napínací drát pvc zelený"
             />
           </div>
           <div className="pletivo-product-text">
@@ -402,7 +399,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/dratgreen.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Napínací drát pvc zelený"
             />
           </div>
           <div className="pletivo-product-text">
@@ -431,7 +428,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/dratgreen.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Napínací drát pvc zelený"
             />
           </div>
           <div className="pletivo-product-text">
@@ -518,7 +515,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/dratzink.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Napínací drát zinkový"
             />
           </div>
           <div className="pletivo-product-text">
@@ -547,7 +544,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/kladka.webp`}
-              alt="Napínací kladka pvc"
+              alt="Napínací kladka pvc v zelené barvě"
             />
           </div>
           <div className="pletivo-product-text">
@@ -576,7 +573,7 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/kladkaa.webp`}
-              alt="Napínací kladka pvc"
+              alt="Napínací kladka pvc antracit"
             />
           </div>
           <div className="pletivo-product-text">
