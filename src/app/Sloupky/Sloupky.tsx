@@ -378,14 +378,72 @@ function Sloupky() {
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Napínací drát – zelený</h3>
+              <h3>Napínací drát – zelený 78m</h3>
             </div>
             <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
+              Napínací drát PVC zelený, délka 78 metrů. Napínací drát se využívá
+              při montáži pletivového plotu.
             </p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>340,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratgreen.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – zelený 52m</h3>
+            </div>
+            <p>
+              Napínací drát PVC zelený, délka 52 metrů. Napínací drát se využívá
+              při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>250,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratgreen.webp`}
+              alt="Pletivo zinkové bezinal"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – zelený 26m</h3>
+            </div>
+            <p>
+              Napínací drát PVC zelený, délka 26 metrů. Napínací drát se využívá
+              při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>140,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -402,19 +460,48 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/dratantra.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Napínací drát v barvě antracit"
             />
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Napínací drát – antracit</h3>
+              <h3>Napínací drát – antracit 78m</h3>
             </div>
             <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
+              Napínací drát PVC antracit, délka 78 metrů. Napínací drát se
+              využívá při montáži pletivového plotu.
             </p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>360,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratantra.webp`}
+              alt="Napínací drát v barvě antracit"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – antracit 52m</h3>
+            </div>
+            <p>
+              Napínací drát PVC antracit, délka 52 metrů. Napínací drát se
+              využívá při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>270,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -439,8 +526,8 @@ function Sloupky() {
               <h3>Napínací drát – Zinkový</h3>
             </div>
             <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
+              Napínací drát zinkový, využivá se při montáži plotu ze zinkového
+              pletiba bezinal.
             </p>
             <div className="pletivo-product-price">
               <h4>od 255,-Kč</h4>
