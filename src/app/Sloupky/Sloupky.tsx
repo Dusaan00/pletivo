@@ -542,6 +542,64 @@ function Sloupky() {
             </Link>
           </div>
         </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/kladka.webp`}
+              alt="Napínací kladka pvc"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací kladka PVC zelená</h3>
+            </div>
+            <p>
+              Napínací kladka PVC v zelené barvě, tohle příslušenství se využivá
+              při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>22,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/kladkaa.webp`}
+              alt="Napínací kladka pvc"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací kladka PVC antracit</h3>
+            </div>
+            <p>
+              Napínací kladka PVC v antracitové barvě, tohle příslušenství se
+              využivá při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>29,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
