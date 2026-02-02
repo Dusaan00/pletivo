@@ -55,13 +55,9 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Sloupek antracit – ⌀48mm</h3>
             </div>
-            <p>
-              Panel pvc v zelené barvě, šířka 2.50m, dostupné výšky panelů od 1m
-              do 2m. Idealní pro oplocení rodinného domu, zahrady, i firemního
-              areálu.
-            </p>
+            <p>Sloupek ⌀48mm v antracitové barvě.</p>
             <div className="pletivo-product-price">
-              <h4>od 490,-Kč</h4>
+              <h4>Na poptávku</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -85,13 +81,9 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Vzpěra antracit – ⌀38mm</h3>
             </div>
-            <p>
-              Panel pvc v antracitové barvě, šířka 2.50m, dostupné výšky panelů
-              od 1m do 2m. Idealní pro oplocení rodinného domu, zahrady, i
-              firemního areálu.
-            </p>
+            <p>Vzpěra v barvě antracit.</p>
             <div className="pletivo-product-price">
-              <h4>od 490,-Kč</h4>
+              <h4>Na poptávku</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -116,10 +108,8 @@ function Sloupky() {
               <h3>Sloupek PVC – ⌀42mm</h3>
             </div>
             <p>
-              Panel 3D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky
-              panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely
-              jsou velice odolné s dlouhou životností. Ideální pro oplocení
-              např. v oblastech průmyslu.
+              Sloupek pvc v zelené barvě, používá se při montážích plotů z
+              pletiva.
             </p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
@@ -144,10 +134,8 @@ function Sloupky() {
               <h3>Vzpěra PVC – ⌀42mm</h3>
             </div>
             <p>
-              Panel 2D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky
-              panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely
-              jsou velice odolné s dlouhou životností. Ideální pro oplocení
-              např. v oblastech průmyslu.
+              Vzpěra pvc v zelené barvě, používá se při montážích plotů z
+              pletiva.
             </p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
@@ -175,11 +163,10 @@ function Sloupky() {
               <h3>Sloupek zinkový – ⌀48mm</h3>
             </div>
             <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
+              Sloupek zinkový, používá se při montážích plotů z pletiva bezinal.
             </p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>Na poptávku</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -203,10 +190,7 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Sloupek zelený ⌀48mm</h3>
             </div>
-            <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
-            </p>
+            <p>Sloupek zelený pvc, používá se při stavbě plotu z pletiva.</p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
             </div>
@@ -232,12 +216,9 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Vzpěra zelená – ⌀38mm</h3>
             </div>
-            <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
-            </p>
+            <p>Vzpěra zelená pvc, používá se při stavbě plotu z pletiva.</p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>Na poptávku</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -262,11 +243,11 @@ function Sloupky() {
               <h3>Vzpěra zinková – ⌀38mm</h3>
             </div>
             <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
+              Vzpěra zinková, používá se při montážích oplocení z pletiva
+              bezinal.
             </p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>Na poptávku</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -290,10 +271,7 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Sloupek JEKL - antracit</h3>
             </div>
-            <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
-            </p>
+            <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
             <div className="pletivo-product-price">
               <h4>od 255,-Kč</h4>
             </div>
@@ -319,10 +297,7 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Sloupek JEKL - zinkový</h3>
             </div>
-            <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
-            </p>
+            <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
             </div>
@@ -348,12 +323,9 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Sloupek JEKL - zelený</h3>
             </div>
-            <p>
-              Sloupky mezi které se panely při montáži plotu dosazují. Rozměr
-              60x40.
-            </p>
+            <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>255,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
