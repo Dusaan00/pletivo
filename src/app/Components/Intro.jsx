@@ -5,11 +5,19 @@ import { basePath } from "../functions/Env";
 import Slider from "../functions/Slider";
 
 const sliderItems = [
-  { src: "/panelyintroo.png", label: "Panely 3D" },
-  { src: "/land/pletvo.webp", label: "Pletiva" },
-  { src: "/land/sloupkyland.webp", label: "Sloupky" },
-  { src: "/land/gateland.webp", label: "Brány a branky" },
-  { src: "/land/mobile.webp", label: "Mobilní oplocení" },
+  { src: "/panelyintroo.png", label: "Panely 3D", href: "/Panely3D2D" },
+  { src: "/land/pletvo.webp", label: "Pletiva", href: "/Pletivo" },
+  {
+    src: "/land/sloupkyland.webp",
+    label: "Sloupky",
+    href: "/SloupkyPrislusenstvi",
+  },
+  { src: "/land/gateland.webp", label: "Brány a branky", href: "/Brany" },
+  {
+    src: "/land/mobile.webp",
+    label: "Mobilní oplocení",
+    href: "/MobilniOploceni",
+  },
 ];
 
 function Intro() {

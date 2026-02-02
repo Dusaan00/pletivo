@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Slider({ items }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -16,6 +17,10 @@ export default function Slider({ items }) {
 
   const activeItem = items[activeIndex];
 
+  const imageElement = (
+    <img src={activeItem.src} alt={activeItem.label} className="slider-image" />
+  );
+
   return (
     <div className="slider">
       <div className="slider-inner">
@@ -27,7 +32,13 @@ export default function Slider({ items }) {
           ‹
         </button>
 
-        <img src={activeItem.src} alt={activeItem.label} />
+        {activeItem.href ? (
+          <Link href={activeItem.href} aria-label={activeItem.label}>
+            {imageElement}
+          </Link>
+        ) : (
+          imageElement
+        )}
 
         <button
           className="slider-arrow right"
