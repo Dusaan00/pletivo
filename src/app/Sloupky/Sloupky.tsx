@@ -55,7 +55,9 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Sloupek antracit – ⌀48mm</h3>
             </div>
-            <p>Sloupek ⌀48mm v antracitové barvě.</p>
+            <p>
+              Sloupek ⌀48mm v antracitové barvě. Pro montáže pletivových plotů.
+            </p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
             </div>
@@ -81,7 +83,7 @@ function Sloupky() {
             <div className="pletivo-product-pricing">
               <h3>Vzpěra antracit – ⌀38mm</h3>
             </div>
-            <p>Vzpěra v barvě antracit.</p>
+            <p>Vzpěra v barvě antracit. Pro montáže pletivových plotů.</p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
             </div>

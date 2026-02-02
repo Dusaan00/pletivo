@@ -63,7 +63,7 @@ function Panely() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/pletivaa/panelgreen.png`}
-              alt="Pletivo PVC zelené"
+              alt="3D panel v zelené barvě"
             />
           </div>
           <div className="pletivo-product-text">
@@ -93,7 +93,7 @@ function Panely() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/pletivaa/pantracit.png`}
-              alt="Pletivo PVC antracit"
+              alt="Panel 3D v antracitové barvě"
             />
           </div>
           <div className="pletivo-product-text">
@@ -121,10 +121,7 @@ function Panely() {
 
         <div className="pletivo-product">
           <div className="pletivo-product-image">
-            <img
-              src={`${basePath}/pletivaa/zinc.png`}
-              alt="Pletivo zinkové bezinal"
-            />
+            <img src={`${basePath}/pletivaa/zinc.png`} alt="Panel 3D zinkový" />
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
@@ -152,10 +149,7 @@ function Panely() {
 
         <div className="pletivo-product">
           <div className="pletivo-product-image">
-            <img
-              src={`${basePath}/pletivaa/dvad.png`}
-              alt="Pletivo zinkové bezinal"
-            />
+            <img src={`${basePath}/pletivaa/dvad.png`} alt="Panel 2D zinkový" />
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
@@ -185,7 +179,7 @@ function Panely() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/jeklgreen.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek JEKL - zelený"
             />
           </div>
           <div className="pletivo-product-text">
@@ -214,7 +208,7 @@ function Panely() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/jeklantracit.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek JEKL - antracit"
             />
           </div>
           <div className="pletivo-product-text">
@@ -243,7 +237,7 @@ function Panely() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/jeklzinc.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Sloupek JEKL - zinkový"
             />
           </div>
           <div className="pletivo-product-text">
