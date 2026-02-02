@@ -1,4 +1,5 @@
 import Pletiva from "../Pletiva/Pletiva";
+import Pay from "../Components/Pay";
 
 export const metadata = {
   title: "Výroba Pletiva Grygov - Pletiva",
@@ -28,5 +29,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Pletiva />;
+  return (
+    <>
+      <Pletiva />
+      <Pay />
+    </>
+  );
 }

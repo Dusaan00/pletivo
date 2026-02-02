@@ -1,4 +1,5 @@
 import Sloupky from "../Sloupky/Sloupky";
+import Pay from "../Components/Pay";
 
 export const metadata = {
   title: "Pletivo Grygov - Sloupky & příslušenství",
@@ -28,5 +29,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Sloupky />;
+  return (
+    <>
+      <Sloupky />
+      <Pay />
+    </>
+  );
 }
