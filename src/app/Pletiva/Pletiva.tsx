@@ -215,7 +215,7 @@ function Pletiva() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/land/zeberkove.webp`}
-              alt="Pletivo zinkové bezinal"
+              alt="Žeberkové pletivo"
             />
           </div>
           <div className="pletivo-product-text">

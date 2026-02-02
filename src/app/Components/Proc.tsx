@@ -85,9 +85,9 @@ function Proc() {
               <p className="proc-right-p">
                 {" "}
                 Velice často, jak pro soukromé osoby, tak pro firmy, vyrábíme na
-                zakázku. Můžeme Vám dodat různá pletiva, panely 3D/2D, brány,
-                branky, sloupky a všechna ostatní nezbytná příslušenství pro
-                stavbu oplocení.{" "}
+                zakázku. Můžeme Vám dodat pletiva PVC a pletivo bezinal, panely
+                3D/2D, brány, branky, sloupky a všechna ostatní nezbytná
+                příslušenství pro stavbu oplocení.{" "}
               </p>{" "}
               <Link href="/form" className="btn--text btn--gallery">
                 {" "}
