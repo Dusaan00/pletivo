@@ -195,7 +195,7 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <Link href="/form">
+            <Link href="/SloupkyProduct">
               <button>
                 Koupit
                 <RiShoppingCart2Line />
@@ -224,7 +224,7 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <Link href="/form">
+            <Link href="/SloupkyProduct">
               <button>
                 Koupit
                 <RiShoppingCart2Line />
