@@ -571,6 +571,35 @@ function Sloupky() {
             </Link>
           </div>
         </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/kladkazinc.webp`}
+              alt="Napínací kladka zinková"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací kladka zinková</h3>
+            </div>
+            <p>
+              Napínací kladka zinkový, tohle příslušenství se využivá při
+              montáži zinkového plotuz pletiva bezinal.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>29,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
