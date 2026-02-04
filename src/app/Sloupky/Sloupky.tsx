@@ -600,6 +600,35 @@ function Sloupky() {
             </Link>
           </div>
         </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/vazacidrat.jpeg`}
+              alt="Napínací kladka zinková"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Vázací drát pvc 50m</h3>
+            </div>
+            <p>
+              Vázací dráty pvc v zelené/antracitové/hnědé barvě s průměrem
+              1,4mm/2,0mm.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>140,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

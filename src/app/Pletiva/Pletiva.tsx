@@ -8,7 +8,7 @@ const sliderItems = [
   { src: "/land/sloupkyland.webp", label: "Sloupky" },
   { src: "/land/vzperagreen.webp", label: "Vzpěry" },
   { src: "/land/dratgreen.webp", label: "Napínací dráty" },
-  { src: "/land/vazaci.webp", label: "Vázací dráty" },
+  { src: "/sloupky/vazacidrat.jpeg", label: "Vázací dráty" },
 ];
 
 function Pletiva() {
