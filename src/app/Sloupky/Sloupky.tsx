@@ -498,7 +498,7 @@ function Sloupky() {
             </div>
             <p>
               Napínací drát zinkový, využivá se při montáži plotu ze zinkového
-              pletiba bezinal.
+              pletiva bezinal.
             </p>
             <div className="pletivo-product-price">
               <h4>od 255,-Kč</h4>

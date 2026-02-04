@@ -15,7 +15,7 @@ function BuyPletivo() {
                 Dostupné výšky pletiva od 100 do 200cm. Pletivo je upletené u
                 nás v našich dílnách. 1 balík pletiva má délku 25m. Pletivo je
                 kvalitní, odolné, po dokončené montáži není potřeba dále
-                udržovat.
+                udržovat. Vyrobeno u nás.
               </p>
               <br />
               <p>

@@ -239,6 +239,296 @@ function Pletiva() {
             </Link>
           </div>
         </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/vazacidrat.jpeg`}
+              alt="Napínací kladka zinková"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Vázací drát pvc 50m</h3>
+            </div>
+            <p>
+              Vázací dráty pvc v zelené/antracitové/hnědé barvě s průměrem
+              1,4mm/2,0mm.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>140,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratgreen.webp`}
+              alt="Napínací drát pvc zelený"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – zelený 78m</h3>
+            </div>
+            <p>
+              Napínací drát PVC zelený, délka 78 metrů. Napínací drát se využívá
+              při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>340,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratgreen.webp`}
+              alt="Napínací drát pvc zelený"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – zelený 52m</h3>
+            </div>
+            <p>
+              Napínací drát PVC zelený, délka 52 metrů. Napínací drát se využívá
+              při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>250,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratgreen.webp`}
+              alt="Napínací drát pvc zelený"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – zelený 26m</h3>
+            </div>
+            <p>
+              Napínací drát PVC zelený, délka 26 metrů. Napínací drát se využívá
+              při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>140,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratantra.webp`}
+              alt="Napínací drát v barvě antracit"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – antracit 78m</h3>
+            </div>
+            <p>
+              Napínací drát PVC antracit, délka 78 metrů. Napínací drát se
+              využívá při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>360,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratantra.webp`}
+              alt="Napínací drát v barvě antracit"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – antracit 52m</h3>
+            </div>
+            <p>
+              Napínací drát PVC antracit, délka 52 metrů. Napínací drát se
+              využívá při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>270,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/dratzink.webp`}
+              alt="Napínací drát zinkový"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací drát – Zinkový</h3>
+            </div>
+            <p>
+              Napínací drát zinkový, využivá se při montáži plotu ze zinkového
+              pletiva bezinal.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/kladka.webp`}
+              alt="Napínací kladka pvc v zelené barvě"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací kladka PVC zelená</h3>
+            </div>
+            <p>
+              Napínací kladka PVC v zelené barvě, tohle příslušenství se využivá
+              při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>22,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/kladkaa.webp`}
+              alt="Napínací kladka pvc antracit"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací kladka PVC antracit</h3>
+            </div>
+            <p>
+              Napínací kladka PVC v antracitové barvě, tohle příslušenství se
+              využivá při montáži pletivového plotu.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>29,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/kladkazinc.webp`}
+              alt="Napínací kladka zinková"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Napínací kladka zinková</h3>
+            </div>
+            <p>
+              Napínací kladka zinkový, tohle příslušenství se využivá při
+              montáži zinkového plotuz pletiva bezinal.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>29,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
