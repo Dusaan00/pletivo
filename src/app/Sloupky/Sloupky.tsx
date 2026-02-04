@@ -47,6 +47,84 @@ function Sloupky() {
         <div className="pletivo-product">
           <div className="pletivo-product-image">
             <img
+              src={`${basePath}/sloupky/jeklgreen.webp`}
+              alt="Sloupek JEKL - zelený"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek pvc zelený 60x40</h3>
+            </div>
+            <p>Sloupek se používá při montážích plotů z 3D pletiva.</p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/SloupkyProduct">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/jeklantracit.webp`}
+              alt="Sloupek JEKL - antracit"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek pvc antracit 60x40</h3>
+            </div>
+            <p>Sloupek se používá při montážích plotů z 3D pletiva.</p>
+            <div className="pletivo-product-price">
+              <h4>od 255,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/SloupkyProduct">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/jeklzinc.webp`}
+              alt="Sloupek JEKL - zinkový"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Sloupek JEKL - zinkový</h3>
+            </div>
+            <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
+            <div className="pletivo-product-price">
+              <h4>Na poptávku</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
               src={`${basePath}/sloupky/sloupekantracit.webp`}
               alt="Sloupek antracit"
             />
@@ -250,84 +328,6 @@ function Sloupky() {
             </p>
             <div className="pletivo-product-price">
               <h4>Na poptávku</h4>
-            </div>
-          </div>
-          <div className="btn-buy">
-            <Link href="/form">
-              <button>
-                Koupit
-                <RiShoppingCart2Line />
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="pletivo-product">
-          <div className="pletivo-product-image">
-            <img
-              src={`${basePath}/sloupky/jeklantracit.webp`}
-              alt="Sloupek JEKL - antracit"
-            />
-          </div>
-          <div className="pletivo-product-text">
-            <div className="pletivo-product-pricing">
-              <h3>Sloupek JEKL - antracit</h3>
-            </div>
-            <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
-            <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
-            </div>
-          </div>
-          <div className="btn-buy">
-            <Link href="/form">
-              <button>
-                Koupit
-                <RiShoppingCart2Line />
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="pletivo-product">
-          <div className="pletivo-product-image">
-            <img
-              src={`${basePath}/sloupky/jeklzinc.webp`}
-              alt="Sloupek JEKL - zinkový"
-            />
-          </div>
-          <div className="pletivo-product-text">
-            <div className="pletivo-product-pricing">
-              <h3>Sloupek JEKL - zinkový</h3>
-            </div>
-            <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
-            <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
-            </div>
-          </div>
-          <div className="btn-buy">
-            <Link href="/form">
-              <button>
-                Koupit
-                <RiShoppingCart2Line />
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="pletivo-product">
-          <div className="pletivo-product-image">
-            <img
-              src={`${basePath}/sloupky/jeklgreen.webp`}
-              alt="Sloupek JEKL - zelený"
-            />
-          </div>
-          <div className="pletivo-product-text">
-            <div className="pletivo-product-pricing">
-              <h3>Sloupek JEKL - zelený</h3>
-            </div>
-            <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
-            <div className="pletivo-product-price">
-              <h4>255,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
