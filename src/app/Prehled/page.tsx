@@ -1,4 +1,5 @@
 import Over from "../Components/Over";
+import All from "../Components/All";
 
 export const metadata = {
   title: "Výroba Pletiva Grygov | Pletivo, Panely 3D/2D, Brány, Sloupky",
@@ -7,5 +8,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Over />;
+  return (
+    <>
+      <Over />
+      <All />
+    </>
+  );
 }

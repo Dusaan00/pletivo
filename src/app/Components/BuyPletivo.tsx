@@ -1,4 +1,5 @@
 import "../Sass/_buypletivo.scss";
+import "../Sass/_pletiva.scss";
 import ColorChange from "../functions/ColorChange";
 
 function BuyPletivo() {
