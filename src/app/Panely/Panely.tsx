@@ -261,6 +261,58 @@ function Panely() {
             </Link>
           </div>
         </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/objimky3d.jpeg`}
+              alt="Objímky v zelené barvě pro montáž 3d panelů"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Objímky zelené</h3>
+            </div>
+            <p>Zelené objímky pro montáž plotu z 3D panelů.</p>
+            <div className="pletivo-product-price">
+              <h4>55,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/objimky3da.jpg`}
+              alt="Objímky v antracitové barvě pro 3D panely"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Objímky antracit</h3>
+            </div>
+            <p>Objímky v antracitové barvě pro montáž plotu z 3D panelů.</p>
+            <div className="pletivo-product-price">
+              <h4>55,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
