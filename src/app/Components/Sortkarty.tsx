@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const categories = [
   {
-    href: "/Pletiva",
+    href: "/Pletivo",
     label: "Pletiva",
     icon: `${basePath}/sorty/sortpletivo.png`,
   },
@@ -40,7 +40,7 @@ function Sortkarty() {
   return (
     <section className="section-sortkarty">
       <div className="sortkarty-container">
-        <h2 className="sortkarty-title">Přehled sortimentu</h2>
+        <h2 className="sortkarty-title">Přehled sortimentu Pletivo Grygov</h2>
 
         <div className="sortkarty-grid">
           {categories.map((item) => (
