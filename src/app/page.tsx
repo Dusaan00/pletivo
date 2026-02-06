@@ -5,12 +5,15 @@ import Pay from "./Components/Pay";
 import Proc from "./Components/Proc";
 import Features from "./Components/Features";
 import About from "./Components/About";
+import SortKarty from "./Components/Sortkarty";
+
 // import Akce from "./Components/Akce";
 
 export default function Home() {
   return (
     <div>
       <Intro />
+      <SortKarty />
       <Over />
       <Doprava />
       <Pay />

@@ -1,3 +1,4 @@
+import Sortkarty from "../Components/Sortkarty";
 import Over from "../Components/Over";
 import All from "../Components/All";
 
@@ -10,6 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <Sortkarty />
       <Over />
       <All />
     </>

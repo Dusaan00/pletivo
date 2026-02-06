@@ -9,8 +9,10 @@ function Mobile() {
         <div className="mobile-text">
           <h1 className="mobile-title">Mobilní oplocení</h1>
           <p className="mobile-intro">
-            Můžeme vám poskytnout i mobilní oplocení. Vyzvednutí je možné
-            kdykoliv během našich pracovních hodin, stačí nás kontaktovat.
+            Mímo běžná oplocení z pletiva a 3D pletiva nabízíme i dočasná řešení
+            oplocení - mobilní oplocení. Vyzvednutí mobilního oplocení je možné
+            na adrese naší firmy kdykoliv během našich pracovních hodin, stačí
+            nás kontaktovat.
           </p>
         </div>
         <div className="mobile-image-wrapper">
