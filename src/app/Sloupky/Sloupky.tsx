@@ -109,7 +109,7 @@ function Sloupky() {
             </div>
             <p>Sloupek se používá při montížch plotů z 3D pletiva.</p>
             <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
+              <h4>od 355,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">

@@ -134,7 +134,7 @@ function Panely() {
               např. v oblastech průmyslu.
             </p>
             <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
+              <h4>od 520,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -153,7 +153,7 @@ function Panely() {
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Panel 2D zinkový</h3>
+              <h3>Panel 2D zinkový, drát 5/6mm</h3>
             </div>
             <p>
               Panel 2D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky
@@ -162,7 +162,7 @@ function Panely() {
               např. v oblastech průmyslu.
             </p>
             <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
+              <h4>od 925,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -249,7 +249,7 @@ function Panely() {
               60x40.
             </p>
             <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
+              <h4>od 355,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
