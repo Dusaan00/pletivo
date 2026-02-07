@@ -179,61 +179,6 @@ function Sloupky() {
         <div className="pletivo-product">
           <div className="pletivo-product-image">
             <img
-              src={`${basePath}/sloupky/sloupekpvp.webp`}
-              alt="Sloupek PVC"
-            />
-          </div>
-          <div className="pletivo-product-text">
-            <div className="pletivo-product-pricing">
-              <h3>Sloupek PVC – ⌀42mm</h3>
-            </div>
-            <p>
-              Sloupek pvc v zelené barvě, používá se při montážích plotů z
-              pletiva.
-            </p>
-            <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
-            </div>
-          </div>
-          <div className="btn-buy">
-            <Link href="/form">
-              <button>
-                Koupit
-                <RiShoppingCart2Line />
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="pletivo-product">
-          <div className="pletivo-product-image">
-            <img src={`${basePath}/sloupky/vzperapvp.webp`} alt="Vzpěra PVC" />
-          </div>
-          <div className="pletivo-product-text">
-            <div className="pletivo-product-pricing">
-              <h3>Vzpěra PVC – ⌀42mm</h3>
-            </div>
-            <p>
-              Vzpěra pvc v zelené barvě, používá se při montážích plotů z
-              pletiva.
-            </p>
-            <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
-            </div>
-          </div>
-          <div className="btn-buy">
-            <Link href="/form">
-              <button>
-                Koupit
-                <RiShoppingCart2Line />
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="pletivo-product">
-          <div className="pletivo-product-image">
-            <img
               src={`${basePath}/sloupky/sloupekzinc.webp`}
               alt="Sloupek zinkový"
             />
@@ -494,14 +439,14 @@ function Sloupky() {
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Napínací drát – Zinkový</h3>
+              <h3>Vázací drát – Zinkový</h3>
             </div>
             <p>
-              Napínací drát zinkový, využivá se při montáži plotu ze zinkového
+              Vázací drát zinkový, využivá se při montáži plotu ze zinkového
               pletiva bezinal.
             </p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>od 145,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
