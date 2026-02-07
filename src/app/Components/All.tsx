@@ -250,7 +250,7 @@ function All() {
               např. v oblastech průmyslu.
             </p>
             <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
+              <h4>od 520,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -278,7 +278,7 @@ function All() {
               např. v oblastech průmyslu.
             </p>
             <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
+              <h4>od 925,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -307,7 +307,7 @@ function All() {
               3D pletiva.
             </p>
             <div className="pletivo-product-price">
-              <h4>Na poptávku</h4>
+              <h4>odd 355,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -532,14 +532,14 @@ function All() {
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Napínací drát – Zinkový</h3>
+              <h3>Vázací drát – Zinkový</h3>
             </div>
             <p>
               Napínací drát zinkový, využivá se při montáži plotu ze zinkového
               pletiva bezinal.
             </p>
             <div className="pletivo-product-price">
-              <h4>od 255,-Kč</h4>
+              <h4>140,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
@@ -627,6 +627,35 @@ function All() {
             </p>
             <div className="pletivo-product-price">
               <h4>29,-Kč</h4>
+            </div>
+          </div>
+          <div className="btn-buy">
+            <Link href="/form">
+              <button>
+                Koupit
+                <RiShoppingCart2Line />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="pletivo-product">
+          <div className="pletivo-product-image">
+            <img
+              src={`${basePath}/sloupky/prichytky.webp`}
+              alt="Napínací kladka zinková"
+            />
+          </div>
+          <div className="pletivo-product-text">
+            <div className="pletivo-product-pricing">
+              <h3>Příchytky + šroubky</h3>
+            </div>
+            <p>
+              Příchytky a šroubky, které se využívají pro kompletní montáže
+              plotů. Cena za 1ks příchytka + 1ks šroubek je 7,- Kč.
+            </p>
+            <div className="pletivo-product-price">
+              <h4>7,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
