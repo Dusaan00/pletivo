@@ -434,19 +434,19 @@ function Sloupky() {
           <div className="pletivo-product-image">
             <img
               src={`${basePath}/sloupky/dratzink.webp`}
-              alt="Napínací drát zinkový"
+              alt="Vázací drát zinkový"
             />
           </div>
           <div className="pletivo-product-text">
             <div className="pletivo-product-pricing">
-              <h3>Vázací drát – Zinkový</h3>
+              <h3>Vázací drát Zinkový 50m</h3>
             </div>
             <p>
               Vázací drát zinkový, využivá se při montáži plotu ze zinkového
               pletiva bezinal.
             </p>
             <div className="pletivo-product-price">
-              <h4>od 145,-Kč</h4>
+              <h4>140,-Kč</h4>
             </div>
           </div>
           <div className="btn-buy">
