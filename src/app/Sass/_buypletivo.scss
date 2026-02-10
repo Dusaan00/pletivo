@@ -371,3 +371,10 @@ form button svg {
 .out-stock {
   color: #d62828 !important;
 }
+
+form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}

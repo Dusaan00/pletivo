@@ -104,7 +104,7 @@ const PanelyChange = ({ children }: PanelyChangeProps) => {
             <input type="number" defaultValue={1} min="1" />
           </div>
           <Link href="/form" className="order-link">
-            <button>
+            <button disabled={!isInStock}>
               Objednat <RiShoppingCart2Line />
             </button>
           </Link>
