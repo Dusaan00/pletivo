@@ -356,3 +356,18 @@ form button svg {
     width: 100%;
   }
 }
+
+.stock-status {
+  margin-bottom: 1.5rem;
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.in-stock {
+  color: #00d874;
+}
+
+.out-stock {
+  color: #d62828 !important;
+}

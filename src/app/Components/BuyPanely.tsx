@@ -9,7 +9,6 @@ function BuyPletivo() {
         <div className="section-spletivo-container">
           <div className="section-spletivo-product">
             <PanelyChange>
-              <h3>Skladem, ihned k odběru</h3>
               <p>
                 Tento panel je dostupný v zelené a antracitové barvě. Panely
                 jsou šíroké 2.5m, vysoké jsou od 1m do 2m. Tyty panely mají

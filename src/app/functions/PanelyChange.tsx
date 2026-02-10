@@ -31,6 +31,7 @@ const PanelyChange = ({ children }: PanelyChangeProps) => {
       ? `${basePath}/panely/panelgreen.webp`
       : `${basePath}/panely/paneltracit.webp`;
 
+  const isInStock = selectedColor === "zelená";
   // Definuj ceny pro jednotlivé výšky (doplníš si sám zbylé ceny)
   const prices: { [key: string]: number } = {
     "1030/2500": 490,
@@ -50,6 +51,11 @@ const PanelyChange = ({ children }: PanelyChangeProps) => {
       <div className="section-spletivo-details">
         <h1>{title}</h1>
         <h2>{currentPrice},- Kč</h2>
+        <h3 className={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}>
+          {isInStock
+            ? "Skladem, ihned k odběru"
+            : "Panely antracit na skladě od 20.2. 2026."}
+        </h3>
         {children}
         <div className="height-select">
           <label htmlFor="height" className="height">
