@@ -20,8 +20,10 @@ function About() {
               výrobu pletiva a zámečnictví, a to trvá dodnes.
             </p>
             <p className="section-about-para-ii">
-              Vyrábíme různé druhy pletiv, bran, branek a doplňků nezbytných k
-              oplocení – napínací dráty, vázací dráty, napínací kladky,
+              Vyrábíme a dodáváme pletiva poplastovaná a pletiva zinková -
+              bezinal, panely 3D/2D pvc i zinkové, sloupky pvc/zinkové, dále
+              brány, branky a všechny ostatní nezbytné doplňky pro kompletní
+              montáže oplocení – napínací dráty, vázací dráty, napínací kladky,
               kloboučky na plotové sloupky – pozinkované i PVC. Zároveň
               provádíme stavby plotů na klíč. Zakládáme si na kvalitě materiálu
               a na vstřícném a profesionálním přístupu k zákazníkům. Zakázky

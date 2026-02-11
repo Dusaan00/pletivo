@@ -107,7 +107,7 @@ function Pletiva() {
               <h3>Pletivo Poplastované Zelené 25m</h3>
             </div>
             <p>
-              Kvalitní pletivo PVC s průměrem 2.5mm a rozměrem oka 55mm.
+              Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm.
               Dostupné výšky pletiva od 100 do 200cm.
             </p>
             <div className="pletivo-product-price">
@@ -136,7 +136,7 @@ function Pletiva() {
               <h3>Pletivo Poplastované Antracit 25m</h3>
             </div>
             <p>
-              Kvalitní pletivo PVC s průměrem 2.5mm a rozměrem oka 55mm.
+              Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm.
               Dostupné výšky pletiva od 100 do 200cm.
             </p>
             <div className="pletivo-product-price">
@@ -165,8 +165,8 @@ function Pletiva() {
               <h3>Pletivo Zinkové Bezinal 25m, 2.0mm</h3>
             </div>
             <p>
-              Kvalitní pletivo bezinal s průměrem 2.0mm a rozměrem oka 55mm.
-              Dostupné výšky pletiva bezinal od 100 do 200cm.
+              Kvalitní pletivo bezinal s průměrem drátu 2.0mm a rozměrem oka
+              55mm. Dostupné výšky pletiva bezinal od 100 do 200cm.
             </p>
             <div className="pletivo-product-price">
               <h4>1550,- Kč</h4>
@@ -194,8 +194,8 @@ function Pletiva() {
               <h3>Pletivo Zinkové Bezinal 25m, 2.2mm</h3>
             </div>
             <p>
-              Kvalitní pletivo bezinal s průměrem 2.2mm a rozměrem oka 55mm.
-              Dostupné výšky pletiva bezinal od 100 do 200cm.
+              Kvalitní pletivo bezinal s průměrem drátu 2.2mm a rozměrem oka
+              55mm. Dostupné výšky pletiva bezinal od 100 do 200cm.
             </p>
             <div className="pletivo-product-price">
               <h4>1999,- Kč</h4>
