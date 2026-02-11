@@ -12,6 +12,7 @@ function BuySloupky() {
               <h3>Skladem, ihned k odběru</h3>
               <p>
                 Sloupky poplastované ve velikosti 60x40 a výškami od 2m do 2.6m.
+                Používají se při montážích oplocení z 3D pletiva.
               </p>
               <br />
               <p>
