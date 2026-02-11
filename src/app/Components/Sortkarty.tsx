@@ -20,7 +20,7 @@ const categories = [
     icon: `${basePath}/sorty/sortsloupky.png`,
   },
   {
-    href: "/SloupkyPrislusenstvi",
+    href: "/NapinaciDraty",
     label: "Napínací dráty",
     icon: `${basePath}/sorty/sortnapinaky.png`,
   },
