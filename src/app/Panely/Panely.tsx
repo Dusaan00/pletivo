@@ -253,7 +253,7 @@ function Panely() {
             </div>
           </div>
           <div className="btn-buy">
-            <Link href="/form">
+            <Link href="/SloupkyZinkoveJekl">
               <button>
                 Koupit
                 <RiShoppingCart2Line />
