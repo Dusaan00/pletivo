@@ -66,7 +66,7 @@ function Over() {
             </div>
 
             <div className="prehled-card-item">
-              <Link href="/Panely3D2D" className="prehled-card-link">
+              <Link href="/PanelyZinkove" className="prehled-card-link">
                 <img
                   src={`${basePath}/pletivaa/zinc.webp`}
                   alt="Panely 3D/2D zinkové"
