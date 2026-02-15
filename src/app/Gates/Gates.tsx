@@ -178,6 +178,10 @@ function Gates() {
         <h2 className="gates-h2">
           Další příklady bran, která pro vás můžeme realizovat:
         </h2>
+        <p className="gates-p gateh2">
+          V případě zájmu o bránu/branku nás kontaktujte a domluvíme se na
+          konkrétních řešeních.
+        </p>
         <div className="gatee-products">
           <div className="gatee-product">
             <div className="gatee-product-image">
