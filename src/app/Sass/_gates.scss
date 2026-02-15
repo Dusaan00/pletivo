@@ -320,7 +320,7 @@
 
 .gatee-product-image {
   width: 100%;
-  aspect-ratio: 4/3; // Dynamický poměr stran místo fixní výšky – přizpůsobí se šířce
+  aspect-ratio: 3/4; // Dynamický poměr stran místo fixní výšky – přizpůsobí se šířce
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -330,7 +330,7 @@
 .gatee-product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 5px;
 }
 
@@ -381,8 +381,11 @@
 
 .btn-buy {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: clamp(12px, 3vw, 20px);
+  right: clamp(12px, 3vw, 20px);
+
+  max-width: calc(100% - 24px); // ⬅️ KLÍČ – nikdy nepřeleze kartu
+  box-sizing: border-box;
 }
 
 .btn-buy button {
@@ -392,9 +395,11 @@
   gap: 0.6rem;
 
   font-weight: 600;
-  padding: 10px 25px;
-  font-size: 1.6rem;
+  padding: clamp(8px, 2.5vw, 10px) clamp(14px, 4vw, 25px);
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
   border-radius: 5px;
+  white-space: nowrap; // text se nezalamuje
+  max-width: 100%;
 
   outline: none;
   background-color: $color-goldd;
