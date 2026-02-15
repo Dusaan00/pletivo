@@ -36,6 +36,11 @@
 .gates-p {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  text-align: justify;
+  text-align-last: left;
+  line-height: 1.75;
+  hyphens: auto;
+  max-width: 800px;
 }
 
 .gates-container {
@@ -217,7 +222,7 @@
 ///
 
 .gates-produkty {
-  margin-top: 5rem;
+  margin-top: 7rem;
   width: 100%; // Plná šířka pro adaptaci
   padding: 0 1rem; // Malý padding pro okraje
   box-sizing: border-box; // Zabrání přetečení

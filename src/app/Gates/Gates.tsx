@@ -8,7 +8,7 @@ function Gates() {
   return (
     <section className="gates">
       <div className="gates-texts">
-        <h1 className="gates-h1">Brána a branky Pletivo Grygov</h1>
+        <h1 className="gates-h1">Brány a branky Pletivo Grygov</h1>
         <p className="gates-p">
           Níže můžete vidět příklady bran, které jsme jako firma u zákazníků
           instalovali a můžeme tedy tyto brány a branky instalovat i u vás, ať
