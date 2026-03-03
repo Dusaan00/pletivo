@@ -1,12 +1,11 @@
-@use "./variables" as *;
-@use "./formWindow";
+@import "variables";
 
 .containar {
-  font-family: "Sora", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0 auto;
   margin-top: 60px;
   width: 80%;
-  background-color: #fcfcfc;
+  background-color: #fff;
   border-radius: 6px;
   padding: 30px 60px 40px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -54,7 +53,7 @@
   height: 3.5rem;
   width: 3.5rem;
   margin-bottom: 1rem;
-  fill: $color-primary-green;
+  fill: #5029bc;
 }
 
 .text-one {
@@ -80,14 +79,10 @@
 }
 
 .topic-text {
+  color: black;
   font-size: 1.8rem;
   font-weight: 700;
-
-  background: linear-gradient(135deg, $color-green-dark, $color-primary-green);
-  -webkit-background-clip: text; // pro WebKit (Chrome, Safari)
-  -webkit-text-fill-color: transparent; // aby šlo vidět pozadí
-  background-clip: text; // fallback pro ostatní prohlížeče
-  color: transparent; // fallback
+  color: #5029bc;
 }
 
 .input-box {
@@ -129,31 +124,13 @@ textarea {
   border: none;
   padding: 13px 14px;
   border-radius: 5px;
-  background: linear-gradient(135deg, $color-green-dark, $color-primary-green);
-
+  background: #5029bc;
   cursor: pointer;
-  transition:
-    background 0.35s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
-  box-shadow: 0 6px 14px rgba(40, 180, 133, 0.35);
+  transition: all 0.3s ease;
 }
 
 .form-button input[type="submit"]:hover {
-  background: linear-gradient(
-    135deg,
-    darken($color-green-dark, 6%),
-    darken($color-primary-green, 6%)
-  );
-
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(40, 180, 133, 0.45);
-}
-
-.form-button input[type="submit"]:active {
-  transform: translateY(0);
-  box-shadow: 0 5px 12px rgba(40, 180, 133, 0.35);
+  background: $color-secondary;
 }
 
 .achtung {
@@ -170,17 +147,118 @@ textarea {
   padding: 5px;
 }
 
-input:invalid[data-focused="true"] {
+input:invalid[focused="true"] {
   border: 1px solid red;
 }
 
-input:invalid[data-focused="true"] ~ .achtung {
+input:invalid[focused="true"] ~ .achtung {
   display: block;
 }
 
-textarea:invalid[data-focused="true"] ~ .achtung {
+textarea:invalid[focused="true"] ~ .achtung {
   display: block;
 }
+
+/////////////// IMAGE UPLOAD
+.upload-box {
+  width: 100%;
+  min-height: 150px;
+  margin: 25px 0;
+  border: 2px dashed #5029bc;
+  border-radius: 8px;
+  background: #f8f9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: visible;
+  gap: 4px;
+}
+
+.upload-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px; // menší mezera
+  margin-top: 0;
+}
+
+.upload-box.active {
+  background: #ecebff;
+  border-color: $color-secondary;
+}
+
+.upload-box p {
+  font-size: clamp(14px, 3vw, 16px);
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.upload-box span {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 7px;
+}
+
+.upload-button {
+  background: #5029bc;
+  color: white;
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 22px);
+  border-radius: 5px;
+  font-size: clamp(14px, 3vw, 16px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-button:hover {
+  background: $color-secondary;
+}
+
+.preview-wrapper {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-content: flex-start;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.preview-item {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+}
+
+.preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // klíčové
+  border-radius: 6px;
+}
+
+.remove-image {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+////////////////
 
 @media (max-width: 950px) {
   .containar {
@@ -232,8 +310,8 @@ textarea:invalid[data-focused="true"] ~ .achtung {
 
 @media (max-width: 455px) {
   .containar {
-    width: 95%;
-    padding: 20px 25px 30px 25px; /* Adjust padding for smaller screens */
+    width: 90%;
+    padding: 20px 25px 30px 25px; /* Adjust padding for smaller screens if needed */
   }
 
   .left-side {
@@ -241,7 +319,7 @@ textarea:invalid[data-focused="true"] ~ .achtung {
     flex-direction: row; /* Ensure row direction */
     justify-content: space-evenly; /* Evenly space the items */
     flex-wrap: wrap; /* Allow wrapping to 2 per row */
-    margin-top: 28px;
+    margin-top: 25px;
 
     &::before {
       display: none; /* Hide the vertical line */
