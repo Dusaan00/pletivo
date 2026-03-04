@@ -157,7 +157,7 @@ function Form() {
           {/* ... (Levá strana s kontakty zůstává beze změny) ... */}
           <div className="phone details">
             <svg className="clock ikon">
-              <use href="/sprite.svg#icon-clock"></use>
+              <use href="/sprite2.svg#icon-clock"></use>
             </svg>
             <div className="topic">Provozní hodiny</div>
             <div className="text-one">Po - Pá</div>
