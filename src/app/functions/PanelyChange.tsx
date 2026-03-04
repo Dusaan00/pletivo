@@ -54,7 +54,7 @@ const PanelyChange = ({ children }: PanelyChangeProps) => {
         <h3 className={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}>
           {isInStock
             ? "Skladem, ihned k odběru"
-            : "Panely antracit na skladě od 20.2. 2026."}
+            : "Panely antracit na skladě od 18.3. 2026."}
         </h3>
         {children}
         <div className="height-select">
