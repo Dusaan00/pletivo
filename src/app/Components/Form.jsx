@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import "../Sass/_form.scss";
 import Link from "next/link";
-import { basePath } from "../functions/Env";
 
 function Form() {
   const [name, setName] = useState("");
@@ -20,6 +19,11 @@ function Form() {
   const [files, setFiles] = useState([]);
   const [previews, setPreviews] = useState([]);
   const [dragActive, setDragActive] = useState(false);
+
+  // NOVÝ STAV PRO DĚKOVNOU ZPRÁVU
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Stav pro zobrazení loadingu během odesílání (volitelné, ale doporučené)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleFile = (selectedFiles) => {
     if (!selectedFiles || selectedFiles.length === 0) return;
@@ -78,6 +82,7 @@ function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Zapneme loading stav
 
     try {
       const formData = new FormData();
@@ -105,14 +110,16 @@ function Form() {
       const data = await res.json();
 
       if (data.success) {
-        alert("Formulář byl úspěšně odeslán!");
-        resetForm();
+        setIsSubmitted(true); // Přepneme na děkovnou zprávu
+        resetForm(); // Volitelné, pokud bys chtěl umožnit odeslat další formulář
       } else {
         alert("Odeslání se nezdařilo. Zkuste to prosím znovu.");
       }
     } catch (error) {
       console.error("Fetch error:", error);
       alert("Došlo k chybě při odesílání. Zkuste to prosím znovu.");
+    } finally {
+      setIsSubmitting(false); // Vypneme loading stav
     }
   };
 
@@ -120,13 +127,37 @@ function Form() {
     setFocused({ ...focused, [inputName]: true });
   };
 
+  // Pokud je formulář úspěšně odeslán, zobrazíme děkovnou zprávu
+  if (isSubmitted) {
+    return (
+      <div className="containar">
+        <div className="thank-you-wrapper">
+          <svg className="success-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg>
+          <h2 className="thank-you-title">Děkujeme za Vaši zprávu!</h2>
+          <p className="thank-you-text">
+            Formulář byl úspěšně odeslán. Na váš e-mail jsme zaslali potvrzení o
+            přijetí.
+          </p>
+          <p className="thank-you-text">Brzy se vám ozveme s odpovědí.</p>
+          <Link href="/">
+            <button className="back-button">Zpět na hlavní stránku</button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  // Pokud není odeslán, zobrazíme normální formulář (tento kód zůstává z 99% stejný)
   return (
     <div className="containar">
       <div className="content">
         <div className="left-side">
+          {/* ... (Levá strana s kontakty zůstává beze změny) ... */}
           <div className="phone details">
             <svg className="clock ikon">
-              <use href={`${basePath}/sprite2.svg#icon-clock`}></use>
+              <use href="/sprite.svg#icon-clock"></use>
             </svg>
             <div className="topic">Provozní hodiny</div>
             <div className="text-one">Po - Pá</div>
@@ -135,7 +166,7 @@ function Form() {
 
           <div className="address details">
             <svg className="add ikon">
-              <use href={`${basePath}/sprite.svg#icon-location_on`}></use>
+              <use href="/sprite.svg#icon-location_on"></use>
             </svg>
             <div className="topic">Adresa</div>
             <div className="text-one">Za Tratí 255</div>
@@ -170,6 +201,7 @@ function Form() {
             method="POST"
             encType="multipart/form-data"
           >
+            {/* ... (Inputy zůstávají beze změny) ... */}
             <div className="input-box">
               <input
                 type="text"
@@ -179,7 +211,7 @@ function Form() {
                 onChange={(e) => setName(e.target.value)}
                 onBlur={() => handleFocus("name")}
                 focused={focused.name.toString()}
-                pattern="^[A-Za-zĚŠČŘŽÝÁÍÉŮÚÓěščřžýáíéůúó]{3,30}$"
+                pattern="^[A-Za-zĚŠČŘŽÝÁÍÉŮÚÓěščřžýáíéůúó ]{3,30}$" // Přidána mezera do patternu, aby šlo zadat jméno i příjmení
                 required
               ></input>
               <span className="achtung">
@@ -187,6 +219,7 @@ function Form() {
                 znaky
               </span>
             </div>
+
             <div className="input-box">
               <input
                 type="email"
@@ -200,6 +233,7 @@ function Form() {
               ></input>
               <span className="achtung">Zadejte platnou emailovou adresu</span>
             </div>
+
             <div className="input-box">
               <input
                 type="tel"
@@ -214,6 +248,7 @@ function Form() {
               ></input>
               <span className="achtung">Zadejte platné telefonní číslo</span>
             </div>
+
             <div className="input-box message-box">
               <textarea
                 type="text"
@@ -262,7 +297,6 @@ function Form() {
                         className="remove-image"
                         onClick={() => {
                           URL.revokeObjectURL(previews[index]);
-
                           setFiles(files.filter((_, i) => i !== index));
                           setPreviews(previews.filter((_, i) => i !== index));
                         }}
@@ -288,7 +322,16 @@ function Form() {
             </div>
 
             <div className="form-button">
-              <input type="submit" value="Odeslat poptávku"></input>
+              {/* Změníme text tlačítka během odesílání */}
+              <input
+                type="submit"
+                value={isSubmitting ? "Odesílám..." : "Odeslat poptávku"}
+                disabled={isSubmitting}
+                style={{
+                  opacity: isSubmitting ? 0.7 : 1,
+                  cursor: isSubmitting ? "not-allowed" : "pointer",
+                }}
+              />
             </div>
             <p className="privacy-text">
               Vaše údaje nesdílíme s třetími stranami. Vaše údaje jsou použity

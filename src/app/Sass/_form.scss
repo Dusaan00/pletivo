@@ -259,6 +259,80 @@ textarea:invalid[focused="true"] ~ .achtung {
   cursor: pointer;
 }
 ////////////////
+///
+///
+/////////////// THANK YOU PAGE ///////////////
+.thank-you-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 40px 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  fill: #4caf50; /* Zelená barva pro úspěch */
+  margin-bottom: 20px;
+}
+
+.thank-you-title {
+  color: #5029bc; /* Tvoje hlavní barva */
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.thank-you-text {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.back-button {
+  margin-top: 30px;
+  background: transparent;
+  color: #5029bc;
+  border: 2px solid #5029bc;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+
+  &:hover {
+    background: #5029bc;
+    color: white;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .thank-you-title {
+    font-size: 2rem;
+  }
+  .thank-you-text {
+    font-size: 1.4rem;
+  }
+}
+////////////
 
 @media (max-width: 950px) {
   .containar {
