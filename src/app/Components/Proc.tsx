@@ -99,7 +99,7 @@ function Proc() {
       </section>{" "}
       <div className="contacts">
         <p className="contacts__item">plotygrygov@gmail.com</p>
-        <p className="contacts__item">+420 608 705 547</p>
+        <p className="contacts__item">+420 608 474 760</p>
         <Link href="/form" className="contacts__item contacts__button">
           Odeslat poptávku
         </Link>

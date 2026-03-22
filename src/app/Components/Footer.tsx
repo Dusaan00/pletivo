@@ -47,7 +47,7 @@ function Footer() {
             <svg className="footer__icon">
               <use href={`${basePath}/sprite.svg#icon-call`}></use>
             </svg>
-            <p className="phone"> +420 608 705 547</p>
+            <p className="phone"> +420 608 474 760</p>
           </a>
         </li>
 

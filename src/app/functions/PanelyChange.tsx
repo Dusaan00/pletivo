@@ -31,7 +31,7 @@ const PanelyChange = ({ children }: PanelyChangeProps) => {
       ? `${basePath}/panely/panelgreen.webp`
       : `${basePath}/panely/paneltracit.webp`;
 
-  const isInStock = selectedColor === "zelená";
+  const isInStock = true;
   // Definuj ceny pro jednotlivé výšky (doplníš si sám zbylé ceny)
   const prices: { [key: string]: number } = {
     "1030/2500": 490,
