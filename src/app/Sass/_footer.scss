@@ -1,11 +1,16 @@
 @use "./variables" as *;
 
 .foot {
-  background-color: #333;
   padding: 2.5rem;
-  background-image: linear-gradient(#2b2b2bf8), url("/bakgrund.webp");
+
+  background-image:
+    linear-gradient(135deg, rgba(12, 70, 30, 0.94), rgba(5, 40, 18, 0.96)),
+    url("/bakgrund.webp");
+  position: relative;
+
   background-size: cover;
   background-position: top;
+  color: white;
 
   @media (max-width: 760px) {
     padding: 2rem;
@@ -16,13 +21,36 @@
   }
 }
 
+.foot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #66ff8a,
+    #00ff6a,
+    #66ff8a,
+    transparent
+  );
+
+  background-size: 200% 100%;
+
+  animation: footerGlow 6s linear infinite;
+}
+
 .footer {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 1.5rem;
   align-items: center;
-  color: $color-grey-light-1;
+  color: white;
 
   @media (max-width: 1430px) {
     grid-template-columns: repeat(3, 1fr);
@@ -71,7 +99,6 @@
 }
 
 .address {
-  color: $color-grey-light-1;
   font-size: 1.5rem;
 
   @media (max-width: 950px) {
@@ -92,7 +119,6 @@
 }
 
 .phone {
-  color: $color-grey-light-1;
   font-size: 1.8rem;
 
   @media (max-width: 950px) {
@@ -144,7 +170,7 @@
   }
 
   &__text {
-    color: $color-grey-light-1;
+    color: #e8ffe9;
     font-size: 1.7rem;
 
     @media (max-width: 950px) {
@@ -177,8 +203,9 @@ a {
 .footer__icon {
   width: 4.5rem;
   height: 4.5rem;
-  fill: $color-grey-light-1;
+  fill: currentColor;
   margin-right: 0.75rem;
+  transition: all 0.25s ease;
 
   @media (max-width: 1000px) {
     width: 3.8rem;
@@ -196,9 +223,17 @@ a {
   }
 }
 
+.footer__link:hover .footer__icon {
+  transform: scale(1.1);
+  fill: #8cff9c;
+
+  .footer__link:active {
+    transform: scale(0.96);
+  }
+}
+
 .footer-legal {
   list-style: none;
-  fill: $color-grey-light-1;
   display: flex;
   justify-content: center; // Centers the items horizontally
   align-items: center; // Centers the items vertically
@@ -220,7 +255,12 @@ a {
   &__link:hover,
   &__link:active {
     @media (min-width: 901px) {
-      background-color: rgba(#fff, 0.05);
+      background: rgba(255, 255, 255, 0.06);
+
+      backdrop-filter: blur(6px);
+
+      border-radius: 10px;
+
       transform: translateY(-3px);
     }
   }
@@ -254,7 +294,6 @@ a {
 }
 
 .legal-text {
-  color: $color-grey-light-1;
   font-size: 16px;
   margin-left: -6px;
 
@@ -275,7 +314,6 @@ a {
 
 .copyright {
   font-size: 1.3rem;
-  color: $color-grey-light-1;
   margin-top: 5rem;
   margin-right: auto;
   margin-left: auto;
@@ -284,5 +322,15 @@ a {
   @media (max-width: 950px) {
     font-size: 1.1rem;
     margin-top: 3rem;
+  }
+}
+
+@keyframes footerGlow {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
   }
 }
