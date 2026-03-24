@@ -7,10 +7,14 @@ function Proc() {
   return (
     <section className="why">
       <div className="why-wrap">
-        <h2 className="why-heading">Proč naše firma?</h2>
+        <div className="why-heading-wrapper">
+          <h2 className="why-heading">Proč naše firma?</h2>
+        </div>
         <div className="why-container">
           <div className="why-container-item">
-            <img src={`${basePath}/why/handshake.png`}></img>
+            <div className="why-icon">
+              <img src={`${basePath}/why/handshake.png`}></img>
+            </div>
             <h3>Zkušenosti</h3>
             <p>
               Na trhu jsme už dlouho, takže máme potřebné zkušenosti a
@@ -21,7 +25,9 @@ function Proc() {
           </div>
 
           <div className="why-container-item">
-            <img src={`${basePath}/why/circle.png`}></img>
+            <div className="why-icon">
+              <img src={`${basePath}/why/circle.png`}></img>
+            </div>
             <h3>Specializace</h3>
             <p>
               Specializujeme se výhradně na ploty z pletiva a plotových panelů.
@@ -32,16 +38,20 @@ function Proc() {
           </div>
 
           <div className="why-container-item">
-            <img src={`${basePath}/why/conversation.png`}></img>
+            <div className="why-icon">
+              <img src={`${basePath}/why/conversation.png`}></img>
+            </div>
             <h3>Komunikace</h3>
             <p>
-              Během spolupráce s námi můžete vždy očekávat vstřícný a zákaznicky
+              Během spolupráce s námi můžete vždy očekávat vstřícný, zákaznicky
               orientovaný přístup.
             </p>
           </div>
 
           <div className="why-container-item">
-            <img src={`${basePath}/why/teamwork.png`}></img>
+            <div className="why-icon">
+              <img src={`${basePath}/why/teamwork.png`}></img>
+            </div>
             <h3>B2B & B2C</h3>
             <p>
               Kompletní oplocení dodáváme jak soukromým osobám, tak i firmám.
