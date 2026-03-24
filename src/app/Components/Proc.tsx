@@ -62,6 +62,22 @@ function Proc() {
           </div>
         </div>
       </div>
+
+      <div className="why-cta">
+        <div className="why-cta-content">
+          <a href="mailto:plotygrygov@gmail.com" className="why-cta-item">
+            plotygrygov@gmail.com
+          </a>
+
+          <a href="tel:+420608474760" className="why-cta-item">
+            +420 608 474 760
+          </a>
+
+          <Link href="/form" className="why-cta-button">
+            Odeslat poptávku
+          </Link>
+        </div>
+      </div>
     </section>
   );
 }
