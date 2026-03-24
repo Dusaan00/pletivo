@@ -167,12 +167,29 @@
 .why-cta {
   position: relative;
   margin-top: 3rem;
+  transform: translateY(50%);
   border-radius: 10px;
   overflow: hidden;
 
   background: linear-gradient(135deg, $color-goldd, $color-gold-darkk);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.why-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.25),
+    transparent 40%
+  );
+
+  pointer-events: none;
 }
 
 .why-cta-content {
@@ -202,6 +219,15 @@
   &:hover {
     opacity: 0.8;
   }
+}
+
+.why-container-item p {
+  font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.75);
+
+  max-width: 38ch;
+  margin: 0 auto;
 }
 
 .why-cta-item::after {
