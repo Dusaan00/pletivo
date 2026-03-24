@@ -5,106 +5,54 @@ import { basePath } from "../functions/Env";
 
 function Proc() {
   return (
-    <>
-      {" "}
-      <section className="proc-section">
-        {" "}
-        <div className="proc-title-wrapper">
-          {" "}
-          <h2 className="proc-title">Proč si vybrat naši firmu?</h2>{" "}
-        </div>{" "}
-        <div className="proc-div">
-          {" "}
-          <div className="proc-left">
-            {" "}
-            <div className="proc-photo-wrapper">
-              {" "}
-              <div className="proc-photo-grid">
-                {" "}
-                <Image
-                  src={`${basePath}/panely/panelyy.jpg`}
-                  width={500}
-                  height={300}
-                  className="proc-photo"
-                  alt="Pletivo a sloupky ke stavbě plotu"
-                  loading="lazy"
-                />{" "}
-                <Image
-                  src={`${basePath}/pletivaa/pletvo.webp`}
-                  width={500}
-                  height={300}
-                  className="proc-photo"
-                  alt="Balíky pletiv ke stavbě plotu"
-                  loading="lazy"
-                />{" "}
-                <Image
-                  src={`${basePath}/vyroba-pletiva3.jpg`}
-                  width={500}
-                  height={300}
-                  className="proc-photo"
-                  alt="Nezbytná příslušenství ke stavbě plotu"
-                  loading="lazy"
-                />{" "}
-                <Image
-                  src={`${basePath}/gates/brana.webp`}
-                  width={500}
-                  height={300}
-                  className="proc-photo"
-                  alt="Výroba pletiva v Pletivo Grygov"
-                  loading="lazy"
-                />{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-          <div className="proc-right">
-            {" "}
-            <div className="proc-right-i">
-              {" "}
-              <h3 className="proc-right-h">
-                {" "}
-                Jak pletivo vyrábíme a jaké typy pletiva nabízíme?{" "}
-              </h3>{" "}
-              <p className="proc-right-p">
-                {" "}
-                Pletivo vyrábíme v našich prostorách v Grygově. Naše stroje na
-                výrobu pletiva zaručují maximální tuhost drátu a vyslédkem je
-                kvalitní a odolné pletivo pro oplocení Vašeho pozemku.
-                Nejčastěji zajišťujeme výrobu poplastovaných pletiv v
-                antracitové a zelené barvě, dále například vysoce odolné pletivo
-                Bezinal, které je vhodné pro zabezpečení prostor hlavně v
-                průmyslových oblastech.{" "}
-              </p>{" "}
-              <Link href="/Cenik" className="btn--text btn--gallery">
-                {" "}
-                Ceník materiálu &rarr;{" "}
-              </Link>{" "}
-            </div>{" "}
-            <div className="proc-right-ii">
-              {" "}
-              <h3 className="proc-right-h hh">Zakázková výroba</h3>{" "}
-              <p className="proc-right-p">
-                {" "}
-                Velice často, jak pro soukromé osoby, tak pro firmy, vyrábíme na
-                zakázku. Můžeme Vám dodat pletiva PVC a pletivo bezinal, panely
-                3D/2D, brány, branky, sloupky a všechna ostatní nezbytná
-                příslušenství pro stavbu oplocení.{" "}
-              </p>{" "}
-              <Link href="/form" className="btn--text btn--gallery">
-                {" "}
-                Výroba na zakázku &rarr;{" "}
-              </Link>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
-      </section>{" "}
-      <div className="contacts">
-        <p className="contacts__item">plotygrygov@gmail.com</p>
-        <p className="contacts__item">+420 608 474 760</p>
-        <Link href="/form" className="contacts__item contacts__button">
-          Odeslat poptávku
-        </Link>
+    <section className="why">
+      <div className="why-wrap">
+        <h2 className="why-heading">Proč naše firma?</h2>
+        <div className="why-container">
+          <div className="why-container-item">
+            <img src={`${basePath}/why/handshake.png`}></img>
+            <h3>Zkušenosti</h3>
+            <p>
+              Na trhu jsme už dlouho, takže máme potřebné zkušenosti a
+              kompetence k tomu, vám správně poradit s výběrem materiálu a
+              stavbou oplocení. Zároveň dokážeme předvídat a předcházet
+              komplikace, které pří stavbách oplocení mohou nastat.
+            </p>
+          </div>
+
+          <div className="why-container-item">
+            <img src={`${basePath}/why/circle.png`}></img>
+            <h3>Specializace</h3>
+            <p>
+              Specializujeme se výhradně na ploty z pletiva a plotových panelů.
+              Díky tomuto úzkému soustředění dokážeme zajistit vysokou kvalitu
+              provedení práce a odborné poradenství při výběru vhodného
+              oplocení.
+            </p>
+          </div>
+
+          <div className="why-container-item">
+            <img src={`${basePath}/why/conversation.png`}></img>
+            <h3>Komunikace</h3>
+            <p>
+              Během spolupráce s námi můžete vždy očekávat vstřícný a zákaznicky
+              orientovaný přístup.
+            </p>
+          </div>
+
+          <div className="why-container-item">
+            <img src={`${basePath}/why/teamwork.png`}></img>
+            <h3>B2B & B2C</h3>
+            <p>
+              Kompletní oplocení dodáváme jak soukromým osobám, tak i firmám.
+              Pro firemní zákazníky dokážeme zajistit dodávky materiálu ve
+              větších objemech potřebných pro realizace oplocení, rádi s vámi
+              navážeme spolupráci.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </section>
   );
 }
 export default Proc;
