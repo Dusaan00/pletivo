@@ -95,6 +95,7 @@
 }
 
 .why-icon {
+  position: relative;
   width: clamp(70px, 6vw, 90px);
   height: clamp(70px, 6vw, 90px);
 
@@ -111,16 +112,31 @@
     rgba(212, 175, 55, 0.15),
     rgba(212, 175, 55, 0.05)
   );
-
   border: 1px solid rgba(212, 175, 55, 0.25);
-
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.06),
     inset 0 0 8px rgba(212, 175, 55, 0.1);
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+}
+
+.why-icon::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 12px;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(212, 175, 55, 0.35),
+    transparent
+  );
+
+  filter: blur(6px);
 }
 
 .why-container-item img {
