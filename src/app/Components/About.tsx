@@ -20,17 +20,20 @@ function About() {
               výrobu pletiva a zámečnictví, a to trvá dodnes.
             </p>
             <p className="section-about-para-ii">
-              Vyrábíme a dodáváme pletiva poplastovaná a pletiva zinková -
-              bezinal, panely 3D/2D pvc i zinkové, sloupky pvc/zinkové, dále
-              brány, branky a všechny ostatní nezbytné doplňky pro kompletní
-              montáže oplocení – napínací dráty, vázací dráty, napínací kladky,
-              kloboučky na plotové sloupky – pozinkované i PVC. Zároveň
-              provádíme stavby plotů na klíč. Zakládáme si na kvalitě materiálu
-              a na vstřícném a profesionálním přístupu k zákazníkům. Zakázky
-              realizujeme pro soukromé osoby (např. rodinné domy, chatové
-              oblasti, zahrady), firmy (zajištění materiálu a oplocení pro
-              firemní objekty a průmyslové oblasti) i pro veřejný sektor (obce,
-              školy atd.).
+              Vyrábíme a dodáváme pletiva poplastovaná pvc a pletiva zinková -
+              bezinal, brány, branky, svařovaná pletivá a další věci spojené se
+              zámečnictvím. Dále dodáváme plotové panely 3D/2D pvc i zinkové,
+              sloupky pvc/zinkové a všechny ostatní nezbytné doplňky pro
+              kompletní montáže oplocení – napínací dráty, vázací dráty,
+              napínací kladky, kloboučky na plotové sloupky – pozinkované i PVC.
+              Zároveň provádíme stavby plotů na klíč. Kromě dodání kompletního
+              materiálu pro stavbu plotu vám tedy můžeme i plot sami
+              postavit.Zakládáme si na kvalitě materiálu a na vstřícném,
+              profesionálním přístupu k zákazníkům. Zakázky realizujeme pro
+              soukromé osoby (např. rodinné domy, chatové oblasti, zahrady),
+              firmy (zajištění materiálu pro další stavební firmy, oplocení
+              firemních objektů a průmyslových oblastí) i pro veřejný sektor
+              (obce, školy atd.).
             </p>
             <div className="section-about-logo-container">
               <Image
