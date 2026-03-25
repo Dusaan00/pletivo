@@ -47,13 +47,17 @@
   margin: 14px;
   text-align: center;
   color: black;
+
+  padding: 12px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
 }
 
 .ikon {
   height: 3.5rem;
   width: 3.5rem;
   margin-bottom: 1rem;
-  fill: #5029bc;
+  fill: $color-green-dark;
 }
 
 .text-one {
@@ -79,10 +83,12 @@
 }
 
 .topic-text {
-  color: black;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #5029bc;
+
+  background: $color-green-dark;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .input-box {
@@ -124,13 +130,15 @@ textarea {
   border: none;
   padding: 13px 14px;
   border-radius: 5px;
-  background: #5029bc;
+  background: $gradient-green;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 18px rgba(40, 180, 133, 0.35);
 }
 
 .form-button input[type="submit"]:hover {
-  background: $color-secondary;
+  background: $gradient-gold;
+  box-shadow: 0 10px 22px rgba(184, 134, 11, 0.35);
 }
 
 .achtung {
@@ -164,7 +172,7 @@ textarea:invalid[focused="true"] ~ .achtung {
   width: 100%;
   min-height: 150px;
   margin: 25px 0;
-  border: 2px dashed #5029bc;
+  border: 2px dashed $color-green-dark;
   border-radius: 8px;
   background: #f8f9ff;
   display: flex;
@@ -188,8 +196,8 @@ textarea:invalid[focused="true"] ~ .achtung {
 }
 
 .upload-box.active {
-  background: #ecebff;
-  border-color: $color-secondary;
+  background: rgba(126, 213, 111, 0.15);
+  border-color: $color-green-dark;
 }
 
 .upload-box p {
@@ -205,7 +213,7 @@ textarea:invalid[focused="true"] ~ .achtung {
 }
 
 .upload-button {
-  background: #5029bc;
+  background: $gradient-green;
   color: white;
   padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 22px);
   border-radius: 5px;
@@ -215,7 +223,7 @@ textarea:invalid[focused="true"] ~ .achtung {
 }
 
 .upload-button:hover {
-  background: $color-secondary;
+  background: $gradient-gold;
 }
 
 .preview-wrapper {
@@ -281,7 +289,9 @@ textarea:invalid[focused="true"] ~ .achtung {
 }
 
 .thank-you-title {
-  color: #5029bc; /* Tvoje hlavní barva */
+  background: $gradient-green;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 15px;
@@ -297,18 +307,20 @@ textarea:invalid[focused="true"] ~ .achtung {
 
 .back-button {
   margin-top: 30px;
+
   background: transparent;
-  color: #5029bc;
-  border: 2px solid #5029bc;
+  color: $color-green-dark;
+  border: 2px solid $color-green-dark;
+
   padding: 10px 24px;
   font-size: 16px;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
   font-weight: 600;
+  transition: all 0.3s ease;
 
   &:hover {
-    background: #5029bc;
+    background: $gradient-green;
     color: white;
   }
 }
@@ -379,7 +391,11 @@ textarea:invalid[focused="true"] ~ .achtung {
 }
 
 .privacy-link {
-  color: #5029bc;
+  color: $color-green-dark;
+}
+
+.privacy-link:hover {
+  color: $color-gold-dark;
 }
 
 @media (max-width: 455px) {
@@ -410,6 +426,8 @@ textarea:invalid[focused="true"] ~ .achtung {
     height: 3rem;
     width: 3rem;
     margin-bottom: 0.75rem;
+
+    fill: $color-green-dark;
   }
 
   .text-one,

@@ -19,8 +19,8 @@ function Proc() {
             <p>
               Na trhu jsme už dlouho, takže máme potřebné zkušenosti a
               kompetence k tomu, vám správně poradit s výběrem materiálu a
-              stavbou oplocení. Zároveň dokážeme předvídat a předcházet
-              komplikace, které pří stavbách oplocení mohou nastat.
+              stavbou oplocení. Dokážeme předvídat a předcházet komplikace,
+              které pří stavbách oplocení mohou nastat.
             </p>
           </div>
 

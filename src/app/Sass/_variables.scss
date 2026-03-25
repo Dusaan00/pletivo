@@ -18,12 +18,16 @@ $color-green-light: #7ed56f;
 $color-green-dark: #28b485;
 
 $color-gold: #ffbf00;
-$color-gold-dark: #B8860B;
+$color-gold-dark: #b8860b;
 
 $color-goldd: #f0c047;
 $color-gold-darkk: #c89410;
 
 $color-wood: #a18a71;
+
+$gradient-green: linear-gradient(135deg, $color-green-light, $color-green-dark);
+
+$gradient-gold: linear-gradient(135deg, $color-goldd, $color-gold-darkk);
 
 // GRID
 $grid-width: 114rem;
