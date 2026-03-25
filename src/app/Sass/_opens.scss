@@ -1,0 +1,81 @@
+.openings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2747, #0b1d34);
+  padding: 3.5rem 1rem;
+  margin-top: 3rem;
+}
+
+.openings-itemh {
+  letter-spacing: 5px;
+}
+
+.openings__item {
+  position: relative;
+  color: #f7f7f7;
+  font-size: 2.8rem;
+
+  &:first-of-type {
+    letter-spacing: 2px;
+  }
+}
+
+.openings__hodiny {
+  font-size: 2.4rem;
+}
+
+@media (max-width: 500px) {
+  .features {
+    margin: 5rem auto;
+    padding: 0 0rem;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  }
+
+  .feature {
+    grid-row-gap: 0.8rem;
+    grid-column-gap: 1.8rem;
+  }
+
+  .feature__text {
+    font-size: 1.5rem;
+  }
+
+  .heading--4 {
+    font-size: 1.6rem;
+  }
+
+  .openings {
+    margin-top: -3rem;
+  }
+
+  .openings__item {
+    font-size: 2.2rem;
+  }
+
+  .openings__hodiny {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .openings__item {
+    font-size: 2rem;
+  }
+
+  .openings__hodiny {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .openings__item {
+    font-size: 1.85rem;
+  }
+
+  .openings__hodiny {
+    font-size: 1.65rem;
+  }
+}

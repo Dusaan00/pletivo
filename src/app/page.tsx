@@ -6,6 +6,7 @@ import Proc from "./Components/Proc";
 import Features from "./Components/Features";
 import About from "./Components/About";
 import SortKarty from "./Components/Sortkarty";
+import Openings from "./Components/Openings";
 
 // import Akce from "./Components/Akce";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Over />
       <Doprava />
       <Pay />
+      <Openings />
       <Proc />
       <Features />
       <About />

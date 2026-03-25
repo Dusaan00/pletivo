@@ -55,7 +55,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #635ae9 0%, #7b74f2 100%);
+  background: linear-gradient(135deg, #0f2747, #0b1d34);
   opacity: 0;
   transition: opacity 0.35s ease;
   z-index: 0;
@@ -69,7 +69,7 @@
 
 .pay-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(99, 90, 233, 0.35);
+  box-shadow: 0 18px 40px rgba(11, 29, 52, 0.35);
 }
 
 .pay-card:hover::before {
@@ -90,7 +90,7 @@
 .pay-card-icon {
   width: 6rem;
   height: 6rem;
-  background-color: #635ae9;
+  background: linear-gradient(135deg, #0f2747, #0b1d34);
   display: grid;
   place-items: center;
   color: #fff;

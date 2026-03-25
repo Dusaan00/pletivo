@@ -8,7 +8,7 @@ function About() {
       <div className="section-about-content">
         <div className="section-about-header">
           <h2 className="section-about-title">
-            <strong>O firmě Výroba Pletiva Grygov</strong>
+            <strong>O firmě Pletivo Grygov</strong>
           </h2>
         </div>
         <div className="section-about-grid">
