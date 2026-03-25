@@ -81,8 +81,6 @@
   background: white;
   padding: fluid-size(2, 5);
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  border: solid 1px #f7f7f7;
 
   @include respond-to(mid-break) {
     padding: fluid-size(2, 3);
@@ -203,7 +201,7 @@
   margin-bottom: 15px;
   color: black;
   font-family: "Helvetica", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
 
   @include respond-to(mid-break) {
     font-size: 1.6rem;
