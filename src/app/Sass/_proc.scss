@@ -301,10 +301,27 @@
   .why-cta-content {
     flex-direction: column;
   }
+
+  .why-cta {
+    /* Změna: Místo 50% ho posuneme jen o kousek, aby nepřejel přes další sekci */
+    transform: translateY(2rem);
+  }
 }
 
 @media (max-width: 550px) {
   .why-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .why-cta {
+    /* Změna: Odstraň margin-top: -6rem; a dej tam třeba 2rem, 
+       jinak se ti blok tlačí zbytečně nahoru do předchozích prvků */
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .why-cta {
+    margin-top: -6rem;
   }
 }
