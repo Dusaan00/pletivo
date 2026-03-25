@@ -36,11 +36,17 @@
 }
 
 .why-heading {
-  color: $color-gold-darkk;
   font-size: clamp(2rem, 2.5vw, 4rem);
   text-align: center;
   position: relative;
   display: inline-block;
+
+  /* gradient z tlačítka */
+  background-image: linear-gradient(to right, $color-gold-darkk, $color-goldd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; // pro Webkit prohlížeče
+  background-clip: text; // standardní
+  color: transparent; // fallback
 }
 
 .why-heading::after {
