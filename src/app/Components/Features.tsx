@@ -45,7 +45,7 @@ function Features() {
 
         <div className="feature">
           <div className="feature__icon">
-            <img src={`${basePath}/features/chat.png`}></img>
+            <img src={`${basePath}/features/calculator.png`}></img>
           </div>
           <h4 className="heading--4">Kalkulace ceny na míru</h4>
           <p className="feature__text">
