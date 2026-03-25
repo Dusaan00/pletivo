@@ -18,6 +18,20 @@
   color: black;
 }
 
+.title-gradient {
+  background-image: linear-gradient(
+    to right,
+    $color-green-dark,
+    $color-primary-green
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 .sortkarty-grid {
   display: grid;
 

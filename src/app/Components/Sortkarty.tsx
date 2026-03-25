@@ -40,7 +40,10 @@ function Sortkarty() {
   return (
     <section className="section-sortkarty">
       <div className="sortkarty-container">
-        <h2 className="sortkarty-title">Přehled sortimentu Pletivo Grygov</h2>
+        <h2 className="sortkarty-title">
+          Přehled sortimentu <span className="title-gradient">Pletivo</span>{" "}
+          Grygov
+        </h2>
 
         <div className="sortkarty-grid">
           {categories.map((item) => (
