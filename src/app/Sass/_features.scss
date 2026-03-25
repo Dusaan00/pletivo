@@ -22,11 +22,47 @@ body {
   grid-column-gap: 2.5rem;
 
   &__icon {
-    fill: #00cc66;
-    width: 4.5rem;
-    height: 4.5rem;
+    position: relative;
+    width: clamp(70px, 6vw, 90px);
+    height: clamp(70px, 6vw, 90px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+      circle at center,
+      rgba(212, 175, 55, 0.15),
+      rgba(212, 175, 55, 0.05)
+    );
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.06),
+      inset 0 0 8px rgba(212, 175, 55, 0.1);
+
     grid-row: 1 / span 2;
-    transform: translateY(-1rem);
+  }
+
+  &__icon::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 12px;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: radial-gradient(
+      ellipse at center,
+      rgba(212, 175, 55, 0.35),
+      transparent
+    );
+
+    filter: blur(6px);
   }
 
   &__text {
@@ -34,6 +70,13 @@ body {
     font-weight: 400;
     color: #4d4d4d;
   }
+}
+
+.feature__icon img {
+  height: clamp(2.2rem, 3vw, 2.8rem);
+  margin: 0;
+
+  filter: drop-shadow(0 3px 4px rgba(212, 175, 55, 0.35));
 }
 
 .heading--4 {
@@ -81,11 +124,6 @@ body {
   .feature {
     grid-row-gap: 0.8rem;
     grid-column-gap: 1.8rem;
-  }
-
-  .feature__icon {
-    width: 2.8rem;
-    height: 2.8rem;
   }
 
   .feature__text {

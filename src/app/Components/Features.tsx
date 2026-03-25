@@ -6,81 +6,76 @@ function Features() {
     <>
       <section className="features">
         <div className="feature">
-          <svg className="feature__icon">
-            <use href={`${basePath}/sprite.svg#icon-assignment`}></use>
-          </svg>
-          <h4 className="heading--4">Jsme na trhu od roku 1930</h4>
+          <div className="feature__icon">
+            <img src={`${basePath}/features/wire.png`}></img>
+          </div>
+          <h4 className="heading--4">Český výrobce pletiva</h4>
           <p className="feature__text">
-            Na trhu jako firma fungujeme už dlouho, takže s výrobou pletiva,
-            zámečnictvím, zakázkovou výrobou i se stavbami plotů na klíč máme
-            mnoho zkušeností.
+            Pletiva PVC a Bezinal vyrábíme v našich dilnách. Pletiva pleteme na
+            spolehlivých strojích z Německa, které zaručují maximální tuhost
+            drátu.
           </p>
         </div>
 
         <div className="feature">
-          <svg className="feature__icon">
-            <use href={`${basePath}/sprite.svg#icon-emoji_events`}></use>
-          </svg>
-          <h4 className="heading--4">
-            Odborně poradíme s výběrem vhodného materiálu
-          </h4>
+          <div className="feature__icon">
+            <img src={`${basePath}/features/trophy.png`}></img>
+          </div>
+
+          <h4 className="heading--4">Pomůžeme vám vybrat vhodné oplocení</h4>
           <p className="feature__text">
-            Díky našim mnohaletým zkušenostem jsme schopni profesionálně poradit
-            s výběrem materiálu dle vaší situace a na základě vašich aktuálních
-            potřeb.
+            Díky dlouholetým zkušenostem jsme se setkali s různými problémy a
+            situacemi, proto vám odborně poradíme s konkrétním řešením vašeho
+            problemu.
           </p>
         </div>
 
         <div className="feature">
-          <svg className="feature__icon">
-            <use href={`${basePath}/sprite.svg#icon-handyman`}></use>
-          </svg>
-          <h4 className="heading--4">Materiál si sami vyrábíme</h4>
+          <div className="feature__icon">
+            <img src={`${basePath}/features/in-stock.png`}></img>
+          </div>
+
+          <h4 className="heading--4">Kompletní materiál pro stavbu plotu</h4>
           <p className="feature__text">
-            Pletivo si vyrábíme sami, stejně tak například brány, branky a další
-            věci spojené se stavbami oplocení a zámečnictvím. Za kvalitu
-            materiálu ručíme. Dále dodáváme veškeré doplňky a příslušenství pro
-            ploty a oplocení.
+            Velkou část sortimentu udržujeme skladem, takže je materiál možno
+            odebrat ihned. Můžete u nás zakoupit všechna nezbytná příslušenství
+            pro kompletní stavbu oplocení.
           </p>
         </div>
 
         <div className="feature">
-          <svg className="feature__icon">
-            <use href={`${basePath}/sprite2.svg#icon-talks`}></use>
-          </svg>
-          <h4 className="heading--4">Zákaznicky orientovaný přístup</h4>
+          <div className="feature__icon">
+            <img src={`${basePath}/features/chat.png`}></img>
+          </div>
+          <h4 className="heading--4">Kalkulace ceny na míru</h4>
           <p className="feature__text">
-            Pošlete nám nezávaznou poptávku přes formulář, zavolejte nám, nebo
-            nám napište email. Na zprávy přes online formulář a emaily
-            odpovídáme nejpozději do 24 hodin ve všední dny. Samozřejmostí je i
-            možnost vše osobně prokonzultovat.
+            Na základě vašich požadavků připravíme přesnou kalkulaci dodávky
+            oplocení i stavby plotu. Zašlete nám poptávku a my pro vás obratem
+            přípravíme nabídku na míru.
           </p>
         </div>
 
         <div className="feature">
-          <svg className="feature__icon">
-            <use href={`${basePath}/sprite.svg#icon-brightness_high`}></use>
-          </svg>
+          <div className="feature__icon">
+            <img src={`${basePath}/features/order-delivery.png`}></img>
+          </div>
           <h4 className="heading--4">Zakázková výroba</h4>
           <p className="feature__text">
-            Značné množství objednávek zpracováváme na zakázky. Většinou se
-            jedná o pletiva, panely 3D/2D, brány, branky a další věci spojené se
-            stavbami oplocení a zámečnictvím. Zakázky plníme pro soukromé osoby
-            i firmy.
+            Některé objednávky zpracováváme na zakázku. Může se jednat např. o
+            brány, branky, žebérková pletiva a další věci spojené se
+            zámečnictvím. Zakázky plníme pro soukromé osoby i firmy.
           </p>
         </div>
 
         <div className="feature">
-          <svg className="feature__icon">
-            <use href={`${basePath}/sprite.svg#icon-location_on`}></use>
-          </svg>
-          <h4 className="heading--4">
-            Sídlo máme v obci Grygov (u Olomouce), doprava po celé České
-            Republice
-          </h4>
+          <div className="feature__icon">
+            <img src={`${basePath}/features/location.png`}></img>
+          </div>
+          <h4 className="heading--4">Jsme z obce Grygov (u Olomouce)</h4>
           <p className="feature__text">
-            Dopravu objednaného materiálu Vám můžeme zajistit po celé ČR. Je
-            možné si však materiál klidně osobně přijet vyzvednout do Grygova.
+            Objednaný materiál si můžete vyzvednout na adrese naší firmy nebo
+            zajistímě dopravu k vám. Dopravu objednaného materiálu Vám můžeme
+            zajistit po celé ČR.
           </p>
         </div>
       </section>
