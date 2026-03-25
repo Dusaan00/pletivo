@@ -177,7 +177,7 @@
   border-radius: 10px;
   overflow: hidden;
 
-  background: linear-gradient(135deg, $color-goldd, $color-gold-darkk);
+  background: linear-gradient(135deg, $color-green-light, $color-green-dark);
 
   box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.15),
@@ -207,6 +207,8 @@
   padding: clamp(1.2rem, 2vw, 2.5rem);
 
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .why-cta-item {
@@ -256,7 +258,6 @@
 
 .why-cta-button {
   padding: 0.7rem 1.6rem;
-
   cursor: pointer;
   border: 2px solid white;
   border-radius: 6px;
@@ -269,9 +270,21 @@
   transition: all 0.25s ease;
 
   &:hover {
-    background: white;
-    color: $color-gold-darkk;
+    background: linear-gradient(135deg, $color-goldd, $color-gold-darkk);
+    border-color: transparent;
+    transform: translateY(-2px);
   }
+}
+
+.why-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+
+  z-index: 0;
 }
 
 .why-cta-button:hover {
