@@ -4,13 +4,13 @@ import Pay from "../Components/Pay";
 export const metadata = {
   title: "Pletivo Grygov - Pletivo PVC",
   description:
-    "Pletiva skladem: poplastovaná pletiva v zelené a antracitové barvě, odolné pletivo Bezinal ze zinku a hliníku, a žeberkové pletivo. Pletivo od českého výrobce.",
+    "Pletiva skladem: poplastovaná pletiva v zelené a antracitové barvě, odolné pletivo Bezinal ze zinku a hliníku, a žeberkové pletivo. Pletivo od Českého výrobce.",
   keywords:
     "pletivo Grygov, pletivo, poplastované pletivo, pletivo Bezinal, žeberkové pletivo, drátěné pletivo",
   openGraph: {
     title: "Výroba Pletiva Grygov - Kvalitní Pletivo Skladem",
     description:
-      "Kvalitní pletivo od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberková pletiva. Rychlé dodání.",
+      "Kvalitní pletivo skladem od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberkové pletiv.",
     images: [{ url: "/opengraph-image.png" }], // Add a relevant image
     url: "https://pletivogrygov.cz/Pletivo",
     type: "website",
