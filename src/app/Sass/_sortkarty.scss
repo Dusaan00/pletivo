@@ -79,6 +79,74 @@
   line-height: 1.2;
 }
 
+.sortkarta-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:hover .sortkarta-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:hover .sortkarta-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.sortkarta-arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.sortkarta-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid $color-primary-green;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  overflow: hidden;
+
+  .dropdown-item {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: #444;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: rgba($color-primary-green, 0.1);
+      color: $color-green-dark;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+  }
+}
+
+// Úprava pro mobilní zařízení (hover na click)
+@media (max-width: 1024px) {
+  .sortkarta-wrapper:focus-within .sortkarta-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 565px) {
   .sortkarty-grid {
     grid-template-columns: repeat(2, 1fr);

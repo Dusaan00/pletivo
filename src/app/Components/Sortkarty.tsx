@@ -2,6 +2,7 @@ import Link from "next/link";
 import { basePath } from "../functions/Env";
 import "../Sass/_sortkarty.scss";
 import Image from "next/image";
+import { RiArrowDownSLine } from "react-icons/ri"; // Import šipky
 
 const categories = [
   {
@@ -20,9 +21,12 @@ const categories = [
     icon: `${basePath}/sorty/sortsloupky.png`,
   },
   {
-    href: "/NapinaciDraty",
     label: "Napínací dráty",
     icon: `${basePath}/sorty/sortnapinaky.png`,
+    subItems: [
+      { label: "PVC dráty", href: "/NapinaciDraty" },
+      { label: "Zinkové dráty", href: "/NapinaciDratyZinkove" },
+    ],
   },
   {
     href: "/Brany",
@@ -46,23 +50,63 @@ function Sortkarty() {
         </h2>
 
         <div className="sortkarty-grid">
-          {categories.map((item) => (
-            <Link key={item.label} href={item.href} className="sortkarta">
-              <div className="sortkarta-icon">
-                <Image
-                  src={item.icon}
-                  alt={item.label}
-                  width={30}
-                  height={30}
-                />
-              </div>
+          {categories.map((item) => {
+            if (item.subItems) {
+              return (
+                <div
+                  key={item.label}
+                  className="sortkarta-wrapper"
+                  tabIndex={0}
+                >
+                  <div className="sortkarta">
+                    <div className="sortkarta-icon">
+                      <Image
+                        src={item.icon}
+                        alt={item.label}
+                        width={30}
+                        height={30}
+                      />
+                    </div>
+                    <span className="sortkarta-text">{item.label}</span>
+                    <RiArrowDownSLine className="sortkarta-arrow" />
+                  </div>
+                  <div className="sortkarta-dropdown">
+                    {item.subItems.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className="dropdown-item"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
 
-              <span className="sortkarta-text">{item.label}</span>
-            </Link>
-          ))}
+            return (
+              <Link
+                key={item.label}
+                href={item.href || "#"}
+                className="sortkarta"
+              >
+                <div className="sortkarta-icon">
+                  <Image
+                    src={item.icon}
+                    alt={item.label}
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <span className="sortkarta-text">{item.label}</span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+
 export default Sortkarty;
