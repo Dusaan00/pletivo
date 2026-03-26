@@ -4,7 +4,7 @@ import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 import Slider from "../functions/Slider";
 import Link from "next/link";
 import { pletivaProducts } from "../../data/products/pletiva";
-import ProductCard from "../Components/ProductCard";
+import ProductSearch from "../functions/ProductSearch";
 
 const sliderItems = [
   { src: "/land/sloupkyland.webp", label: "Sloupky" },
@@ -96,11 +96,7 @@ function Pletiva() {
         </div>
       </div>
 
-      <div className="pletivo-products">
-        {pletivaProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ProductSearch products={pletivaProducts} />
     </section>
   );
 }
