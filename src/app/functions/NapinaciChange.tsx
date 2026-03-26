@@ -4,6 +4,7 @@ import { useState, ReactNode } from "react";
 import { basePath } from "../functions/Env";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface NapinaciChangeProps {
   children: ReactNode;
@@ -13,26 +14,18 @@ type Color = "zelená" | "antracitová";
 type Length = "26" | "52" | "78";
 
 const productData: Record<Color, Partial<Record<Length, number>>> = {
-  zelená: {
-    "26": 140,
-    "52": 250,
-    "78": 340,
-  },
-  antracitová: {
-    "52": 270,
-    "78": 360,
-  },
+  zelená: { "26": 140, "52": 250, "78": 340 },
+  antracitová: { "52": 270, "78": 360 },
 };
 
 const NapinaciChange = ({ children }: NapinaciChangeProps) => {
+  const router = useRouter();
   const [selectedColor, setSelectedColor] = useState<Color>("zelená");
   const [selectedLength, setSelectedLength] = useState<Length>("26");
 
-  // při změně barvy automaticky nastav první dostupnou délku
   const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const color = e.target.id as Color;
     setSelectedColor(color);
-
     const availableLengths = Object.keys(productData[color]) as Length[];
     setSelectedLength(availableLengths[0]);
   };
@@ -47,7 +40,6 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
       : `${basePath}/sloupky/dratantra.webp`;
 
   const currentPrice = productData[selectedColor][selectedLength] ?? 0;
-
   const title = `Napínací drát ${selectedColor}, ${selectedLength} m`;
 
   return (
@@ -64,7 +56,23 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
 
         {children}
 
-        {/* VÝBĚR DÉLKY */}
+        <div className="type-select">
+          <p>Typ drátu:</p>
+          <div className="type-options">
+            <label className="type-label active">
+              <input type="radio" name="type" checked={true} readOnly /> PVC
+            </label>
+            <label className="type-label">
+              <input
+                type="radio"
+                name="type"
+                onChange={() => router.push("/NapinaciDratyZinkove")}
+              />{" "}
+              Zinkové
+            </label>
+          </div>
+        </div>
+
         <div className="height-select">
           <label htmlFor="length">Vyberte délku:</label>
           <select
@@ -83,10 +91,8 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
         </div>
 
         <form>
-          {/* VÝBĚR BARVY */}
           <div className="color-select">
             <p>Barva:</p>
-
             <label htmlFor="zelená">
               <input
                 type="radio"
@@ -97,7 +103,6 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
               />
               <span className="color-1"></span>
             </label>
-
             <label htmlFor="antracitová">
               <input
                 type="radio"
@@ -116,7 +121,7 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
           </div>
 
           <Link href="/form" className="order-link">
-            <button>
+            <button type="button">
               Objednat <RiShoppingCart2Line />
             </button>
           </Link>

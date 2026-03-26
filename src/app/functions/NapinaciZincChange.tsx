@@ -4,16 +4,16 @@ import { useState, ReactNode } from "react";
 import { basePath } from "../functions/Env";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface NapinaciChangeProps {
   children: ReactNode;
 }
 
 const NapinaciChange = ({ children }: NapinaciChangeProps) => {
-  // Ponecháno pro funkčnost inputu množství, pokud je potřeba
+  const router = useRouter();
   const [quantity, setQuantity] = useState(1);
 
-  // Zde si upravte cestu k vašemu obrázku
   const imgSrc = `${basePath}/sloupky/dratzink.webp`;
   const currentPrice = 255;
   const title = `Napínací drát – Zinkový`;
@@ -31,6 +31,23 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
         <h3 className="stock-status in-stock">Skladem, ihned k odběru</h3>
 
         {children}
+
+        <div className="type-select">
+          <p>Typ drátu:</p>
+          <div className="type-options">
+            <label className="type-label">
+              <input
+                type="radio"
+                name="type"
+                onChange={() => router.push("/NapinaciDraty")}
+              />{" "}
+              PVC
+            </label>
+            <label className="type-label active">
+              <input type="radio" name="type" checked={true} readOnly /> Zinkové
+            </label>
+          </div>
+        </div>
 
         <form>
           <div className="quantity-select">
