@@ -4,7 +4,7 @@ import Pay from "../Components/Pay";
 export const metadata = {
   title: "Pletivo Grygov - Panely 3D/2D",
   description:
-    "Panely 3D/2D skladem: moderní 3D panely v zelené a antracitové barvě dodávající plotu estetický vzhled, odolné zinkové panely 3D/2D, ideální pro zabezpečení objektů.",
+    "Panely 3D/2D skladem: moderní 3D panely v zelené a antracitové barvě dodávající plotu estetický vzhled, odolné zinkové panely 3D/2D, skvělé moderní oplocení vašeho pozemku",
   keywords:
     "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
   openGraph: {

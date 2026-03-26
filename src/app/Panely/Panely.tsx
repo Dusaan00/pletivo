@@ -3,7 +3,7 @@ import { basePath } from "../functions/Env";
 import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
 import { panelyProducts } from "../../data/products/panely";
-import ProductCard from "../Components/ProductCard";
+import ProductSearch from "../functions/ProductSearch";
 
 function Panely() {
   return (
@@ -60,11 +60,7 @@ function Panely() {
         </div>
       </div>
 
-      <div className="pletivo-products">
-        {panelyProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ProductSearch products={panelyProducts} />
     </section>
   );
 }
