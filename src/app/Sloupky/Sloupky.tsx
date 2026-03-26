@@ -3,7 +3,7 @@ import "../Sass/_pletiva.scss";
 import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
 import { sloupkyProducts } from "../../data/products/sloupky";
-import ProductCard from "../Components/ProductCard";
+import ProductSearch from "../functions/ProductSearch";
 
 function Sloupky() {
   return (
@@ -45,11 +45,7 @@ function Sloupky() {
         </div>
       </div>
 
-      <div className="pletivo-products">
-        {sloupkyProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ProductSearch products={sloupkyProducts} />
     </section>
   );
 }

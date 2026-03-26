@@ -1,16 +1,12 @@
 import "../Sass/_all.scss";
 
 import { vseProducts } from "../../data/products/vse";
-import ProductCard from "../Components/ProductCard";
+import ProductSearch from "../functions/ProductSearch";
 
 function All() {
   return (
     <section className="all">
-      <div className="pletivo-products">
-        {vseProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ProductSearch products={vseProducts} />
     </section>
   );
 }
