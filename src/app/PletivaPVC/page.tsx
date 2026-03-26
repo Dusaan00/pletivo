@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: "Výroba Pletiva Grygov - Kvalitní Pletivo Skladem",
     description:
-      "Kvalitní pletivo skladem od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberkové pletiv.",
+      "Kvalitní pletivo skladem od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberkové pletivo.",
     images: [{ url: "/opengraph-image.png" }], // Add a relevant image
     url: "https://pletivogrygov.cz/Pletivo",
     type: "website",
