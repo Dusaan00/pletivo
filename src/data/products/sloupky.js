@@ -138,7 +138,7 @@ export const sloupkyProducts = [
     description:
       "Napínací drát zinkový, využivá se při montáži plotu ze zinkového pletiva bezinal.",
     price: "255,-Kč",
-    link: "/form",
+    link: "/NapinaciDratyZinkove",
   },
   {
     id: "kladka-pvc-zelena",
