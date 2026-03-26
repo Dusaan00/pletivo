@@ -6,19 +6,30 @@ import { RiArrowDownSLine } from "react-icons/ri"; // Import šipky
 
 const categories = [
   {
-    href: "/Pletivo",
     label: "Pletiva",
     icon: `${basePath}/sorty/sortpletivo.png`,
+    subItems: [
+      { label: "Pletiva PVC", href: "/PletivaPVC" },
+      { label: "Pletiva Bezinal (Zinková)", href: "/PletivaBezinal" },
+    ],
   },
   {
-    href: "/Panely3D2D",
     label: "Panely 3D / 2D",
     icon: `${basePath}/sorty/sortpanely.png`,
+    subItems: [
+      { label: "Panely PVC 3D", href: "/PanelyProduct" },
+      { label: "Panely Zinkové 3D", href: "/PanelyZinkove" },
+      { label: "Panely Zinkové 2D", href: "/PanelyZinkove" },
+    ],
   },
   {
-    href: "/SloupkyPrislusenstvi",
     label: "Sloupky",
     icon: `${basePath}/sorty/sortsloupky.png`,
+    subItems: [
+      { label: "Sloupky - ploty z pletiva", href: "/SloupkyPrislusenstvi" },
+      { label: "Sloupky Jekl PVC", href: "/SloupkyProduct" },
+      { label: "Sloupky Jekl Zinkové", href: "/SloupkyZinkoveJekl" },
+    ],
   },
   {
     label: "Napínací dráty",
@@ -73,7 +84,7 @@ function Sortkarty() {
                   <div className="sortkarta-dropdown">
                     {item.subItems.map((sub) => (
                       <Link
-                        key={sub.href}
+                        key={sub.label}
                         href={sub.href}
                         className="dropdown-item"
                       >

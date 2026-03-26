@@ -84,14 +84,21 @@
   display: flex;
   flex-direction: column;
 
+  &:hover .sortkarta {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: $color-primary-green;
+  }
+
   &:hover .sortkarta-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    border-top: none;
   }
 
   &:hover .sortkarta-arrow {
-    transform: rotate(180deg);
+    transform: rotate(-90deg);
   }
 }
 

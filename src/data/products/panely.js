@@ -9,7 +9,7 @@ export const panelyProducts = [
     link: "/PanelyProduct",
   },
   {
-    id: "panel-anracit",
+    id: "panel-antracit",
     name: "Panel 3D Antracit, drát 4mm",
     image: "/panely/paneltracit.webp",
     description:
