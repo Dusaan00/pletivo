@@ -12,18 +12,18 @@ export const metadata = {
     description:
       "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
     images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/Panely3D2D",
+    url: "https://pletivogrygov.cz/NapinaciDraty",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Výroba Pletiva Grygov - Panely 3D/2D",
+    title: "Výroba Pletiva Grygov - Napínací dráty",
     description:
       "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://pletivogrygov.cz/Panely3D2D",
+    canonical: "https://pletivogrygov.cz/NapinaciDraty",
   },
   robots: "index, follow",
 };
