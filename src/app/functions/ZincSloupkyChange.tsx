@@ -37,7 +37,7 @@ const ZincSloupkyChange = ({ children }: ZincSloupkyChangeProps) => {
 
       <div className="section-spletivo-details">
         <h1>{title}</h1>
-        <h2>{currentPrice},- Kč</h2>
+        <h2>{currentPrice},-</h2>
         <h3 className="stock-status in-stock">Skladem, ihned k odběru</h3>
         {children}
 

@@ -50,7 +50,7 @@ const PanelyChange = ({ children }: PanelyChangeProps) => {
       </div>
       <div className="section-spletivo-details">
         <h1>{title}</h1>
-        <h2>{currentPrice},- Kč</h2>
+        <h2>{currentPrice},-</h2>
         <h3 className={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}>
           {isInStock
             ? "Skladem, ihned k odběru"

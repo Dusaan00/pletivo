@@ -47,7 +47,7 @@ const ColorChange = ({ children }: ColorChangeProps) => {
       </div>
       <div className="section-spletivo-details">
         <h1>{title}</h1>
-        <h2>{currentPrice},- Kč</h2>
+        <h2>{currentPrice},-</h2>
         {children}
         <div className="height-select">
           <label htmlFor="height" className="height">
