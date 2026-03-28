@@ -5,7 +5,7 @@ export const pletivaProducts = [
     image: "/pletivaa/zelenep.webp",
     description:
       "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
-    price: "1325,- Kč",
+    price: "1325,-",
     link: "/PletivaPVC",
   },
   {
@@ -14,7 +14,7 @@ export const pletivaProducts = [
     image: "/pletivaa/antracitv.webp",
     description:
       "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
-    price: "1325,- Kč",
+    price: "1325,-",
     link: "/PletivaPVC",
   },
   {
@@ -23,7 +23,7 @@ export const pletivaProducts = [
     image: "/pletivaa/bezinalv.webp",
     description:
       "Kvalitní pletivo bezinal s průměrem drátu 2.2mm a rozměrem oka 55mm. Dostupné výšky pletiva bezinal od 100 do 200cm.",
-    price: "1550,- Kč",
+    price: "1550,-",
     link: "/PletivaBezinal",
   },
   {
@@ -32,7 +32,7 @@ export const pletivaProducts = [
     image: "/pletivaa/bezinalv.webp",
     description:
       "Kvalitní pletivo bezinal s průměrem drátu 2.2mm a rozměrem oka 55mm. Dostupné výšky pletiva bezinal od 100 do 200cm.",
-    price: "1999,- Kč",
+    price: "1999,-",
     link: "/PletivaBezinal",
   },
   {
@@ -50,7 +50,7 @@ export const pletivaProducts = [
     image: "/sloupky/vazacidrat.jpeg",
     description:
       "Vázací dráty pvc v zelené/antracitové/hnědé barvě s průměrem 1,4mm/2,0mm.",
-    price: "140,-Kč",
+    price: "140,-",
     link: "/form",
   },
   {
@@ -59,7 +59,7 @@ export const pletivaProducts = [
     image: "/sloupky/dratgreen.webp",
     description:
       "Napínací drát PVC zelený, délka 78 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "340,-Kč",
+    price: "340,-",
     link: "/NapinaciDraty",
   },
   {
@@ -68,7 +68,7 @@ export const pletivaProducts = [
     image: "/sloupky/dratgreen.webp",
     description:
       "Napínací drát PVC zelený, délka 52 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "250,-Kč",
+    price: "250,-",
     link: "/NapinaciDraty",
   },
   {
@@ -77,7 +77,7 @@ export const pletivaProducts = [
     image: "/sloupky/dratgreen.webp",
     description:
       "Napínací drát PVC zelený, délka 26 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "140,-Kč",
+    price: "140,-",
     link: "/NapinaciDraty",
   },
   {
@@ -86,7 +86,7 @@ export const pletivaProducts = [
     image: "/sloupky/dratantra.webp",
     description:
       "Napínací drát PVC antracit, délka 78 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "360,-Kč",
+    price: "360,-",
     link: "/NapinaciDraty",
   },
   {
@@ -95,7 +95,7 @@ export const pletivaProducts = [
     image: "/sloupky/dratantra.webp",
     description:
       "Napínací drát PVC antracit, délka 52 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "270,-Kč",
+    price: "270,-",
     link: "/NapinaciDraty",
   },
   {
@@ -104,7 +104,7 @@ export const pletivaProducts = [
     image: "/sloupky/dratzink.webp",
     description:
       "Napínací drát zinkový, využivá se při montáži plotu ze zinkového pletiva bezinal.",
-    price: "255,-Kč",
+    price: "255,-",
     link: "/NapinaciDratyZinkove",
   },
   {
@@ -113,7 +113,7 @@ export const pletivaProducts = [
     image: "/sloupky/kladka.webp",
     description:
       "Napínací kladka PVC v zelené barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
-    price: "22,-Kč",
+    price: "22,-",
     link: "/form",
   },
   {
@@ -122,7 +122,7 @@ export const pletivaProducts = [
     image: "/sloupky/kladkaa.webp",
     description:
       "Napínací kladka PVC v antracitové barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
-    price: "29,-Kč",
+    price: "29,-",
     link: "/form",
   },
   {
@@ -131,7 +131,7 @@ export const pletivaProducts = [
     image: "/sloupky/kladkazinc.webp",
     description:
       "Napínací kladka zinková, tohle příslušenství se využivá při montáži zinkového plotuz pletiva bezinal.",
-    price: "29,-Kč",
+    price: "29,-",
     link: "/form",
   },
   {
@@ -140,7 +140,7 @@ export const pletivaProducts = [
     image: "/sloupky/prichytky.webp",
     description:
       "Příchytky a šroubky, které se využívají pro kompletní montáže plotů. Cena za 1ks příchytka + 1ks šroubek je 7,- Kč.",
-    price: "7,-Kč",
+    price: "7,-",
     link: "/form",
   },
 ];

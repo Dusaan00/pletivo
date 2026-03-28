@@ -5,7 +5,7 @@ export const vseProducts = [
     image: "/pletivaa/zelenep.webp",
     description:
       "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
-    price: "1325,- Kč",
+    price: "1325,-",
     link: "/PletivaPVC",
   },
   {
@@ -14,7 +14,7 @@ export const vseProducts = [
     image: "/pletivaa/antracitv.webp",
     description:
       "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
-    price: "1325,- Kč",
+    price: "1325,-",
     link: "/PletivaPVC",
   },
   {
@@ -23,7 +23,7 @@ export const vseProducts = [
     image: "/pletivaa/bezinalv.webp",
     description:
       "Kvalitní pletivo bezinal s průměrem drátu 2.2mm a rozměrem oka 55mm. Dostupné výšky pletiva bezinal od 100 do 200cm.",
-    price: "1550,- Kč",
+    price: "1550,-",
     link: "/PletivaBezinal",
   },
   {
@@ -32,7 +32,7 @@ export const vseProducts = [
     image: "/pletivaa/bezinalv.webp",
     description:
       "Kvalitní pletivo bezinal s průměrem drátu 2.2mm a rozměrem oka 55mm. Dostupné výšky pletiva bezinal od 100 do 200cm.",
-    price: "1999,- Kč",
+    price: "1999,-",
     link: "/PletivaBezinal",
   },
   {
@@ -50,7 +50,7 @@ export const vseProducts = [
     image: "/panely/panelgreen.webp",
     description:
       "Panel pvc v zelené barvě, šířka 2.50m, dostupné výšky panelů od 1m do 2m. Idealní pro oplocení rodinného domu, zahrady, i firemního areálu.",
-    price: "490,-Kč",
+    price: "490,-",
     link: "/PanelyProduct",
   },
   {
@@ -59,7 +59,7 @@ export const vseProducts = [
     image: "/panely/paneltracit.webp",
     description:
       "Panel pvc v antracitové barvě, šířka 2.50m, dostupné výšky panelů od 1m do 2m. Idealní pro oplocení rodinného domu, zahrady, i firemního areálu.",
-    price: "490,- Kč",
+    price: "490,-",
     link: "/PanelyProduct",
   },
   {
@@ -68,7 +68,7 @@ export const vseProducts = [
     image: "/pletivaa/zinc.webp",
     description:
       "Panel 3D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely jsou velice odolné s dlouhou životností. Ideální pro oplocení např. v oblastech průmyslu.",
-    price: "520,-Kč",
+    price: "520,-",
     link: "/PanelyZinkove",
   },
   {
@@ -77,7 +77,7 @@ export const vseProducts = [
     image: "/pletivaa/dvad.png",
     description:
       "Panel 2D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely jsou velice odolné s dlouhou životností. Ideální pro oplocení např. v oblastech průmyslu.",
-    price: "925,-Kč",
+    price: "925,-",
     link: "/PanelyZinkove",
   },
   {
@@ -86,7 +86,7 @@ export const vseProducts = [
     image: "/sloupky/jeklgreen.webp",
     description:
       "Sloupky mezi které se panely při montáži plotu dosazují. Rozměr 60x40.",
-    price: "255,-Kč",
+    price: "255,-",
     link: "/SloupkyProduct",
   },
   {
@@ -95,7 +95,7 @@ export const vseProducts = [
     image: "/sloupky/jeklantracit.webp",
     description:
       "Sloupky mezi které se panely při montáži plotu dosazují. Rozměr 60x40.",
-    price: "255,-Kč",
+    price: "255,-",
     link: "/SloupkyProduct",
   },
   {
@@ -104,7 +104,7 @@ export const vseProducts = [
     image: "/sloupky/jeklzinc.webp",
     description:
       "Sloupky mezi které se panely při montáži plotu dosazují. Rozměr 60x40.",
-    price: "355,-Kč",
+    price: "355,-",
     link: "/SloupkyZinkoveJekl",
   },
   {
@@ -112,7 +112,7 @@ export const vseProducts = [
     name: "Objímky zelené",
     image: "/sloupky/objimky3d.jpeg",
     description: "Zelené objímky pro montáž plotu z 3D panelů.",
-    price: "55,-Kč",
+    price: "55,-",
     link: "/form",
   },
   {
@@ -120,7 +120,7 @@ export const vseProducts = [
     name: "Objímky antracit",
     image: "/sloupky/objimky3da.jpg",
     description: "Objímky v antracitové barvě pro montáž plotu z 3D panelů.",
-    price: "55,-Kč",
+    price: "55,-",
     link: "/form",
   },
   {
@@ -180,7 +180,7 @@ export const vseProducts = [
     image: "/sloupky/vazacidrat.jpeg",
     description:
       "Vázací dráty pvc v zelené/antracitové/hnědé barvě s průměrem 1,4mm/2,0mm.",
-    price: "140,-Kč",
+    price: "140,-",
     link: "/form",
   },
   {
@@ -189,7 +189,7 @@ export const vseProducts = [
     image: "/sloupky/dratgreen.webp",
     description:
       "Napínací drát PVC zelený, délka 78 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "340,-Kč",
+    price: "340,-",
     link: "/NapinaciDraty",
   },
   {
@@ -198,7 +198,7 @@ export const vseProducts = [
     image: "/sloupky/dratgreen.webp",
     description:
       "Napínací drát PVC zelený, délka 52 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "250,-Kč",
+    price: "250,-",
     link: "/NapinaciDraty",
   },
   {
@@ -207,7 +207,7 @@ export const vseProducts = [
     image: "/sloupky/dratgreen.webp",
     description:
       "Napínací drát PVC zelený, délka 26 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "140,-Kč",
+    price: "140,-",
     link: "/NapinaciDraty",
   },
   {
@@ -216,7 +216,7 @@ export const vseProducts = [
     image: "/sloupky/dratantra.webp",
     description:
       "Napínací drát PVC antracit, délka 78 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "360,-Kč",
+    price: "360,-",
     link: "/NapinaciDraty",
   },
   {
@@ -225,7 +225,7 @@ export const vseProducts = [
     image: "/sloupky/dratantra.webp",
     description:
       "Napínací drát PVC antracit, délka 52 metrů. Napínací drát se využívá při montáži pletivového plotu.",
-    price: "270,-Kč",
+    price: "270,-",
     link: "/NapinaciDraty",
   },
   {
@@ -234,7 +234,7 @@ export const vseProducts = [
     image: "/sloupky/dratzink.webp",
     description:
       "Napínací drát zinkový, využivá se při montáži plotu ze zinkového pletiva bezinal.",
-    price: "255,-Kč",
+    price: "255,-",
     link: "/form",
   },
   {
@@ -243,7 +243,7 @@ export const vseProducts = [
     image: "/sloupky/kladka.webp",
     description:
       "Napínací kladka PVC v zelené barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
-    price: "22,-Kč",
+    price: "22,-",
     link: "/form",
   },
   {
@@ -252,7 +252,7 @@ export const vseProducts = [
     image: "/sloupky/kladkaa.webp",
     description:
       "Napínací kladka PVC v antracitové barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
-    price: "29,-Kč",
+    price: "29,-",
     link: "/form",
   },
   {
@@ -261,7 +261,7 @@ export const vseProducts = [
     image: "/sloupky/kladkazinc.webp",
     description:
       "Napínací kladka zinková, tohle příslušenství se využivá při montáži zinkového plotuz pletiva bezinal.",
-    price: "29,-Kč",
+    price: "29,-",
     link: "/form",
   },
   {
@@ -270,7 +270,7 @@ export const vseProducts = [
     image: "/sloupky/prichytky.webp",
     description:
       "Příchytky a šroubky, které se využívají pro kompletní montáže plotů. Cena za 1ks příchytka + 1ks šroubek je 7,- Kč.",
-    price: "7,-Kč",
+    price: "7,-",
     link: "/form",
   },
 ];

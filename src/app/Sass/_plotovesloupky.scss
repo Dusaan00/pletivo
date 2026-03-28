@@ -1,0 +1,49 @@
+@use "./variables" as *;
+
+.pletiva-section {
+  // Zarovnání na střed a stejná šířka jako u produktů
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem 0; // Horní padding 4rem, strany 1rem (shodné s produkty)
+
+  h2 {
+    // Flexibilní velikost nadpisu pomocí clamp
+    // Minimum: 2rem, Ideální: 4vw, Maximum: 3rem
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+
+    // Gradient efekt pro konzistenci s pletivy
+    background-image: linear-gradient(
+      to right,
+      $color-green-dark,
+      $color-primary-green
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  p {
+    // Flexibilní velikost textu popisu
+    // Minimum: 1.4rem, Ideální: 2vw, Maximum: 1.7rem
+    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    line-height: 1.6;
+    max-width: 800px; // Aby řádky nebyly příliš dlouhé a dobře se četly
+    color: #333;
+    margin-bottom: 2rem;
+  }
+}
+
+// Responzivní doladění pro mobilní zařízení
+@media (max-width: 900px) {
+  .pletiva-section {
+    text-align: center;
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -26,7 +26,7 @@ const categories = [
     label: "Sloupky",
     icon: `${basePath}/sorty/sortsloupky.png`,
     subItems: [
-      { label: "Sloupky - ploty z pletiva", href: "/SloupkyPrislusenstvi" },
+      { label: "Sloupky - ploty z pletiva", href: "/PlotoveSloupky" },
       { label: "Sloupky Jekl PVC", href: "/SloupkyProduct" },
       { label: "Sloupky Jekl Zinkové", href: "/SloupkyZinkoveJekl" },
     ],
