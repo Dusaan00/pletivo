@@ -96,10 +96,13 @@
 
 .section-spletivo-details h2 {
   color: #333;
-  line-height: 1.6;
-  font-weight: 700;
+  line-height: 1.3;
+  font-weight: 800;
   margin-top: 1.2rem;
-  font-size: 1.675rem;
+
+  font-size: clamp(2rem, 3vw, 2.35rem);
+
+  letter-spacing: 0.5px;
 }
 
 .section-spletivo-details h3 {

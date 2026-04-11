@@ -6,7 +6,7 @@ export const deskyProducts = [
     description:
       "K oplocení z pletiva a panelů 3D/2D se dají použít i betonové podhrabové desky, které zajistí dodatečnou ochranu plotu, estetiku a upravenost.",
     price: "670,-",
-    link: "/form",
+    link: "/DeskyPodhrabove",
   },
   {
     id: "Podhrabové desky 2.90m",
@@ -15,7 +15,7 @@ export const deskyProducts = [
     description:
       "K oplocení z pletiva a panelů 3D/2D se dají použít i betonové podhrabové desky, které zajistí dodatečnou ochranu plotu, estetiku a upravenost.",
     price: "710,-",
-    link: "/form",
+    link: "/DeskyPodhrabove",
   },
   {
     id: "Držáky na desky",
