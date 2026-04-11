@@ -1,6 +1,6 @@
-import "../Sass/_overview.scss";
 import Link from "next/link";
 import { basePath } from "../functions/Env";
+import "../Sass/_overview.scss";
 
 function Overview() {
   return (
@@ -77,6 +77,28 @@ function Overview() {
           <div className="over-overlay"></div>
           <div className="product-img">
             <img
+              src={`${basePath}/land/sloupkyland.webp`}
+              alt="Mobilní oplocení"
+            />
+          </div>
+          <div className="product-details">
+            <h2>Sloupky a příslušenství</h2>
+            <ul className="product-features">
+              <li>Vše nezbytné pro kompletní montáž plotu</li>
+              <li>Sloupky, podhrabové desky, vázací dráty, atd.</li>
+            </ul>
+            <div className="product-btn">
+              <Link href="/SloupkyPrislusenstvi">
+                <button className="product-btnbtn">Detaily produktu</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="over-product">
+          <div className="over-overlay"></div>
+          <div className="product-img">
+            <img
               src={`${basePath}/land/zeberkove.webp`}
               alt="Žebérkové pletivo"
             />
@@ -110,28 +132,6 @@ function Overview() {
             </ul>
             <div className="product-btn">
               <Link href="/MobilniOploceni">
-                <button className="product-btnbtn">Detaily produktu</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="over-product">
-          <div className="over-overlay"></div>
-          <div className="product-img">
-            <img
-              src={`${basePath}/land/sloupkyland.webp`}
-              alt="Mobilní oplocení"
-            />
-          </div>
-          <div className="product-details">
-            <h2>Sloupky a příslušenství</h2>
-            <ul className="product-features">
-              <li>Vše nezbytné pro kompletní montáž plotu</li>
-              <li>Sloupky, podhrabové desky, vázací dráty, atd.</li>
-            </ul>
-            <div className="product-btn">
-              <Link href="/SloupkyPrislusenstvi">
                 <button className="product-btnbtn">Detaily produktu</button>
               </Link>
             </div>
