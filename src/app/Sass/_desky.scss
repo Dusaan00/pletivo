@@ -9,109 +9,8 @@
   color: black;
 
   &-title {
-    font-size: 6.5rem;
+    font-size: clamp(2.6rem, 2.2rem + 1.8vw, 3.5rem);
     margin-bottom: 2rem;
-
-    @media (max-width: 709px) {
-      margin-top: -1rem;
-      font-size: 5.5rem;
-    }
-
-    @media (max-width: 540px) {
-      font-size: 5rem;
-    }
-
-    @media (max-width: 495px) {
-      font-size: 4.6rem;
-    }
-
-    @media (max-width: 460px) {
-      font-size: 4.3rem;
-    }
-
-    @media (max-width: 433px) {
-      font-size: 4rem;
-    }
-
-    @media (max-width: 405px) {
-      font-size: 3.75rem;
-    }
-
-    @media (max-width: 384px) {
-      font-size: 3.3rem;
-    }
-
-    @media (max-width: 344px) {
-      font-size: 3rem;
-      margin-top: -1.5rem;
-    }
-
-    @media (max-width: 322px) {
-      margin-bottom: 3rem;
-    }
-  }
-
-  &-intro {
-    width: 50%;
-    font-size: 2.3rem;
-    margin-bottom: 3rem;
-    background-color: #f7f7f7;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    padding: 2rem;
-    line-height: 1.5; /* Improves readability */
-    text-align: center; /* Center text for better mobile display */
-
-    @media (max-width: 1350px) {
-      margin-top: -1rem;
-    }
-
-    /* Large screens (default, above 1200px) */
-    @media (max-width: 1200px) {
-      width: 70%; /* Increase width for slightly smaller screens */
-      font-size: 2.15rem; /* Slightly smaller font */
-      padding: 1.8rem;
-    }
-
-    @media (max-width: 900px) {
-      font-size: 2rem;
-    }
-
-    /* Tablets (768px - 1200px) */
-    @media (max-width: 768px) {
-      width: 85%; /* Wider to fit tablet screens */
-      font-size: 1.85rem; /* Smaller font for readability */
-      padding: 1.5rem;
-    }
-
-    /* Mobile devices (below 768px) */
-    @media (max-width: 576px) {
-      width: 90%; /* Almost full width for small screens */
-      font-size: 1.75rem; /* Further reduce font size */
-      padding: 1.2rem;
-      margin-bottom: 2rem; /* Reduce bottom margin */
-      margin-top: -1.5rem;
-    }
-
-    @media (max-width: 475px) {
-      font-size: 1.625rem;
-      margin-top: -2rem;
-    }
-
-    /* Very small screens (below 400px, e.g., small phones) */
-    @media (max-width: 420px) {
-      width: 95%; /* Maximize width */
-      font-size: 1.425rem; /* Smallest readable font */
-      padding: 1rem;
-    }
-
-    @media (max-width: 420px) {
-      font-size: 1.325rem; /* Smallest readable font */
-      padding: 0.85rem;
-    }
-
-    @media (max-width: 322px) {
-      margin-top: -2.75rem;
-    }
   }
 
   &-container {
@@ -176,6 +75,13 @@
       color: white;
     }
   }
+}
+
+.container-desky {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 .desky-xplain {
