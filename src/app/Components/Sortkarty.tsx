@@ -45,6 +45,11 @@ const categories = [
     icon: `${basePath}/sorty/sortgates.png`,
   },
   {
+    href: "/PodhraboveDesky",
+    label: "Podhrabové desky",
+    icon: `${basePath}/sorty/gravel.png`,
+  },
+  {
     href: "/MobilniOploceni",
     label: "Mobilní oplocení",
     icon: `${basePath}/sorty/sortmobile.png`,
