@@ -17,15 +17,6 @@ export const sloupkyplotoveProducts = [
     link: "/form",
   },
   {
-    id: "Sloupek Zink 48",
-    name: "Sloupek zinkový – ⌀48mm",
-    image: "/sloupky/sloupekzinc.webp",
-    description:
-      "Sloupek zinkový, používá se při montážích plotů z pletiva bezinal.",
-    price: "Na poptávku",
-    link: "/form",
-  },
-  {
     id: "Sloupek Zeleny 48",
     name: "Sloupek zelený ⌀48mm",
     image: "/sloupky/sloupekgreen.webp",
@@ -38,6 +29,15 @@ export const sloupkyplotoveProducts = [
     name: "Vzpěra zelená – ⌀38mm",
     image: "/sloupky/vzperagreen.webp",
     description: "Vzpěra zelená pvc, používá se při stavbě plotu z pletiva.",
+    price: "Na poptávku",
+    link: "/form",
+  },
+  {
+    id: "Sloupek Zink 48",
+    name: "Sloupek zinkový – ⌀48mm",
+    image: "/sloupky/sloupekzinc.webp",
+    description:
+      "Sloupek zinkový, používá se při montážích plotů z pletiva bezinal.",
     price: "Na poptávku",
     link: "/form",
   },
