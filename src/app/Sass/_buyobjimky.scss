@@ -1,0 +1,88 @@
+@use "./variables" as *;
+
+.objimka-color-selector {
+  margin: 2rem 0;
+  // Omezíme celkovou šířku, aby se neroztahovalo do prázdna
+  max-width: 450px;
+
+  .objimka-color-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+  .objimka-tile-grid {
+    display: flex;
+    // Změna: dáme je vedle sebe, pokud je místo, jinak pod sebe
+    flex-direction: row;
+    gap: 1rem;
+
+    @media (max-width: 480px) {
+      flex-direction: column; // Na mobilu zůstanou pod sebou
+    }
+  }
+
+  .objimka-tile {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px; // Trochu kulatější podle tvého obrázku
+    cursor: pointer;
+    transition: all 0.2s ease;
+    // Pružná šířka, ale ne nekonečná
+    flex: 1;
+    background: #fff;
+
+    input {
+      display: none;
+    }
+
+    .tile-color-box {
+      width: 40px;
+      height: 24px;
+      border-radius: 6px;
+      flex-shrink: 0; // Aby se obdélníček nedeformoval
+
+      &.is-green {
+        background-color: #1a3c34;
+      }
+      &.is-antracit {
+        background-color: #383838;
+      }
+    }
+
+    .tile-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+
+      .tile-name {
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #222;
+      }
+
+      .tile-ral {
+        font-size: 0.75rem;
+        color: #888;
+      }
+    }
+
+    &:hover {
+      border-color: #ccc;
+    }
+
+    &.active {
+      // Podle obrázku má aktivní prvek zelený border a světlé pozadí
+      border-color: #50c878;
+      background-color: #f6fcf9;
+
+      .tile-name {
+        color: #50c878;
+      }
+    }
+  }
+}

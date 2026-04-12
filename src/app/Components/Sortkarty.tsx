@@ -7,6 +7,7 @@ import { RiArrowDownSLine } from "react-icons/ri"; // Import šipky
 const categories = [
   {
     label: "Pletiva",
+    href: "/Pletivo",
     icon: `${basePath}/sorty/sortpletivo.png`,
     subItems: [
       { label: "Pletiva PVC", href: "/PletivaPVC" },
@@ -15,6 +16,7 @@ const categories = [
   },
   {
     label: "Panely 3D / 2D",
+    href: "/Panely3D2D",
     icon: `${basePath}/sorty/sortpanely.png`,
     subItems: [
       { label: "Panely PVC 3D", href: "/PanelyProduct" },
@@ -24,6 +26,7 @@ const categories = [
   },
   {
     label: "Sloupky",
+    href: "/SloupkyPrislusenstvi",
     icon: `${basePath}/sorty/sortsloupky.png`,
     subItems: [
       { label: "Sloupky - ploty z pletiva", href: "/PlotoveSloupky" },
@@ -32,11 +35,16 @@ const categories = [
     ],
   },
   {
-    label: "Napínací dráty",
-    icon: `${basePath}/sorty/sortnapinaky.png`,
+    label: "Plotová Příslušenství",
+    href: "/SloupkyPrislusenstvi",
+    icon: `${basePath}/sorty/wire-rod.png`,
     subItems: [
-      { label: "PVC dráty", href: "/NapinaciDraty" },
-      { label: "Zinkové dráty", href: "/NapinaciDratyZinkove" },
+      { label: "Objímky", href: "/Objimky" },
+      { label: "Napínací drát PVC", href: "/NapinaciDraty" },
+      { label: "Napínací drát zinkový", href: "/NapinaciDratyZinkove" },
+      { label: "Vázací dráty", href: "/NapinaciDratyZinkove" },
+      { label: "Napínací kladky", href: "/NapinaciDratyZinkove" },
+      { label: "Příchtky, šroubky", href: "/NapinaciDratyZinkove" },
     ],
   },
   {
@@ -46,12 +54,12 @@ const categories = [
   },
   {
     href: "/PodhraboveDesky",
-    label: "Podhrabové desky",
+    label: "Podhrabové Desky",
     icon: `${basePath}/sorty/gravel.png`,
   },
   {
     href: "/MobilniOploceni",
-    label: "Mobilní oplocení",
+    label: "Mobilní Oplocení",
     icon: `${basePath}/sorty/sortmobile.png`,
   },
 ];
@@ -74,7 +82,7 @@ function Sortkarty() {
                   className="sortkarta-wrapper"
                   tabIndex={0}
                 >
-                  <div className="sortkarta">
+                  <Link href={item.href || "#"} className="sortkarta">
                     <div className="sortkarta-icon">
                       <Image
                         src={item.icon}
@@ -85,7 +93,7 @@ function Sortkarty() {
                     </div>
                     <span className="sortkarta-text">{item.label}</span>
                     <RiArrowDownSLine className="sortkarta-arrow" />
-                  </div>
+                  </Link>
                   <div className="sortkarta-dropdown">
                     {item.subItems.map((sub) => (
                       <Link
