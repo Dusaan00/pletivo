@@ -10,8 +10,12 @@ function BuyNapinaci() {
           <div className="section-spletivo-product">
             <NapinaciChange>
               <p>
-                Napínaci dráty v zelené a antracitové barvě. Využívají se při
-                montážích plotů.
+                Napínaci drát se používá při stavbě plotu z pletiva k tomu, aby
+                pletivo zpevnil, a udržel ho rovně a pevně napnuté mezi
+                plotovými sloupky. Pletivo se na napínací drát přivazuje pomocí
+                vázacího drátu. Při povětrnostních vlivech se síla přenáší z
+                pletiva do napínací drátu se sloupky, a plot se ak stáva
+                stabilnější.
               </p>
               <br />
               <p>

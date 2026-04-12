@@ -31,7 +31,7 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
         : `${basePath}/sloupky/vazacidrat.jpeg`;
 
   const isInStock = true;
-  const currentPrice = 149;
+  const currentPrice = 140;
 
   return (
     <>

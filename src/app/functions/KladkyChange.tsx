@@ -5,11 +5,11 @@ import { basePath } from "./Env";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
 
-interface ObjimkyChangeProps {
+interface KladkyChangeProps {
   children: ReactNode;
 }
 
-const ObjimkyChange = ({ children }: ObjimkyChangeProps) => {
+const KladkyChange = ({ children }: KladkyChangeProps) => {
   const [selectedColor, setSelectedColor] = useState("zelená");
 
   const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,19 +19,19 @@ const ObjimkyChange = ({ children }: ObjimkyChangeProps) => {
   // Dynamický titulek podle barvy
   const title =
     selectedColor === "zelená"
-      ? "Objímka Zelená (RAL 6005)"
-      : "Objímka Antracitová (RAL 7016)";
+      ? "Napínací Kladka Zelená"
+      : "Napínací Kladka Antracit";
 
   // Cesta k obrázkům (předpokládám, že máš v /objimky/ soubory objimka-green/antracit)
   const imgSrc =
     selectedColor === "zelená"
-      ? `${basePath}/sloupky/objimky3d.jpeg`
-      : `${basePath}/sloupky/objimky3da.jpg`;
+      ? `${basePath}/sloupky/kladka.webp`
+      : `${basePath}/sloupky/kladkaa.webp`;
 
   const isInStock = true;
 
   // Pevná cena pro objímku (uprav si podle potřeby)
-  const currentPrice = 55;
+  const currentPrice = 29;
 
   return (
     <>
@@ -105,4 +105,4 @@ const ObjimkyChange = ({ children }: ObjimkyChangeProps) => {
   );
 };
 
-export default ObjimkyChange;
+export default KladkyChange;
