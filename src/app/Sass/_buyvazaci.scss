@@ -1,0 +1,93 @@
+@use "./variables" as *;
+
+.vazaci-selector {
+  margin: 2rem 0;
+  // Omezíme celkovou šířku kontejneru, aby dlaždice neputovaly na konec světa
+  max-width: 500px;
+
+  .vazaci-selector-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+
+  .vazaci-grid {
+    display: flex;
+    flex-direction: row; // Tohle je drží v řadě
+    gap: 0.8rem;
+    flex-wrap: nowrap; // Zabrání odskakování na nový řádek při dostatku místa
+
+    @media (max-width: 600px) {
+      flex-wrap: wrap; // Na mobilu se seřadí pod sebe
+    }
+  }
+
+  .vazaci-tile {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+
+    // TADY JE TA ZMĚNA:
+    flex: 0 1 auto; // Nezabírat víc místa než je nutné
+    white-space: nowrap; // Text se nezalomí
+
+    input {
+      display: none;
+    }
+
+    .vazaci-color-box {
+      width: 38px;
+      height: 22px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+
+      &.is-green {
+        background-color: #1a3c34;
+      }
+      &.is-antracit {
+        background-color: #383838;
+      }
+      &.is-brown {
+        background-color: #4b3621;
+      }
+    }
+
+    .vazaci-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+
+      .vazaci-name {
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: #111;
+      }
+
+      .vazaci-ral {
+        font-size: 0.7rem;
+        color: #6b7280;
+      }
+    }
+
+    &:hover {
+      border-color: #d1d5db;
+    }
+
+    &.active {
+      border-color: #10b981;
+      background-color: #f0fdf4;
+
+      .vazaci-name {
+        color: #059669;
+      }
+    }
+  }
+}

@@ -42,7 +42,7 @@ const categories = [
       { label: "Objímky", href: "/Objimky" },
       { label: "Napínací drát PVC", href: "/NapinaciDraty" },
       { label: "Napínací drát zinkový", href: "/NapinaciDratyZinkove" },
-      { label: "Vázací dráty", href: "/NapinaciDratyZinkove" },
+      { label: "Vázací dráty", href: "/VazaciDraty" },
       { label: "Napínací kladky", href: "/NapinaciDratyZinkove" },
       { label: "Příchtky, šroubky", href: "/NapinaciDratyZinkove" },
     ],

@@ -181,7 +181,7 @@ export const vseProducts = [
     description:
       "Vázací dráty pvc v zelené/antracitové/hnědé barvě s průměrem 1,4mm/2,0mm.",
     price: "140,-",
-    link: "/form",
+    link: "/VazaciDraty",
   },
   {
     id: "napinak-zeleny-78",
