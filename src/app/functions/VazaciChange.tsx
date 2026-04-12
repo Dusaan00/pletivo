@@ -18,10 +18,10 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
 
   const title =
     selectedColor === "zelená"
-      ? "Vázací Drát Zelený (RAL 6005)"
+      ? "Vázací Drát Zelený"
       : selectedColor === "antracit"
-        ? "Vázací Drát Antracitový (RAL 7016)"
-        : "Vázací Drát Hnědý (RAL 8017)";
+        ? "Vázací Drát Antracitový"
+        : "Vázací Drát Hnědá";
 
   const imgSrc =
     selectedColor === "zelená"
