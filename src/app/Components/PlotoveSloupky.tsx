@@ -9,8 +9,12 @@ function Sloupky() {
     <section className="pletiva-section" id="pletiva-about">
       <h2>Sloupky pro oplocení z pletiva</h2>
       <p>
-        Tyto sloupky a vzpěry se využívají jako plotové sloupky při stavbách
-        oplocení z pleteného pletiva.
+        Následující sloupky a vzpěry se využívají jako plotové sloupky při
+        stavbách oplocení z pleteného pletiva. Sloupky zakoupené u nás snadno
+        odolávají tlaku větru, dokážou tedy zajistit velice dlouhou trvanlivost
+        celého oplocení. U zinkových sloupků je jejich maximální odolnost
+        zajištěna procesem zinkování, který na nich vytváří silnou ochrannou
+        vrstvu, která tak sloupky chrání před korozí.
       </p>
       <ProductSearch products={sloupkyplotoveProducts} />
     </section>
