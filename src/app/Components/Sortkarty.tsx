@@ -85,23 +85,48 @@ function Sortkarty() {
           {categories.map((item) => {
             if (item.subItems) {
               return (
-                <div
-                  key={item.label}
-                  className="sortkarta-wrapper"
-                  tabIndex={0}
-                >
-                  <Link href={item.href || "#"} className="sortkarta">
+                <div key={item.label} className="sortkarta-wrapper">
+                  <input
+                    type="checkbox"
+                    id={`main-check-${item.label}`}
+                    className="main-dropdown-check"
+                  />
+
+                  <Link
+                    href={item.href || "#"}
+                    className="sortkarta sortkarta-link"
+                  >
                     <div className="sortkarta-icon">
                       <Image
                         src={item.icon}
                         alt={item.label}
                         width={30}
                         height={30}
+                        loading="lazy"
+                        sizes="30px"
                       />
                     </div>
                     <span className="sortkarta-text">{item.label}</span>
                     <RiArrowDownSLine className="sortkarta-arrow" />
                   </Link>
+
+                  <label
+                    htmlFor={`main-check-${item.label}`}
+                    className="sortkarta sortkarta-toggle"
+                  >
+                    <div className="sortkarta-icon">
+                      <Image
+                        src={item.icon}
+                        alt={item.label}
+                        width={30}
+                        height={30}
+                        loading="lazy"
+                        sizes="30px"
+                      />
+                    </div>
+                    <span className="sortkarta-text">{item.label}</span>
+                    <RiArrowDownSLine className="sortkarta-arrow" />
+                  </label>
 
                   <div className="sortkarta-dropdown">
                     {item.subItems.map((sub) => (
@@ -159,6 +184,8 @@ function Sortkarty() {
                     alt={item.label}
                     width={30}
                     height={30}
+                    loading="lazy"
+                    sizes="30px"
                   />
                 </div>
                 <span className="sortkarta-text">{item.label}</span>

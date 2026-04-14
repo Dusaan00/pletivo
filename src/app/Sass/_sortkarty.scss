@@ -2,133 +2,93 @@
 
 .section-sortkarty {
   font-family: "Montserrat", sans-serif;
-
   padding: 4rem 1rem;
-
   background-color: #fff;
 }
 
 .sortkarty-container {
   max-width: 1200px;
-
   margin: 0 auto;
 }
 
 .sortkarty-title {
   text-align: center;
-
   font-size: clamp(1.6rem, 3vw, 2.4rem);
-
   margin-bottom: 3rem;
-
   color: black;
 }
 
 .title-gradient {
   background-image: linear-gradient(
     to right,
-
     $color-green-dark,
     $color-primary-green
   );
 
   background-clip: text;
-
   -webkit-background-clip: text;
-
   color: transparent;
-
   font-weight: 700;
-
   letter-spacing: 1px;
 }
 
 .sortkarty-grid {
   display: grid;
-
   // 4 → 3 → 2 karty, ALE nikdy méně než 2
-
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
   gap: 1.5rem;
 }
 
 .sortkarta {
   display: flex;
-
   align-items: center;
-
   gap: 1.2rem;
-
   padding: 1.4rem 1.6rem;
-
   background-color: #fff;
-
   border: 1px solid #e0e0e0;
-
   border-radius: 10px;
-
   text-decoration: none;
-
   color: #222;
-
   transition: all 0.25s ease;
-
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
   &:hover {
     transform: translateY(-3px);
-
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-
     border-color: $color-primary-green;
   }
 }
 
 .sortkarta-icon {
   flex-shrink: 0;
-
   width: 42px;
-
   height: 42px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
 .sortkarta-text {
   font-size: 1.05rem;
-
   font-weight: 600;
-
   line-height: 1.2;
 }
 
 .sortkarta-wrapper {
   position: relative;
-
   display: flex;
-
   flex-direction: column;
 
   &:hover .sortkarta {
     border-bottom-left-radius: 0;
-
     border-bottom-right-radius: 0;
-
     border-color: $color-primary-green;
   }
 
   &:hover .sortkarta-dropdown {
     opacity: 1;
-
     visibility: visible;
-
     transform: translateY(0);
-
     border-top: none;
   }
 
@@ -139,11 +99,8 @@
 
 .sortkarta-arrow {
   margin-left: auto;
-
   transition: transform 0.3s ease;
-
   font-size: 1.4rem;
-
   color: #888;
 }
 
@@ -297,37 +254,80 @@
   }
 }
 
+.main-dropdown-check {
+  display: none;
+}
+
+.sortkarta-wrapper:hover .sortkarta-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sortkarta-link {
+  display: flex;
+}
+
+.sortkarta-toggle {
+  display: none;
+}
+
 // Úprava pro mobilní zařízení (hover na click)
 
-@media (max-width: 1024px) {
-  .dropdown-item-wrapper:focus-within {
-    .sub-dropdown {
-      position: static;
-      width: 100%;
-      display: none; // Skryto v základu
-      border: none;
-      border-top: 1px solid #eee;
-      background-color: #f9f9f9;
-      box-shadow: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: none; // Na mobilu je lepší okamžitý skok u static pozice
-    }
-    .sub-arrow {
-      transform: rotate(90deg);
-    }
+@media (min-width: 1025px) {
+  .sortkarta-link {
+    display: flex;
   }
 
-  .sub-dropdown {
-    position: static; // Na mobilu už není absolutní, ale tlačí obsah dolů
+  .sortkarta-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sortkarta-link {
+    display: none;
+  }
+
+  .sortkarta-toggle {
+    display: flex;
+  }
+
+  .sortkarta-dropdown {
+    position: static;
     width: 100%;
     border: none;
     border-top: 1px solid #eee;
     border-radius: 0;
     box-shadow: none;
     transform: none;
-    background-color: #f9f9f9; // Odlišení pozadí vnořeného menu
+    background-color: #f9f9f9;
+    display: none;
+  }
 
+  .main-dropdown-check:checked ~ .sortkarta-dropdown {
+    display: block;
+  }
+
+  .main-dropdown-check:checked
+    + .sortkarta-link
+    + .sortkarta-toggle
+    .sortkarta-arrow {
+    transform: rotate(-90deg);
+    color: $color-primary-green;
+  }
+
+  .sub-dropdown {
+    position: static;
+    // Na mobilu už není absolutní, ale tlačí obsah dolů
+    width: 100%;
+    border: none;
+    border-top: 1px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    background-color: #f9f9f9;
+    // Odlišení pozadí vnořeného menu
     // Zobrazit pouze při focus-within nebo aktivaci
     display: none;
   }
