@@ -24,9 +24,10 @@ function Pletiva() {
           </h2>
           <p className="pletiva-description">
             Plot z pletiva je efektivní a cenově dostupné řešení oplocení
-            pozemku, plot z pletiva se zároveň jednoduše instaluje. Pletivo
+            pozemku, zároveň se plot z pletiva jednoduše instaluje. Pletivo
             můžete využít k oplocení svého domu, zahrady, chaty, firemních
-            objektů i např. sportovišť.
+            objektů i např. sportovišť. Pletivo zakoupené u nás je pleteno v
+            našich dílnách.
           </p>
           <p className="pletiva-description">
             Máme k dispozici pletiva pvc i zinková - bezinal.

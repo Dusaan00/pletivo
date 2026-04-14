@@ -1,5 +1,6 @@
 import BuyBezinal from "../Components/BuyBezinal";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Pletivo Bezinal",
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <BuyBezinal />
+      <Sortkarty />
       <Pay />
     </>
   );

@@ -1,5 +1,6 @@
 import BuySloupky from "../Components/BuySloupky";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Sloupky PVC",
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <BuySloupky />
+      <Sortkarty />
       <Pay />
     </>
   );

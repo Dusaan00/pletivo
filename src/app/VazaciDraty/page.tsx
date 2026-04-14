@@ -1,5 +1,6 @@
 import BuyVazaci from "../Components/BuyVazaci";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Vázací Dráty",
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <BuyVazaci />
+      <Sortkarty />
       <Pay />
     </>
   );

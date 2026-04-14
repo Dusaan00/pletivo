@@ -1,5 +1,6 @@
 import Kladky from "../Components/BuyKladky";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Kladky PVC",
@@ -31,6 +32,7 @@ export default function Page() {
   return (
     <>
       <Kladky />
+      <Sortkarty />
       <Pay />
     </>
   );

@@ -1,5 +1,6 @@
 import Napinaci from "../Components/BuyNapinaci";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Napínací dráty pvc",
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <Napinaci />
+      <Sortkarty />
       <Pay />
     </>
   );

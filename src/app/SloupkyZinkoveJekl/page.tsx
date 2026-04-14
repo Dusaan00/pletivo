@@ -1,5 +1,6 @@
 import BuySloupkyZinc from "../Components/BuyZincSloupky";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Sloupky Zinkové Jekl",
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <BuySloupkyZinc />
+      <Sortkarty />
       <Pay />
     </>
   );

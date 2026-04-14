@@ -114,7 +114,7 @@ export const pletivaProducts = [
     description:
       "Napínací kladka PVC v zelené barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
     price: "22,-",
-    link: "/form",
+    link: "/Kladky",
   },
   {
     id: "kladka-pvc-antracit",
@@ -123,7 +123,7 @@ export const pletivaProducts = [
     description:
       "Napínací kladka PVC v antracitové barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
     price: "29,-",
-    link: "/form",
+    link: "/Kladky",
   },
   {
     id: "kladka-zinc",
@@ -132,7 +132,7 @@ export const pletivaProducts = [
     description:
       "Napínací kladka zinková, tohle příslušenství se využivá při montáži zinkového plotuz pletiva bezinal.",
     price: "29,-",
-    link: "/form",
+    link: "/KladkyZinkove",
   },
   {
     id: "prichytky",

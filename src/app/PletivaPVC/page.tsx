@@ -1,5 +1,6 @@
 import BuyPletivo from "../Components/BuyPletivo";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Pletivo PVC",
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <BuyPletivo />
+      <Sortkarty />
       <Pay />
     </>
   );

@@ -1,5 +1,6 @@
 import BuyPanelZinc from "../Components/BuyPanelZinc";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Panely Zinkové",
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <BuyPanelZinc />
+      <Sortkarty />
       <Pay />
     </>
   );

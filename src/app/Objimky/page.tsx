@@ -1,5 +1,6 @@
 import Objimky from "../Components/BuyObjimky";
 import Pay from "../Components/Pay";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Objímky Na Panely",
@@ -31,6 +32,7 @@ export default function Page() {
   return (
     <>
       <Objimky />
+      <Sortkarty />
       <Pay />
     </>
   );
