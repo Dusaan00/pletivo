@@ -103,7 +103,7 @@ function Sortkarty() {
                         width={30}
                         height={30}
                         loading="lazy"
-                        sizes="30px"
+                        unoptimized
                       />
                     </div>
                     <span className="sortkarta-text">{item.label}</span>
@@ -121,7 +121,7 @@ function Sortkarty() {
                         width={30}
                         height={30}
                         loading="lazy"
-                        sizes="30px"
+                        unoptimized
                       />
                     </div>
                     <span className="sortkarta-text">{item.label}</span>
@@ -185,7 +185,7 @@ function Sortkarty() {
                     width={30}
                     height={30}
                     loading="lazy"
-                    sizes="30px"
+                    unoptimized
                   />
                 </div>
                 <span className="sortkarta-text">{item.label}</span>

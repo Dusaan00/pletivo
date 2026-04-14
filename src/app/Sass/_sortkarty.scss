@@ -272,6 +272,32 @@
   display: none;
 }
 
+@media (max-width: 1800px) {
+  .sub-dropdown {
+    position: static;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    background-color: #f9f9f9;
+
+    opacity: 1;
+    visibility: visible;
+    display: none;
+  }
+
+  .dropdown-item-wrapper:hover .sub-dropdown {
+    display: block;
+  }
+
+  .dropdown-item-wrapper:hover .sub-arrow {
+    transform: rotate(90deg);
+    color: $color-primary-green;
+  }
+}
+
 // Úprava pro mobilní zařízení (hover na click)
 
 @media (min-width: 1025px) {
