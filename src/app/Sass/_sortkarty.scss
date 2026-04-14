@@ -2,33 +2,44 @@
 
 .section-sortkarty {
   font-family: "Montserrat", sans-serif;
+
   padding: 4rem 1rem;
+
   background-color: #fff;
 }
 
 .sortkarty-container {
   max-width: 1200px;
+
   margin: 0 auto;
 }
 
 .sortkarty-title {
   text-align: center;
+
   font-size: clamp(1.6rem, 3vw, 2.4rem);
+
   margin-bottom: 3rem;
+
   color: black;
 }
 
 .title-gradient {
   background-image: linear-gradient(
     to right,
+
     $color-green-dark,
     $color-primary-green
   );
 
   background-clip: text;
+
   -webkit-background-clip: text;
+
   color: transparent;
+
   font-weight: 700;
+
   letter-spacing: 1px;
 }
 
@@ -36,64 +47,88 @@
   display: grid;
 
   // 4 → 3 → 2 karty, ALE nikdy méně než 2
+
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
   gap: 1.5rem;
 }
 
 .sortkarta {
   display: flex;
+
   align-items: center;
+
   gap: 1.2rem;
 
   padding: 1.4rem 1.6rem;
+
   background-color: #fff;
+
   border: 1px solid #e0e0e0;
+
   border-radius: 10px;
 
   text-decoration: none;
+
   color: #222;
 
   transition: all 0.25s ease;
+
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
   &:hover {
     transform: translateY(-3px);
+
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
     border-color: $color-primary-green;
   }
 }
 
 .sortkarta-icon {
   flex-shrink: 0;
+
   width: 42px;
+
   height: 42px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 }
 
 .sortkarta-text {
   font-size: 1.05rem;
+
   font-weight: 600;
+
   line-height: 1.2;
 }
 
 .sortkarta-wrapper {
   position: relative;
+
   display: flex;
+
   flex-direction: column;
 
   &:hover .sortkarta {
     border-bottom-left-radius: 0;
+
     border-bottom-right-radius: 0;
+
     border-color: $color-primary-green;
   }
 
   &:hover .sortkarta-dropdown {
     opacity: 1;
+
     visibility: visible;
+
     transform: translateY(0);
+
     border-top: none;
   }
 
@@ -104,8 +139,11 @@
 
 .sortkarta-arrow {
   margin-left: auto;
+
   transition: transform 0.3s ease;
+
   font-size: 1.4rem;
+
   color: #888;
 }
 
@@ -123,14 +161,80 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.2s ease;
-  overflow: hidden;
+  //overflow: hidden;
 
   .dropdown-item {
+    display: flex; // Změněno na flex pro šipku
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: #444;
+    font-size: 1.1rem; // Lehce zmenšeno pro lepší fit
+    font-weight: 500;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: rgba($color-primary-green, 0.1);
+
+      color: $color-green-dark;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+  }
+}
+
+.dropdown-item-wrapper {
+  position: relative; // Důležité pro pozicování sub-dropdownu
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+
+  // Hover efekty pro sub-dropdown (Desktop)
+  &:hover {
+    .sub-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+    .sub-arrow {
+      transform: rotate(90deg);
+      color: $color-primary-green;
+    }
+  }
+}
+
+.sub-arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+// STYLY PRO SUB-DROPDOWN (VYJÍŽDĚNÍ DOSTRANY)
+.sub-dropdown {
+  position: absolute;
+  left: 100%; // Na desktopu vyjede doprava
+  top: -1px; // Zarovnání s horním okrajem položky
+  width: 100%;
+  background: #fff;
+  border: 1px solid $color-primary-green;
+  border-radius: 0 10px 10px 0; // Zaoblení vpravo
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 11;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: all 0.25s ease;
+
+  .sub-dropdown-item {
     display: block;
     padding: 0.8rem 1.2rem;
     text-decoration: none;
     color: #444;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: background 0.2s;
 
@@ -145,12 +249,91 @@
   }
 }
 
-// Úprava pro mobilní zařízení (hover na click)
-@media (max-width: 1024px) {
-  .sortkarta-wrapper:focus-within .sortkarta-dropdown {
+.sub-dropdown-check {
+  display: none;
+}
+
+.dropdown-item-wrapper {
+  position: relative;
+
+  // Změna labelu na ukazatel ruky, protože funguje jako tlačítko
+  label.dropdown-item {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  // DESKTOP HOVER (zachováme pro PC uživatele)
+  @media (min-width: 1025px) {
+    &:hover {
+      .sub-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+      .sub-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+// MOBILNÍ LOGIKA (KLIKNUTÍ)
+.sub-dropdown-check:checked {
+  // Když je zaškrtnuto, ukaž menu
+  ~ .sub-dropdown {
+    display: block; // Na mobilu
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    @media (min-width: 1025px) {
+      display: block;
+      transform: translateX(0);
+    }
+  }
+
+  // Otoč šipku
+  + .dropdown-item .sub-arrow {
+    transform: rotate(90deg);
+    color: $color-primary-green;
+  }
+}
+
+// Úprava pro mobilní zařízení (hover na click)
+
+@media (max-width: 1024px) {
+  .dropdown-item-wrapper:focus-within {
+    .sub-dropdown {
+      position: static;
+      width: 100%;
+      display: none; // Skryto v základu
+      border: none;
+      border-top: 1px solid #eee;
+      background-color: #f9f9f9;
+      box-shadow: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: none; // Na mobilu je lepší okamžitý skok u static pozice
+    }
+    .sub-arrow {
+      transform: rotate(90deg);
+    }
+  }
+
+  .sub-dropdown {
+    position: static; // Na mobilu už není absolutní, ale tlačí obsah dolů
+    width: 100%;
+    border: none;
+    border-top: 1px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    background-color: #f9f9f9; // Odlišení pozadí vnořeného menu
+
+    // Zobrazit pouze při focus-within nebo aktivaci
+    display: none;
+  }
+
+  .dropdown-item-wrapper:focus-within .sub-dropdown {
+    display: block;
   }
 }
 
@@ -161,6 +344,7 @@
 
   .sortkarta {
     padding: 1rem;
+
     gap: 0.8rem;
   }
 

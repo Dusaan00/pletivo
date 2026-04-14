@@ -2,7 +2,7 @@ import Link from "next/link";
 import { basePath } from "../functions/Env";
 import "../Sass/_sortkarty.scss";
 import Image from "next/image";
-import { RiArrowDownSLine } from "react-icons/ri"; // Import šipky
+import { RiArrowDownSLine, RiArrowRightSLine } from "react-icons/ri"; // Přidána pravá šipka
 
 const categories = [
   {
@@ -43,7 +43,15 @@ const categories = [
       { label: "Napínací drát PVC", href: "/NapinaciDraty" },
       { label: "Napínací drát zinkový", href: "/NapinaciDratyZinkove" },
       { label: "Vázací dráty", href: "/VazaciDraty" },
-      { label: "Napínací kladky", href: "/Kladky" },
+      // UPRAVENO: Napínací kladky mají nyní subItems
+      {
+        label: "Napínací kladky",
+        href: "#",
+        subItems: [
+          { label: "Kladky PVC", href: "/Kladky" },
+          { label: "Kladky Zinkové", href: "/KladkyZinkove" },
+        ],
+      },
       { label: "Příchtky, šroubky", href: "/NapinaciDratyZinkove" },
     ],
   },
@@ -94,15 +102,44 @@ function Sortkarty() {
                     <span className="sortkarta-text">{item.label}</span>
                     <RiArrowDownSLine className="sortkarta-arrow" />
                   </Link>
+
                   <div className="sortkarta-dropdown">
                     {item.subItems.map((sub) => (
-                      <Link
-                        key={sub.label}
-                        href={sub.href}
-                        className="dropdown-item"
-                      >
-                        {sub.label}
-                      </Link>
+                      <div key={sub.label} className="dropdown-item-wrapper">
+                        {sub.subItems ? (
+                          <>
+                            {/* Skrytý checkbox pro ovládání stavu bez JS */}
+                            <input
+                              type="checkbox"
+                              id={`check-${sub.label}`}
+                              className="sub-dropdown-check"
+                            />
+                            <label
+                              htmlFor={`check-${sub.label}`}
+                              className="dropdown-item"
+                            >
+                              {sub.label}
+                              <RiArrowRightSLine className="sub-arrow" />
+                            </label>
+
+                            <div className="sub-dropdown">
+                              {sub.subItems.map((nested) => (
+                                <Link
+                                  key={nested.label}
+                                  href={nested.href}
+                                  className="sub-dropdown-item"
+                                >
+                                  {nested.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </>
+                        ) : (
+                          <Link href={sub.href} className="dropdown-item">
+                            {sub.label}
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -115,6 +152,7 @@ function Sortkarty() {
                 href={item.href || "#"}
                 className="sortkarta"
               >
+                {/* ... (obsah jednoduché karty) */}
                 <div className="sortkarta-icon">
                   <Image
                     src={item.icon}

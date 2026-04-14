@@ -4,40 +4,51 @@ import { useState, ReactNode } from "react";
 import { basePath } from "./Env";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface KladkyChangeProps {
   children: ReactNode;
+  type: "pvc" | "zinc";
 }
 
-const KladkyChange = ({ children }: KladkyChangeProps) => {
+const KladkyChange = ({ children, type }: KladkyChangeProps) => {
+  const router = useRouter();
   const [selectedColor, setSelectedColor] = useState("zelená");
 
-  const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedColor(e.target.id);
+  const handleTypeChange = (newType: "pvc" | "zinc") => {
+    if (newType === "pvc") router.push("/Kladky");
+    if (newType === "zinc") router.push("/KladkyZinkove");
   };
 
-  // Dynamický titulek podle barvy
-  const title =
-    selectedColor === "zelená"
-      ? "Napínací Kladka Zelená"
-      : "Napínací Kladka Antracit";
+  // Dynamická data
+  let title = "";
+  let imgSrc = "";
+  let currentPrice = 29; // Výchozí cena (pro Antracit a Zinek)
 
-  // Cesta k obrázkům (předpokládám, že máš v /objimky/ soubory objimka-green/antracit)
-  const imgSrc =
-    selectedColor === "zelená"
-      ? `${basePath}/sloupky/kladka.webp`
-      : `${basePath}/sloupky/kladkaa.webp`;
+  if (type === "pvc") {
+    if (selectedColor === "zelená") {
+      title = "Napínací Kladka Zelená";
+      imgSrc = `${basePath}/sloupky/kladka.webp`;
+      currentPrice = 22; // <--- TADY JE TA TVOJE CENA PRO ZELENOU
+    } else {
+      title = "Napínací Kladka Antracit";
+      imgSrc = `${basePath}/sloupky/kladkaa.webp`;
+      currentPrice = 29; // Antracit zůstává za 29,-
+    }
+  } else {
+    title = "Napínací Kladka Zinková";
+    imgSrc = `${basePath}/sloupky/kladkazinc.webp`;
+    currentPrice = 29; // Zinek taky za 29,- (nebo si uprav podle potřeby)
+  }
 
   const isInStock = true;
-
-  // Pevná cena pro objímku (uprav si podle potřeby)
-  const currentPrice = 29;
 
   return (
     <>
       <div className="section-spletivo-gal">
         <img src={imgSrc} alt={title} />
       </div>
+
       <div className="section-spletivo-details">
         <h1>{title}</h1>
         <h2>{currentPrice},- / ks</h2>
@@ -48,47 +59,61 @@ const KladkyChange = ({ children }: KladkyChangeProps) => {
 
         {children}
 
-        <form>
-          <div className="objimka-color-selector">
-            <div className="objimka-tile-grid">
-              {/* Zelená varianta */}
-              <label
-                className={`objimka-tile ${selectedColor === "zelená" ? "active" : ""}`}
-              >
+        {/* VÝBĚR TYPU - POUŽÍVÁ TVÉ STRUKTURY Z PANELŮ */}
+        <div className="diameter-select">
+          <p>Typ kladky:</p>
+          <div className="diameter-options">
+            <label>
+              <input
+                type="radio"
+                name="variant"
+                checked={type === "pvc"}
+                onChange={() => handleTypeChange("pvc")}
+              />
+              <span>PVC</span>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="variant"
+                checked={type === "zinc"}
+                onChange={() => handleTypeChange("zinc")}
+              />
+              <span>Zinek</span>
+            </label>
+          </div>
+        </div>
+
+        {/* VÝBĚR BARVY - POUŽÍVÁ STEJNOU STRUKTURU */}
+        {type === "pvc" && (
+          <div className="diameter-select" style={{ marginTop: "1.5rem" }}>
+            <p>Barva:</p>
+            <div className="diameter-options">
+              <label>
                 <input
                   type="radio"
                   name="color"
-                  id="zelená"
                   checked={selectedColor === "zelená"}
-                  onChange={handleColorChange}
+                  onChange={() => setSelectedColor("zelená")}
                 />
-                <div className="tile-color-box is-green"></div>
-                <div className="tile-info">
-                  <span className="tile-name">Zelená</span>
-                  <span className="tile-ral">RAL 6005</span>
-                </div>
+                <span>Zelená</span>
               </label>
 
-              {/* Antracitová varianta */}
-              <label
-                className={`objimka-tile ${selectedColor === "antracit" ? "active" : ""}`}
-              >
+              <label>
                 <input
                   type="radio"
                   name="color"
-                  id="antracit"
                   checked={selectedColor === "antracit"}
-                  onChange={handleColorChange}
+                  onChange={() => setSelectedColor("antracit")}
                 />
-                <div className="tile-color-box is-antracit"></div>
-                <div className="tile-info">
-                  <span className="tile-name">Antracit</span>
-                  <span className="tile-ral">RAL 7016</span>
-                </div>
+                <span>Antracit</span>
               </label>
             </div>
           </div>
+        )}
 
+        <form>
           <div className="quantity-select">
             <p>Množství</p>
             <input type="number" defaultValue={1} min="1" />

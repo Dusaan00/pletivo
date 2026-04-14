@@ -2,14 +2,14 @@ import "../Sass/_buykladky.scss";
 import "../Sass/_buyobjimky.scss";
 import KladkyChange from "../functions/KladkyChange";
 
-function BuyKladky() {
+function BuyKladkyZinc() {
   return (
     <>
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
           <div className="section-spletivo-product">
-            <KladkyChange type="pvc">
+            <KladkyChange type="zinc">
               <p>
                 Napínací kladky se používají při stavbě plotu z pleteného
                 pletiva při napínání napínacího drátu, který drží pletivo.
@@ -31,4 +31,4 @@ function BuyKladky() {
   );
 }
 
-export default BuyKladky;
+export default BuyKladkyZinc;
