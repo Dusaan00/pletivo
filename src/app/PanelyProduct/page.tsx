@@ -1,6 +1,8 @@
 import BuyPanely from "../Components/BuyPanely";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recpanelyProducts } from "../../data/products/recpanely";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Panely 3D/2D",
@@ -33,6 +35,10 @@ export default function Page() {
   return (
     <>
       <BuyPanely />
+      <DoporuceneProdukty
+        title="K montáži plotu z panelů dále můžete potřebovat:"
+        products={recpanelyProducts}
+      />
       <Sortkarty />
       <Pay />
     </>

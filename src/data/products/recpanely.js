@@ -1,4 +1,4 @@
-export const recpletivaProducts = [
+export const recpanelyProducts = [
   {
     id: "Podhrabové desky 2.50m",
     name: "Podhrabové desky betonové 2.50m",
