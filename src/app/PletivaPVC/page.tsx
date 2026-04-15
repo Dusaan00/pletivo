@@ -1,6 +1,9 @@
 import BuyPletivo from "../Components/BuyPletivo";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import Doporucene from "../Components/DoporucenePletivo";
+import { recpletivaProducts } from "../../data/products/recpletiva";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Pletivo PVC",
@@ -33,6 +36,10 @@ export default function Page() {
   return (
     <>
       <BuyPletivo />
+      <DoporuceneProdukty
+        title="K montáži pleteného pletiva PVC dále potřebujete:"
+        products={recpletivaProducts}
+      />
       <Sortkarty />
       <Pay />
     </>

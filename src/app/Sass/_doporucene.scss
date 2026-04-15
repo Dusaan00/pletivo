@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+.section-reccomended {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  margin-top: 4.25rem;
+  margin-bottom: 2rem;
+}
+
+.title-rec {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 2.5rem;
+}
