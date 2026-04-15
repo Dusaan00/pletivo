@@ -5,6 +5,7 @@ import { basePath } from "../functions/Env";
 import ProductSearch from "../functions/ProductSearch";
 import { deskyProducts } from "../../data/products/desky";
 import "../Sass/_pletiva.scss";
+import Sortkarty from "../Components/Sortkarty";
 
 function Desky() {
   return (
@@ -13,6 +14,7 @@ function Desky() {
         <h2 className="desky-title">Podhrabové desky</h2>
 
         <ProductSearch products={deskyProducts} />
+        <Sortkarty />
 
         <div className="desky-xplain">
           <div className="xplain-item">

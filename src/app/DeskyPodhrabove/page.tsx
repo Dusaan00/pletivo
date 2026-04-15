@@ -1,4 +1,5 @@
 import DeskyPodhrabove from "../Components/BuyDesky";
+import Sortkarty from "../Components/Sortkarty";
 import Pay from "../Components/Pay";
 
 export const metadata = {
@@ -32,6 +33,7 @@ export default function Page() {
   return (
     <>
       <DeskyPodhrabove />
+      <Sortkarty />
       <Pay />
     </>
   );

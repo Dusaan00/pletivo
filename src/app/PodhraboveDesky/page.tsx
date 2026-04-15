@@ -28,5 +28,9 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Desky />;
+  return (
+    <>
+      <Desky />
+    </>
+  );
 }
