@@ -1,6 +1,8 @@
 import BuyVazaci from "../Components/BuyVazaci";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recvazaciProducts } from "../../data/products/recvazaci";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Vázací Dráty",
@@ -33,6 +35,10 @@ export default function Page() {
   return (
     <>
       <BuyVazaci />
+      <DoporuceneProdukty
+        title="K vázacímu drátu ještě můžete potřebovat:"
+        products={recvazaciProducts}
+      />
       <Sortkarty />
       <Pay />
     </>
