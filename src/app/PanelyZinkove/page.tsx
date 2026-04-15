@@ -1,6 +1,8 @@
 import BuyPanelZinc from "../Components/BuyPanelZinc";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recpanelyznProducts } from "../../data/products/recpanelyzn";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Panely Zinkové",
@@ -33,6 +35,10 @@ export default function Page() {
   return (
     <>
       <BuyPanelZinc />
+      <DoporuceneProdukty
+        title="K montáži plotu ze zinkových panelů dále můžete potřebovat:"
+        products={recpanelyznProducts}
+      />
       <Sortkarty />
       <Pay />
     </>

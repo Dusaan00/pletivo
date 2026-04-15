@@ -1,6 +1,8 @@
 import BuySloupky from "../Components/BuySloupky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recsloupkyProducts } from "../../data/products/recsloupky";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Sloupky PVC",
@@ -33,6 +35,10 @@ export default function Page() {
   return (
     <>
       <BuySloupky />
+      <DoporuceneProdukty
+        title="K pvc sloupkům pro panelové oplocení můžete ještě potřebovat:"
+        products={recsloupkyProducts}
+      />
       <Sortkarty />
       <Pay />
     </>
