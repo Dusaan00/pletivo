@@ -73,7 +73,7 @@ export const sloupkyProducts = [
     name: "Vzpěra zinková – ⌀38mm",
     image: "/sloupky/vzperazn.webp",
     description:
-      "Vzpěra zinková, používá se při montážích oplocení z pletiva bezinal.",
+      "Plotová vzpěra zinková, používá se při montážích oplocení z pletiva bezinal.",
     price: "Na poptávku",
     link: "/form",
   },

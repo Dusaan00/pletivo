@@ -1,6 +1,8 @@
 import BuyBezinal from "../Components/BuyBezinal";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recpletivoznProducts } from "../../data/products/recpletivozn";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Pletivo Bezinal",
@@ -33,6 +35,10 @@ export default function Page() {
   return (
     <>
       <BuyBezinal />
+      <DoporuceneProdukty
+        title="K montáži zinkového pletiva dále můžete potřebovat:"
+        products={recpletivoznProducts}
+      />
       <Sortkarty />
       <Pay />
     </>
