@@ -37,7 +37,7 @@ export default function Page() {
     <>
       <BuyPletivo />
       <DoporuceneProdukty
-        title="K montáži pleteného pletiva PVC dále potřebujete:"
+        title="K montáži pleteného pletiva PVC dále můžete potřebovat:"
         products={recpletivaProducts}
       />
       <Sortkarty />
