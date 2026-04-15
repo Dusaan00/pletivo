@@ -1,6 +1,8 @@
 import Objimky from "../Components/BuyObjimky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recobjimkyProducts } from "../../data/products/recobjimky";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Objímky Na Panely",
@@ -32,6 +34,10 @@ export default function Page() {
   return (
     <>
       <Objimky />
+      <DoporuceneProdukty
+        title="K objímkám můžete ještě potřebovat:"
+        products={recobjimkyProducts}
+      />
       <Sortkarty />
       <Pay />
     </>

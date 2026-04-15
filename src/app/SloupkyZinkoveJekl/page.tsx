@@ -1,6 +1,8 @@
 import BuySloupkyZinc from "../Components/BuyZincSloupky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recsloupkyznProducts } from "../../data/products/recsloupkyzn";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Sloupky Zinkové Jekl",
@@ -33,6 +35,10 @@ export default function Page() {
   return (
     <>
       <BuySloupkyZinc />
+      <DoporuceneProdukty
+        title="K zinkovým panelovým sloupkům můžete ještě potřebovat:"
+        products={recsloupkyznProducts}
+      />
       <Sortkarty />
       <Pay />
     </>
