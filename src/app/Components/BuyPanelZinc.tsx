@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import PanelyZincChange from "../functions/PanelyZincChange";
 
 function BuyPanelZinc() {

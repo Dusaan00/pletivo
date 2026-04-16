@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import BezinalChange from "../functions/BezinalChange";
 
 function BuyBezinal() {

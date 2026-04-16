@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import SloupkyChange from "../functions/SloupkyChange";
 
 function BuySloupky() {

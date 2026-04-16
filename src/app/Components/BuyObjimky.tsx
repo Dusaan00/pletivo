@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import "../Sass/_buyobjimky.scss";
 import ObjimkyChange from "../functions/ObjimkyChange";
 

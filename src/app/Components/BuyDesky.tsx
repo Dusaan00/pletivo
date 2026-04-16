@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import DeskyChange from "../functions/DeskyChange";
 
 function BuyDesky() {

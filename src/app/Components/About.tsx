@@ -11,6 +11,7 @@ function About() {
             <strong>O firmě Pletivo Grygov</strong>
           </h2>
         </div>
+        s
         <div className="section-about-grid">
           <div className="section-about-left">
             <p className="section-about-para-ii">

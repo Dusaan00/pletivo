@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import "../Sass/_buyvazaci.scss";
 import VazaciChange from "../functions/VazaciChange";
 

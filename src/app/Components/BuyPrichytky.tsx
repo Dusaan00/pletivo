@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import "../Sass/_pletiva.scss";
 import PrichytkyChange from "../functions/PrichytkyChange";
 

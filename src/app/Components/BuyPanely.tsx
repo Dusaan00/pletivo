@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import PanelyChange from "../functions/PanelyChange";
 
 function BuyPletivo() {
