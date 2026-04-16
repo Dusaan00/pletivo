@@ -1,6 +1,8 @@
 import Napinaci from "../Components/BuyZinkove";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { recnapinaciznProducts } from "../../data/products/recnapinacizn";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Napínací dráty zinkové",
@@ -33,6 +35,10 @@ export default function Page() {
   return (
     <>
       <Napinaci />
+      <DoporuceneProdukty
+        title="K zinkovému napínacímu drátu ještě můžete potřebovat:"
+        products={recnapinaciznProducts}
+      />
       <Sortkarty />
       <Pay />
     </>
