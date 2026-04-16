@@ -23,7 +23,7 @@ export const recsloupkyProducts = [
     image: "/sloupky/objimky3d.jpeg",
     description: "Zelené objímky pro montáž plotu z 3D panelů.",
     price: "55,-",
-    link: "/form",
+    link: "/Objimky",
   },
   {
     id: "objimky-anracit",
@@ -31,7 +31,7 @@ export const recsloupkyProducts = [
     image: "/sloupky/objimky3da.jpg",
     description: "Objímky v antracitové barvě pro montáž plotu z 3D panelů.",
     price: "55,-",
-    link: "/form",
+    link: "/Objimky",
   },
   {
     id: "Podhrabové desky 2.50m",

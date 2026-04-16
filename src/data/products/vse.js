@@ -113,7 +113,7 @@ export const vseProducts = [
     image: "/sloupky/objimky3d.jpeg",
     description: "Zelené objímky pro montáž plotu z 3D panelů.",
     price: "55,-",
-    link: "/form",
+    link: "/Objimky",
   },
   {
     id: "objimky-anracit",
@@ -121,7 +121,7 @@ export const vseProducts = [
     image: "/sloupky/objimky3da.jpg",
     description: "Objímky v antracitové barvě pro montáž plotu z 3D panelů.",
     price: "55,-",
-    link: "/form",
+    link: "/Objimky",
   },
   {
     id: "Sloupek antracit 48",
@@ -235,7 +235,7 @@ export const vseProducts = [
     description:
       "Napínací drát zinkový, využivá se při montáži plotu ze zinkového pletiva bezinal.",
     price: "255,-",
-    link: "/form",
+    link: "/NapinaciDratyZinkove",
   },
   {
     id: "kladka-pvc-zelena",
@@ -244,7 +244,7 @@ export const vseProducts = [
     description:
       "Napínací kladka PVC v zelené barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
     price: "22,-",
-    link: "/form",
+    link: "/Kladky",
   },
   {
     id: "kladka-pvc-antracit",
@@ -253,7 +253,7 @@ export const vseProducts = [
     description:
       "Napínací kladka PVC v antracitové barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
     price: "29,-",
-    link: "/form",
+    link: "/Kladky",
   },
   {
     id: "kladka-zinc",
@@ -262,7 +262,7 @@ export const vseProducts = [
     description:
       "Napínací kladka zinková, tohle příslušenství se využivá při montáži zinkového plotuz pletiva bezinal.",
     price: "29,-",
-    link: "/form",
+    link: "/KladkyZinkove",
   },
   {
     id: "prichytky",
