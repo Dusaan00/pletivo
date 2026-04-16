@@ -60,7 +60,7 @@ export const pletivaProducts = [
     description:
       "Napínací drát PVC zelený, délka 78 metrů. Napínací drát se využívá při montáži pletivového plotu.",
     price: "340,-",
-    link: "/NapinaciDraty",
+    link: "/NapinaciDraty?color=zelena&length=78",
   },
   {
     id: "napinak-zeleny-52",
@@ -69,7 +69,7 @@ export const pletivaProducts = [
     description:
       "Napínací drát PVC zelený, délka 52 metrů. Napínací drát se využívá při montáži pletivového plotu.",
     price: "250,-",
-    link: "/NapinaciDraty",
+    link: "/NapinaciDraty?color=zelena&length=52",
   },
   {
     id: "napinak-zeleny-26",
@@ -78,7 +78,7 @@ export const pletivaProducts = [
     description:
       "Napínací drát PVC zelený, délka 26 metrů. Napínací drát se využívá při montáži pletivového plotu.",
     price: "140,-",
-    link: "/NapinaciDraty",
+    link: "/NapinaciDraty?color=zelena&length=26",
   },
   {
     id: "napinak-antracit-78",
@@ -87,7 +87,7 @@ export const pletivaProducts = [
     description:
       "Napínací drát PVC antracit, délka 78 metrů. Napínací drát se využívá při montáži pletivového plotu.",
     price: "360,-",
-    link: "/NapinaciDraty",
+    link: "/NapinaciDraty?color=antracitova&length=78",
   },
   {
     id: "napinak-antracit-52",
@@ -96,7 +96,7 @@ export const pletivaProducts = [
     description:
       "Napínací drát PVC antracit, délka 52 metrů. Napínací drát se využívá při montáži pletivového plotu.",
     price: "270,-",
-    link: "/NapinaciDraty",
+    link: "/NapinaciDraty?color=antracitova&length=52",
   },
   {
     id: "napinak-zinc",

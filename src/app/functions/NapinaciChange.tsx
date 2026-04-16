@@ -1,31 +1,42 @@
 "use client";
 
-import { useState, ReactNode } from "react";
+import { useState, ReactNode, useEffect } from "react";
 import { basePath } from "../functions/Env";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface NapinaciChangeProps {
   children: ReactNode;
 }
 
-type Color = "zelená" | "antracitová";
+type Color = "zelena" | "antracitova";
 type Length = "26" | "52" | "78";
 
 const productData: Record<Color, Partial<Record<Length, number>>> = {
-  zelená: { "26": 140, "52": 250, "78": 340 },
-  antracitová: { "52": 270, "78": 360 },
+  zelena: { "26": 140, "52": 250, "78": 340 },
+  antracitova: { "52": 270, "78": 360 },
+};
+
+const colorLabels = {
+  zelena: "zelený",
+  antracitova: "antracitový",
 };
 
 const NapinaciChange = ({ children }: NapinaciChangeProps) => {
   const router = useRouter();
-  const [selectedColor, setSelectedColor] = useState<Color>("zelená");
-  const [selectedLength, setSelectedLength] = useState<Length>("26");
+  const searchParams = useSearchParams();
+
+  const initialColor = (searchParams.get("color") as Color) || "zelena";
+  const initialLength = (searchParams.get("length") as Length) || "26";
+
+  const [selectedColor, setSelectedColor] = useState<Color>(initialColor);
+  const [selectedLength, setSelectedLength] = useState<Length>(initialLength);
 
   const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const color = e.target.id as Color;
     setSelectedColor(color);
+
     const availableLengths = Object.keys(productData[color]) as Length[];
     setSelectedLength(availableLengths[0]);
   };
@@ -34,13 +45,22 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
     setSelectedLength(e.target.value as Length);
   };
 
+  /* UPDATE URL při změně varianty */
+  useEffect(() => {
+    router.replace(
+      `/NapinaciDraty?color=${selectedColor}&length=${selectedLength}`,
+      { scroll: false },
+    );
+  }, [selectedColor, selectedLength, router]);
+
   const imgSrc =
-    selectedColor === "zelená"
+    selectedColor === "zelena"
       ? `${basePath}/sloupky/dratgreen.webp`
       : `${basePath}/sloupky/dratantra.webp`;
 
-  const currentPrice = productData[selectedColor][selectedLength] ?? 0;
-  const title = `Napínací drát ${selectedColor}, ${selectedLength} m`;
+  const currentPrice = productData[selectedColor]?.[selectedLength] ?? 0;
+
+  const title = `Napínací drát ${colorLabels[selectedColor]}, ${selectedLength} m`;
 
   return (
     <>
@@ -58,16 +78,18 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
 
         <div className="type-select">
           <p>Typ drátu:</p>
+
           <div className="type-options">
             <label className="type-label active">
-              <input type="radio" name="type" checked={true} readOnly /> PVC
+              <input type="radio" name="type" checked readOnly /> PVC
             </label>
+
             <label className="type-label">
               <input
                 type="radio"
                 name="type"
                 onChange={() => router.push("/NapinaciDratyZinkove")}
-              />{" "}
+              />
               Zinkové
             </label>
           </div>
@@ -75,6 +97,7 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
 
         <div className="height-select">
           <label htmlFor="length">Vyberte délku:</label>
+
           <select
             id="length"
             value={selectedLength}
@@ -93,22 +116,24 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
         <form>
           <div className="color-select">
             <p>Barva:</p>
-            <label htmlFor="zelená">
+
+            <label htmlFor="zelena">
               <input
                 type="radio"
                 name="color"
-                id="zelená"
-                checked={selectedColor === "zelená"}
+                id="zelena"
+                checked={selectedColor === "zelena"}
                 onChange={handleColorChange}
               />
               <span className="color-1"></span>
             </label>
-            <label htmlFor="antracitová">
+
+            <label htmlFor="antracitova">
               <input
                 type="radio"
                 name="color"
-                id="antracitová"
-                checked={selectedColor === "antracitová"}
+                id="antracitova"
+                checked={selectedColor === "antracitova"}
                 onChange={handleColorChange}
               />
               <span className="color-2"></span>
