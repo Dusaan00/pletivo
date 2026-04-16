@@ -31,10 +31,36 @@ export const metadata = {
   robots: "index, follow",
 };
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  // 2. MUSÍME POČKAT NA VYHODNOCENÍ PROMISE
+  const params = await searchParams;
+
+  // 3. TEĎ UŽ ČTEME Z VYHODNOCENÝCH "params"
+  const colorParam = Array.isArray(params?.color)
+    ? params?.color[0]
+    : params?.color;
+
+  const lengthParam = Array.isArray(params?.length)
+    ? params?.length[0]
+    : params?.length;
+
+  const color = colorParam === "antracitova" ? "antracitova" : "zelena";
+
+  const length =
+    lengthParam === "52" || lengthParam === "78" ? lengthParam : "26";
+
   return (
     <>
-      <Napinaci />
+      <Napinaci
+        key={`${color}-${length}`}
+        initialColor={color}
+        initialLength={length as any}
+      />
+
       <DoporuceneProdukty
         title="K napínacímu drátu ještě můžete potřebovat:"
         products={recnapinaciProducts}

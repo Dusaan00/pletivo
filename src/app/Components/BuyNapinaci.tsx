@@ -1,14 +1,22 @@
 import "../Sass/_buypletivo.scss";
 import NapinaciChange from "../functions/NapinaciChange";
 
-function BuyNapinaci() {
+interface BuyNapinaciProps {
+  initialColor?: "zelena" | "antracitova";
+  initialLength?: "26" | "52" | "78";
+}
+
+function BuyNapinaci({ initialColor, initialLength }: BuyNapinaciProps) {
   return (
     <>
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
           <div className="section-spletivo-product">
-            <NapinaciChange>
+            <NapinaciChange
+              initialColor={initialColor}
+              initialLength={initialLength}
+            >
               <p>
                 Napínaci drát se používá při stavbě plotu z pletiva k tomu, aby
                 pletivo zpevnil, a udržel ho rovně a pevně napnuté mezi

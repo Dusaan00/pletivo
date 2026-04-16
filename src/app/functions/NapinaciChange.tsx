@@ -4,14 +4,16 @@ import { useState, ReactNode, useEffect } from "react";
 import { basePath } from "../functions/Env";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-
-interface NapinaciChangeProps {
-  children: ReactNode;
-}
+import { useRouter } from "next/navigation";
 
 type Color = "zelena" | "antracitova";
 type Length = "26" | "52" | "78";
+
+interface NapinaciChangeProps {
+  children: ReactNode;
+  initialColor?: Color;
+  initialLength?: Length;
+}
 
 const productData: Record<Color, Partial<Record<Length, number>>> = {
   zelena: { "26": 140, "52": 250, "78": 340 },
@@ -23,12 +25,12 @@ const colorLabels = {
   antracitova: "antracitový",
 };
 
-const NapinaciChange = ({ children }: NapinaciChangeProps) => {
+const NapinaciChange = ({
+  children,
+  initialColor = "zelena",
+  initialLength = "26",
+}: NapinaciChangeProps) => {
   const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const initialColor = (searchParams.get("color") as Color) || "zelena";
-  const initialLength = (searchParams.get("length") as Length) || "26";
 
   const [selectedColor, setSelectedColor] = useState<Color>(initialColor);
   const [selectedLength, setSelectedLength] = useState<Length>(initialLength);
@@ -45,7 +47,7 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
     setSelectedLength(e.target.value as Length);
   };
 
-  /* UPDATE URL při změně varianty */
+  /* update URL */
   useEffect(() => {
     router.replace(
       `/NapinaciDraty?color=${selectedColor}&length=${selectedLength}`,
@@ -60,7 +62,9 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
 
   const currentPrice = productData[selectedColor]?.[selectedLength] ?? 0;
 
-  const title = `Napínací drát ${colorLabels[selectedColor]}, ${selectedLength} m`;
+  const title = `Napínací drát ${
+    colorLabels[selectedColor]
+  }, ${selectedLength} m`;
 
   return (
     <>
