@@ -1,5 +1,8 @@
 import KladkyZinkove from "../Components/BuyKladkyZinc";
 import Pay from "../Components/Pay";
+import { kladkyznProducts } from "../../data/products/kladkyzn";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import Sortkarty from "../Components/Sortkarty";
 
 export const metadata = {
   title: "Pletivo Grygov - Kladky Zinkové",
@@ -32,6 +35,11 @@ export default function Page() {
   return (
     <>
       <KladkyZinkove />
+      <DoporuceneProdukty
+        title="K napínacím zinkovým kladkám ještě můžete potřebovat:"
+        products={kladkyznProducts}
+      />
+      <Sortkarty />
       <Pay />
     </>
   );

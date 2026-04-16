@@ -1,30 +1,21 @@
-export const sloupkyProducts = [
+export const kladkyProducts = [
   {
-    id: "sloupek-jekl-zeleny",
-    name: "Sloupek JEKL - zelený",
-    image: "/sloupky/jeklgreen.webp",
+    id: "pletivo-pvc-green",
+    name: "Pletivo Poplastované Zelené 25m",
+    image: "/pletivaa/zelenep.webp",
     description:
-      "Sloupky mezi které se panely při montáži plotu dosazují. Rozměr 60x40.",
-    price: "255,-",
-    link: "/SloupkyProduct",
+      "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
+    price: "1325,-",
+    link: "/PletivaPVC",
   },
   {
-    id: "sloupek-jekl-antracit",
-    name: "Sloupek JEKL - antracit",
-    image: "/sloupky/jeklantracit.webp",
+    id: "pletivo-pvc-antracit",
+    name: "Pletivo Poplastované Antracit 25m",
+    image: "/pletivaa/antracitv.webp",
     description:
-      "Sloupky mezi které se panely při montáži plotu dosazují. Rozměr 60x40.",
-    price: "255,-",
-    link: "/SloupkyProduct",
-  },
-  {
-    id: "sloupek-jekl-zinc",
-    name: "Sloupek JEKL - zinkový",
-    image: "/sloupky/jeklzinc.webp",
-    description:
-      "Sloupky mezi které se panely při montáži plotu dosazují. Rozměr 60x40.",
-    price: "355,-",
-    link: "/SloupkyZinkoveJekl",
+      "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
+    price: "1325,-",
+    link: "/PletivaPVC",
   },
   {
     id: "Sloupek antracit 48",
@@ -40,15 +31,6 @@ export const sloupkyProducts = [
     name: "Vzpěra antracit – ⌀38mm",
     image: "/sloupky/vzperantracit.webp",
     description: "Vzpěra v barvě antracit. Pro montáže pletivových plotů.",
-    price: "Na poptávku",
-    link: "/form",
-  },
-  {
-    id: "Sloupek Zink 48",
-    name: "Sloupek zinkový – ⌀48mm",
-    image: "/sloupky/sloupekzinc.webp",
-    description:
-      "Sloupek zinkový, používá se při montážích plotů z pletiva bezinal.",
     price: "Na poptávku",
     link: "/form",
   },
@@ -69,12 +51,30 @@ export const sloupkyProducts = [
     link: "/form",
   },
   {
-    id: "Vzpera Zinkova 38",
-    name: "Vzpěra zinková – ⌀38mm",
-    image: "/sloupky/vzperazn.webp",
+    id: "Podhrabové desky 2.50m",
+    name: "Podhrabové desky betonové 2.50m",
+    image: "/deskyy/deskybeton.webp",
     description:
-      "Plotová vzpěra zinková, používá se při montážích oplocení z pletiva bezinal.",
-    price: "Na poptávku",
+      "K oplocení z pletiva a panelů 3D/2D se dají použít i betonové podhrabové desky, které zajistí dodatečnou ochranu plotu, estetiku a upravenost.",
+    price: "670,-",
+    link: "/DeskyPodhrabove",
+  },
+  {
+    id: "Podhrabové desky 2.90m",
+    name: "Podhrabové desky betonové 2.90m",
+    image: "/deskyy/deskybeton.webp",
+    description:
+      "K oplocení z pletiva a panelů 3D/2D se dají použít i betonové podhrabové desky, které zajistí dodatečnou ochranu plotu, estetiku a upravenost.",
+    price: "710,-",
+    link: "/DeskyPodhrabove",
+  },
+  {
+    id: "Držáky na desky",
+    name: "Držáky na podhrabové desky",
+    image: "/deskyy/drzaky.webp",
+    description:
+      "Držáky na podhrabové desky se instalují mezi plotové sloupky a do držáků se následně uloží podhrabové desky.",
+    price: "55,-",
     link: "/form",
   },
   {
@@ -130,42 +130,6 @@ export const sloupkyProducts = [
       "Napínací drát PVC antracit, délka 52 metrů. Napínací drát se využívá při montáži pletivového plotu.",
     price: "270,-",
     link: "/NapinaciDraty",
-  },
-  {
-    id: "napinak-zinc",
-    name: "Napínací drát – Zinkový",
-    image: "/sloupky/dratzink.webp",
-    description:
-      "Napínací drát zinkový, využivá se při montáži plotu ze zinkového pletiva bezinal.",
-    price: "255,-",
-    link: "/NapinaciDratyZinkove",
-  },
-  {
-    id: "kladka-pvc-zelena",
-    name: "Napínací kladka PVC zelená",
-    image: "/sloupky/kladka.webp",
-    description:
-      "Napínací kladka PVC v zelené barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
-    price: "22,-",
-    link: "/Kladky",
-  },
-  {
-    id: "kladka-pvc-antracit",
-    name: "Napínací kladka PVC antracit",
-    image: "/sloupky/kladkaa.webp",
-    description:
-      "Napínací kladka PVC v antracitové barvě, tohle příslušenství se využivá při montáži pletivového plotu.",
-    price: "29,-",
-    link: "/Kladky",
-  },
-  {
-    id: "kladka-zinc",
-    name: "Napínací kladka zinková",
-    image: "/sloupky/kladkazinc.webp",
-    description:
-      "Napínací kladka zinková, tohle příslušenství se využivá při montáži zinkového plotuz pletiva bezinal.",
-    price: "29,-",
-    link: "/KladkyZinkove",
   },
   {
     id: "prichytky",

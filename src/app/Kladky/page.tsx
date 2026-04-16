@@ -1,6 +1,8 @@
 import Kladky from "../Components/BuyKladky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
+import { kladkyProducts } from "../../data/products/kladka";
+import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
   title: "Pletivo Grygov - Kladky PVC",
@@ -32,6 +34,10 @@ export default function Page() {
   return (
     <>
       <Kladky />
+      <DoporuceneProdukty
+        title="K napínacím kladkám ještě můžete potřebovat:"
+        products={kladkyProducts}
+      />
       <Sortkarty />
       <Pay />
     </>
