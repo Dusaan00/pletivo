@@ -34,18 +34,31 @@ const NapinaciContent = ({ children }: { children: ReactNode }) => {
   const validColors: Color[] = ["zelena", "antracitova"];
   const validLengths: Length[] = ["26", "52", "78"];
 
-  const colorParam = searchParams.get("color");
-  const lengthParam = searchParams.get("length");
+  const colorParam = searchParams.get("color") as Color;
+  const lengthParam = searchParams.get("length") as Length;
 
-  const colorFromUrl: Color = validColors.includes(colorParam as Color)
-    ? (colorParam as Color)
-    : "zelena";
+  const colorFromUrl: Color =
+    colorParam && productData[colorParam] ? colorParam : "zelena";
 
-  const lengthFromUrl: Length = validLengths.includes(lengthParam as Length)
-    ? (lengthParam as Length)
-    : "26";
+  const availableLengths = Object.keys(productData[colorFromUrl]) as Length[];
+
+  const lengthFromUrl: Length =
+    lengthParam && availableLengths.includes(lengthParam)
+      ? lengthParam
+      : availableLengths[0];
 
   /* ========================= */
+  useEffect(() => {
+    const urlColor = searchParams.get("color");
+    const urlLength = searchParams.get("length");
+
+    if (urlColor !== colorFromUrl || urlLength !== lengthFromUrl) {
+      router.replace(
+        `/NapinaciDraty?color=${colorFromUrl}&length=${lengthFromUrl}`,
+        { scroll: false },
+      );
+    }
+  }, [colorFromUrl, lengthFromUrl, router, searchParams]);
 
   const [selectedColor, setSelectedColor] = useState<Color>(colorFromUrl);
   const [selectedLength, setSelectedLength] = useState<Length>(lengthFromUrl);
