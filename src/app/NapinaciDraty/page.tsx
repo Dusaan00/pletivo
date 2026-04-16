@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Napinaci from "../Components/BuyNapinaci";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
@@ -35,8 +36,11 @@ export default function Page() {
   return (
     <>
       {/* Už neposíláme props, Napinaci si je vytáhne z URL sám přes hooky */}
-      <Napinaci />
-
+      <Suspense
+        fallback={<div style={{ minHeight: "600px" }}>Načítání...</div>}
+      >
+        <Napinaci />
+      </Suspense>
       <DoporuceneProdukty
         title="K napínacímu drátu ještě můžete potřebovat:"
         products={recnapinaciProducts}

@@ -1,4 +1,3 @@
-import "../Sass/_buypletivo.scss";
 import NapinaciChange from "../functions/NapinaciChange";
 
 interface BuyNapinaciProps {

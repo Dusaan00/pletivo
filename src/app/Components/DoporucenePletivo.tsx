@@ -1,4 +1,3 @@
-import "../Sass/_doporucene.scss";
 import ProductSearch from "../functions/ProductSearch";
 
 function DoporuceneProdukty({
