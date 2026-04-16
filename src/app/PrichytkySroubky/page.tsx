@@ -1,31 +1,31 @@
-import Objimky from "../Components/BuyObjimky";
+import Prichytky from "../Components/BuyPrichytky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recobjimkyProducts } from "../../data/products/recobjimky";
+import { prichytkyProducts } from "../../data/products/prichytky";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {
-  title: "Pletivo Grygov - Objímky Na Panely",
+  title: "Pletivo Grygov - Příchytky, šroubky",
   description: "Objímky pro montáže plotů z panelů.",
   keywords:
     "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
   openGraph: {
-    title: "Pletivo Grygov - Objímky Na Panely",
+    title: "Pletivo Grygov - Příchytky, šroubky",
     description:
       "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
     images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/Objimky",
+    url: "https://pletivogrygov.cz/PrichytkySroubky",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pletivo Grygov - Objímky",
+    title: "Pletivo Grygov - Příchytky, šroubky",
     description:
       "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://pletivogrygov.cz/Objimky",
+    canonical: "https://pletivogrygov.cz/PrichytkySroubky",
   },
   robots: "index, follow",
 };
@@ -33,10 +33,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Objimky />
+      <Prichytky />
       <DoporuceneProdukty
-        title="K objímkám můžete ještě potřebovat:"
-        products={recobjimkyProducts}
+        title="Dále můžete potřebovat:"
+        products={prichytkyProducts}
       />
       <Sortkarty />
       <Pay />

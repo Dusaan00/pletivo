@@ -156,6 +156,6 @@ export const recnapinaciProducts = [
     description:
       "Příchytky a šroubky, které se využívají pro kompletní montáže plotů. Cena za 1ks příchytka + 1ks šroubek je 7,- Kč.",
     price: "7,-",
-    link: "/form",
+    link: "/PrichytkySroubky",
   },
 ];

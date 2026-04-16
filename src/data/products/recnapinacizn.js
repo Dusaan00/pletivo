@@ -42,7 +42,7 @@ export const recnapinaciznProducts = [
     description:
       "Napínací kladka zinková, tohle příslušenství se využivá při montáži zinkového plotuz pletiva bezinal.",
     price: "29,-",
-    link: "/form",
+    link: "/KladkyZinkove",
   },
   {
     id: "Podhrabové desky 2.50m",
@@ -87,6 +87,6 @@ export const recnapinaciznProducts = [
     description:
       "Příchytky a šroubky, které se využívají pro kompletní montáže plotů. Cena za 1ks příchytka + 1ks šroubek je 7,- Kč.",
     price: "7,-",
-    link: "/form",
+    link: "/PrichytkySroubky",
   },
 ];
