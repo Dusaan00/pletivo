@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { basePath } from "../functions/Env";
+import "../Sass/_pletiva.scss";
 
 function ProductCard({ product }) {
   return (
