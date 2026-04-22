@@ -12,7 +12,7 @@ function ProductSearch({ products }) {
 
   const filteredProducts = products
     .filter((product) =>
-      (product.name + " " + product.description)
+      (product.searchText || `${product.name} ${product.description}`)
         .toLowerCase()
         .includes(searchTerm),
     )

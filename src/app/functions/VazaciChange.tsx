@@ -2,8 +2,7 @@
 
 import { useState, ReactNode } from "react";
 import { basePath } from "./Env";
-import { RiShoppingCart2Line } from "react-icons/ri";
-import Link from "next/link";
+import { ProductDetailShell } from "../Components/ProductDetailShell";
 
 interface VazaciChangeProps {
   children: ReactNode;
@@ -11,10 +10,7 @@ interface VazaciChangeProps {
 
 const VazaciChange = ({ children }: VazaciChangeProps) => {
   const [selectedColor, setSelectedColor] = useState("zelená");
-
-  const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedColor(e.target.id);
-  };
+  const [quantity, setQuantity] = useState(1);
 
   const title =
     selectedColor === "zelená"
@@ -23,29 +19,20 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
         ? "Vázací Drát Antracitový 50m"
         : "Vázací Drát Hnědá 50m";
 
-  const imgSrc =
-    selectedColor === "zelená"
-      ? `${basePath}/sloupky/vazacidrat.jpeg`
-      : selectedColor === "antracit"
-        ? `${basePath}/sloupky/vazacidrat.jpeg`
-        : `${basePath}/sloupky/vazacidrat.jpeg`;
-
+  const imgSrc = `${basePath}/sloupky/vazacidrat.jpeg`;
   const isInStock = true;
-  const currentPrice = 140;
 
   return (
-    <>
-      <div className="section-spletivo-gal">
-        <img src={imgSrc} alt={title} />
-      </div>
-      <div className="section-spletivo-details">
-        <h1>{title}</h1>
-        <h2>{currentPrice},- / ks</h2>
-
-        {children}
+    <ProductDetailShell
+      title={title}
+      priceLabel="140,- / ks"
+      imageSrc={imgSrc}
+      quantity={quantity}
+      onQuantityChange={setQuantity}
+      orderDisabled={!isInStock}
+      selectors={
         <div className="vazaci-selector">
           <div className="vazaci-grid">
-            {/* Zelená */}
             <label
               className={`vazaci-tile ${selectedColor === "zelená" ? "active" : ""}`}
             >
@@ -54,7 +41,7 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
                 name="color"
                 id="zelená"
                 checked={selectedColor === "zelená"}
-                onChange={handleColorChange}
+                onChange={() => setSelectedColor("zelená")}
               />
               <div className="vazaci-color-box is-green"></div>
               <div className="vazaci-info">
@@ -63,7 +50,6 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
               </div>
             </label>
 
-            {/* Antracit */}
             <label
               className={`vazaci-tile ${selectedColor === "antracit" ? "active" : ""}`}
             >
@@ -72,7 +58,7 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
                 name="color"
                 id="antracit"
                 checked={selectedColor === "antracit"}
-                onChange={handleColorChange}
+                onChange={() => setSelectedColor("antracit")}
               />
               <div className="vazaci-color-box is-antracit"></div>
               <div className="vazaci-info">
@@ -81,7 +67,6 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
               </div>
             </label>
 
-            {/* Hnědá */}
             <label
               className={`vazaci-tile ${selectedColor === "hnědá" ? "active" : ""}`}
             >
@@ -90,7 +75,7 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
                 name="color"
                 id="hnědá"
                 checked={selectedColor === "hnědá"}
-                onChange={handleColorChange}
+                onChange={() => setSelectedColor("hnědá")}
               />
               <div className="vazaci-color-box is-brown"></div>
               <div className="vazaci-info">
@@ -100,21 +85,10 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
             </label>
           </div>
         </div>
-
-        <form>
-          <div className="quantity-select">
-            <p>Množství (ks)</p>
-            <input type="number" defaultValue={1} min="1" />
-          </div>
-
-          <Link href="/form" className="order-link">
-            <button type="button" disabled={!isInStock}>
-              Objednat <RiShoppingCart2Line />
-            </button>
-          </Link>
-        </form>
-      </div>
-    </>
+      }
+    >
+      {children}
+    </ProductDetailShell>
   );
 };
 

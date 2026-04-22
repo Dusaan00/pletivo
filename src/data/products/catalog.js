@@ -1,6 +1,12 @@
-export const vseProducts = [
-  {
+export const productCatalog = {
+  "pletivo-pvc-green": {
     id: "pletivo-pvc-green",
+    slug: "pletivo-poplastovane-zelene-25m",
+    category: "pletiva",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 1325,
+    priceCurrency: "CZK",
     name: "Pletivo Poplastované Zelené 25m",
     image: "/pletivaa/zelenep.webp",
     description:
@@ -8,8 +14,14 @@ export const vseProducts = [
     price: "1325,-",
     link: "/PletivaPVC",
   },
-  {
+  "pletivo-pvc-antracit": {
     id: "pletivo-pvc-antracit",
+    slug: "pletivo-poplastovane-antracit-25m",
+    category: "pletiva",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 1325,
+    priceCurrency: "CZK",
     name: "Pletivo Poplastované Antracit 25m",
     image: "/pletivaa/antracitv.webp",
     description:
@@ -17,8 +29,14 @@ export const vseProducts = [
     price: "1325,-",
     link: "/PletivaPVC",
   },
-  {
+  "pletivo-bezinal-20": {
     id: "pletivo-bezinal-20",
+    slug: "pletivo-zinkove-bezinal-25m-20mm",
+    category: "pletiva",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 1550,
+    priceCurrency: "CZK",
     name: "Pletivo Zinkové Bezinal 25m, 2.0mm",
     image: "/pletivaa/bezinalv.webp",
     description:
@@ -26,8 +44,14 @@ export const vseProducts = [
     price: "1550,-",
     link: "/PletivaBezinal",
   },
-  {
+  "pletivo-bezinal-21": {
     id: "pletivo-bezinal-21",
+    slug: "pletivo-zinkove-bezinal-25m-22mm",
+    category: "pletiva",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 1999,
+    priceCurrency: "CZK",
     name: "Pletivo Zinkové Bezinal 25m, 2.2mm",
     image: "/pletivaa/bezinalv.webp",
     description:
@@ -35,8 +59,14 @@ export const vseProducts = [
     price: "1999,-",
     link: "/PletivaBezinal",
   },
-  {
+  "pletivo-zeberkove": {
     id: "pletivo-zeberkove",
+    slug: "zeberkova-pletiva",
+    category: "pletiva",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: null,
+    priceCurrency: "CZK",
     name: "Žeberková pletiva",
     image: "/pletivaa/zeberkove.webp",
     description:
@@ -44,8 +74,14 @@ export const vseProducts = [
     price: "Na poptávku",
     link: "/form",
   },
-  {
+  "panel-green": {
     id: "panel-green",
+    slug: "panel-3d-zeleny-drat-4mm",
+    category: "panely",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 490,
+    priceCurrency: "CZK",
     name: "Panel 3D Zelený, drát 4mm",
     image: "/panely/panelgreen.webp",
     description:
@@ -53,8 +89,14 @@ export const vseProducts = [
     price: "490,-",
     link: "/PanelyProduct",
   },
-  {
-    id: "panel-anracit",
+  "panel-antracit": {
+    id: "panel-antracit",
+    slug: "panel-3d-antracit-drat-4mm",
+    category: "panely",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 490,
+    priceCurrency: "CZK",
     name: "Panel 3D Antracit, drát 4mm",
     image: "/panely/paneltracit.webp",
     description:
@@ -62,8 +104,14 @@ export const vseProducts = [
     price: "490,-",
     link: "/PanelyProduct",
   },
-  {
+  "panel-3d-zinc": {
     id: "panel-3d-zinc",
+    slug: "panel-3d-zinkovy",
+    category: "panely",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 520,
+    priceCurrency: "CZK",
     name: "Panel 3D zinkový",
     image: "/pletivaa/zinc.webp",
     description:
@@ -71,8 +119,14 @@ export const vseProducts = [
     price: "520,-",
     link: "/PanelyZinkove",
   },
-  {
+  "panel-2d-zinc": {
     id: "panel-2d-zinc",
+    slug: "panel-2d-zinkovy-drat-56mm",
+    category: "panely",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 925,
+    priceCurrency: "CZK",
     name: "Panel 2D zinkový, drát 5/6mm",
     image: "/pletivaa/dvad.png",
     description:
@@ -80,8 +134,14 @@ export const vseProducts = [
     price: "925,-",
     link: "/PanelyZinkove",
   },
-  {
+  "sloupek-jekl-zeleny": {
     id: "sloupek-jekl-zeleny",
+    slug: "sloupek-jekl-zeleny",
+    category: "sloupky",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 255,
+    priceCurrency: "CZK",
     name: "Sloupek JEKL - zelený",
     image: "/sloupky/jeklgreen.webp",
     description:
@@ -89,8 +149,14 @@ export const vseProducts = [
     price: "255,-",
     link: "/SloupkyProduct",
   },
-  {
+  "sloupek-jekl-antracit": {
     id: "sloupek-jekl-antracit",
+    slug: "sloupek-jekl-antracit",
+    category: "sloupky",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 255,
+    priceCurrency: "CZK",
     name: "Sloupek JEKL - antracit",
     image: "/sloupky/jeklantracit.webp",
     description:
@@ -98,8 +164,14 @@ export const vseProducts = [
     price: "255,-",
     link: "/SloupkyProduct",
   },
-  {
+  "sloupek-jekl-zinc": {
     id: "sloupek-jekl-zinc",
+    slug: "sloupek-jekl-zinkovy",
+    category: "sloupky",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 355,
+    priceCurrency: "CZK",
     name: "Sloupek JEKL - zinkový",
     image: "/sloupky/jeklzinc.webp",
     description:
@@ -107,24 +179,42 @@ export const vseProducts = [
     price: "355,-",
     link: "/SloupkyZinkoveJekl",
   },
-  {
+  "objimky-green": {
     id: "objimky-green",
+    slug: "objimky-zelene",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 55,
+    priceCurrency: "CZK",
     name: "Objímky zelené",
     image: "/sloupky/objimky3d.jpeg",
     description: "Zelené objímky pro montáž plotu z 3D panelů.",
     price: "55,-",
     link: "/Objimky",
   },
-  {
+  "objimky-anracit": {
     id: "objimky-anracit",
+    slug: "objimky-antracit",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 55,
+    priceCurrency: "CZK",
     name: "Objímky antracit",
     image: "/sloupky/objimky3da.jpg",
     description: "Objímky v antracitové barvě pro montáž plotu z 3D panelů.",
     price: "55,-",
     link: "/Objimky",
   },
-  {
+  "Sloupek antracit 48": {
     id: "Sloupek antracit 48",
+    slug: "sloupek-antracit-48",
+    category: "sloupky",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: null,
+    priceCurrency: "CZK",
     name: "Sloupek antracit – ⌀48mm",
     image: "/sloupky/sloupekantracit.webp",
     description:
@@ -132,16 +222,28 @@ export const vseProducts = [
     price: "Na poptávku",
     link: "/form",
   },
-  {
+  "Vzpera antracit 38": {
     id: "Vzpera antracit 38",
+    slug: "vzpera-antracit-38",
+    category: "sloupky",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: null,
+    priceCurrency: "CZK",
     name: "Vzpěra antracit – ⌀38mm",
     image: "/sloupky/vzperantracit.webp",
     description: "Vzpěra v barvě antracit. Pro montáže pletivových plotů.",
     price: "Na poptávku",
     link: "/form",
   },
-  {
+  "Sloupek Zink 48": {
     id: "Sloupek Zink 48",
+    slug: "sloupek-zinkovy-48",
+    category: "sloupky",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: null,
+    priceCurrency: "CZK",
     name: "Sloupek zinkový – ⌀48mm",
     image: "/sloupky/sloupekzinc.webp",
     description:
@@ -149,33 +251,57 @@ export const vseProducts = [
     price: "Na poptávku",
     link: "/form",
   },
-  {
+  "Sloupek Zeleny 48": {
     id: "Sloupek Zeleny 48",
+    slug: "sloupek-zeleny-48",
+    category: "sloupky",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: null,
+    priceCurrency: "CZK",
     name: "Sloupek zelený ⌀48mm",
     image: "/sloupky/sloupekgreen.webp",
     description: "Sloupek zelený pvc, používá se při stavbě plotu z pletiva.",
     price: "Na poptávku",
     link: "/form",
   },
-  {
+  "Vzpera Zelena 38": {
     id: "Vzpera Zelena 38",
+    slug: "vzpera-zelena-38",
+    category: "sloupky",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: null,
+    priceCurrency: "CZK",
     name: "Vzpěra zelená – ⌀38mm",
     image: "/sloupky/vzperagreen.webp",
     description: "Vzpěra zelená pvc, používá se při stavbě plotu z pletiva.",
     price: "Na poptávku",
     link: "/form",
   },
-  {
+  "Vzpera Zinkova 38": {
     id: "Vzpera Zinkova 38",
+    slug: "vzpera-zinkova-38",
+    category: "sloupky",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: null,
+    priceCurrency: "CZK",
     name: "Vzpěra zinková – ⌀38mm",
     image: "/sloupky/vzperazn.webp",
     description:
-      "Vzpěra zinková, používá se při montážích oplocení z pletiva bezinal.",
+      "Plotová vzpěra zinková, používá se při montážích oplocení z pletiva bezinal.",
     price: "Na poptávku",
     link: "/form",
   },
-  {
+  "vazaci-draty": {
     id: "vazaci-draty",
+    slug: "vazaci-drat-pvc-50m",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 140,
+    priceCurrency: "CZK",
     name: "Vázací drát pvc 50m",
     image: "/sloupky/vazacidrat.jpeg",
     description:
@@ -183,8 +309,14 @@ export const vseProducts = [
     price: "140,-",
     link: "/VazaciDraty",
   },
-  {
+  "napinak-zeleny-78": {
     id: "napinak-zeleny-78",
+    slug: "napinaci-drat-zeleny-78m",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 340,
+    priceCurrency: "CZK",
     name: "Napínací drát – zelený 78m",
     image: "/sloupky/dratgreen.webp",
     description:
@@ -192,8 +324,14 @@ export const vseProducts = [
     price: "340,-",
     link: "/NapinaciDraty?color=zelena&length=78",
   },
-  {
+  "napinak-zeleny-52": {
     id: "napinak-zeleny-52",
+    slug: "napinaci-drat-zeleny-52m",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 250,
+    priceCurrency: "CZK",
     name: "Napínací drát – zelený 52m",
     image: "/sloupky/dratgreen.webp",
     description:
@@ -201,8 +339,14 @@ export const vseProducts = [
     price: "250,-",
     link: "/NapinaciDraty?color=zelena&length=52",
   },
-  {
+  "napinak-zeleny-26": {
     id: "napinak-zeleny-26",
+    slug: "napinaci-drat-zeleny-26m",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 140,
+    priceCurrency: "CZK",
     name: "Napínací drát – zelený 26m",
     image: "/sloupky/dratgreen.webp",
     description:
@@ -210,8 +354,14 @@ export const vseProducts = [
     price: "140,-",
     link: "/NapinaciDraty?color=zelena&length=26",
   },
-  {
+  "napinak-antracit-78": {
     id: "napinak-antracit-78",
+    slug: "napinaci-drat-antracit-78m",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 360,
+    priceCurrency: "CZK",
     name: "Napínací drát – antracit 78m",
     image: "/sloupky/dratantra.webp",
     description:
@@ -219,8 +369,14 @@ export const vseProducts = [
     price: "360,-",
     link: "/NapinaciDraty?color=antracitova&length=78",
   },
-  {
+  "napinak-antracit-52": {
     id: "napinak-antracit-52",
+    slug: "napinaci-drat-antracit-52m",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 270,
+    priceCurrency: "CZK",
     name: "Napínací drát – antracit 52m",
     image: "/sloupky/dratantra.webp",
     description:
@@ -228,8 +384,14 @@ export const vseProducts = [
     price: "270,-",
     link: "/NapinaciDraty?color=antracitova&length=52",
   },
-  {
+  "napinak-zinc": {
     id: "napinak-zinc",
+    slug: "napinaci-drat-zinkovy",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 255,
+    priceCurrency: "CZK",
     name: "Napínací drát – Zinkový",
     image: "/sloupky/dratzink.webp",
     description:
@@ -237,8 +399,14 @@ export const vseProducts = [
     price: "255,-",
     link: "/NapinaciDratyZinkove",
   },
-  {
+  "kladka-pvc-zelena": {
     id: "kladka-pvc-zelena",
+    slug: "napinaci-kladka-pvc-zelena",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 22,
+    priceCurrency: "CZK",
     name: "Napínací kladka PVC zelená",
     image: "/sloupky/kladka.webp",
     description:
@@ -246,8 +414,14 @@ export const vseProducts = [
     price: "22,-",
     link: "/Kladky",
   },
-  {
+  "kladka-pvc-antracit": {
     id: "kladka-pvc-antracit",
+    slug: "napinaci-kladka-pvc-antracit",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 29,
+    priceCurrency: "CZK",
     name: "Napínací kladka PVC antracit",
     image: "/sloupky/kladkaa.webp",
     description:
@@ -255,8 +429,14 @@ export const vseProducts = [
     price: "29,-",
     link: "/Kladky",
   },
-  {
+  "kladka-zinc": {
     id: "kladka-zinc",
+    slug: "napinaci-kladka-zinkova",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 29,
+    priceCurrency: "CZK",
     name: "Napínací kladka zinková",
     image: "/sloupky/kladkazinc.webp",
     description:
@@ -264,8 +444,14 @@ export const vseProducts = [
     price: "29,-",
     link: "/KladkyZinkove",
   },
-  {
+  prichytky: {
     id: "prichytky",
+    slug: "prichytky-a-sroubky",
+    category: "prislusenstvi",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 7,
+    priceCurrency: "CZK",
     name: "Příchytky + šroubky",
     image: "/sloupky/prichytky.webp",
     description:
@@ -273,4 +459,67 @@ export const vseProducts = [
     price: "7,-",
     link: "/PrichytkySroubky",
   },
-];
+  "Podhrabové desky 2.50m": {
+    id: "Podhrabové desky 2.50m",
+    slug: "podhrabove-desky-betonove-250m",
+    category: "desky",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 670,
+    priceCurrency: "CZK",
+    name: "Podhrabové desky betonové 2.50m",
+    image: "/deskyy/deskybeton.webp",
+    description:
+      "K oplocení z pletiva a panelů 3D/2D se dají použít i betonové podhrabové desky, které zajistí dodatečnou ochranu plotu, estetiku a upravenost.",
+    price: "670,-",
+    link: "/DeskyPodhrabove",
+  },
+  "Podhrabové desky 2.90m": {
+    id: "Podhrabové desky 2.90m",
+    slug: "podhrabove-desky-betonove-290m",
+    category: "desky",
+    ctaType: "buy",
+    availability: "in_stock",
+    priceValue: 710,
+    priceCurrency: "CZK",
+    name: "Podhrabové desky betonové 2.90m",
+    image: "/deskyy/deskybeton.webp",
+    description:
+      "K oplocení z pletiva a panelů 3D/2D se dají použít i betonové podhrabové desky, které zajistí dodatečnou ochranu plotu, estetiku a upravenost.",
+    price: "710,-",
+    link: "/DeskyPodhrabove",
+  },
+  "Držáky na desky": {
+    id: "Držáky na desky",
+    slug: "drzaky-na-podhrabove-desky",
+    category: "desky",
+    ctaType: "inquiry",
+    availability: "inquiry",
+    priceValue: 55,
+    priceCurrency: "CZK",
+    name: "Držáky na podhrabové desky",
+    image: "/deskyy/drzaky.webp",
+    description:
+      "Držáky na podhrabové desky se instalují mezi plotové sloupky a do držáků se následně uloží podhrabové desky.",
+    price: "55,-",
+    link: "/form",
+  },
+};
+
+export const allProducts = Object.values(productCatalog);
+
+export const selectProducts = (entries) =>
+  entries.map((entry) => {
+    const selection = typeof entry === "string" ? { id: entry } : entry;
+    const { id, ...overrides } = selection;
+    const product = productCatalog[id];
+
+    if (!product) {
+      throw new Error(`Unknown product id: ${id}`);
+    }
+
+    return {
+      ...product,
+      ...overrides,
+    };
+  });

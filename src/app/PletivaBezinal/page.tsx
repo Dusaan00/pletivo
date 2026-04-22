@@ -1,35 +1,24 @@
 import BuyBezinal from "../Components/BuyBezinal";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recpletivoznProducts } from "../../data/products/recpletivozn";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { recpletivoznProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Pletivo Bezinal",
+export const metadata = buildProductMetadata({
+  familyId: "pletivo-bezinal",
+  title: "Pletivo Bezinal 25 m | Zinkové pletivo | Pletivo Grygov",
   description:
-    "Pletiva skladem: poplastovaná pletiva v zelené a antracitové barvě, odolné pletivo Bezinal ze zinku a hliníku, a žeberkové pletivo. Pletivo od Českého výrobce.",
-  keywords:
-    "pletivo Grygov, pletivo, pletivo zinkové, pletivo bezinal, pletivo pozinkované, stříbrné pletivo",
-  openGraph: {
-    title: "Pletiv Grygov - Kvalitní Pletivo Bezinal Skladem",
-    description:
-      "Kvalitní pletivo skladem od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberkové pletivo.",
-    images: [{ url: "/opengraph-image.png" }], // Add a relevant image
-    url: "https://pletivogrygov.cz/PletivaBezinal",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Výroba Pletiva Grygov - Kvalitní Pletivo Bezinal Skladem",
-    description:
-      "Pletivo skladem: poplastovaná pletiva, pletivo Bezinal a žeberková pletiva od českého výrobce.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/PletivaBezinal",
-  },
-  robots: "index, follow",
-};
+    "Pletivo Bezinal 25 m se zvýšenou odolností pro firmy, průmyslové provozy i náročnější oplocení. Varianty podle výšky a průměru drátu se zachovanými cenami.",
+  keywords: [
+    "pletivo bezinal",
+    "zinkové pletivo",
+    "pozinkované pletivo",
+    "pletivo 25m",
+    "pletivo pro firmy",
+    "pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (

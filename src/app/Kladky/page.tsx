@@ -1,7 +1,7 @@
 import Kladky from "../Components/BuyKladky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { kladkyProducts } from "../../data/products/kladka";
+import { kladkyProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {

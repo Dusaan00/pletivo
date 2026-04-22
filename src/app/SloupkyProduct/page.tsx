@@ -1,7 +1,7 @@
 import BuySloupky from "../Components/BuySloupky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recsloupkyProducts } from "../../data/products/recsloupky";
+import { recsloupkyProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {

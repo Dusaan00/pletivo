@@ -3,7 +3,7 @@ import "../Sass/_desky.scss";
 import Link from "next/link";
 import { basePath } from "../functions/Env";
 import ProductSearch from "../functions/ProductSearch";
-import { deskyProducts } from "../../data/products/desky";
+import { deskyProducts } from "../../data/products/collections";
 import "../Sass/_pletiva.scss";
 import Sortkarty from "../Components/Sortkarty";
 

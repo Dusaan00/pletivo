@@ -1,36 +1,24 @@
 import BuyPletivo from "../Components/BuyPletivo";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import Doporucene from "../Components/DoporucenePletivo";
-import { recpletivaProducts } from "../../data/products/recpletiva";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { recpletivaProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Pletivo PVC",
+export const metadata = buildProductMetadata({
+  familyId: "pletivo-pvc",
+  title: "Pletivo PVC 25 m | Poplastované pletivo | Pletivo Grygov",
   description:
-    "Pletiva skladem: poplastovaná pletiva v zelené a antracitové barvě, odolné pletivo Bezinal ze zinku a hliníku, a žeberkové pletivo. Pletivo od Českého výrobce.",
-  keywords:
-    "pletivo Grygov, pletivo, poplastované pletivo, pletivo Bezinal, žeberkové pletivo, drátěné pletivo",
-  openGraph: {
-    title: "Výroba Pletiva Grygov - Kvalitní Pletivo Skladem",
-    description:
-      "Kvalitní pletivo skladem od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberkové pletivo.",
-    images: [{ url: "/opengraph-image.png" }], // Add a relevant image
-    url: "https://pletivogrygov.cz/Pletivo",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Výroba Pletiva Grygov - Kvalitní Pletivo Skladem",
-    description:
-      "Pletivo skladem: poplastovaná pletiva, pletivo Bezinal a žeberková pletiva od českého výrobce.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/Pletivo",
-  },
-  robots: "index, follow",
-};
+    "Poplastované pletivo PVC 25 m v zelené a antracitové barvě, výšky od 100 do 200 cm. Český výrobce, skladem a vhodné pro rodinné domy i firmy.",
+  keywords: [
+    "pletivo pvc",
+    "poplastované pletivo",
+    "pletivo 25m",
+    "zelené pletivo",
+    "antracitové pletivo",
+    "pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (

@@ -1,6 +1,6 @@
 import KladkyZinkove from "../Components/BuyKladkyZinc";
 import Pay from "../Components/Pay";
-import { kladkyznProducts } from "../../data/products/kladkyzn";
+import { kladkyznProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 import Sortkarty from "../Components/Sortkarty";
 

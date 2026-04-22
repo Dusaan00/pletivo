@@ -1,4 +1,5 @@
 import PanelyChange from "../functions/PanelyChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyPletivo() {
   return (
@@ -6,6 +7,13 @@ function BuyPletivo() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Panely 3D/2D", href: "/Panely3D2D" },
+              { label: "Panely 3D PVC" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <PanelyChange>
               <p>

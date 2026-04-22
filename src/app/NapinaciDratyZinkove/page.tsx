@@ -1,7 +1,7 @@
 import Napinaci from "../Components/BuyZinkove";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recnapinaciznProducts } from "../../data/products/recnapinacizn";
+import { recnapinaciznProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {

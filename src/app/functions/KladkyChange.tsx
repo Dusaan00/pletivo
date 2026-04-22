@@ -2,9 +2,8 @@
 
 import { useState, ReactNode } from "react";
 import { basePath } from "./Env";
-import { RiShoppingCart2Line } from "react-icons/ri";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { ProductDetailShell, ProductRadioGroup } from "../Components/ProductDetailShell";
 
 interface KladkyChangeProps {
   children: ReactNode;
@@ -14,119 +13,91 @@ interface KladkyChangeProps {
 const KladkyChange = ({ children, type }: KladkyChangeProps) => {
   const router = useRouter();
   const [selectedColor, setSelectedColor] = useState("zelená");
+  const [quantity, setQuantity] = useState(1);
 
   const handleTypeChange = (newType: "pvc" | "zinc") => {
     if (newType === "pvc") router.push("/Kladky");
     if (newType === "zinc") router.push("/KladkyZinkove");
   };
 
-  // Dynamická data
   let title = "";
   let imgSrc = "";
-  let currentPrice = 29; // Výchozí cena (pro Antracit a Zinek)
+  let currentPrice = 29;
 
   if (type === "pvc") {
     if (selectedColor === "zelená") {
       title = "Napínací Kladka Zelená";
       imgSrc = `${basePath}/sloupky/kladka.webp`;
-      currentPrice = 22; // <--- TADY JE TA TVOJE CENA PRO ZELENOU
+      currentPrice = 22;
     } else {
       title = "Napínací Kladka Antracit";
       imgSrc = `${basePath}/sloupky/kladkaa.webp`;
-      currentPrice = 29; // Antracit zůstává za 29,-
+      currentPrice = 29;
     }
   } else {
     title = "Napínací Kladka Zinková";
     imgSrc = `${basePath}/sloupky/kladkazinc.webp`;
-    currentPrice = 29; // Zinek taky za 29,- (nebo si uprav podle potřeby)
+    currentPrice = 29;
   }
 
   const isInStock = true;
 
   return (
-    <>
-      <div className="section-spletivo-gal">
-        <img src={imgSrc} alt={title} />
-      </div>
-
-      <div className="section-spletivo-details">
-        <h1>{title}</h1>
-        <h2>{currentPrice},- / ks</h2>
-
-        <h3 className={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}>
-          {isInStock ? "Skladem, ihned k odběru" : "Momentálně nedostupné"}
-        </h3>
-
-        {children}
-
-        {/* VÝBĚR TYPU - POUŽÍVÁ TVÉ STRUKTURY Z PANELŮ */}
-        <div className="diameter-select">
-          <p>Typ kladky:</p>
-          <div className="diameter-options">
-            <label>
-              <input
-                type="radio"
-                name="variant"
-                checked={type === "pvc"}
-                onChange={() => handleTypeChange("pvc")}
-              />
-              <span>PVC</span>
-            </label>
-
-            <label>
-              <input
-                type="radio"
-                name="variant"
-                checked={type === "zinc"}
-                onChange={() => handleTypeChange("zinc")}
-              />
-              <span>Zinek</span>
-            </label>
-          </div>
-        </div>
-
-        {/* VÝBĚR BARVY - POUŽÍVÁ STEJNOU STRUKTURU */}
-        {type === "pvc" && (
-          <div className="diameter-select" style={{ marginTop: "1.5rem" }}>
-            <p>Barva:</p>
-            <div className="diameter-options">
-              <label>
-                <input
-                  type="radio"
-                  name="color"
-                  checked={selectedColor === "zelená"}
-                  onChange={() => setSelectedColor("zelená")}
-                />
-                <span>Zelená</span>
-              </label>
-
-              <label>
-                <input
-                  type="radio"
-                  name="color"
-                  checked={selectedColor === "antracit"}
-                  onChange={() => setSelectedColor("antracit")}
-                />
-                <span>Antracit</span>
-              </label>
-            </div>
-          </div>
-        )}
-
-        <form>
-          <div className="quantity-select">
-            <p>Množství</p>
-            <input type="number" defaultValue={1} min="1" />
-          </div>
-
-          <Link href="/form" className="order-link">
-            <button type="button" disabled={!isInStock}>
-              Objednat <RiShoppingCart2Line />
-            </button>
-          </Link>
-        </form>
-      </div>
-    </>
+    <ProductDetailShell
+      title={title}
+      priceLabel={`${currentPrice},- / ks`}
+      imageSrc={imgSrc}
+      stockLabel={isInStock ? "Skladem, ihned k odběru" : "Momentálně nedostupné"}
+      stockClassName={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}
+      quantity={quantity}
+      onQuantityChange={setQuantity}
+      orderDisabled={!isInStock}
+      selectors={
+        <>
+          <ProductRadioGroup
+            label="Typ kladky:"
+            name="variant"
+            options={[
+              {
+                value: "pvc",
+                label: "PVC",
+                checked: type === "pvc",
+                onChange: () => handleTypeChange("pvc"),
+              },
+              {
+                value: "zinc",
+                label: "Zinek",
+                checked: type === "zinc",
+                onChange: () => handleTypeChange("zinc"),
+              },
+            ]}
+          />
+          {type === "pvc" && (
+            <ProductRadioGroup
+              label="Barva:"
+              name="color"
+              className="diameter-select"
+              options={[
+                {
+                  value: "zelená",
+                  label: "Zelená",
+                  checked: selectedColor === "zelená",
+                  onChange: () => setSelectedColor("zelená"),
+                },
+                {
+                  value: "antracit",
+                  label: "Antracit",
+                  checked: selectedColor === "antracit",
+                  onChange: () => setSelectedColor("antracit"),
+                },
+              ]}
+            />
+          )}
+        </>
+      }
+    >
+      {children}
+    </ProductDetailShell>
   );
 };
 

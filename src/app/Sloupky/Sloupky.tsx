@@ -2,7 +2,7 @@ import { basePath } from "../functions/Env";
 import "../Sass/_pletiva.scss";
 import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 import Link from "next/link";
-import { sloupkyProducts } from "../../data/products/sloupky";
+import { sloupkyProducts } from "../../data/products/collections";
 import ProductSearch from "../functions/ProductSearch";
 
 function Sloupky() {

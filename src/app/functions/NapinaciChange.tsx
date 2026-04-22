@@ -1,10 +1,14 @@
 "use client";
 
-import { useState, ReactNode, useEffect, Suspense } from "react";
+import { ReactNode, Suspense, useEffect, useState } from "react";
 import { basePath } from "../functions/Env";
-import { RiShoppingCart2Line } from "react-icons/ri";
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import {
+  ProductColorSwatches,
+  ProductDetailShell,
+  ProductRadioGroup,
+  ProductSelectField,
+} from "../Components/ProductDetailShell";
 
 type Color = "zelena" | "antracitova";
 type Length = "26" | "52" | "78";
@@ -26,13 +30,7 @@ const colorLabels = {
 const NapinaciContent = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-
-  /* =========================
-     VALIDACE URL PARAMETRŮ
-  ========================= */
-
-  const validColors: Color[] = ["zelena", "antracitova"];
-  const validLengths: Length[] = ["26", "52", "78"];
+  const [quantity, setQuantity] = useState(1);
 
   const colorParam = searchParams.get("color") as Color;
   const lengthParam = searchParams.get("length") as Length;
@@ -47,7 +45,6 @@ const NapinaciContent = ({ children }: { children: ReactNode }) => {
       ? lengthParam
       : availableLengths[0];
 
-  /* ========================= */
   useEffect(() => {
     const urlColor = searchParams.get("color");
     const urlLength = searchParams.get("length");
@@ -63,17 +60,14 @@ const NapinaciContent = ({ children }: { children: ReactNode }) => {
   const [selectedColor, setSelectedColor] = useState<Color>(colorFromUrl);
   const [selectedLength, setSelectedLength] = useState<Length>(lengthFromUrl);
 
-  /* synchronizace při změně URL */
   useEffect(() => {
     setSelectedColor(colorFromUrl);
     setSelectedLength(lengthFromUrl);
   }, [colorFromUrl, lengthFromUrl]);
 
-  const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const color = e.target.id as Color;
-
-    const availableLengths = Object.keys(productData[color]) as Length[];
-    const firstAvailableLength = availableLengths[0];
+  const handleColorChange = (color: Color) => {
+    const nextLengths = Object.keys(productData[color]) as Length[];
+    const firstAvailableLength = nextLengths[0];
 
     setSelectedColor(color);
     setSelectedLength(firstAvailableLength);
@@ -84,12 +78,11 @@ const NapinaciContent = ({ children }: { children: ReactNode }) => {
     );
   };
 
-  const handleLengthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const length = e.target.value as Length;
+  const handleLengthChange = (length: string) => {
+    const castLength = length as Length;
+    setSelectedLength(castLength);
 
-    setSelectedLength(length);
-
-    router.push(`/NapinaciDraty?color=${selectedColor}&length=${length}`, {
+    router.push(`/NapinaciDraty?color=${selectedColor}&length=${castLength}`, {
       scroll: false,
     });
   };
@@ -100,102 +93,72 @@ const NapinaciContent = ({ children }: { children: ReactNode }) => {
       : `${basePath}/sloupky/dratantra.webp`;
 
   const currentPrice = productData[selectedColor]?.[selectedLength] ?? 0;
-
-  const title = `Napínací drát ${
-    colorLabels[selectedColor]
-  }, ${selectedLength} m`;
+  const title = `Napínací drát ${colorLabels[selectedColor]}, ${selectedLength} m`;
 
   return (
-    <>
-      <div className="section-spletivo-gal">
-        <img src={imgSrc} alt={title} />
-      </div>
-
-      <div className="section-spletivo-details">
-        <h1>{title}</h1>
-        <h2>{currentPrice},-</h2>
-
-        <h3 className="stock-status in-stock">Skladem, ihned k odběru</h3>
-
-        {children}
-
-        <div className="type-select">
-          <p>Typ drátu:</p>
-
-          <div className="type-options">
-            <label className="type-label active">
-              <input type="radio" name="type" checked readOnly /> PVC
-            </label>
-
-            <label className="type-label">
-              <input
-                type="radio"
-                name="type"
-                onChange={() => router.push("/NapinaciDratyZinkove")}
-              />
-              Zinkové
-            </label>
-          </div>
-        </div>
-
-        <div className="height-select">
-          <label htmlFor="length">Vyberte délku:</label>
-
-          <select
+    <ProductDetailShell
+      title={title}
+      priceLabel={`${currentPrice},-`}
+      imageSrc={imgSrc}
+      stockLabel="Skladem, ihned k odběru"
+      quantity={quantity}
+      onQuantityChange={setQuantity}
+      selectors={
+        <>
+          <ProductRadioGroup
+            label="Typ drátu:"
+            name="type"
+            className="type-select"
+            options={[
+              {
+                value: "pvc",
+                label: "PVC",
+                checked: true,
+                onChange: () => undefined,
+              },
+              {
+                value: "zinc",
+                label: "Zinkové",
+                checked: false,
+                onChange: () => router.push("/NapinaciDratyZinkove"),
+              },
+            ]}
+          />
+          <ProductSelectField
             id="length"
+            label="Vyberte délku:"
             value={selectedLength}
             onChange={handleLengthChange}
-          >
-            {(Object.keys(productData[selectedColor]) as Length[]).map(
-              (length) => (
-                <option key={length} value={length}>
-                  {length} m
-                </option>
-              ),
+            options={(Object.keys(productData[selectedColor]) as Length[]).map(
+              (length) => ({
+                value: length,
+                label: `${length} m`,
+              }),
             )}
-          </select>
-        </div>
-
-        <form>
-          <div className="color-select">
-            <p>Barva:</p>
-
-            <label htmlFor="zelena">
-              <input
-                type="radio"
-                name="color"
-                id="zelena"
-                checked={selectedColor === "zelena"}
-                onChange={handleColorChange}
-              />
-              <span className="color-1"></span>
-            </label>
-
-            <label htmlFor="antracitova">
-              <input
-                type="radio"
-                name="color"
-                id="antracitova"
-                checked={selectedColor === "antracitova"}
-                onChange={handleColorChange}
-              />
-              <span className="color-2"></span>
-            </label>
-          </div>
-
-          <div className="quantity-select">
-            <p>Množství</p>
-            <input type="number" defaultValue={1} min="1" />
-          </div>
-
-          <Link href="/form" className="order-link">
-            <button type="button">
-              Objednat <RiShoppingCart2Line />
-            </button>
-          </Link>
-        </form>
-      </div>
-    </>
+          />
+          <ProductColorSwatches
+            label="Barva:"
+            name="color"
+            options={[
+              {
+                id: "zelena",
+                checked: selectedColor === "zelena",
+                onChange: () => handleColorChange("zelena"),
+                swatchClassName: "color-1",
+              },
+              {
+                id: "antracitova",
+                checked: selectedColor === "antracitova",
+                onChange: () => handleColorChange("antracitova"),
+                swatchClassName: "color-2",
+              },
+            ]}
+          />
+        </>
+      }
+    >
+      {children}
+    </ProductDetailShell>
   );
 };
 

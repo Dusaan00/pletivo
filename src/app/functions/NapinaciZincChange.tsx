@@ -2,9 +2,8 @@
 
 import { useState, ReactNode } from "react";
 import { basePath } from "../functions/Env";
-import { RiShoppingCart2Line } from "react-icons/ri";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { ProductDetailShell, ProductRadioGroup } from "../Components/ProductDetailShell";
 
 interface NapinaciChangeProps {
   children: ReactNode;
@@ -14,60 +13,38 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
 
-  const imgSrc = `${basePath}/sloupky/dratzink.webp`;
-  const currentPrice = 255;
-  const title = `Napínací drát – Zinkový`;
-
   return (
-    <>
-      <div className="section-spletivo-gal">
-        <img src={imgSrc} alt={title} />
-      </div>
-
-      <div className="section-spletivo-details">
-        <h1>{title}</h1>
-        <h2>{currentPrice},-</h2>
-
-        <h3 className="stock-status in-stock">Skladem, ihned k odběru</h3>
-
-        {children}
-
-        <div className="type-select">
-          <p>Typ drátu:</p>
-          <div className="type-options">
-            <label className="type-label">
-              <input
-                type="radio"
-                name="type"
-                onChange={() => router.push("/NapinaciDraty")}
-              />{" "}
-              PVC
-            </label>
-            <label className="type-label active">
-              <input type="radio" name="type" checked={true} readOnly /> Zinkové
-            </label>
-          </div>
-        </div>
-
-        <form>
-          <div className="quantity-select">
-            <p>Množství</p>
-            <input
-              type="number"
-              value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))}
-              min="1"
-            />
-          </div>
-
-          <Link href="/form" className="order-link">
-            <button type="button">
-              Objednat <RiShoppingCart2Line />
-            </button>
-          </Link>
-        </form>
-      </div>
-    </>
+    <ProductDetailShell
+      title="Napínací drát – Zinkový"
+      priceLabel="255,-"
+      imageSrc={`${basePath}/sloupky/dratzink.webp`}
+      stockLabel="Skladem, ihned k odběru"
+      quantity={quantity}
+      onQuantityChange={setQuantity}
+      selectors={
+        <ProductRadioGroup
+          label="Typ drátu:"
+          name="type"
+          className="type-select"
+          options={[
+            {
+              value: "pvc",
+              label: "PVC",
+              checked: false,
+              onChange: () => router.push("/NapinaciDraty"),
+            },
+            {
+              value: "zinc",
+              label: "Zinkové",
+              checked: true,
+              onChange: () => undefined,
+            },
+          ]}
+        />
+      }
+    >
+      {children}
+    </ProductDetailShell>
   );
 };
 

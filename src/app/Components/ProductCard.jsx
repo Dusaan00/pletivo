@@ -4,10 +4,17 @@ import { basePath } from "../functions/Env";
 import "../Sass/_pletiva.scss";
 
 function ProductCard({ product }) {
+  const primaryBadge = product.badges?.[0];
+  const inventoryLabel = product.inventory?.label;
+  const ctaLabel = product.purchase?.ctaLabel || "Koupit";
+  const productHref = product.purchase?.href || product.link;
+  const imageAlt = product.media?.[0]?.alt || product.name;
+  const priceLabel = product.pricing?.display || product.price;
+
   return (
     <div className="pletivo-product">
       <div className="pletivo-product-image">
-        <img src={`${basePath}${product.image}`} alt={product.name} />
+        <img src={`${basePath}${product.image}`} alt={imageAlt} />
       </div>
 
       <div className="pletivo-product-text">
@@ -18,14 +25,16 @@ function ProductCard({ product }) {
         <p>{product.description}</p>
 
         <div className="pletivo-product-price">
-          <h4>{product.price}</h4>
+          <h4>{priceLabel}</h4>
+          {inventoryLabel && <p>{inventoryLabel}</p>}
+          {primaryBadge && <p>{primaryBadge}</p>}
         </div>
       </div>
 
       <div className="btn-buy">
-        <Link href={product.link}>
+        <Link href={productHref}>
           <button>
-            Koupit
+            {ctaLabel}
             <RiShoppingCart2Line />
           </button>
         </Link>

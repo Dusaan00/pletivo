@@ -3,7 +3,7 @@ import { basePath } from "../functions/Env";
 import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
 import Slider from "../functions/Slider";
 import Link from "next/link";
-import { pletivaProducts } from "../../data/products/pletiva";
+import { pletivaProducts } from "../../data/products/collections";
 import ProductSearch from "../functions/ProductSearch";
 
 const sliderItems = [

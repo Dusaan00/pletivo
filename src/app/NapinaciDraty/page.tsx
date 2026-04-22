@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Napinaci from "../Components/BuyNapinaci";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recnapinaciProducts } from "../../data/products/recnapinaci";
+import { recnapinaciProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {

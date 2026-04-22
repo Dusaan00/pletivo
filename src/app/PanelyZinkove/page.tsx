@@ -1,7 +1,7 @@
 import BuyPanelZinc from "../Components/BuyPanelZinc";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recpanelyznProducts } from "../../data/products/recpanelyzn";
+import { recpanelyznProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {

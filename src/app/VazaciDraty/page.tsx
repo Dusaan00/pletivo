@@ -1,7 +1,7 @@
 import BuyVazaci from "../Components/BuyVazaci";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recvazaciProducts } from "../../data/products/recvazaci";
+import { recvazaciProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {

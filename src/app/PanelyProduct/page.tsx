@@ -1,35 +1,24 @@
 import BuyPanely from "../Components/BuyPanely";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recpanelyProducts } from "../../data/products/recpanely";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { recpanelyProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Panely 3D/2D",
+export const metadata = buildProductMetadata({
+  familyId: "panely-pvc-3d",
+  title: "Panely 3D PVC | Panelové oplocení | Pletivo Grygov",
   description:
-    "Panely 3D/2D skladem: moderní 3D panely v zelené a antracitové barvě dodávající plotu estetický vzhled, odolné zinkové panely 3D/2D, ideální pro zabezpečení objektů.",
-  keywords:
-    "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
-  openGraph: {
-    title: "Výroba Pletiva Grygov - Panely 3D/2D",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/Panely3D2D",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Výroba Pletiva Grygov - Panely 3D/2D",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/Panely3D2D",
-  },
-  robots: "index, follow",
-};
+    "3D panely PVC v zelené a antracitové barvě, šířka 2500 mm a výšky pro běžné i firemní oplocení. Zachované ceny podle výšky panelu v moderním detailu produktu.",
+  keywords: [
+    "3D panely",
+    "panelové oplocení",
+    "panely pvc",
+    "antracitové panely",
+    "zelené panely",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (

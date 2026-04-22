@@ -1,6 +1,6 @@
 import "../Sass/_all.scss";
 
-import { vseProducts } from "../../data/products/vse";
+import { vseProducts } from "../../data/products/collections";
 import ProductSearch from "../functions/ProductSearch";
 
 function All() {

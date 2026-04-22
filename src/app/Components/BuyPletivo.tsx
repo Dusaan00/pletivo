@@ -1,5 +1,6 @@
 import "../Sass/_pletiva.scss";
 import ColorChange from "../functions/ColorChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyPletivo() {
   return (
@@ -7,6 +8,13 @@ function BuyPletivo() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Pletivo", href: "/Pletivo" },
+              { label: "Pletivo PVC 25m" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <ColorChange>
               <h3>Skladem, ihned k odběru</h3>

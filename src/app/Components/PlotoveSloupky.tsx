@@ -1,7 +1,7 @@
 import { basePath } from "../functions/Env";
 import "../Sass/_pletiva.scss";
 import "../Sass/_plotovesloupky.scss";
-import { sloupkyplotoveProducts } from "../../data/products/sloupkyplotove";
+import { sloupkyplotoveProducts } from "../../data/products/collections";
 import ProductSearch from "../functions/ProductSearch";
 
 function Sloupky() {

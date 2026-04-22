@@ -1,7 +1,7 @@
 import Objimky from "../Components/BuyObjimky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recobjimkyProducts } from "../../data/products/recobjimky";
+import { recobjimkyProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 
 export const metadata = {

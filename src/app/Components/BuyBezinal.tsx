@@ -1,4 +1,5 @@
 import BezinalChange from "../functions/BezinalChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyBezinal() {
   return (
@@ -6,6 +7,13 @@ function BuyBezinal() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Pletivo", href: "/Pletivo" },
+              { label: "Pletivo Bezinal 25m" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <BezinalChange>
               <h3>Skladem, ihned k odběru</h3>
