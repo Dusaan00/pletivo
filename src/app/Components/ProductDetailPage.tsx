@@ -16,6 +16,8 @@ type FaqItem = {
   answer: string;
 };
 
+type FamilyProduct = NonNullable<ReturnType<typeof getFamilyProducts>[number]>;
+
 type ProductDetailPageProps = {
   familyId: string;
   title: string;
@@ -30,7 +32,7 @@ type ProductDetailPageProps = {
 
 const siteUrl = "https://pletivogrygov.cz";
 
-function formatVariantLabel(product: any) {
+function formatVariantLabel(product: FamilyProduct) {
   const variantEntries = Object.entries(product.variantOptions || {});
 
   if (variantEntries.length === 0) {
@@ -54,12 +56,13 @@ function buildProductSchema({
   title: string;
   lead: string;
   pageUrl: string;
-  defaultProduct: any;
-  familyProducts: any[];
+  defaultProduct: FamilyProduct;
+  familyProducts: FamilyProduct[];
   categoryName: string;
 }) {
   const pricedVariants = familyProducts.filter(
-    (product) => typeof product.pricing?.amount === "number",
+    (product): product is FamilyProduct & { pricing: { amount: number } } =>
+      typeof product.pricing?.amount === "number",
   );
 
   const lowPrice =
@@ -187,9 +190,9 @@ export default function ProductDetailPage({
   }
 
   const category = getCategoryById(defaultProduct.categoryKey);
-  const familyProducts = getFamilyProducts(familyId);
+  const familyProducts = getFamilyProducts(familyId) as FamilyProduct[];
   const startingPrice = familyProducts
-    .map((product) => product.pricing?.amount)
+    .map((product: FamilyProduct) => product.pricing?.amount)
     .filter((amount): amount is number => typeof amount === "number");
   const lowestPrice =
     startingPrice.length > 0 ? Math.min(...startingPrice) : defaultProduct.pricing?.amount;
@@ -258,7 +261,7 @@ export default function ProductDetailPage({
               <p className="product-page__lead">{lead}</p>
 
               <div className="product-page__badges">
-                {(family.badges || []).map((badge) => (
+                {(family.badges || []).map((badge: string) => (
                   <span key={badge} className="product-page__badge">
                     {badge}
                   </span>
