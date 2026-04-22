@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .cenik-container {
   max-width: 1250px;
   margin: 0 auto;
@@ -51,7 +53,7 @@
 }
 
 .dropdown-summary:hover {
-  background-color: lighten(#333, 10%);
+  background-color: color.adjust(#333, $lightness: 10%);
 }
 
 .dropdown-summary::-webkit-details-marker {
