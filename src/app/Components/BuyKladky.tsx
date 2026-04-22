@@ -1,6 +1,7 @@
 import "../Sass/_buykladky.scss";
 import "../Sass/_buyobjimky.scss";
 import KladkyChange from "../functions/KladkyChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyKladky() {
   return (
@@ -8,6 +9,13 @@ function BuyKladky() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Napínací kladka PVC" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <KladkyChange type="pvc">
               <p>

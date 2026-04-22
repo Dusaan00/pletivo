@@ -1,6 +1,6 @@
 import { basePath } from "../functions/Env";
 import "../Sass/_pletiva.scss";
-import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
+import { RiCheckboxCircleLine } from "react-icons/ri";
 import Link from "next/link";
 import { sloupkyProducts } from "../../data/products/collections";
 import ProductSearch from "../functions/ProductSearch";
@@ -17,12 +17,34 @@ function Sloupky() {
           <p className="pletiva-description">
             Dodáváme všechna nezbytná příslušenství pro stavbu plotu. Napínací
             dráty, napínáky, vázací dráty, vzpěry, čepičky, objímky, stínící
-            tkaniny i bezpečnostní prvky jako jsou ostnaté dráty.
+            tkaniny i bezpečnostní prvky jako jsou ostnaté dráty. Najdeš tu{" "}
+            <Link href="/SloupkyProduct" className="category-inline-link">
+              sloupky JEKL PVC
+            </Link>
+            ,{" "}
+            <Link href="/SloupkyZinkoveJekl" className="category-inline-link">
+              sloupky JEKL zinkové
+            </Link>
+            ,{" "}
+            <Link href="/Objimky" className="category-inline-link">
+              objímky
+            </Link>
+            ,{" "}
+            <Link href="/NapinaciDraty" className="category-inline-link">
+              napínací dráty
+            </Link>{" "}
+            i{" "}
+            <Link href="/VazaciDraty" className="category-inline-link">
+              vázací dráty
+            </Link>
+            .
           </p>
           <ul className="pletiva-advantages">
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <span>Sloupky pro ploty z pletiva i panelů</span>
+              <Link href="/SloupkyProduct" className="category-inline-link">
+                Sloupky pro ploty z pletiva i panelů
+              </Link>
             </li>
 
             <li className="pletiva-advantages-item">
@@ -32,7 +54,9 @@ function Sloupky() {
 
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <span>Napínací dráty, vázací dráty, objímky, čepičky</span>
+              <Link href="/NapinaciDraty" className="category-inline-link">
+                Napínací dráty, vázací dráty, objímky, čepičky
+              </Link>
             </li>
           </ul>
         </div>

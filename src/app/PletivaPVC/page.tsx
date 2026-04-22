@@ -2,6 +2,7 @@ import BuyPletivo from "../Components/BuyPletivo";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import ProductStructuredData from "../Components/ProductStructuredData";
 import { buildProductMetadata } from "../functions/productPageMetadata";
 import { recpletivaProducts } from "../../data/products/collections";
 
@@ -23,6 +24,15 @@ export const metadata = buildProductMetadata({
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/PletivaPVC"
+        familyId="pletivo-pvc"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Pletivo", href: "/Pletivo" },
+          { label: "Pletivo PVC 25m" },
+        ]}
+      />
       <BuyPletivo />
       <DoporuceneProdukty
         title="K montáži pleteného pletiva PVC dále můžete potřebovat:"

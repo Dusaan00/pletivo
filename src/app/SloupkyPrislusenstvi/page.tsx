@@ -1,36 +1,42 @@
 import Sloupky from "../Sloupky/Sloupky";
 import Pay from "../Components/Pay";
+import CategoryStructuredData from "../Components/CategoryStructuredData";
+import { buildCategoryMetadata } from "../functions/categoryPageMetadata";
+import { sloupkyProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Sloupky & příslušenství",
-  description:
-    "Sloupky a příslušenství skladem: sloupky a vzpěry (zelené, antracit, pvc, zinkové), napínací dráty, ostnaté dráty, vše důležité pro stavbu plotu.",
-  keywords:
-    "sloupky, vzpěry, sloupky zelené, sloupky antracit, sloupky zinkové, vzpěry zelené, vzpěry antracit, vzpěry zinkové, vázací dráty, napínací dráty, ostnanté dráty",
-  openGraph: {
-    title: "Výroba Pletiva Grygov - Sloupky & příslušenství",
-    description:
-      "Sloupky a příslušenství skladem: sloupky a vzpěry (zelené, antracit, pvc, zinkové), napínací dráty, ostnaté dráty, vše důležité pro stavbu plotu.",
-    images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/SloupkyPrislusenstvi",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Výroba Pletiva Grygov - Sloupky & příslušenství",
-    description:
-      "Sloupky a příslušenství skladem: sloupky a vzpěry (zelené, antracit, pvc, zinkové), napínací dráty, ostnaté dráty, vše důležité pro stavbu plotu.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/SloupkyPrislusenstvi",
-  },
-  robots: "index, follow",
-};
+const title = "Sloupky a příslušenství k plotům | Pletivo Grygov";
+const description =
+  "Sloupky, objímky, napínací dráty, vázací dráty, kladky a další příslušenství pro kompletní montáž pletivových i panelových plotů.";
+
+export const metadata = buildCategoryMetadata({
+  categoryId: "prislusenstvi",
+  canonicalPath: "/SloupkyPrislusenstvi",
+  title,
+  description,
+  keywords: [
+    "sloupky a příslušenství",
+    "sloupky k plotu",
+    "napínací dráty",
+    "vázací dráty",
+    "objímky a kladky",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <CategoryStructuredData
+        categoryId="prislusenstvi"
+        canonicalPath="/SloupkyPrislusenstvi"
+        title={title}
+        description={description}
+        products={sloupkyProducts}
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Sloupky a příslušenství" },
+        ]}
+      />
       <Sloupky />
       <Pay />
     </>

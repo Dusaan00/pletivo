@@ -1,4 +1,5 @@
 import NapinaciChange from "../functions/NapinaciChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 interface BuyNapinaciProps {
   initialColor?: "zelena" | "antracitova";
@@ -11,6 +12,13 @@ function BuyNapinaci({ initialColor, initialLength }: BuyNapinaciProps) {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Napínací drát PVC" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <NapinaciChange>
               <p>

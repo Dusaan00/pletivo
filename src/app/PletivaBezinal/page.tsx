@@ -2,6 +2,7 @@ import BuyBezinal from "../Components/BuyBezinal";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import ProductStructuredData from "../Components/ProductStructuredData";
 import { buildProductMetadata } from "../functions/productPageMetadata";
 import { recpletivoznProducts } from "../../data/products/collections";
 
@@ -23,6 +24,15 @@ export const metadata = buildProductMetadata({
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/PletivaBezinal"
+        familyId="pletivo-bezinal"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Pletivo", href: "/Pletivo" },
+          { label: "Pletivo Bezinal 25m" },
+        ]}
+      />
       <BuyBezinal />
       <DoporuceneProdukty
         title="K montáži zinkového pletiva dále můžete potřebovat:"

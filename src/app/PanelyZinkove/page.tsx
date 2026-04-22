@@ -1,39 +1,38 @@
 import BuyPanelZinc from "../Components/BuyPanelZinc";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recpanelyznProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import ProductStructuredData from "../Components/ProductStructuredData";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { recpanelyznProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Panely Zinkové",
+export const metadata = buildProductMetadata({
+  familyId: "panely-zinkove",
+  title: "Panely zinkové 3D a 2D | Odolné panelové oplocení | Pletivo Grygov",
   description:
-    "Pletiva skladem: poplastovaná pletiva v zelené a antracitové barvě, odolné pletivo Bezinal ze zinku a hliníku, a žeberkové pletivo. Pletivo od českého výrobce.",
-  keywords:
-    "pletivo Grygov, pletivo, poplastované pletivo, pletivo Bezinal, žeberkové pletivo, drátěné pletivo",
-  openGraph: {
-    title: "Pletivo Grygov - Kvalitní Pletivo Skladem",
-    description:
-      "Kvalitní pletivo od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberková pletiva. Rychlé dodání.",
-    images: [{ url: "/opengraph-image.png" }], // Add a relevant image
-    url: "https://pletivogrygov.cz/PanelyZinkove",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pletivo Grygov - Kvalitní Pletivo Skladem",
-    description:
-      "Pletivo skladem: poplastovaná pletiva, pletivo Bezinal a žeberková pletiva od českého výrobce.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/PanelyZinkove",
-  },
-  robots: "index, follow",
-};
+    "Zinkové panely 3D a 2D pro odolné oplocení firem, skladů i technických objektů. Přehledné varianty, ceny od konkrétního typu a český dodavatel.",
+  keywords: [
+    "panely zinkové",
+    "panely 3D zinkové",
+    "panely 2D zinkové",
+    "panelové oplocení",
+    "průmyslové oplocení",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/PanelyZinkove"
+        familyId="panely-zinkove"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Panely 3D/2D", href: "/Panely3D2D" },
+          { label: "Panely zinkové" },
+        ]}
+      />
       <BuyPanelZinc />
       <DoporuceneProdukty
         title="K montáži plotu ze zinkových panelů dále můžete potřebovat:"

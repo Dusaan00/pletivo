@@ -1,5 +1,6 @@
 import "../Sass/_buyvazaci.scss";
 import VazaciChange from "../functions/VazaciChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyVazaci() {
   return (
@@ -7,6 +8,13 @@ function BuyVazaci() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Vázací drát" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <VazaciChange>
               <h3>Skladem, ihned k odběru</h3>

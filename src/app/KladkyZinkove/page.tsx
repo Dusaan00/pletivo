@@ -1,39 +1,38 @@
 import KladkyZinkove from "../Components/BuyKladkyZinc";
 import Pay from "../Components/Pay";
-import { kladkyznProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
 import Sortkarty from "../Components/Sortkarty";
+import ProductStructuredData from "../Components/ProductStructuredData";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { kladkyznProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Kladky Zinkové",
+export const metadata = buildProductMetadata({
+  familyId: "napinaci-kladka-zinkova",
+  title: "Napínací kladka zinková | Pro zinkové pletivo | Pletivo Grygov",
   description:
-    "Panely 3D/2D skladem: moderní 3D panely v zelené a antracitové barvě dodávající plotu estetický vzhled, odolné zinkové panely 3D/2D, ideální pro zabezpečení objektů.",
-  keywords:
-    "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
-  openGraph: {
-    title: "Pletivo Grygov - Kladky Zinkové",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/KladkyZinkove",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pletivo Grygov - Kladky Zinkové",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/KladkyZinkove",
-  },
-  robots: "index, follow",
-};
+    "Zinková napínací kladka pro montáž Bezinal a dalších zinkových plotů. Praktické a odolné příslušenství pro správné dopnutí plotového drátu.",
+  keywords: [
+    "napínací kladka zinková",
+    "kladka pro bezinal",
+    "příslušenství pro zinkové pletivo",
+    "kladka na plot",
+    "montáž bezinal",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/KladkyZinkove"
+        familyId="napinaci-kladka-zinkova"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+          { label: "Napínací kladka zinková" },
+        ]}
+      />
       <KladkyZinkove />
       <DoporuceneProdukty
         title="K napínacím zinkovým kladkám ještě můžete potřebovat:"

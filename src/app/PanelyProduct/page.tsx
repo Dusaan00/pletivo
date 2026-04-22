@@ -2,6 +2,7 @@ import BuyPanely from "../Components/BuyPanely";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import ProductStructuredData from "../Components/ProductStructuredData";
 import { buildProductMetadata } from "../functions/productPageMetadata";
 import { recpanelyProducts } from "../../data/products/collections";
 
@@ -23,6 +24,15 @@ export const metadata = buildProductMetadata({
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/PanelyProduct"
+        familyId="panely-pvc-3d"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Panely 3D/2D", href: "/Panely3D2D" },
+          { label: "Panely 3D PVC" },
+        ]}
+      />
       <BuyPanely />
       <DoporuceneProdukty
         title="K montáži plotu z panelů dále můžete potřebovat:"

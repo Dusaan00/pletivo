@@ -1,4 +1,5 @@
 import ZincSloupkyChange from "../functions/ZincSloupkyChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyZincSloupky() {
   return (
@@ -6,6 +7,13 @@ function BuyZincSloupky() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Sloupky JEKL zinkové" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <ZincSloupkyChange>
               <p>

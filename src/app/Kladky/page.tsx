@@ -1,38 +1,38 @@
 import Kladky from "../Components/BuyKladky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { kladkyProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import ProductStructuredData from "../Components/ProductStructuredData";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { kladkyProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Kladky PVC",
-  description: "Objímky pro montáže plotů z panelů.",
-  keywords:
-    "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
-  openGraph: {
-    title: "Pletivo Grygov - Objímky Na Panely",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/Kladky",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pletivo Grygov - Kladky PVC",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/Kladky",
-  },
-  robots: "index, follow",
-};
+export const metadata = buildProductMetadata({
+  familyId: "napinaci-kladka-pvc",
+  title: "Napínací kladka PVC | Zelená a antracit | Pletivo Grygov",
+  description:
+    "Napínací kladky PVC v zelené a antracitové barvě pro montáž pletivového plotu. Přehledné varianty a důležité příslušenství pro správné napnutí drátu.",
+  keywords: [
+    "napínací kladka pvc",
+    "kladka na pletivo",
+    "zelená kladka",
+    "antracitová kladka",
+    "příslušenství pro plot",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/Kladky"
+        familyId="napinaci-kladka-pvc"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+          { label: "Napínací kladka PVC" },
+        ]}
+      />
       <Kladky />
       <DoporuceneProdukty
         title="K napínacím kladkám ještě můžete potřebovat:"

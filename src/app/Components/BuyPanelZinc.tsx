@@ -1,4 +1,5 @@
 import PanelyZincChange from "../functions/PanelyZincChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyPanelZinc() {
   return (
@@ -6,6 +7,13 @@ function BuyPanelZinc() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Panely 3D/2D", href: "/Panely3D2D" },
+              { label: "Panely zinkové" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <PanelyZincChange>
               <p>

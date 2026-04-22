@@ -1,4 +1,5 @@
 import SloupkyChange from "../functions/SloupkyChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuySloupky() {
   return (
@@ -6,6 +7,13 @@ function BuySloupky() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Sloupky JEKL" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <SloupkyChange>
               <h3>Skladem, ihned k odběru</h3>

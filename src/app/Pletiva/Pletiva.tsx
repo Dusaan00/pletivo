@@ -1,6 +1,6 @@
 import "../Sass/_pletiva.scss";
 import { basePath } from "../functions/Env";
-import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
+import { RiCheckboxCircleLine } from "react-icons/ri";
 import Slider from "../functions/Slider";
 import Link from "next/link";
 import { pletivaProducts } from "../../data/products/collections";
@@ -27,10 +27,23 @@ function Pletiva() {
             pozemku, zároveň se plot z pletiva jednoduše instaluje. Pletivo
             můžete využít k oplocení svého domu, zahrady, chaty, firemních
             objektů i např. sportovišť. Pletivo zakoupené u nás je pleteno v
-            našich dílnách.
+            našich dílnách. V nabídce najdete{" "}
+            <Link href="/PletivaPVC" className="category-inline-link">
+              pletivo PVC
+            </Link>{" "}
+            i{" "}
+            <Link href="/PletivaBezinal" className="category-inline-link">
+              pletivo Bezinal
+            </Link>
+            .
           </p>
           <p className="pletiva-description">
-            Máme k dispozici pletiva pvc i zinková - bezinal.
+            Máme k dispozici pletiva pvc i zinková - bezinal. K oplocení můžete
+            rovnou doplnit také{" "}
+            <Link href="/PodhraboveDesky" className="category-inline-link">
+              podhrabové desky
+            </Link>
+            .
             <br />
             Výšky pletiva 1m - 2m.
           </p>
@@ -72,23 +85,33 @@ function Pletiva() {
           <ul className="pletivo-needed-ul">
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <span>Sloupky zelené/antracit</span>
+              <Link href="/SloupkyPrislusenstvi" className="category-inline-link">
+                Sloupky zelené/antracit
+              </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <span>Vzpěry zelené/antracit</span>
+              <Link href="/SloupkyPrislusenstvi" className="category-inline-link">
+                Vzpěry zelené/antracit
+              </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <span>Napínací drát</span>
+              <Link href="/NapinaciDraty" className="category-inline-link">
+                Napínací drát
+              </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <span>Vázací drát</span>
+              <Link href="/VazaciDraty" className="category-inline-link">
+                Vázací drát
+              </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <span>Napínáky</span>
+              <Link href="/Kladky" className="category-inline-link">
+                Napínáky
+              </Link>
             </li>
           </ul>
         </div>

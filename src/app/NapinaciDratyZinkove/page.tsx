@@ -1,39 +1,38 @@
 import Napinaci from "../Components/BuyZinkove";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { recnapinaciznProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import ProductStructuredData from "../Components/ProductStructuredData";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { recnapinaciznProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Napínací dráty zinkové",
+export const metadata = buildProductMetadata({
+  familyId: "napinaci-drat-zinkovy",
+  title: "Napínací drát zinkový | Pro Bezinal a zinkové ploty | Pletivo Grygov",
   description:
-    "Panely 3D/2D skladem: moderní 3D panely v zelené a antracitové barvě dodávající plotu estetický vzhled, odolné zinkové panely 3D/2D, ideální pro zabezpečení objektů.",
-  keywords:
-    "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
-  openGraph: {
-    title: "Výroba Pletiva Grygov - Napínací dráty zinkové",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/NapinaciDratyZinkove",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Výroba Pletiva Grygov - Napínací dráty zinkové",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/NapinaciDratyZinkove",
-  },
-  robots: "index, follow",
-};
+    "Zinkový napínací drát pro montáž pletiva Bezinal a dalších zinkových plotových systémů. Odolné příslušenství pro pevné a stabilní oplocení.",
+  keywords: [
+    "napínací drát zinkový",
+    "drát pro bezinal",
+    "zinkový drát pro plot",
+    "příslušenství k pletivu",
+    "montáž plotu",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/NapinaciDratyZinkove"
+        familyId="napinaci-drat-zinkovy"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+          { label: "Napínací drát zinkový" },
+        ]}
+      />
       <Napinaci />
       <DoporuceneProdukty
         title="K zinkovému napínacímu drátu ještě můžete potřebovat:"

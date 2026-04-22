@@ -1,5 +1,6 @@
 import "../Sass/_buyobjimky.scss";
 import ObjimkyChange from "../functions/ObjimkyChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyObjimky() {
   return (
@@ -7,6 +8,13 @@ function BuyObjimky() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Objímky" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <ObjimkyChange>
               <p>

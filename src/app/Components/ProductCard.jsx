@@ -12,14 +12,24 @@ function ProductCard({ product }) {
   const priceLabel = product.pricing?.display || product.price;
 
   return (
-    <div className="pletivo-product">
-      <div className="pletivo-product-image">
-        <img src={`${basePath}${product.image}`} alt={imageAlt} />
-      </div>
+    <article className="pletivo-product">
+      <Link
+        href={productHref}
+        className="pletivo-product-image-link"
+        aria-label={`Detail produktu ${product.name}`}
+      >
+        <div className="pletivo-product-image">
+          <img src={`${basePath}${product.image}`} alt={imageAlt} />
+        </div>
+      </Link>
 
       <div className="pletivo-product-text">
         <div className="pletivo-product-pricing">
-          <h3>{product.name}</h3>
+          <h3>
+            <Link href={productHref} className="pletivo-product-title-link">
+              {product.name}
+            </Link>
+          </h3>
         </div>
 
         <p>{product.description}</p>
@@ -39,7 +49,7 @@ function ProductCard({ product }) {
           </button>
         </Link>
       </div>
-    </div>
+    </article>
   );
 }
 

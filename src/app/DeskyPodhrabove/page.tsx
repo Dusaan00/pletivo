@@ -1,37 +1,36 @@
 import DeskyPodhrabove from "../Components/BuyDesky";
 import Sortkarty from "../Components/Sortkarty";
 import Pay from "../Components/Pay";
+import ProductStructuredData from "../Components/ProductStructuredData";
+import { buildProductMetadata } from "../functions/productPageMetadata";
 
-export const metadata = {
-  title: "Pletivo Grygov - Podhrabové Desky",
+export const metadata = buildProductMetadata({
+  familyId: "podhrabove-desky",
+  title: "Podhrabové desky betonové | 2,5 m a 2,9 m | Pletivo Grygov",
   description:
-    "Panely 3D/2D skladem: moderní 3D panely v zelené a antracitové barvě dodávající plotu estetický vzhled, odolné zinkové panely 3D/2D, ideální pro zabezpečení objektů.",
-  keywords:
-    "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
-  openGraph: {
-    title: "Výroba Pletiva Grygov - Napínací dráty zinkové",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/DeskyPodhrabove",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Výroba Pletiva Grygov - Podhrabové Desky",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/DeskyPodhrabove",
-  },
-  robots: "index, follow",
-};
+    "Betonové podhrabové desky pro pletivové i panelové ploty v délkách 2,5 m a 2,9 m. Ochrana plotu, čistší vzhled a praktičtější zakončení oplocení.",
+  keywords: [
+    "podhrabové desky",
+    "betonové podhrabové desky",
+    "desky k plotu",
+    "podhrabové desky 2,5 m",
+    "podhrabové desky 2,9 m",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/DeskyPodhrabove"
+        familyId="podhrabove-desky"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Podhrabové desky", href: "/PodhraboveDesky" },
+          { label: "Betonové podhrabové desky" },
+        ]}
+      />
       <DeskyPodhrabove />
       <Sortkarty />
       <Pay />

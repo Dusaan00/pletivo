@@ -1,6 +1,6 @@
 import "../Sass/_pletiva.scss";
 import { basePath } from "../functions/Env";
-import { RiCheckboxCircleLine, RiShoppingCart2Line } from "react-icons/ri";
+import { RiCheckboxCircleLine } from "react-icons/ri";
 import Link from "next/link";
 import { panelyProducts } from "../../data/products/collections";
 import ProductSearch from "../functions/ProductSearch";
@@ -19,9 +19,19 @@ function Panely() {
             pozemku. Je moderní, estetické a zároveň skvěle zabezpečí a chrání
             váš pozemek. Plot z panelů 3D/2D je tak skvělá volba pro oplocení u
             rodinných domů a zahrad, ale také i pro firmy díky spolehlivému
-            zabezpečení firemních objektů. Montáž panelů 3D/2D se dá provést i s
-            podhrabovými deskami, ať už je to kvůli bezpečnostnímu prvku navíc,
-            nebo čistě z hlediska estetiky plotu.
+            zabezpečení firemních objektů. Montáž{" "}
+            <Link href="/PanelyProduct" className="category-inline-link">
+              panelů 3D PVC
+            </Link>{" "}
+            i{" "}
+            <Link href="/PanelyZinkove" className="category-inline-link">
+              zinkových panelů
+            </Link>{" "}
+            se dá provést i s{" "}
+            <Link href="/PodhraboveDesky" className="category-inline-link">
+              podhrabovými deskami
+            </Link>
+            .
           </p>
           <p className="pletiva-description">
             Panely 3D/2D máme k dispozici v zelené, antracitové a zinkové barvě,
@@ -47,7 +57,9 @@ function Panely() {
 
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <span>Možnost instalace s podhrabovými deskami</span>
+              <Link href="/PodhraboveDesky" className="category-inline-link">
+                Možnost instalace s podhrabovými deskami
+              </Link>
             </li>
           </ul>
         </div>

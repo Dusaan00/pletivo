@@ -1,4 +1,5 @@
 import NapinaciChange from "../functions/NapinaciZincChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyNapinaci() {
   return (
@@ -6,6 +7,13 @@ function BuyNapinaci() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Napínací drát zinkový" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <NapinaciChange>
               <p>

@@ -1,5 +1,6 @@
 import "../Sass/_pletiva.scss";
 import PrichytkyChange from "../functions/PrichytkyChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyPrichytky() {
   return (
@@ -7,6 +8,13 @@ function BuyPrichytky() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              { label: "Příchytky a šroubky" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <PrichytkyChange>
               <h3>Skladem, ihned k odběru</h3>

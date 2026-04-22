@@ -1,38 +1,38 @@
 import Prichytky from "../Components/BuyPrichytky";
 import Pay from "../Components/Pay";
 import Sortkarty from "../Components/Sortkarty";
-import { prichytkyProducts } from "../../data/products/collections";
 import DoporuceneProdukty from "../Components/DoporucenePletivo";
+import ProductStructuredData from "../Components/ProductStructuredData";
+import { buildProductMetadata } from "../functions/productPageMetadata";
+import { prichytkyProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Příchytky, šroubky",
-  description: "Objímky pro montáže plotů z panelů.",
-  keywords:
-    "panely 3D, panely 2D, zinkové panely, plotové panely, 3D panely zelené, panely antracit",
-  openGraph: {
-    title: "Pletivo Grygov - Příchytky, šroubky",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: [{ url: "/opengraph-image.png" }],
-    url: "https://pletivogrygov.cz/PrichytkySroubky",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pletivo Grygov - Příchytky, šroubky",
-    description:
-      "Nabízíme 3D/2D panely v zelené, antracitové a zinkové variantě, které tvoří moderní oplocení a zároveň skvěle plní účel zabezpečení pozemku.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/PrichytkySroubky",
-  },
-  robots: "index, follow",
-};
+export const metadata = buildProductMetadata({
+  familyId: "prichytky-sroubky",
+  title: "Příchytky a šroubky | Montážní příslušenství | Pletivo Grygov",
+  description:
+    "Příchytky a šroubky pro montáž plotových systémů. Praktické příslušenství pro dokončení oplocení a rychlé uchycení jednotlivých prvků.",
+  keywords: [
+    "příchytky a šroubky",
+    "příchytky pro plot",
+    "montážní příslušenství",
+    "šroubky pro panely",
+    "plotové doplňky",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <ProductStructuredData
+        canonicalPath="/PrichytkySroubky"
+        familyId="prichytky-sroubky"
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+          { label: "Příchytky a šroubky" },
+        ]}
+      />
       <Prichytky />
       <DoporuceneProdukty
         title="Dále můžete potřebovat:"

@@ -1,4 +1,5 @@
 import DeskyChange from "../functions/DeskyChange";
+import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
 function BuyDesky() {
   return (
@@ -6,6 +7,13 @@ function BuyDesky() {
       <section className="section-spletivo">
         <div className="section-spletivo-background"></div>
         <div className="section-spletivo-container">
+          <ShopBreadcrumbs
+            items={[
+              { label: "Domů", href: "/" },
+              { label: "Podhrabové desky", href: "/PodhraboveDesky" },
+              { label: "Betonové podhrabové desky" },
+            ]}
+          />
           <div className="section-spletivo-product">
             <DeskyChange>
               <h3>Skladem, ihned k odběru</h3>
