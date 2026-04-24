@@ -4,6 +4,129 @@ import {
   getMailErrorMessage,
 } from "../../../lib/mail";
 
+const MAX_IMAGE_FILES = 5;
+const MAX_EMAIL_IMAGE_SIZE = 5 * 1024 * 1024;
+const MAX_TOTAL_IMAGE_SIZE = 15 * 1024 * 1024;
+const ALLOWED_IMAGE_TYPES = new Set([
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "image/heic",
+  "image/heif",
+]);
+const ALLOWED_IMAGE_EXTENSIONS = new Set([
+  ".jpg",
+  ".jpeg",
+  ".png",
+  ".webp",
+  ".heic",
+  ".heif",
+]);
+
+class AttachmentValidationError extends Error {}
+
+const getFileExtension = (fileName = "") =>
+  fileName.slice(fileName.lastIndexOf(".")).toLowerCase();
+
+const sanitizeFileName = (fileName = "priloha") =>
+  fileName
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z0-9._-]/g, "-")
+    .replace(/-+/g, "-")
+    .slice(0, 120) || "priloha";
+
+const isUploadedFile = (file) =>
+  file &&
+  typeof file === "object" &&
+  typeof file.name === "string" &&
+  typeof file.arrayBuffer === "function";
+
+const hasAllowedImageSignature = (buffer, extension) => {
+  if (buffer.length < 12) {
+    return false;
+  }
+
+  const isJpeg =
+    buffer[0] === 0xff && buffer[1] === 0xd8 && buffer[2] === 0xff;
+  const isPng =
+    buffer[0] === 0x89 &&
+    buffer[1] === 0x50 &&
+    buffer[2] === 0x4e &&
+    buffer[3] === 0x47 &&
+    buffer[4] === 0x0d &&
+    buffer[5] === 0x0a &&
+    buffer[6] === 0x1a &&
+    buffer[7] === 0x0a;
+  const isWebp =
+    buffer.toString("ascii", 0, 4) === "RIFF" &&
+    buffer.toString("ascii", 8, 12) === "WEBP";
+  const isHeic =
+    buffer.toString("ascii", 4, 8) === "ftyp" &&
+    ["heic", "heix", "hevc", "hevx", "mif1", "msf1"].includes(
+      buffer.toString("ascii", 8, 12),
+    );
+
+  if (extension === ".jpg" || extension === ".jpeg") return isJpeg;
+  if (extension === ".png") return isPng;
+  if (extension === ".webp") return isWebp;
+  if (extension === ".heic" || extension === ".heif") return isHeic;
+
+  return isJpeg || isPng || isWebp || isHeic;
+};
+
+const validateAndBuildAttachments = async (files) => {
+  const uploadedFiles = files.filter(isUploadedFile);
+
+  if (uploadedFiles.length > MAX_IMAGE_FILES) {
+    throw new AttachmentValidationError(
+      `Můžete nahrát maximálně ${MAX_IMAGE_FILES} obrázků.`,
+    );
+  }
+
+  let totalSize = 0;
+  const attachments = [];
+
+  for (const file of uploadedFiles) {
+    const extension = getFileExtension(file.name);
+    const type = file.type || "";
+
+    if (!ALLOWED_IMAGE_TYPES.has(type) && !ALLOWED_IMAGE_EXTENSIONS.has(extension)) {
+      throw new AttachmentValidationError(
+        "Povolené jsou pouze obrázky ve formátu JPG, PNG, WEBP, HEIC a HEIF.",
+      );
+    }
+
+    const buffer = Buffer.from(await file.arrayBuffer());
+
+    if (buffer.length > MAX_EMAIL_IMAGE_SIZE) {
+      throw new AttachmentValidationError("Jeden obrázek může mít maximálně 5 MB.");
+    }
+
+    totalSize += buffer.length;
+
+    if (totalSize > MAX_TOTAL_IMAGE_SIZE) {
+      throw new AttachmentValidationError(
+        "Celková velikost příloh může být maximálně 15 MB.",
+      );
+    }
+
+    if (!hasAllowedImageSignature(buffer, extension)) {
+      throw new AttachmentValidationError(
+        "Některý z přiložených souborů není platný obrázek.",
+      );
+    }
+
+    attachments.push({
+      filename: sanitizeFileName(file.name),
+      content: buffer,
+      contentType: ALLOWED_IMAGE_TYPES.has(type) ? type : undefined,
+    });
+  }
+
+  return attachments;
+};
+
 export async function POST(req) {
   try {
     const formData = await req.formData();
@@ -15,12 +138,7 @@ export async function POST(req) {
 
     const files = formData.getAll("file");
 
-    const attachments = await Promise.all(
-      files.map(async (file) => ({
-        filename: file.name,
-        content: Buffer.from(await file.arrayBuffer()),
-      })),
-    );
+    const attachments = await validateAndBuildAttachments(files);
 
     const mailConfigError = getMailConfigError();
 
@@ -71,6 +189,8 @@ ${message}
     return Response.json({ success: true });
   } catch (error) {
     console.error("EMAIL ERROR:", error);
+    const isAttachmentValidationError = error instanceof AttachmentValidationError;
+
     return Response.json(
       {
         success: false,
@@ -79,7 +199,7 @@ ${message}
           "Poptávku se nepodařilo odeslat.",
         ),
       },
-      { status: 500 },
+      { status: isAttachmentValidationError ? 400 : 500 },
     );
   }
 }

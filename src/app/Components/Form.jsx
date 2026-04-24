@@ -3,6 +3,91 @@ import React, { useState, useEffect } from "react";
 import "../Sass/_form.scss";
 import Link from "next/link";
 
+const MAX_IMAGE_FILES = 5;
+const MAX_ORIGINAL_IMAGE_SIZE = 8 * 1024 * 1024;
+const MAX_EMAIL_IMAGE_SIZE = 5 * 1024 * 1024;
+const MAX_TOTAL_IMAGE_SIZE = 15 * 1024 * 1024;
+const MAX_IMAGE_EDGE = 1800;
+const IMAGE_COMPRESSION_QUALITY = 0.82;
+const ALLOWED_IMAGE_TYPES = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "image/heic",
+  "image/heif",
+];
+const ALLOWED_IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif"];
+const COMPRESSIBLE_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
+
+const formatMegabytes = (bytes) => `${Math.round((bytes / 1024 / 1024) * 10) / 10} MB`;
+
+const getFileExtension = (fileName = "") =>
+  fileName.slice(fileName.lastIndexOf(".")).toLowerCase();
+
+const isAllowedImageFile = (file) =>
+  ALLOWED_IMAGE_TYPES.includes(file.type) ||
+  ALLOWED_IMAGE_EXTENSIONS.includes(getFileExtension(file.name));
+
+const getCompressedFileName = (fileName = "obrazek") => {
+  const extensionIndex = fileName.lastIndexOf(".");
+  const baseName = extensionIndex > 0 ? fileName.slice(0, extensionIndex) : fileName;
+
+  return `${baseName}.jpg`;
+};
+
+const compressImageFile = (file) => {
+  if (!COMPRESSIBLE_IMAGE_TYPES.includes(file.type)) {
+    return Promise.resolve(file);
+  }
+
+  return new Promise((resolve) => {
+    const image = new Image();
+    const objectUrl = URL.createObjectURL(file);
+
+    image.onload = () => {
+      const largestEdge = Math.max(image.width, image.height);
+      const scale = Math.min(1, MAX_IMAGE_EDGE / largestEdge);
+      const width = Math.round(image.width * scale);
+      const height = Math.round(image.height * scale);
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+
+      canvas.width = width;
+      canvas.height = height;
+      context.fillStyle = "#ffffff";
+      context.fillRect(0, 0, width, height);
+      context.drawImage(image, 0, 0, width, height);
+
+      canvas.toBlob(
+        (blob) => {
+          URL.revokeObjectURL(objectUrl);
+
+          if (!blob) {
+            resolve(file);
+            return;
+          }
+
+          const compressedFile = new File([blob], getCompressedFileName(file.name), {
+            type: "image/jpeg",
+            lastModified: Date.now(),
+          });
+
+          resolve(compressedFile.size < file.size ? compressedFile : file);
+        },
+        "image/jpeg",
+        IMAGE_COMPRESSION_QUALITY,
+      );
+    };
+
+    image.onerror = () => {
+      URL.revokeObjectURL(objectUrl);
+      resolve(file);
+    };
+
+    image.src = objectUrl;
+  });
+};
+
 function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,25 +109,78 @@ function Form() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   // Stav pro zobrazení loadingu během odesílání (volitelné, ale doporučené)
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isProcessingImages, setIsProcessingImages] = useState(false);
 
-  const handleFile = (selectedFiles) => {
+  const handleFile = async (selectedFiles) => {
     if (!selectedFiles || selectedFiles.length === 0) return;
 
     const newFiles = [];
     const newPreviews = [];
+    const warnings = [];
+    let nextTotalSize = files.reduce((total, file) => total + file.size, 0);
+    let remainingSlots = MAX_IMAGE_FILES - files.length;
 
-    Array.from(selectedFiles).forEach((file) => {
-      if (!file.type.startsWith("image/")) return;
-      if (file.size > 5 * 1024 * 1024) {
-        alert("Soubor je příliš velký (max 5MB).");
-        return;
+    if (remainingSlots <= 0) {
+      alert(`Můžete nahrát maximálně ${MAX_IMAGE_FILES} obrázků.`);
+      return;
+    }
+
+    setIsProcessingImages(true);
+
+    try {
+      for (const selectedFile of Array.from(selectedFiles)) {
+        if (remainingSlots <= 0) {
+          warnings.push(`Byl dosažen limit ${MAX_IMAGE_FILES} obrázků.`);
+          break;
+        }
+
+        if (!isAllowedImageFile(selectedFile)) {
+          warnings.push(
+            `Soubor "${selectedFile.name}" není podporovaný typ obrázku. Povolené jsou JPG, PNG, WEBP, HEIC a HEIF.`,
+          );
+          continue;
+        }
+
+        if (selectedFile.size > MAX_ORIGINAL_IMAGE_SIZE) {
+          warnings.push(
+            `Soubor "${selectedFile.name}" je příliš velký. Maximální velikost jednoho obrázku před úpravou je ${formatMegabytes(MAX_ORIGINAL_IMAGE_SIZE)}.`,
+          );
+          continue;
+        }
+
+        const preparedFile = await compressImageFile(selectedFile);
+
+        if (preparedFile.size > MAX_EMAIL_IMAGE_SIZE) {
+          warnings.push(
+            `Soubor "${selectedFile.name}" je i po optimalizaci příliš velký. Maximální velikost jednoho odesílaného obrázku je ${formatMegabytes(MAX_EMAIL_IMAGE_SIZE)}.`,
+          );
+          continue;
+        }
+
+        if (nextTotalSize + preparedFile.size > MAX_TOTAL_IMAGE_SIZE) {
+          warnings.push(
+            `Celková velikost příloh může být maximálně ${formatMegabytes(MAX_TOTAL_IMAGE_SIZE)}.`,
+          );
+          continue;
+        }
+
+        newFiles.push(preparedFile);
+        newPreviews.push(URL.createObjectURL(preparedFile));
+        nextTotalSize += preparedFile.size;
+        remainingSlots -= 1;
       }
-      newFiles.push(file);
-      newPreviews.push(URL.createObjectURL(file));
-    });
 
-    setFiles((prev) => [...prev, ...newFiles]);
-    setPreviews((prev) => [...prev, ...newPreviews]);
+      if (newFiles.length > 0) {
+        setFiles((prev) => [...prev, ...newFiles]);
+        setPreviews((prev) => [...prev, ...newPreviews]);
+      }
+
+      if (warnings.length > 0) {
+        alert([...new Set(warnings)].join("\n"));
+      }
+    } finally {
+      setIsProcessingImages(false);
+    }
   };
 
   const handleDrop = (e) => {
@@ -82,6 +220,21 @@ function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (isProcessingImages) {
+      return;
+    }
+
+    if (files.length > MAX_IMAGE_FILES) {
+      alert(`Můžete nahrát maximálně ${MAX_IMAGE_FILES} obrázků.`);
+      return;
+    }
+
+    if (files.reduce((total, file) => total + file.size, 0) > MAX_TOTAL_IMAGE_SIZE) {
+      alert(`Celková velikost příloh může být maximálně ${formatMegabytes(MAX_TOTAL_IMAGE_SIZE)}.`);
+      return;
+    }
+
     setIsSubmitting(true); // Zapneme loading stav
 
     try {
@@ -104,7 +257,8 @@ function Form() {
       });
 
       if (!res.ok) {
-        throw new Error(`Server error: ${res.status}`);
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || `Server error: ${res.status}`);
       }
 
       const data = await res.json();
@@ -117,7 +271,7 @@ function Form() {
       }
     } catch (error) {
       console.error("Fetch error:", error);
-      alert("Došlo k chybě při odesílání. Zkuste to prosím znovu.");
+      alert(error.message || "Došlo k chybě při odesílání. Zkuste to prosím znovu.");
     } finally {
       setIsSubmitting(false); // Vypneme loading stav
     }
@@ -280,7 +434,7 @@ function Form() {
               <input
                 type="file"
                 name="file"
-                accept="image/*"
+                accept=".jpg,.jpeg,.png,.webp,.heic,.heif,image/jpeg,image/png,image/webp,image/heic,image/heif"
                 id="fileUpload"
                 hidden
                 onChange={(e) => handleFile(e.target.files)}
@@ -326,10 +480,10 @@ function Form() {
               <input
                 type="submit"
                 value={isSubmitting ? "Odesílám..." : "Odeslat poptávku"}
-                disabled={isSubmitting}
+                disabled={isSubmitting || isProcessingImages}
                 style={{
-                  opacity: isSubmitting ? 0.7 : 1,
-                  cursor: isSubmitting ? "not-allowed" : "pointer",
+                  opacity: isSubmitting || isProcessingImages ? 0.7 : 1,
+                  cursor: isSubmitting || isProcessingImages ? "not-allowed" : "pointer",
                 }}
               />
             </div>
