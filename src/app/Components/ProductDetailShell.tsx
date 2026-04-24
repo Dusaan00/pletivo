@@ -12,6 +12,7 @@ interface ProductDetailShellProps {
   imageSrc: string;
   imageAlt?: string;
   stockLabel?: string;
+  stockNote?: string;
   stockClassName?: string;
   children?: ReactNode;
   selectors?: ReactNode;
@@ -66,6 +67,7 @@ export function ProductDetailShell({
   imageSrc,
   imageAlt,
   stockLabel,
+  stockNote,
   stockClassName = "stock-status in-stock",
   children,
   selectors,
@@ -123,7 +125,12 @@ export function ProductDetailShell({
       <div className="section-spletivo-details">
         <TitleTag>{title}</TitleTag>
         <h2>{priceLabel}</h2>
-        {stockLabel && <h3 className={stockClassName}>{stockLabel}</h3>}
+        {stockLabel && (
+          <h3 className={stockClassName}>
+            <span>{stockLabel}</span>
+            {stockNote && <span className="stock-status__note">{stockNote}</span>}
+          </h3>
+        )}
 
         {children}
 

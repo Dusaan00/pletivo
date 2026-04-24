@@ -477,6 +477,13 @@ form button svg {
   color: #8f2d22;
 }
 
+.stock-status__note {
+  display: block;
+  margin-top: 0.35rem;
+  color: inherit;
+  line-height: 1.35;
+}
+
 .out-stock {
   color: #d62828 !important;
 }

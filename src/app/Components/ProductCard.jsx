@@ -6,6 +6,7 @@ import "../Sass/_pletiva.scss";
 function ProductCard({ product }) {
   const primaryBadge = product.badges?.[0];
   const inventoryLabel = product.inventory?.label;
+  const inventoryNote = product.inventory?.note;
   const inventoryClassName =
     product.inventory?.status === "in_stock"
       ? "pletivo-product-stock pletivo-product-stock--in-stock"
@@ -44,6 +45,11 @@ function ProductCard({ product }) {
           <h4>{priceLabel}</h4>
           {inventoryLabel && (
             <p className={inventoryClassName}>{inventoryLabel}</p>
+          )}
+          {inventoryNote && (
+            <p className={`${inventoryClassName} pletivo-product-stock-note`}>
+              {inventoryNote}
+            </p>
           )}
           {primaryBadge && <p>{primaryBadge}</p>}
         </div>

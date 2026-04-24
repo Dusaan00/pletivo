@@ -46,6 +46,7 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
       stockLabel="Skladem od 4.5.2026"
+      stockNote="Předobjednávka mailem a telefonicky"
       stockClassName="stock-status available-from-stock"
       orderDisabled
       orderLabel="Dostupné od 4.5.2026"

@@ -553,6 +553,9 @@ const normalizeProduct = (product) => {
           : isAvailableFrom
             ? "Skladem od 4.5.2026"
             : "Na nezávaznou poptávku",
+      note: isAvailableFrom
+        ? "Předobjednávka mailem a telefonicky"
+        : null,
       canBuyOnline: !isInquiry && !isAvailableFrom,
     },
     purchase: {
