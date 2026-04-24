@@ -8,6 +8,7 @@ import {
   getMailConfigError,
   getMailErrorMessage,
 } from "../../../lib/mail";
+import { validateOrderPayload } from "../../../lib/orderValidation";
 
 function formatPrice(value) {
   return new Intl.NumberFormat("cs-CZ", {
@@ -29,23 +30,19 @@ function escapeHtml(value) {
 export async function POST(req) {
   try {
     const payload = await req.json();
-    const { customer, cart, checkout } = payload || {};
+    const validation = validateOrderPayload(payload);
 
-    if (
-      !customer?.fullName ||
-      !customer?.email ||
-      !customer?.phone ||
-      !customer?.street ||
-      !customer?.city ||
-      !customer?.postalCode ||
-      !Array.isArray(cart?.items) ||
-      cart.items.length === 0
-    ) {
+    if (!validation.success) {
       return Response.json(
-        { success: false, error: "Chybí povinné údaje objednávky." },
+        {
+          success: false,
+          error: validation.errors[0] || "Zkontrolujte prosím údaje objednávky.",
+        },
         { status: 400 },
       );
     }
+
+    const { customer, cart, checkout } = validation.data;
 
     const mailConfigError = getMailConfigError();
 
@@ -61,8 +58,8 @@ export async function POST(req) {
 
     const normalizedCheckout = createCheckoutState({
       items: cart.items,
-      shippingMethod: checkout?.shippingMethod || customer?.shippingMethod,
-      paymentMethod: checkout?.paymentMethod || customer?.paymentMethod,
+      shippingMethod: checkout.shippingMethod || customer.shippingMethod,
+      paymentMethod: checkout.paymentMethod || customer.paymentMethod,
       paymentProvider: checkout?.paymentProvider ?? null,
       paymentStatus: checkout?.paymentStatus || "pending",
       mode: checkout?.mode || "manual",

@@ -10,6 +10,10 @@ import {
   PAYMENT_METHODS,
   SHIPPING_METHODS,
 } from "../../lib/checkout";
+import {
+  checkoutValidationAttributes,
+  validateOrderPayload,
+} from "../../lib/orderValidation";
 
 type CheckoutFormState = {
   fullName: string;
@@ -88,34 +92,41 @@ function CheckoutPageClient() {
     setIsSubmitting(true);
 
     try {
+      const orderPayload = {
+        customer: {
+          ...formState,
+          deliveryAddress: usesDifferentDeliveryAddress
+            ? {
+                street: formState.deliveryStreet,
+                city: formState.deliveryCity,
+                postalCode: formState.deliveryPostalCode,
+              }
+            : null,
+        },
+        cart: {
+          items,
+          subtotal,
+          currency: "CZK",
+        },
+        checkout: createCheckoutState({
+          items,
+          shippingMethod: formState.shippingMethod,
+          paymentMethod: formState.paymentMethod,
+          paymentProvider: null,
+        }),
+      };
+      const validation = validateOrderPayload(orderPayload);
+
+      if (!validation.success) {
+        throw new Error(validation.errors[0] || "Zkontrolujte prosím údaje v objednávce.");
+      }
+
       const response = await fetch("/api/order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          customer: {
-            ...formState,
-            deliveryAddress: usesDifferentDeliveryAddress
-              ? {
-                  street: formState.deliveryStreet,
-                  city: formState.deliveryCity,
-                  postalCode: formState.deliveryPostalCode,
-                }
-              : null,
-          },
-          cart: {
-            items,
-            subtotal,
-            currency: "CZK",
-          },
-          checkout: createCheckoutState({
-            items,
-            shippingMethod: formState.shippingMethod,
-            paymentMethod: formState.paymentMethod,
-            paymentProvider: null,
-          }),
-        }),
+        body: JSON.stringify(validation.data),
       });
 
       const data = await response.json();
@@ -190,6 +201,7 @@ function CheckoutPageClient() {
                   required
                   name="fullName"
                   autoComplete="name"
+                  {...checkoutValidationAttributes.fullName}
                   value={formState.fullName}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -208,6 +220,7 @@ function CheckoutPageClient() {
                   name="email"
                   autoComplete="email"
                   inputMode="email"
+                  {...checkoutValidationAttributes.email}
                   value={formState.email}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -221,10 +234,12 @@ function CheckoutPageClient() {
               <label>
                 <span>Telefon *</span>
                 <input
+                  type="tel"
                   required
                   name="phone"
                   autoComplete="tel"
                   inputMode="tel"
+                  {...checkoutValidationAttributes.phone}
                   value={formState.phone}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -240,6 +255,7 @@ function CheckoutPageClient() {
                 <input
                   name="company"
                   autoComplete="organization"
+                  {...checkoutValidationAttributes.company}
                   value={formState.company}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -255,6 +271,7 @@ function CheckoutPageClient() {
                 <input
                   name="ico"
                   inputMode="numeric"
+                  {...checkoutValidationAttributes.ico}
                   value={formState.ico}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -271,6 +288,7 @@ function CheckoutPageClient() {
                   required
                   name="street"
                   autoComplete="address-line1"
+                  {...checkoutValidationAttributes.street}
                   value={formState.street}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -287,6 +305,7 @@ function CheckoutPageClient() {
                   required
                   name="city"
                   autoComplete="address-level2"
+                  {...checkoutValidationAttributes.city}
                   value={formState.city}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -304,6 +323,7 @@ function CheckoutPageClient() {
                   name="postalCode"
                   autoComplete="postal-code"
                   inputMode="numeric"
+                  {...checkoutValidationAttributes.postalCode}
                   value={formState.postalCode}
                   onChange={(event) =>
                     setFormState((current) => ({
@@ -401,6 +421,7 @@ function CheckoutPageClient() {
                           required={usesDifferentDeliveryAddress}
                           name="deliveryStreet"
                           autoComplete="shipping address-line1"
+                          {...checkoutValidationAttributes.street}
                           value={formState.deliveryStreet}
                           onChange={(event) =>
                             setFormState((current) => ({
@@ -417,6 +438,7 @@ function CheckoutPageClient() {
                           required={usesDifferentDeliveryAddress}
                           name="deliveryCity"
                           autoComplete="shipping address-level2"
+                          {...checkoutValidationAttributes.city}
                           value={formState.deliveryCity}
                           onChange={(event) =>
                             setFormState((current) => ({
@@ -434,6 +456,7 @@ function CheckoutPageClient() {
                           name="deliveryPostalCode"
                           autoComplete="shipping postal-code"
                           inputMode="numeric"
+                          {...checkoutValidationAttributes.postalCode}
                           value={formState.deliveryPostalCode}
                           onChange={(event) =>
                             setFormState((current) => ({
@@ -486,6 +509,7 @@ function CheckoutPageClient() {
               <textarea
                 name="note"
                 rows={5}
+                {...checkoutValidationAttributes.note}
                 value={formState.note}
                 onChange={(event) =>
                   setFormState((current) => ({
