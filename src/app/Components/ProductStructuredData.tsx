@@ -5,6 +5,7 @@ import {
   getFamilyProducts,
   getProductById,
 } from "../../data/products/model";
+import { withMerchantReturnPolicy } from "../../lib/merchantPolicies";
 
 type BreadcrumbItem = {
   label: string;
@@ -47,7 +48,7 @@ function buildOffer(product: any, url: string) {
     return undefined;
   }
 
-  return {
+  return withMerchantReturnPolicy({
     "@type": "Offer",
     priceCurrency: product.pricing.currency || "CZK",
     price: product.pricing.amount,
@@ -58,7 +59,7 @@ function buildOffer(product: any, url: string) {
     itemCondition: "https://schema.org/NewCondition",
     seller: organization,
     url,
-  };
+  });
 }
 
 function getProductColor(product: any) {
@@ -135,13 +136,15 @@ function buildProductSchema({
       offers:
         lowPrice !== undefined && highPrice !== undefined
           ? {
-              "@type": "AggregateOffer",
-              lowPrice,
-              highPrice,
-              offerCount: fixedProducts.length,
-              priceCurrency: primaryProduct.pricing?.currency || "CZK",
-              availability: "https://schema.org/InStock",
-              url: pageUrl,
+              ...withMerchantReturnPolicy({
+                "@type": "AggregateOffer",
+                lowPrice,
+                highPrice,
+                offerCount: fixedProducts.length,
+                priceCurrency: primaryProduct.pricing?.currency || "CZK",
+                availability: "https://schema.org/InStock",
+                url: pageUrl,
+              })
             }
           : undefined,
       hasVariant: products.map((product) => buildProductNode(product)),

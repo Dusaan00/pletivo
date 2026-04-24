@@ -1,4 +1,5 @@
 import { getCategoryById } from "../../data/products/model";
+import { withMerchantReturnPolicy } from "../../lib/merchantPolicies";
 
 type BreadcrumbItem = {
   label: string;
@@ -91,7 +92,7 @@ function buildCollectionPageSchema({
             ...(color ? { color } : {}),
             offers:
               typeof product.pricing?.amount === "number"
-                ? {
+                ? withMerchantReturnPolicy({
                     "@type": "Offer",
                     priceCurrency: product.pricing.currency || "CZK",
                     price: product.pricing.amount,
@@ -100,7 +101,7 @@ function buildCollectionPageSchema({
                         ? "https://schema.org/InStock"
                         : "https://schema.org/PreOrder",
                     url: productUrl,
-                  }
+                  })
                 : undefined,
           },
         };

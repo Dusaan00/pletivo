@@ -7,6 +7,7 @@ import {
   getFamilyById,
   getFamilyProducts,
 } from "../../data/products/model";
+import { withMerchantReturnPolicy } from "../../lib/merchantPolicies";
 import DoporuceneProdukty from "./DoporucenePletivo";
 import Sortkarty from "./Sortkarty";
 import Pay from "./Pay";
@@ -105,13 +106,15 @@ function buildProductSchema({
     offers:
       lowPrice !== undefined && highPrice !== undefined
         ? {
-            "@type": "AggregateOffer",
-            priceCurrency: "CZK",
-            lowPrice,
-            highPrice,
-            offerCount: pricedVariants.length,
-            availability: "https://schema.org/InStock",
-            url: pageUrl,
+            ...withMerchantReturnPolicy({
+              "@type": "AggregateOffer",
+              priceCurrency: "CZK",
+              lowPrice,
+              highPrice,
+              offerCount: pricedVariants.length,
+              availability: "https://schema.org/InStock",
+              url: pageUrl,
+            })
           }
         : undefined,
     hasVariant: familyProducts.map((product) => {
@@ -134,7 +137,7 @@ function buildProductSchema({
         ),
         offers:
           product.pricing?.type === "fixed"
-            ? {
+            ? withMerchantReturnPolicy({
                 "@type": "Offer",
                 priceCurrency: "CZK",
                 price: product.pricing.amount,
@@ -143,12 +146,12 @@ function buildProductSchema({
                     ? "https://schema.org/InStock"
                     : "https://schema.org/PreOrder",
                 url: `${siteUrl}${product.purchase?.href || product.link}`,
-              }
-            : {
+              })
+            : withMerchantReturnPolicy({
                 "@type": "Offer",
                 availability: "https://schema.org/PreOrder",
                 url: `${siteUrl}${product.purchase?.href || product.link}`,
-              },
+              }),
       };
     }),
   };
