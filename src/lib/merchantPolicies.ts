@@ -14,6 +14,8 @@ export const merchantReturnPolicy = {
   returnLabelSource: "https://schema.org/ReturnLabelCustomerResponsibility",
 } as const;
 
+export const priceValidUntil = "2026-12-31";
+
 export function withMerchantReturnPolicy<T extends Record<string, unknown>>(
   offer: T | undefined,
 ) {
@@ -23,6 +25,7 @@ export function withMerchantReturnPolicy<T extends Record<string, unknown>>(
 
   return {
     ...offer,
+    priceValidUntil,
     hasMerchantReturnPolicy: merchantReturnPolicy,
   };
 }

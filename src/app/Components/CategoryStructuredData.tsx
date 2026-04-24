@@ -61,6 +61,9 @@ function buildCollectionPageSchema({
   categoryName?: string;
 }) {
   const url = toAbsoluteUrl(canonicalPath);
+  const productsWithOffers = products.filter(
+    (product) => typeof product.pricing?.amount === "number",
+  );
 
   return {
     "@context": "https://schema.org",
@@ -73,8 +76,8 @@ function buildCollectionPageSchema({
     mainEntity: {
       "@type": "ItemList",
       itemListOrder: "https://schema.org/ItemListOrderAscending",
-      numberOfItems: products.length,
-      itemListElement: products.map((product, index) => {
+      numberOfItems: productsWithOffers.length,
+      itemListElement: productsWithOffers.map((product, index) => {
         const productUrl = toAbsoluteUrl(product.purchase?.href || product.link);
         const color = getProductColor(product);
 
@@ -90,19 +93,16 @@ function buildCollectionPageSchema({
             url: productUrl,
             sku: product.sku,
             ...(color ? { color } : {}),
-            offers:
-              typeof product.pricing?.amount === "number"
-                ? withMerchantReturnPolicy({
-                    "@type": "Offer",
-                    priceCurrency: product.pricing.currency || "CZK",
-                    price: product.pricing.amount,
-                    availability:
-                      product.inventory?.status === "in_stock"
-                        ? "https://schema.org/InStock"
-                        : "https://schema.org/PreOrder",
-                    url: productUrl,
-                  })
-                : undefined,
+            offers: withMerchantReturnPolicy({
+              "@type": "Offer",
+              priceCurrency: product.pricing.currency || "CZK",
+              price: product.pricing.amount,
+              availability:
+                product.inventory?.status === "in_stock"
+                  ? "https://schema.org/InStock"
+                  : "https://schema.org/PreOrder",
+              url: productUrl,
+            }),
           },
         };
       }),
