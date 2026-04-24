@@ -45,6 +45,12 @@ function formatVariantLabel(product: FamilyProduct) {
     .join(" • ");
 }
 
+function getProductColor(product: FamilyProduct) {
+  return product.variantOptions?.barva
+    ? String(product.variantOptions.barva)
+    : undefined;
+}
+
 function buildProductSchema({
   title,
   lead,
@@ -108,38 +114,43 @@ function buildProductSchema({
             url: pageUrl,
           }
         : undefined,
-    hasVariant: familyProducts.map((product) => ({
-      "@type": "Product",
-      name: product.name,
-      sku: product.sku,
-      description: product.description,
-      image: [`${siteUrl}${product.image}`],
-      url: `${siteUrl}${product.purchase?.href || product.link}`,
-      additionalProperty: Object.entries(product.variantOptions || {}).map(
-        ([name, value]) => ({
-          "@type": "PropertyValue",
-          name,
-          value,
-        }),
-      ),
-      offers:
-        product.pricing?.type === "fixed"
-          ? {
-              "@type": "Offer",
-              priceCurrency: "CZK",
-              price: product.pricing.amount,
-              availability:
-                product.inventory?.status === "in_stock"
-                  ? "https://schema.org/InStock"
-                  : "https://schema.org/PreOrder",
-              url: `${siteUrl}${product.purchase?.href || product.link}`,
-            }
-          : {
-              "@type": "Offer",
-              availability: "https://schema.org/PreOrder",
-              url: `${siteUrl}${product.purchase?.href || product.link}`,
-            },
-    })),
+    hasVariant: familyProducts.map((product) => {
+      const color = getProductColor(product);
+
+      return {
+        "@type": "Product",
+        name: product.name,
+        sku: product.sku,
+        description: product.description,
+        image: [`${siteUrl}${product.image}`],
+        url: `${siteUrl}${product.purchase?.href || product.link}`,
+        ...(color ? { color } : {}),
+        additionalProperty: Object.entries(product.variantOptions || {}).map(
+          ([name, value]) => ({
+            "@type": "PropertyValue",
+            name,
+            value,
+          }),
+        ),
+        offers:
+          product.pricing?.type === "fixed"
+            ? {
+                "@type": "Offer",
+                priceCurrency: "CZK",
+                price: product.pricing.amount,
+                availability:
+                  product.inventory?.status === "in_stock"
+                    ? "https://schema.org/InStock"
+                    : "https://schema.org/PreOrder",
+                url: `${siteUrl}${product.purchase?.href || product.link}`,
+              }
+            : {
+                "@type": "Offer",
+                availability: "https://schema.org/PreOrder",
+                url: `${siteUrl}${product.purchase?.href || product.link}`,
+              },
+      };
+    }),
   };
 }
 

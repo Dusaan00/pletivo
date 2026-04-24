@@ -40,6 +40,12 @@ function buildBreadcrumbSchema(
   };
 }
 
+function getProductColor(product: any) {
+  return product.variantOptions?.barva
+    ? String(product.variantOptions.barva)
+    : undefined;
+}
+
 function buildCollectionPageSchema({
   title,
   description,
@@ -67,30 +73,38 @@ function buildCollectionPageSchema({
       "@type": "ItemList",
       itemListOrder: "https://schema.org/ItemListOrderAscending",
       numberOfItems: products.length,
-      itemListElement: products.map((product, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        url: toAbsoluteUrl(product.purchase?.href || product.link),
-        item: {
-          "@type": "Product",
-          name: product.name,
-          image: toAbsoluteUrl(product.image),
-          description: product.description,
-          offers:
-            typeof product.pricing?.amount === "number"
-              ? {
-                  "@type": "Offer",
-                  priceCurrency: product.pricing.currency || "CZK",
-                  price: product.pricing.amount,
-                  availability:
-                    product.inventory?.status === "in_stock"
-                      ? "https://schema.org/InStock"
-                      : "https://schema.org/PreOrder",
-                  url: toAbsoluteUrl(product.purchase?.href || product.link),
-                }
-              : undefined,
-        },
-      })),
+      itemListElement: products.map((product, index) => {
+        const productUrl = toAbsoluteUrl(product.purchase?.href || product.link);
+        const color = getProductColor(product);
+
+        return {
+          "@type": "ListItem",
+          position: index + 1,
+          url: productUrl,
+          item: {
+            "@type": "Product",
+            name: product.name,
+            image: toAbsoluteUrl(product.image),
+            description: product.description,
+            url: productUrl,
+            sku: product.sku,
+            ...(color ? { color } : {}),
+            offers:
+              typeof product.pricing?.amount === "number"
+                ? {
+                    "@type": "Offer",
+                    priceCurrency: product.pricing.currency || "CZK",
+                    price: product.pricing.amount,
+                    availability:
+                      product.inventory?.status === "in_stock"
+                        ? "https://schema.org/InStock"
+                        : "https://schema.org/PreOrder",
+                    url: productUrl,
+                  }
+                : undefined,
+          },
+        };
+      }),
     },
   };
 }

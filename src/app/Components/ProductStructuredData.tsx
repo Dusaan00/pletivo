@@ -61,8 +61,15 @@ function buildOffer(product: any, url: string) {
   };
 }
 
+function getProductColor(product: any) {
+  return product.variantOptions?.barva
+    ? String(product.variantOptions.barva)
+    : undefined;
+}
+
 function buildProductNode(product: any) {
   const productUrl = toAbsoluteUrl(product.purchase?.href || product.link);
+  const color = getProductColor(product);
 
   return {
     "@type": "Product",
@@ -73,6 +80,7 @@ function buildProductNode(product: any) {
     image: [toAbsoluteUrl(product.image)],
     url: productUrl,
     brand: organization,
+    ...(color ? { color } : {}),
     additionalProperty: Object.entries(product.variantOptions || {}).map(
       ([name, value]) => ({
         "@type": "PropertyValue",
