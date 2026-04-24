@@ -1,5 +1,5 @@
 import { getCategoryById } from "../../data/products/model";
-import { withMerchantReturnPolicy } from "../../lib/merchantPolicies";
+import { withMerchantOfferMetadata } from "../../lib/merchantPolicies";
 
 type BreadcrumbItem = {
   label: string;
@@ -16,6 +16,10 @@ type CategoryStructuredDataProps = {
 };
 
 const siteUrl = "https://pletivogrygov.cz";
+const brand = {
+  "@type": "Brand",
+  name: "Pletivo Grygov",
+};
 
 function toAbsoluteUrl(path: string) {
   if (path.startsWith("http://") || path.startsWith("https://")) {
@@ -92,8 +96,9 @@ function buildCollectionPageSchema({
             description: product.description,
             url: productUrl,
             sku: product.sku,
+            brand,
             ...(color ? { color } : {}),
-            offers: withMerchantReturnPolicy({
+            offers: withMerchantOfferMetadata({
               "@type": "Offer",
               priceCurrency: product.pricing.currency || "CZK",
               price: product.pricing.amount,

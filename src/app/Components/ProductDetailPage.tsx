@@ -7,7 +7,7 @@ import {
   getFamilyById,
   getFamilyProducts,
 } from "../../data/products/model";
-import { withMerchantReturnPolicy } from "../../lib/merchantPolicies";
+import { withMerchantOfferMetadata } from "../../lib/merchantPolicies";
 import DoporuceneProdukty from "./DoporucenePletivo";
 import Sortkarty from "./Sortkarty";
 import Pay from "./Pay";
@@ -32,6 +32,10 @@ type ProductDetailPageProps = {
 };
 
 const siteUrl = "https://pletivogrygov.cz";
+const brand = {
+  "@type": "Brand",
+  name: "Pletivo Grygov",
+};
 
 function formatVariantLabel(product: FamilyProduct) {
   const variantEntries = Object.entries(product.variantOptions || {});
@@ -96,17 +100,14 @@ function buildProductSchema({
     description: lead,
     url: pageUrl,
     category: categoryName,
-    brand: {
-      "@type": "Brand",
-      name: "Pletivo Grygov",
-    },
+    brand,
     image: [`${siteUrl}${defaultProduct.image}`],
     productGroupID: defaultProduct.familyId,
     variesBy,
     offers:
       lowPrice !== undefined && highPrice !== undefined
         ? {
-            ...withMerchantReturnPolicy({
+            ...withMerchantOfferMetadata({
               "@type": "AggregateOffer",
               priceCurrency: "CZK",
               lowPrice,
@@ -122,11 +123,13 @@ function buildProductSchema({
 
       return {
         "@type": "Product",
+        "@id": `${siteUrl}${product.purchase?.href || product.link}#product-${product.sku}`,
         name: product.name,
         sku: product.sku,
         description: product.description,
         image: [`${siteUrl}${product.image}`],
         url: `${siteUrl}${product.purchase?.href || product.link}`,
+        brand,
         ...(color ? { color } : {}),
         additionalProperty: Object.entries(product.variantOptions || {}).map(
           ([name, value]) => ({
@@ -137,7 +140,7 @@ function buildProductSchema({
         ),
         offers:
           product.pricing?.type === "fixed"
-            ? withMerchantReturnPolicy({
+            ? withMerchantOfferMetadata({
                 "@type": "Offer",
                 priceCurrency: "CZK",
                 price: product.pricing.amount,
@@ -147,7 +150,7 @@ function buildProductSchema({
                     : "https://schema.org/PreOrder",
                 url: `${siteUrl}${product.purchase?.href || product.link}`,
               })
-            : withMerchantReturnPolicy({
+            : withMerchantOfferMetadata({
                 "@type": "Offer",
                 availability: "https://schema.org/PreOrder",
                 url: `${siteUrl}${product.purchase?.href || product.link}`,

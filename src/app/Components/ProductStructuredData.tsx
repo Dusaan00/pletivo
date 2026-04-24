@@ -5,7 +5,7 @@ import {
   getFamilyProducts,
   getProductById,
 } from "../../data/products/model";
-import { withMerchantReturnPolicy } from "../../lib/merchantPolicies";
+import { withMerchantOfferMetadata } from "../../lib/merchantPolicies";
 
 type BreadcrumbItem = {
   label: string;
@@ -25,6 +25,10 @@ const organization = {
   "@type": "Organization",
   name: "Pletivo Grygov",
   url: siteUrl,
+};
+const brand = {
+  "@type": "Brand",
+  name: "Pletivo Grygov",
 };
 
 function toAbsoluteUrl(path: string) {
@@ -48,7 +52,7 @@ function buildOffer(product: any, url: string) {
     return undefined;
   }
 
-  return withMerchantReturnPolicy({
+  return withMerchantOfferMetadata({
     "@type": "Offer",
     priceCurrency: product.pricing.currency || "CZK",
     price: product.pricing.amount,
@@ -74,13 +78,13 @@ function buildProductNode(product: any) {
 
   return {
     "@type": "Product",
-    "@id": `${productUrl}#product`,
+    "@id": `${productUrl}#product-${product.sku}`,
     name: product.name,
     sku: product.sku,
     description: product.description,
     image: [toAbsoluteUrl(product.image)],
     url: productUrl,
-    brand: organization,
+    brand,
     ...(color ? { color } : {}),
     additionalProperty: Object.entries(product.variantOptions || {}).map(
       ([name, value]) => ({
@@ -129,14 +133,14 @@ function buildProductSchema({
       description: primaryProduct.description,
       image: [toAbsoluteUrl(primaryProduct.image)],
       url: pageUrl,
-      brand: organization,
+      brand,
       category: category?.name,
       productGroupID: family?.id,
       variesBy: (family?.variantAxes || []).map(mapAxisToSchema),
       offers:
         lowPrice !== undefined && highPrice !== undefined
           ? {
-              ...withMerchantReturnPolicy({
+              ...withMerchantOfferMetadata({
                 "@type": "AggregateOffer",
                 lowPrice,
                 highPrice,

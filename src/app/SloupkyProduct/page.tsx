@@ -27,6 +27,7 @@ export default function Page() {
     <>
       <ProductStructuredData
         canonicalPath="/SloupkyProduct"
+        familyId="sloupky-jekl"
         productIds={["sloupek-jekl-zeleny", "sloupek-jekl-antracit"]}
         breadcrumbItems={[
           { label: "Domů", href: "/" },
