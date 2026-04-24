@@ -16,6 +16,16 @@ const PrichytkyChange = ({ children }: PrichytkyChangeProps) => {
       title="Příchytky + šroubky"
       priceLabel="7,- / ks"
       imageSrc={`${basePath}/sloupky/prichytky.webp`}
+      cartItem={{
+        productId: "prichytky-sroubky",
+        name: "Příchytky + šroubky",
+        image: `${basePath}/sloupky/prichytky.webp`,
+        href: "/PrichytkySroubky",
+        unitPrice: 7,
+        unitLabel: "7,- / ks",
+        options: [{ name: "Balení", value: "1 ks příchytka + 1 ks šroubek" }],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
     >

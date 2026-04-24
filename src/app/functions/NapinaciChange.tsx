@@ -101,6 +101,19 @@ const NapinaciContent = ({ children }: { children: ReactNode }) => {
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
       stockLabel="Skladem, ihned k odběru"
+      cartItem={{
+        productId: "napinaci-drat-pvc",
+        name: title,
+        image: imgSrc,
+        href: `/NapinaciDraty?color=${selectedColor}&length=${selectedLength}`,
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},-`,
+        options: [
+          { name: "Barva", value: colorLabels[selectedColor] },
+          { name: "Délka", value: `${selectedLength} m` },
+        ],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={

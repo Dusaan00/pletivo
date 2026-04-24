@@ -45,6 +45,19 @@ const PanelyChange = ({ children, titleAs = "h1" }: PanelyChangeProps) => {
       titleAs={titleAs}
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
+      cartItem={{
+        productId: "panely-pvc-3d",
+        name: title,
+        image: imgSrc,
+        href: "/PanelyProduct",
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},-`,
+        options: [
+          { name: "Výška", value: selectedHeight },
+          { name: "Barva", value: selectedColor },
+        ],
+        checkoutMode: "gateway-ready",
+      }}
       stockLabel={
         isInStock
           ? "Skladem, ihned k odběru"

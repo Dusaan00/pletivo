@@ -1,7 +1,17 @@
 import PanelyZincChange from "../functions/PanelyZincChange";
 import ShopBreadcrumbs from "./ShopBreadcrumbs";
 
-function BuyPanelZinc() {
+type BuyPanelZincProps = {
+  variant: "3D" | "2D";
+  pageHref: string;
+  breadcrumbLabel: string;
+};
+
+function BuyPanelZinc({
+  variant,
+  pageHref,
+  breadcrumbLabel,
+}: BuyPanelZincProps) {
   return (
     <>
       <section className="section-spletivo">
@@ -11,11 +21,11 @@ function BuyPanelZinc() {
             items={[
               { label: "Domů", href: "/" },
               { label: "Panely 3D/2D", href: "/Panely3D2D" },
-              { label: "Panely zinkové" },
+              { label: breadcrumbLabel },
             ]}
           />
           <div className="section-spletivo-product">
-            <PanelyZincChange>
+            <PanelyZincChange variant={variant} pageHref={pageHref}>
               <p>
                 Panely zinkové 3D máme dostupné ve výškách od 1.03m do 1.73m,
                 délka 2.5m, průměr drátu 4mm. Panely zinkové v 2D provedení máme
@@ -23,9 +33,8 @@ function BuyPanelZinc() {
               </p>
               <br />
               <p>
-                Pro nákup nás můžete kontaktovat přes kontaktní formulář, napsat
-                email, nebo nám zavolat. Na možnosti nákupu online momentálně
-                pracujeme.
+                Produkt můžete jednoduše vložit do košíku a objednávku dokončit
+                online. Případně nám můžete zavolat nebo napsat email.
               </p>
             </PanelyZincChange>
           </div>

@@ -6,6 +6,12 @@ import "../Sass/_pletiva.scss";
 function ProductCard({ product }) {
   const primaryBadge = product.badges?.[0];
   const inventoryLabel = product.inventory?.label;
+  const inventoryClassName =
+    product.inventory?.status === "in_stock"
+      ? "pletivo-product-stock pletivo-product-stock--in-stock"
+      : product.inventory?.status === "available_from"
+        ? "pletivo-product-stock pletivo-product-stock--available-from"
+      : "pletivo-product-stock pletivo-product-stock--inquiry";
   const ctaLabel = product.purchase?.ctaLabel || "Koupit";
   const productHref = product.purchase?.href || product.link;
   const imageAlt = product.media?.[0]?.alt || product.name;
@@ -36,7 +42,9 @@ function ProductCard({ product }) {
 
         <div className="pletivo-product-price">
           <h4>{priceLabel}</h4>
-          {inventoryLabel && <p>{inventoryLabel}</p>}
+          {inventoryLabel && (
+            <p className={inventoryClassName}>{inventoryLabel}</p>
+          )}
           {primaryBadge && <p>{primaryBadge}</p>}
         </div>
       </div>

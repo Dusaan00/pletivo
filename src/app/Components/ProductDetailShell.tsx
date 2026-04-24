@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { RiShoppingCart2Line } from "react-icons/ri";
+import { type CartItemDraft, useCart } from "./CartProvider";
 
 interface ProductDetailShellProps {
   title: string;
@@ -21,6 +22,7 @@ interface ProductDetailShellProps {
   orderLabel?: string;
   orderDisabled?: boolean;
   orderButtonType?: "button" | "submit";
+  cartItem?: CartItemDraft;
 }
 
 interface ProductOptionChoice {
@@ -74,7 +76,44 @@ export function ProductDetailShell({
   orderLabel = "Objednat",
   orderDisabled = false,
   orderButtonType = "button",
+  cartItem,
 }: ProductDetailShellProps) {
+  const { addItem } = useCart();
+  const [justAdded, setJustAdded] = useState(false);
+
+  useEffect(() => {
+    if (!justAdded) {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      setJustAdded(false);
+    }, 1800);
+
+    return () => window.clearTimeout(timeout);
+  }, [justAdded]);
+
+  const effectiveQuantity = Math.max(1, Number(quantity) || 1);
+  const effectiveOrderLabel = cartItem
+    ? justAdded
+      ? "Přidáno do košíku"
+      : orderLabel === "Objednat"
+        ? "Přidat do košíku"
+        : orderLabel
+    : orderLabel;
+
+  const handleAddToCart = () => {
+    if (!cartItem || orderDisabled) {
+      return;
+    }
+
+    addItem({
+      ...cartItem,
+      quantity: effectiveQuantity,
+    });
+    setJustAdded(true);
+  };
+
   return (
     <>
       <div className="section-spletivo-gal">
@@ -106,11 +145,23 @@ export function ProductDetailShell({
             />
           </div>
 
-          <Link href={orderHref} className="order-link">
-            <button type={orderButtonType} disabled={orderDisabled}>
-              {orderLabel} <RiShoppingCart2Line />
-            </button>
-          </Link>
+          {cartItem ? (
+            <div className="order-link">
+              <button
+                type="button"
+                disabled={orderDisabled}
+                onClick={handleAddToCart}
+              >
+                {effectiveOrderLabel} <RiShoppingCart2Line />
+              </button>
+            </div>
+          ) : (
+            <Link href={orderHref} className="order-link">
+              <button type={orderButtonType} disabled={orderDisabled}>
+                {orderLabel} <RiShoppingCart2Line />
+              </button>
+            </Link>
+          )}
         </form>
       </div>
     </>

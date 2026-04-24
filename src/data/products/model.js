@@ -129,7 +129,7 @@ export const productFamilies = {
     name: "Panely zinkové",
     shortName: "Panely zinkové",
     category: "panely",
-    route: "/PanelyZinkove",
+    route: "/PanelyZinkove3D",
     productKind: "variant-product",
     buyingMode: "buy",
     variantAxes: ["typPanelu"],
@@ -307,13 +307,13 @@ export const productFamilies = {
     name: "Držáky na podhrabové desky",
     shortName: "Držáky na desky",
     category: "desky",
-    route: "/form",
+    route: "/DrzakyNaPodhraboveDesky",
     productKind: "simple-product",
-    buyingMode: "inquiry",
+    buyingMode: "buy",
     variantAxes: [],
     variantIds: ["Držáky na desky"],
     defaultVariantId: "Držáky na desky",
-    badges: ["Na poptávku"],
+    badges: ["Skladem"],
   },
 };
 
@@ -516,6 +516,7 @@ const normalizeProduct = (product) => {
   const category = productCategories[product.category] ?? null;
   const variantOptions = productVariantOptions[product.id] || {};
   const isInquiry = product.ctaType === "inquiry";
+  const isAvailableFrom = product.availability === "available_from";
 
   return {
     ...product,
@@ -547,8 +548,12 @@ const normalizeProduct = (product) => {
     inventory: {
       status: product.availability,
       label:
-        product.availability === "in_stock" ? "Skladem" : "Na nezávaznou poptávku",
-      canBuyOnline: !isInquiry,
+        product.availability === "in_stock"
+          ? "Skladem"
+          : isAvailableFrom
+            ? "Skladem od 4.5.2026"
+            : "Na nezávaznou poptávku",
+      canBuyOnline: !isInquiry && !isAvailableFrom,
     },
     purchase: {
       mode: product.ctaType,
@@ -562,7 +567,11 @@ const normalizeProduct = (product) => {
     },
     badges: [
       ...(family?.badges ?? []),
-      ...(product.availability === "in_stock" ? ["Skladem"] : ["Na poptávku"]),
+      ...(product.availability === "in_stock"
+        ? ["Skladem"]
+        : isAvailableFrom
+          ? ["Skladem od 4.5.2026"]
+          : ["Na poptávku"]),
     ],
     searchText: buildSearchText(product, family, category),
   };

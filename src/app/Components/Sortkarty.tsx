@@ -20,8 +20,8 @@ const categories = [
     icon: `${basePath}/sorty/sortpanely.png`,
     subItems: [
       { label: "Panely PVC 3D", href: "/PanelyProduct" },
-      { label: "Panely Zinkové 3D", href: "/PanelyZinkove" },
-      { label: "Panely Zinkové 2D", href: "/PanelyZinkove" },
+      { label: "Panely Zinkové 3D", href: "/PanelyZinkove3D" },
+      { label: "Panely Zinkové 2D", href: "/PanelyZinkove2D" },
     ],
   },
   {

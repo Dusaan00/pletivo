@@ -177,7 +177,7 @@ function Form() {
             <svg className="phony ikon">
               <use href="/sprite.svg#icon-call"></use>
             </svg>
-            <div className="topic">Telefon</div>
+            <div className="topic">Telefon - Kancelář</div>
             <div className="text-one">+420 608 474 760</div>
             <div className="text-two">+420 608 705 547</div>
           </div>

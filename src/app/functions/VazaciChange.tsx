@@ -27,6 +27,16 @@ const VazaciChange = ({ children }: VazaciChangeProps) => {
       title={title}
       priceLabel="140,- / ks"
       imageSrc={imgSrc}
+      cartItem={{
+        productId: "vazaci-drat",
+        name: title,
+        image: imgSrc,
+        href: "/VazaciDraty",
+        unitPrice: 140,
+        unitLabel: "140,- / ks",
+        options: [{ name: "Barva", value: selectedColor }],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       orderDisabled={!isInStock}

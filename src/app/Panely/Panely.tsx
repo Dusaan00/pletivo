@@ -20,15 +20,31 @@ function Panely() {
             váš pozemek. Plot z panelů 3D/2D je tak skvělá volba pro oplocení u
             rodinných domů a zahrad, ale také i pro firmy díky spolehlivému
             zabezpečení firemních objektů. Montáž{" "}
-            <Link href="/PanelyProduct" className="category-inline-link">
+            <Link
+              href="/PanelyProduct"
+              className="category-inline-link category-inline-link--hero"
+            >
               panelů 3D PVC
             </Link>{" "}
             i{" "}
-            <Link href="/PanelyZinkove" className="category-inline-link">
-              zinkových panelů
+            <Link
+              href="/PanelyZinkove3D"
+              className="category-inline-link category-inline-link--hero"
+            >
+              zinkových panelů 3D
+            </Link>{" "}
+            a{" "}
+            <Link
+              href="/PanelyZinkove2D"
+              className="category-inline-link category-inline-link--hero"
+            >
+              2D
             </Link>{" "}
             se dá provést i s{" "}
-            <Link href="/PodhraboveDesky" className="category-inline-link">
+            <Link
+              href="/PodhraboveDesky"
+              className="category-inline-link category-inline-link--hero"
+            >
               podhrabovými deskami
             </Link>
             .

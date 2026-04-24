@@ -49,6 +49,20 @@ const KladkyChange = ({ children, type }: KladkyChangeProps) => {
       imageSrc={imgSrc}
       stockLabel={isInStock ? "Skladem, ihned k odběru" : "Momentálně nedostupné"}
       stockClassName={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}
+      cartItem={{
+        productId:
+          type === "pvc" ? "napinaci-kladka-pvc" : "napinaci-kladka-zinkova",
+        name: title,
+        image: imgSrc,
+        href: type === "pvc" ? "/Kladky" : "/KladkyZinkove",
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},- / ks`,
+        options:
+          type === "pvc"
+            ? [{ name: "Barva", value: selectedColor }]
+            : [{ name: "Typ", value: "Zinková" }],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       orderDisabled={!isInStock}

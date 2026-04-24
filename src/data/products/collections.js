@@ -243,4 +243,27 @@ export const recobjimkyProducts = selectProducts([
   "Držáky na desky",
 ]);
 
+export const recdrzakyProducts = selectProducts([
+  {
+    id: "panel-green",
+    name: "Panely PVC 3D",
+    description:
+      "Panely PVC 3D pro moderní a odolné oplocení rodinných domů i firemních areálů.",
+  },
+  "panel-3d-zinc",
+  "panel-2d-zinc",
+  {
+    id: "Podhrabové desky 2.50m",
+    name: "Podhrabové desky",
+    description:
+      "Betonové podhrabové desky pro čisté a pevné zakončení oplocení z panelů i pletiva.",
+  },
+  {
+    id: "objimky-green",
+    name: "Objímky pro panely",
+    description:
+      "Objímky pro správné uchycení panelů ke sloupkům při montáži plotu.",
+  },
+]);
+
 export const vseProducts = allProducts;

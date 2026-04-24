@@ -16,7 +16,6 @@ function BuyBezinal() {
           />
           <div className="section-spletivo-product">
             <BezinalChange>
-              <h3>Skladem, ihned k odběru</h3>
               <p>
                 Zinková Pletiva Bezinal máme ve variantách s průměrem drátu
                 2.0mm a 2.2mm. Pletiva Bezinal pleteme v našich dílnách už mnoho
@@ -27,9 +26,8 @@ function BuyBezinal() {
               </p>
               <br />
               <p>
-                Pro nákup nás můžete kontaktovat přes kontaktní formulář, napsat
-                email, nebo nám zavolat. Na možnosti nákupu online momentálně
-                pracujeme.
+                Produkt bude možné objednat online po naskladnění. Případně nám
+                můžete zavolat nebo napsat email.
               </p>
             </BezinalChange>
           </div>

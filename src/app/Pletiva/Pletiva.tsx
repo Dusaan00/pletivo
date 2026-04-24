@@ -28,24 +28,33 @@ function Pletiva() {
             můžete využít k oplocení svého domu, zahrady, chaty, firemních
             objektů i např. sportovišť. Pletivo zakoupené u nás je pleteno v
             našich dílnách. V nabídce najdete{" "}
-            <Link href="/PletivaPVC" className="category-inline-link">
+            <Link
+              href="/PletivaPVC"
+              className="category-inline-link category-inline-link--hero"
+            >
               pletivo PVC
             </Link>{" "}
             i{" "}
-            <Link href="/PletivaBezinal" className="category-inline-link">
+            <Link
+              href="/PletivaBezinal"
+              className="category-inline-link category-inline-link--hero"
+            >
               pletivo Bezinal
             </Link>
             .
           </p>
           <p className="pletiva-description">
-            Máme k dispozici pletiva pvc i zinková - bezinal. K oplocení můžete
-            rovnou doplnit také{" "}
-            <Link href="/PodhraboveDesky" className="category-inline-link">
-              podhrabové desky
+            Máme k dispozici pletiva potažená pvc i pletiva bezinal pozinkovaná.
+            Oplocení se dá doplnit{" "}
+            <Link
+              href="/PodhraboveDesky"
+              className="category-inline-link category-inline-link--hero"
+            >
+              podhrabovými deskami
             </Link>
             .
             <br />
-            Výšky pletiva 1m - 2m.
+            Výšky pletiva jsou 100cm - 200cm.
           </p>
           <ul className="pletiva-advantages">
             <li className="pletiva-advantages-item">
@@ -85,31 +94,46 @@ function Pletiva() {
           <ul className="pletivo-needed-ul">
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <Link href="/SloupkyPrislusenstvi" className="category-inline-link">
+              <Link
+                href="/SloupkyPrislusenstvi"
+                className="category-inline-link category-inline-link--plain"
+              >
                 Sloupky zelené/antracit
               </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <Link href="/SloupkyPrislusenstvi" className="category-inline-link">
+              <Link
+                href="/SloupkyPrislusenstvi"
+                className="category-inline-link category-inline-link--plain"
+              >
                 Vzpěry zelené/antracit
               </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <Link href="/NapinaciDraty" className="category-inline-link">
+              <Link
+                href="/NapinaciDraty"
+                className="category-inline-link category-inline-link--plain"
+              >
                 Napínací drát
               </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <Link href="/VazaciDraty" className="category-inline-link">
+              <Link
+                href="/VazaciDraty"
+                className="category-inline-link category-inline-link--plain"
+              >
                 Vázací drát
               </Link>
             </li>
             <li className="pletivo-needed-item">
               <RiCheckboxCircleLine />
-              <Link href="/Kladky" className="category-inline-link">
+              <Link
+                href="/Kladky"
+                className="category-inline-link category-inline-link--plain"
+              >
                 Napínáky
               </Link>
             </li>

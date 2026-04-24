@@ -17,7 +17,6 @@ function BuyPletivo() {
           />
           <div className="section-spletivo-product">
             <ColorChange>
-              <h3>Skladem, ihned k odběru</h3>
               <p>
                 Pletivo poplastované s průměrem drátu 2.5mm a rozměrem oka 55m.
                 Dostupné výšky pletiva od 100 do 200cm. Pletivo je upletené u
@@ -27,9 +26,8 @@ function BuyPletivo() {
               </p>
               <br />
               <p>
-                Pro nákup nás můžete kontaktovat přes kontaktní formulář, napsat
-                email, nebo nám zavolat. Na možnosti nákupu online momentálně
-                pracujeme.
+                Produkt bude možné objednat online po naskladnění. Případně nám
+                můžete zavolat nebo napsat email.
               </p>
             </ColorChange>
           </div>

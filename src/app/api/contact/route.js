@@ -1,4 +1,8 @@
-import nodemailer from "nodemailer";
+import {
+  createMailTransporter,
+  getMailConfigError,
+  getMailErrorMessage,
+} from "../../../lib/mail";
 
 export async function POST(req) {
   try {
@@ -18,15 +22,16 @@ export async function POST(req) {
       })),
     );
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    const mailConfigError = getMailConfigError();
+
+    if (mailConfigError) {
+      return Response.json(
+        { success: false, error: mailConfigError },
+        { status: 500 },
+      );
+    }
+
+    const transporter = createMailTransporter();
 
     await transporter.sendMail({
       from: `"Poptávka Pletivo Grygov" <${process.env.EMAIL_USER}>`,
@@ -66,6 +71,15 @@ ${message}
     return Response.json({ success: true });
   } catch (error) {
     console.error("EMAIL ERROR:", error);
-    return Response.json({ success: false }, { status: 500 });
+    return Response.json(
+      {
+        success: false,
+        error: getMailErrorMessage(
+          error,
+          "Poptávku se nepodařilo odeslat.",
+        ),
+      },
+      { status: 500 },
+    );
   }
 }

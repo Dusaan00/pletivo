@@ -31,6 +31,16 @@ const ZincSloupkyChange = ({ children }: ZincSloupkyChangeProps) => {
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
       stockLabel="Skladem, ihned k odběru"
+      cartItem={{
+        productId: "sloupek-jekl-zinc",
+        name: title,
+        image: imgSrc,
+        href: "/SloupkyZinkoveJekl",
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},-`,
+        options: [{ name: "Výška", value: `${selectedHeight} mm` }],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={

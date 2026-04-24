@@ -17,24 +17,39 @@ function Sloupky() {
           <p className="pletiva-description">
             Dodáváme všechna nezbytná příslušenství pro stavbu plotu. Napínací
             dráty, napínáky, vázací dráty, vzpěry, čepičky, objímky, stínící
-            tkaniny i bezpečnostní prvky jako jsou ostnaté dráty. Najdeš tu{" "}
-            <Link href="/SloupkyProduct" className="category-inline-link">
+            tkaniny i bezpečnostní prvky jako jsou ostnaté dráty. Naleznete zde{" "}
+            <Link
+              href="/SloupkyProduct"
+              className="category-inline-link category-inline-link--hero"
+            >
               sloupky JEKL PVC
             </Link>
             ,{" "}
-            <Link href="/SloupkyZinkoveJekl" className="category-inline-link">
+            <Link
+              href="/SloupkyZinkoveJekl"
+              className="category-inline-link category-inline-link--hero"
+            >
               sloupky JEKL zinkové
             </Link>
             ,{" "}
-            <Link href="/Objimky" className="category-inline-link">
+            <Link
+              href="/Objimky"
+              className="category-inline-link category-inline-link--hero"
+            >
               objímky
             </Link>
             ,{" "}
-            <Link href="/NapinaciDraty" className="category-inline-link">
+            <Link
+              href="/NapinaciDraty"
+              className="category-inline-link category-inline-link--hero"
+            >
               napínací dráty
             </Link>{" "}
             i{" "}
-            <Link href="/VazaciDraty" className="category-inline-link">
+            <Link
+              href="/VazaciDraty"
+              className="category-inline-link category-inline-link--hero"
+            >
               vázací dráty
             </Link>
             .
@@ -42,7 +57,10 @@ function Sloupky() {
           <ul className="pletiva-advantages">
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <Link href="/SloupkyProduct" className="category-inline-link">
+              <Link
+                href="/SloupkyProduct"
+                className="category-inline-link category-inline-link--plain"
+              >
                 Sloupky pro ploty z pletiva i panelů
               </Link>
             </li>
@@ -54,7 +72,10 @@ function Sloupky() {
 
             <li className="pletiva-advantages-item">
               <RiCheckboxCircleLine />
-              <Link href="/NapinaciDraty" className="category-inline-link">
+              <Link
+                href="/NapinaciDraty"
+                className="category-inline-link category-inline-link--plain"
+              >
                 Napínací dráty, vázací dráty, objímky, čepičky
               </Link>
             </li>

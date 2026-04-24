@@ -22,6 +22,16 @@ const DeskyChange = ({ children }: DeskyChangeProps) => {
       title="Podhrabová betonová deska"
       priceLabel={`${prices[selectedSize]},-`}
       imageSrc={`${basePath}/deskyy/deskybeton.webp`}
+      cartItem={{
+        productId: "podhrabove-desky",
+        name: `Podhrabová betonová deska ${selectedSize} m`,
+        image: `${basePath}/deskyy/deskybeton.webp`,
+        href: "/DeskyPodhrabove",
+        unitPrice: prices[selectedSize],
+        unitLabel: `${prices[selectedSize]},-`,
+        options: [{ name: "Rozměr", value: `${selectedSize} m` }],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={

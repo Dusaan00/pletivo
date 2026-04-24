@@ -45,6 +45,23 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
       titleAs={titleAs}
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
+      stockLabel="Skladem od 4.5.2026"
+      stockClassName="stock-status available-from-stock"
+      orderDisabled
+      orderLabel="Dostupné od 4.5.2026"
+      cartItem={{
+        productId: "pletivo-pvc",
+        name: title,
+        image: imgSrc,
+        href: "/PletivaPVC",
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},-`,
+        options: [
+          { name: "Výška", value: `${selectedHeight} m` },
+          { name: "Barva", value: selectedColor },
+        ],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={

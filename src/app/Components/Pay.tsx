@@ -5,11 +5,11 @@ function Pay() {
   return (
     <section className="section-pay">
       <div className="pay-container">
-        <h2 className="pay-h2">Jak u nás můžete materiál objednat?</h2>
+        <h2 className="pay-h2">Další formy nákupu:</h2>
         <p className="exp">
-          Na dokončení kompletního online eshopu a plateb momentálně pracujeme,
-          zatím prosím pro objednávky zboží využijte kteroukoliv z následujících
-          možností:
+          Vybrané skladové produkty objednáte online přes košík a jednoduchou
+          pokladnu. U větších, atypických nebo montážních zakázek můžete zároveň
+          využít i některou z následujících přímých cest:
         </p>
         <ul className="pay-list">
           <li>

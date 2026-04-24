@@ -11,6 +11,7 @@ import "../app/styles/globals.scss";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Scroller from "./Components/Scroller";
+import { CartProvider } from "./Components/CartProvider";
 import Head from "next/head";
 
 const josefinSans = Josefin_Sans({
@@ -270,10 +271,12 @@ export default function RootLayout({
         />
       </Head>
       <body>
-        <Scroller />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <CartProvider>
+          <Scroller />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

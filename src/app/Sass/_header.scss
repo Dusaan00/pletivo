@@ -3,24 +3,29 @@
 .header {
   font-size: 1.4rem;
   font-family: "Josefin Sans", sans-serif;
-  height: 5.5rem;
   color: black;
   font-weight: 400;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
+  width: 100%;
   background-color: #f7f7f7;
   border-bottom: 0.75px solid #555;
   z-index: 6666;
 }
 
-.heeding {
-  font-size: clamp(1.35rem, 2.5vw, 2.7rem);
-  margin: 0;
-  margin-right: -2rem;
-  margin-bottom: 5px;
+.header__inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0.85rem clamp(0.75rem, 2vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(0.75rem, 1.6vw, 1.5rem);
+}
+
+.header__brand-link {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-right: -0.45rem;
 }
 
 .plot-title {
@@ -36,154 +41,180 @@
 .container-ploty {
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: clamp(0.45rem, 1.2vw, 1.1rem);
+  min-width: 0;
+}
+
+.header__nav-slot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  margin-left: auto;
 }
 
 .logoo {
-  height: 3.25rem;
+  height: clamp(2rem, 3.2vw, 3.25rem);
   width: auto;
+}
+
+.heeding {
+  font-size: clamp(1.35rem, 2.2vw, 2.7rem);
+  margin: 0;
+  line-height: 1;
+  flex: 0 1 auto;
+}
+
+.heeding-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .heeder__link {
   color: #333;
-}
-
-.heeder__link {
-  margin-left: 3rem;
-  margin-right: -8px;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  text-align: center;
-  padding: 1.5rem 0.5rem;
-  display: flex;
+  padding: 0.25rem 0.1rem;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.35rem;
   transition: all 0.2s;
   white-space: nowrap;
-
-  @media (max-width: 950px) {
-    font-size: 1rem;
-    padding: 1rem 0.3rem;
-  }
-
-  @media (max-width: 900px) {
-    margin-left: 1.5rem;
-
-    .user-nav__box--link::after {
-      display: none;
-    }
-
-    .user-nav__box--link:hover::after {
-      background-color: transparent;
-    }
-  }
+  text-decoration: none;
 }
 
 .heeder__icon {
   width: clamp(0.9rem, 2vw, 2.15rem);
   height: clamp(0.9rem, 2vw, 2.15rem);
   fill: #333;
-  margin-right: 0.2rem;
+  margin-right: 0;
+  flex-shrink: 0;
 }
 
 .heeder__link .phone {
   color: black;
-  font-size: clamp(1rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
   white-space: nowrap;
-  margin-right: -0.4rem;
+  margin: 0;
 }
 
 .homee {
   font-family: "Josefin Sans", sans-serif;
-  display: flex;
-  align-items: center; // Zarovná ikonku a text svisle na střed
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 0.5rem; // Vytvoří mezeru mezi ikonkou a textem (místo marginů)
-
-  padding: 0 0.75rem;
-  margin-left: 1.5rem;
-
-  // Důležité pro to, aby byly u sebe
+  gap: 0.5rem;
+  padding: 0.25rem 0.1rem;
   width: auto;
   flex-grow: 0;
-  text-decoration: none; // Odstraní podtržení odkazu
+  text-decoration: none;
   height: auto;
   align-self: center;
 
-  // Oprava odsazení pro menší obrazovky
-  @media (max-width: 950px) {
-    font-size: 1rem;
-    padding: 1rem 0.3rem;
-  }
-
-  @media (max-width: 900px) {
-    margin-left: 1.5rem;
-    padding: 0 1.5rem;
-  }
-
-  @media (max-width: 1050px) {
-    padding: 0 1rem;
-  }
-
-  // --- STYLY PRO IKONU (Zanořené, aby se určitě aplikovaly) ---
   .home-icon {
     display: block;
     flex-shrink: 0;
     width: clamp(0.9rem, 2vw, 2.15rem);
     height: clamp(0.9rem, 2vw, 2.15rem);
     fill: #333;
-    transition: all 0.2s; // Přidá plynulost při hoveru
+    transition: all 0.2s;
   }
 
-  // --- STYLY PRO TEXT DOMŮ ---
   .domuu {
-    font-size: clamp(1rem, 2vw, 1.95rem);
-    margin: 0; // Nulujeme marginy! (gap v .homee se postará o mezeru)
+    font-size: clamp(1rem, 1.7vw, 1.95rem);
+    margin: 0;
     padding: 0;
     line-height: 1;
-    color: black; // Pro jistotu definujeme barvu
+    color: black;
   }
 
-  // Hover efekt pro celý odkaz (volitelné)
   &:hover {
     .home-icon {
-      fill: #28b485; // Změna barvy ikonky při najetí (např. na zelenou)
+      fill: #28b485;
     }
     .domuu {
-      color: #28b485; // Změna barvy textu
+      color: #28b485;
     }
   }
 }
 
-.user-nav {
-  align-self: stretch;
-  font-size: clamp(1rem, 1.5vw, 1.8rem);
-  margin-right: -80px;
+.cart-entry {
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.1rem;
+  margin-left: 0;
+  text-decoration: none;
+  height: auto;
+  align-self: center;
+  color: #333;
+}
 
-  & > * {
-    padding: 0 2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
+.cart-entry__icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-entry__icon {
+  display: block;
+  flex-shrink: 0;
+  width: clamp(1.15rem, 2.2vw, 2.3rem);
+  height: clamp(1.15rem, 2.2vw, 2.3rem);
+  fill: currentColor;
+  transition: all 0.2s;
+}
+
+.cart-entry__label {
+  font-size: clamp(1.1rem, 2.1vw, 2.1rem);
+  margin: 0;
+  line-height: 1;
+  color: inherit;
+}
+
+.cart-entry__badge {
+  position: absolute;
+  top: -0.65rem;
+  right: -0.85rem;
+  min-width: 1.8rem;
+  height: 1.8rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background: #d4af37;
+  color: #111;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-entry:hover {
+  color: #28b485;
+}
+
+.user-nav {
+  font-size: clamp(1rem, 1.5vw, 1.8rem);
+  margin: 0;
 
   &__box {
     display: flex;
+    align-items: center;
+    gap: clamp(0.35rem, 1vw, 1.35rem);
+    margin: 0;
+    padding: 0;
 
     &--item {
-      margin-right: 20px;
       list-style-type: none;
-      height: 100%;
       display: flex;
       color: #333;
       position: relative;
-
-      &:hover {
-        .dropdown {
-          display: block;
-        }
-      }
     }
 
     &--link {
@@ -192,16 +223,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      height: 100%;
+      min-height: 3.2rem;
       position: relative;
       text-transform: uppercase;
       transition: 0.35s;
+      white-space: nowrap;
 
       &::after {
         content: "";
         position: absolute;
-        bottom: 11px;
+        bottom: 0.15rem;
         left: 0;
         right: 0;
         height: 2px;
@@ -214,6 +245,137 @@
       }
     }
   }
+}
+
+.hamburger-menu {
+  width: 4.4rem;
+  height: 4.4rem;
+  border: 0.75px solid #555;
+  background: transparent;
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  padding: 0;
+  color: #111;
+}
+
+.hamburger-menu span {
+  width: 2.1rem;
+  height: 2px;
+  background: currentColor;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.hamburger-menu.is-open span:nth-child(1) {
+  transform: translateY(0.65rem) rotate(45deg);
+}
+
+.hamburger-menu.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.is-open span:nth-child(3) {
+  transform: translateY(-0.65rem) rotate(-45deg);
+}
+
+.mobile-nav {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+
+.mobile-nav__panel {
+  display: grid;
+  gap: 0.2rem;
+  border-top: 0.75px solid rgba(85, 85, 85, 0.35);
+  padding-top: 0.85rem;
+}
+
+.mobile-nav__link,
+.mobile-nav__toggle {
+  gap: 1rem;
+}
+
+.mobile-nav__toggle span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mobile-nav__toggle.is-open {
+  .mobile-nav__arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.mobile-nav__toggle:hover .mobile-nav__arrow {
+  fill: #111;
+}
+
+.mobile-nav__toggle,
+.mobile-nav__link {
+  min-height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 0.25rem;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-nav__arrow {
+  width: 1.525rem;
+  height: 1.525rem;
+  fill: currentColor;
+  flex-shrink: 0;
+  margin-left: -0.85rem;
+  margin-top: -0.28rem;
+  transition: transform 0.2s ease;
+}
+
+.mobile-nav__submenu {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.2rem 0 0.5rem 1rem;
+}
+
+.mobile-nav__link--sub {
+  min-height: 3.6rem;
+  text-transform: none;
+}
+
+.header--tight .header__inner {
+  gap: 0.65rem;
+}
+
+.header--tight .container-ploty {
+  gap: 0.35rem 0.8rem;
+}
+
+.header--tight .logoo {
+  height: 1.9rem;
+}
+
+.header--tight .heeding {
+  font-size: clamp(1.2rem, 6vw, 1.7rem);
+}
+
+.header--tight .heeder__link .phone,
+.header--tight .homee .domuu,
+.header--tight .cart-entry__label {
+  font-size: clamp(1rem, 4.5vw, 1.25rem);
 }
 
 .dropdown-container {
@@ -311,114 +473,4 @@
 
 .inquiry-bold {
   font-weight: 700;
-}
-
-@media (max-width: 1273px) {
-  .user-nav {
-    margin-right: -40px;
-  }
-
-  .user-nav__box--item {
-    margin-right: 15px;
-  }
-}
-
-@media (max-width: 1131px) {
-  .heeder__link {
-    margin-left: 1.2rem;
-  }
-
-  .domuu {
-    margin-top: 4px;
-  }
-
-  .user-nav__box--item {
-    margin-right: 15px;
-  }
-}
-
-@media (max-width: 1070px) {
-  .header {
-    height: 12.5rem;
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-
-  .container-ploty {
-    margin-left: 0;
-  }
-
-  .heeder__link {
-    margin-left: 2.75rem;
-  }
-
-  .user-nav {
-    margin-right: 0;
-    margin-top: -0.5rem;
-  }
-
-  .user-nav__box {
-    justify-content: space-evenly;
-    width: 100%;
-  }
-
-  .user-nav__box--item {
-    margin-right: 5px;
-  }
-
-  .user-nav > * {
-    padding: 0 1rem;
-  }
-
-  .inquiry-bold {
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 900px) {
-  .header {
-    font-size: 1.2rem;
-    height: 4.2rem;
-    height: 12rem;
-  }
-
-  .logoo {
-    height: 2rem;
-  }
-
-  .user-nav {
-    margin-right: -20px;
-  }
-
-  .user-nav__box--item {
-    margin-right: 10px;
-  }
-
-  .user-nav > * {
-    padding: 0 1.5rem;
-  }
-}
-
-@media (max-width: 710px) {
-  .header {
-    height: 12rem;
-  }
-}
-
-@media (max-width: 536px) {
-  .header {
-    height: 10rem;
-  }
-}
-
-@media (max-width: 432px) {
-  .header {
-    height: 9rem;
-  }
-}
-
-@media (max-width: 330px) {
-  .phone {
-    font-size: 1.025rem !important;
-  }
 }

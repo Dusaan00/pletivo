@@ -19,6 +19,16 @@ const NapinaciChange = ({ children }: NapinaciChangeProps) => {
       priceLabel="255,-"
       imageSrc={`${basePath}/sloupky/dratzink.webp`}
       stockLabel="Skladem, ihned k odběru"
+      cartItem={{
+        productId: "napinaci-drat-zinkovy",
+        name: "Napínací drát zinkový",
+        image: `${basePath}/sloupky/dratzink.webp`,
+        href: "/NapinaciDratyZinkove",
+        unitPrice: 255,
+        unitLabel: "255,-",
+        options: [{ name: "Typ", value: "Zinkový" }],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={

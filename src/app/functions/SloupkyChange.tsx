@@ -40,6 +40,19 @@ const ColorChange = ({ children }: ColorChangeProps) => {
       title={title}
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
+      cartItem={{
+        productId: "sloupky-jekl",
+        name: title,
+        image: imgSrc,
+        href: "/SloupkyProduct",
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},-`,
+        options: [
+          { name: "Výška", value: `${selectedHeight} mm` },
+          { name: "Barva", value: selectedColor },
+        ],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={

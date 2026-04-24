@@ -47,14 +47,31 @@
 }
 
 .category-inline-link {
-  color: #1f6a37;
   font-weight: 700;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
-.category-inline-link:hover {
-  color: #144b25;
+.category-inline-link--hero {
+  background-image: linear-gradient(
+    to right,
+    $color-green-dark,
+    $color-primary-green
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.category-inline-link--hero:hover {
+  filter: brightness(0.9);
+}
+
+.category-inline-link--plain {
+  color: black;
+}
+
+.category-inline-link--plain:hover {
+  color: black;
 }
 
 .pletiva-advantages {
@@ -371,6 +388,18 @@
   font-size: 1.95rem;
   letter-spacing: 1px;
   padding-top: 1.5rem;
+}
+
+.pletivo-product-price .pletivo-product-stock--in-stock {
+  color: #00d874;
+}
+
+.pletivo-product-price .pletivo-product-stock--available-from {
+  color: #8f2d22;
+}
+
+.pletivo-product-price .pletivo-product-stock--inquiry {
+  color: #b8860b;
 }
 
 .btn-buy {

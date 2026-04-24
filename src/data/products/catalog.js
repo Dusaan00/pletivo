@@ -4,7 +4,7 @@ export const productCatalog = {
     slug: "pletivo-poplastovane-zelene-25m",
     category: "pletiva",
     ctaType: "buy",
-    availability: "in_stock",
+    availability: "available_from",
     priceValue: 1325,
     priceCurrency: "CZK",
     name: "Pletivo Poplastované Zelené 25m",
@@ -19,7 +19,7 @@ export const productCatalog = {
     slug: "pletivo-poplastovane-antracit-25m",
     category: "pletiva",
     ctaType: "buy",
-    availability: "in_stock",
+    availability: "available_from",
     priceValue: 1325,
     priceCurrency: "CZK",
     name: "Pletivo Poplastované Antracit 25m",
@@ -34,7 +34,7 @@ export const productCatalog = {
     slug: "pletivo-zinkove-bezinal-25m-20mm",
     category: "pletiva",
     ctaType: "buy",
-    availability: "in_stock",
+    availability: "available_from",
     priceValue: 1550,
     priceCurrency: "CZK",
     name: "Pletivo Zinkové Bezinal 25m, 2.0mm",
@@ -49,7 +49,7 @@ export const productCatalog = {
     slug: "pletivo-zinkove-bezinal-25m-22mm",
     category: "pletiva",
     ctaType: "buy",
-    availability: "in_stock",
+    availability: "available_from",
     priceValue: 1999,
     priceCurrency: "CZK",
     name: "Pletivo Zinkové Bezinal 25m, 2.2mm",
@@ -117,7 +117,7 @@ export const productCatalog = {
     description:
       "Panel 3D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely jsou velice odolné s dlouhou životností. Ideální pro oplocení např. v oblastech průmyslu.",
     price: "520,-",
-    link: "/PanelyZinkove",
+    link: "/PanelyZinkove3D",
   },
   "panel-2d-zinc": {
     id: "panel-2d-zinc",
@@ -132,7 +132,7 @@ export const productCatalog = {
     description:
       "Panel 2D zinkový v zinkové barvě, šířka 2.50m, dostupné výšky panelů od 1m do 2m. Zinek dodává ochranu navíc. Zinkové panely jsou velice odolné s dlouhou životností. Ideální pro oplocení např. v oblastech průmyslu.",
     price: "925,-",
-    link: "/PanelyZinkove",
+    link: "/PanelyZinkove2D",
   },
   "sloupek-jekl-zeleny": {
     id: "sloupek-jekl-zeleny",
@@ -493,8 +493,8 @@ export const productCatalog = {
     id: "Držáky na desky",
     slug: "drzaky-na-podhrabove-desky",
     category: "desky",
-    ctaType: "inquiry",
-    availability: "inquiry",
+    ctaType: "buy",
+    availability: "in_stock",
     priceValue: 55,
     priceCurrency: "CZK",
     name: "Držáky na podhrabové desky",
@@ -502,7 +502,7 @@ export const productCatalog = {
     description:
       "Držáky na podhrabové desky se instalují mezi plotové sloupky a do držáků se následně uloží podhrabové desky.",
     price: "55,-",
-    link: "/form",
+    link: "/DrzakyNaPodhraboveDesky",
   },
 };
 

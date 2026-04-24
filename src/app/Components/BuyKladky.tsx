@@ -12,7 +12,10 @@ function BuyKladky() {
           <ShopBreadcrumbs
             items={[
               { label: "Domů", href: "/" },
-              { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+              {
+                label: "Sloupky a příslušenství",
+                href: "/SloupkyPrislusenstvi",
+              },
               { label: "Napínací kladka PVC" },
             ]}
           />
@@ -27,9 +30,8 @@ function BuyKladky() {
               </p>
               <br />
               <p>
-                Pro nákup nás můžete kontaktovat přes kontaktní formulář, napsat
-                email, nebo nám zavolat. Na možnosti nákupu online momentálně
-                pracujeme.
+                Produkt můžete jednoduše vložit do košíku a objednávku dokončit
+                online. Případně nám můžete zavolat nebo napsat email.
               </p>
             </KladkyChange>
           </div>

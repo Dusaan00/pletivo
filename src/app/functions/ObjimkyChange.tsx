@@ -31,6 +31,16 @@ const ObjimkyChange = ({ children }: ObjimkyChangeProps) => {
       imageSrc={imgSrc}
       stockLabel={isInStock ? "Skladem, ihned k odběru" : "Momentálně nedostupné"}
       stockClassName={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}
+      cartItem={{
+        productId: "objimky-panelove",
+        name: title,
+        image: imgSrc,
+        href: "/Objimky",
+        unitPrice: 55,
+        unitLabel: "55,- / ks",
+        options: [{ name: "Barva", value: selectedColor }],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       orderDisabled={!isInStock}

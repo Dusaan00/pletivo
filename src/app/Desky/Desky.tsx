@@ -55,7 +55,14 @@ function Desky() {
               <p>
                 Držáky na podhrabové desky se dávají mezi sloupky a do těchto
                 držáků se následně jednoduše vloží podhrabové desky. Pokud
-                potřebujete sestavit celé oplocení, navazuje na ně i{" "}
+                potřebujete sestavit celé oplocení, podívejte se i na{" "}
+                <Link
+                  href="/DrzakyNaPodhraboveDesky"
+                  className="category-inline-link"
+                >
+                  detail držáků na podhrabové desky
+                </Link>{" "}
+                a navazující{" "}
                 <Link href="/SloupkyPrislusenstvi" className="category-inline-link">
                   příslušenství ke sloupkům a montáži
                 </Link>

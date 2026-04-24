@@ -25,9 +25,8 @@ function BuyPletivo() {
               </p>
               <br />
               <p>
-                Pro nákup nás můžete kontaktovat přes kontaktní formulář, napsat
-                email, nebo nám zavolat. Na možnosti nákupu online momentálně
-                pracujeme.
+                Produkt můžete jednoduše vložit do košíku a objednávku dokončit
+                online. Případně nám můžete zavolat nebo napsat email.
               </p>
             </PanelyChange>
           </div>

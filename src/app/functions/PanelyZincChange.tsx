@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import { basePath } from "../functions/Env";
 import {
   ProductDetailShell,
@@ -10,6 +11,9 @@ import {
 
 interface PanelyZincChangeProps {
   children: ReactNode;
+  variant: Variant;
+  pageHref: string;
+  variantRoutes?: Record<Variant, string>;
 }
 
 type Variant = "3D" | "2D";
@@ -46,9 +50,19 @@ const variants: Record<
   },
 };
 
-const PanelyZincChange = ({ children }: PanelyZincChangeProps) => {
-  const [variant, setVariant] = useState<Variant>("3D");
-  const [selectedHeight, setSelectedHeight] = useState("1030/2500");
+const PanelyZincChange = ({
+  children,
+  variant,
+  pageHref,
+  variantRoutes = {
+    "3D": "/PanelyZinkove3D",
+    "2D": "/PanelyZinkove2D",
+  },
+}: PanelyZincChangeProps) => {
+  const router = useRouter();
+  const [selectedHeight, setSelectedHeight] = useState(
+    Object.keys(variants[variant].heights)[0],
+  );
   const [quantity, setQuantity] = useState(1);
 
   const currentVariant = variants[variant];
@@ -58,8 +72,11 @@ const PanelyZincChange = ({ children }: PanelyZincChangeProps) => {
     Object.values(currentVariant.heights)[0];
 
   const handleVariantChange = (value: Variant) => {
-    setVariant(value);
-    setSelectedHeight(Object.keys(variants[value].heights)[0]);
+    if (value === variant) {
+      return;
+    }
+
+    router.push(variantRoutes[value]);
   };
 
   return (
@@ -68,6 +85,19 @@ const PanelyZincChange = ({ children }: PanelyZincChangeProps) => {
       priceLabel={`${currentPrice},-`}
       imageSrc={currentVariant.img}
       stockLabel="Skladem, ihned k odběru"
+      cartItem={{
+        productId: variant === "3D" ? "panel-3d-zinc" : "panel-2d-zinc",
+        name: currentVariant.title,
+        image: currentVariant.img,
+        href: pageHref,
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},-`,
+        options: [
+          { name: "Provedení", value: variant },
+          { name: "Výška", value: selectedHeight },
+        ],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={

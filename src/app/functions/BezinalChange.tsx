@@ -37,6 +37,23 @@ const BezinalChange = ({ children, titleAs = "h1" }: BezinalChangeProps) => {
       titleAs={titleAs}
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
+      stockLabel="Skladem od 4.5.2026"
+      stockClassName="stock-status available-from-stock"
+      orderDisabled
+      orderLabel="Dostupné od 4.5.2026"
+      cartItem={{
+        productId: "pletivo-bezinal",
+        name: `${title}, ${selectedDiameter} mm`,
+        image: imgSrc,
+        href: "/PletivaBezinal",
+        unitPrice: currentPrice,
+        unitLabel: `${currentPrice},-`,
+        options: [
+          { name: "Výška", value: `${selectedHeight} m` },
+          { name: "Průměr drátu", value: `${selectedDiameter} mm` },
+        ],
+        checkoutMode: "gateway-ready",
+      }}
       quantity={quantity}
       onQuantityChange={setQuantity}
       selectors={
