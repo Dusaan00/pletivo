@@ -422,6 +422,52 @@
   margin-top: 2rem;
 }
 
+.checkout-form__terms {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  padding: 1.2rem 1.4rem;
+  border: 1.5px solid rgba($color-green-dark, 0.22);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0.6rem 1.4rem rgba($color-green-dark, 0.05);
+}
+
+.checkout-form__terms input {
+  flex: 0 0 auto;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.1rem;
+  accent-color: $color-green-dark;
+  cursor: pointer;
+}
+
+.checkout-form__terms span {
+  font-size: 1.35rem;
+  line-height: 1.55;
+  color: #111;
+}
+
+.checkout-form__terms a {
+  color: $color-green-dark;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.checkout-form__terms strong {
+  color: #8f2d22;
+}
+
+.checkout-form__terms-error {
+  margin-top: 0.7rem;
+  color: #8f2d22;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .checkout-form__error {
   margin-top: 1.4rem;
   color: #8f2d22;

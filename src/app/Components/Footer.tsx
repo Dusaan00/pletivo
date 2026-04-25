@@ -81,6 +81,16 @@ function Footer() {
 
       <ul className="footer-legal">
         <li className="footer-legal__item">
+          <Link href="/ObchodniPodminky" className="footer-legal__link">
+            <svg className="footer-legal__icon">
+              <use
+                href={`${basePath}/sprite.svg#icon-policy-svgrepo-com`}
+              ></use>
+            </svg>
+            <p className="legal-text">Obchodní podmínky</p>
+          </Link>
+        </li>
+        <li className="footer-legal__item">
           <Link href="/PrivacyPolicy" className="footer-legal__link">
             <svg className="footer-legal__icon">
               <use

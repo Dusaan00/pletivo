@@ -17,6 +17,8 @@ const ORDER_LIMITS = {
   productText: { max: 160 },
 } as const;
 
+export const ORDER_TERMS_VERSION = "24.04.2026";
+
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const NAME_PATTERN = /^[\p{L}\p{M}][\p{L}\p{M}\s.'-]*$/u;
 const CITY_PATTERN = /^[\p{L}\p{M}][\p{L}\p{M}\s.'-]*$/u;
@@ -77,6 +79,8 @@ type ValidatedOrderPayload = {
     paymentProvider: string | null;
     paymentStatus: string;
     mode: string;
+    termsAccepted: true;
+    termsVersion: string;
   };
 };
 
@@ -291,6 +295,7 @@ export function validateOrderPayload(
     PAYMENT_METHODS,
     "bank_transfer",
   );
+  const termsAccepted = checkoutInput.termsAccepted === true;
   const deliveryAddressMode: "same_as_billing" | "different_address" =
     customerInput.deliveryAddressMode === "different_address"
       ? "different_address"
@@ -342,6 +347,10 @@ export function validateOrderPayload(
     CITY_PATTERN,
   );
   validatePostalCode(errors, customer.postalCode);
+
+  if (!termsAccepted) {
+    errors.push("Pro odeslání objednávky je nutné souhlasit s obchodními podmínkami.");
+  }
 
   if (customerInput.note && normalizeText(customerInput.note).length > ORDER_LIMITS.note.max) {
     errors.push("Poznámka k objednávce je příliš dlouhá.");
@@ -401,6 +410,9 @@ export function validateOrderPayload(
             : null,
         paymentStatus: normalizeText(checkoutInput.paymentStatus) || "pending",
         mode: normalizeText(checkoutInput.mode) || "manual",
+        termsAccepted: true,
+        termsVersion:
+          normalizeText(checkoutInput.termsVersion) || ORDER_TERMS_VERSION,
       },
     },
   };

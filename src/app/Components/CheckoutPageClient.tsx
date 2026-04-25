@@ -12,6 +12,7 @@ import {
 } from "../../lib/checkout";
 import {
   checkoutValidationAttributes,
+  ORDER_TERMS_VERSION,
   validateOrderPayload,
 } from "../../lib/orderValidation";
 
@@ -31,6 +32,7 @@ type CheckoutFormState = {
   deliveryPostalCode: string;
   paymentMethod: keyof typeof PAYMENT_METHODS;
   note: string;
+  termsAccepted: boolean;
 };
 
 const initialState: CheckoutFormState = {
@@ -49,6 +51,7 @@ const initialState: CheckoutFormState = {
   deliveryPostalCode: "",
   paymentMethod: DEFAULT_PAYMENT_METHOD,
   note: "",
+  termsAccepted: false,
 };
 
 function CheckoutPageClient() {
@@ -57,6 +60,7 @@ function CheckoutPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successNumber, setSuccessNumber] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [showTermsError, setShowTermsError] = useState(false);
   const isDeliverySelected = formState.shippingMethod === "delivery_arranged";
   const usesDifferentDeliveryAddress =
     isDeliverySelected && formState.deliveryAddressMode === "different_address";
@@ -89,6 +93,13 @@ function CheckoutPageClient() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrorMessage("");
+    setShowTermsError(false);
+
+    if (!formState.termsAccepted) {
+      setShowTermsError(true);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -108,17 +119,23 @@ function CheckoutPageClient() {
           subtotal,
           currency: "CZK",
         },
-        checkout: createCheckoutState({
-          items,
-          shippingMethod: formState.shippingMethod,
-          paymentMethod: formState.paymentMethod,
-          paymentProvider: null,
-        }),
+        checkout: {
+          ...createCheckoutState({
+            items,
+            shippingMethod: formState.shippingMethod,
+            paymentMethod: formState.paymentMethod,
+            paymentProvider: null,
+          }),
+          termsAccepted: formState.termsAccepted,
+          termsVersion: ORDER_TERMS_VERSION,
+        },
       };
       const validation = validateOrderPayload(orderPayload);
 
       if (!validation.success) {
-        throw new Error(validation.errors[0] || "Zkontrolujte prosím údaje v objednávce.");
+        throw new Error(
+          validation.errors[0] || "Zkontrolujte prosím údaje v objednávce.",
+        );
       }
 
       const response = await fetch("/api/order", {
@@ -138,6 +155,7 @@ function CheckoutPageClient() {
       clearCart();
       setSuccessNumber(data.orderNumber);
       setFormState(initialState);
+      setShowTermsError(false);
     } catch (error) {
       setErrorMessage(
         error instanceof Error
@@ -519,6 +537,49 @@ function CheckoutPageClient() {
                 }
               />
             </label>
+
+            <label className="checkout-form__terms">
+              <input
+                type="checkbox"
+                name="termsAccepted"
+                checked={formState.termsAccepted}
+                onChange={(event) => {
+                  if (event.target.checked) {
+                    setShowTermsError(false);
+                  }
+
+                  setFormState((current) => ({
+                    ...current,
+                    termsAccepted: event.target.checked,
+                  }));
+                }}
+              />
+              <span>
+                <strong aria-hidden="true">*</strong>
+                Souhlasím s{" "}
+                <Link
+                  href="/ObchodniPodminky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  obchodními podmínkami
+                </Link>{" "}
+                a beru na vědomí{" "}
+                <Link
+                  href="/PrivacyPolicy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  zásady ochrany osobních údajů
+                </Link>
+                .
+              </span>
+            </label>
+            {showTermsError ? (
+              <p className="checkout-form__terms-error">
+                * Zaškrtněte prosím souhlas s obchodními podmínkami.
+              </p>
+            ) : null}
 
             {errorMessage && (
               <p className="checkout-form__error">{errorMessage}</p>

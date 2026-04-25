@@ -99,6 +99,7 @@ export async function POST(req) {
         <p><strong>Platba:</strong> ${escapeHtml(getPaymentMethodLabel(normalizedCheckout.paymentMethod))}</p>
         <p><strong>Režim checkoutu:</strong> ${escapeHtml(normalizedCheckout.mode)}</p>
         <p><strong>Platební stav:</strong> ${escapeHtml(normalizedCheckout.paymentStatus)}</p>
+        <p><strong>Souhlas s obchodními podmínkami:</strong> ano (${escapeHtml(checkout.termsVersion)})</p>
         <p><strong>Připraveno na platební bránu:</strong> ${normalizedCheckout.supportsGateway ? "ano" : "částečně"}</p>
         <p><strong>Poznámka:</strong> ${escapeHtml(customer.note || "Bez poznámky")}</p>
         <h3>Položky objednávky</h3>
@@ -130,6 +131,10 @@ export async function POST(req) {
         <p><strong>Zvolená doprava:</strong> ${escapeHtml(getShippingMethodLabel(normalizedCheckout.shippingMethod))}</p>
         <p><strong>Zvolená platba:</strong> ${escapeHtml(getPaymentMethodLabel(normalizedCheckout.paymentMethod))}</p>
         <p><strong>Mezisoučet objednávky:</strong> ${formatPrice(cart.subtotal || 0)}</p>
+        <p>
+          Objednávka byla odeslána se souhlasem s obchodními podmínkami ve znění
+          účinném ke dni ${escapeHtml(checkout.termsVersion)}.
+        </p>
         <p>
           Pokud bude potřeba cokoli upřesnit, ozveme se na váš uvedený email nebo
           telefon.
