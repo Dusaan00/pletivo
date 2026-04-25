@@ -6,167 +6,191 @@ function PrivacyPolicy() {
       <div className="privacy-policy-intro">
         <h1 className="privacy-policy-intro-title">Ochrana osobních údajů</h1>
         <p className="pgraph">
-          Ochrana osobních údajů chrání vaše data a soukromí. Ochrana osobních
-          údajů je pro nás na prvním místě, proto jsou vaše osobní údaje použity
-          v souladu s právními předpisy ochrany osobních údajů. Správcem
-          osobních údajů je{" "}
-          <strong>
-            Pletivo Grygov s.r.o., Za tratí 255, Grygov 783 73,IČO 09109773, DIČ
-            CZ09109773
-          </strong>
-          . Osobní údaje zpracováváme za účelem vyřízení poptávek, objednávek a
-          reklamací.
+          V tomto dokumentu najdete informace o tom, jak společnost Pletivo
+          Grygov s.r.o. zpracovává osobní údaje návštěvníků webu, zákazníků a
+          osob, které nás kontaktují prostřednictvím poptávkového nebo
+          objednávkového formuláře.
         </p>
       </div>
 
       <div className="privacy-policy-basic">
-        <h2 className="privacy-policy-basic-title">I. Základní ustanovení</h2>
+        <h2 className="privacy-policy-basic-title">I. Správce osobních údajů</h2>
         <p className="pgraph">
-          Správcem osobních údajů podle čl. 4 bod 7 nařízení Evropského
-          parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti
-          se zpracováním osobních údajů a o volném pohybu těchto údajů (dále
-          jen: <strong>„GDPR”</strong>) je Pletivo Grygov s.r.o., Za tratí 255,
-          Grygov 783 73,IČO 09109773, DIČ CZ09109773 (dále jen: „správce“).
-          <br />
+          Správcem osobních údajů je <strong>Pletivo Grygov s.r.o.</strong>, se
+          sídlem <strong>Za Tratí 255, Grygov 783 73</strong>, IČO:{" "}
+          <strong>09109773</strong>, DIČ: <strong>CZ09109773</strong>.
         </p>
         <p className="pgraph">
-          <u>Kontaktní údaje správce:</u> <br />
-          <strong>
-            Pletivo Grygov s.r.o. <br />
-            Za Tratí 255, Grygov 783 73 <br />
-            IČO: 09109773, DIČ: CZ09109773 <br />
-            plotygrygov@gmail.com <br />
-            +420 608 474 760 <br />
-          </strong>
+          Kontaktní údaje správce: email{" "}
+          <strong>plotygrygov@gmail.com</strong>, telefon{" "}
+          <strong>+420 608 474 760</strong>.
         </p>
         <p className="pgraph">
-          Osobními údaji se rozumí veškeré informace o identifikované nebo
-          identifikovatelné fyzické osobě; identifikovatelnou fyzickou osobou je
-          fyzická osoba, kterou lze přímo či nepřímo identifikovat, zejména
-          odkazem na určitý identifikátor, například jméno, identifikační číslo,
-          lokační údaje, síťový identifikátor nebo na jeden či více zvláštních
-          prvků fyzické, fyziologické, genetické, psychické, ekonomické,
-          kulturní nebo společenské identity této fyzické osoby. Správce
-          nejmenoval pověřence pro ochranu osobních údajů.
+          Správce nejmenoval pověřence pro ochranu osobních údajů.
         </p>
       </div>
 
       <div className="privacy-policy-terms">
         <h2 className="privacy-policy-terms-title">
-          II. Zdroje a kategorie zpracovávaných osobních údajů
+          II. Jaké osobní údaje zpracováváme
         </h2>
         <p className="pgraph">
-          Správce zpracovává osobní údaje, které jste mu poskytl/a nebo osobní
-          údaje, které správce získal na základě plnění Vaší objednávky. Správce
-          zpracovává Vaše identifikační a kontaktní údaje a údaje nezbytné pro
-          plnění smlouvy.
+          Zpracováváme osobní údaje, které nám sami poskytnete zejména při
+          odeslání poptávky, objednávky nebo při další komunikaci. Jedná se
+          především o jméno a příjmení, email, telefon, fakturační a doručovací
+          adresu, název firmy, IČO, obsah zprávy, poznámku k objednávce,
+          objednané zboží a případné fotografie nebo obrázky přiložené k
+          poptávce.
+        </p>
+        <p className="pgraph">
+          Dále můžeme zpracovávat technické údaje nezbytné pro bezpečný provoz
+          webu a doručení elektronické komunikace.
         </p>
       </div>
 
       <div className="privacy-policy-purposes">
         <h2 className="privacy-policy-purposes-title">
-          III. Zákonný důvod a účel zpracování osobních údajů
+          III. Účely a právní základy zpracování
         </h2>
         <p className="pgraph">
-          Zákonným důvodem zpracování osobních údajů je plnění smlouvy mezi Vámi
-          a správcem podle čl. 6 odst. 1 písm. b, GDPR, oprávněný zájem správce
-          na poskytování přímého marketingu (zejména pro zasílání obchodních
-          sdělení a newsletterů) podle čl. 6 odst. 1 písm. f, GDPR, <br />
-          Váš souhlas se zpracováním pro účely poskytování přímého marketingu
-          (zejména pro zasílání obchodních sdělení) podle čl. 6 odst. 1 písm. a,
-          GDPR ve spojení s § 7 odst. 2 zákona č. 480/2004 Sb., o některých
-          službách informační společnosti v případě, že nedošlo k objednávce
-          zboží nebo služby.
+          Osobní údaje zpracováváme za účelem vyřízení poptávky, přípravy
+          nabídky, zpracování objednávky, dodání zboží, komunikace se
+          zákazníkem, vyřízení reklamace a plnění povinností podle právních
+          předpisů.
         </p>
         <p className="pgraph">
-          Účelem zpracování osobních údajů je vyřízení Vaší objednávky a výkon
-          práv a povinností vyplývajících ze smluvního vztahu mezi Vámi a
-          správcem; při objednávce jsou vyžadovány osobní údaje, které jsou
-          nutné pro úspěšné vyřízení objednávky (jméno a adresa, kontakt),
-          poskytnutí osobních údajů je nutným požadavkem pro uzavření a plnění
-          smlouvy, bez poskytnutí osobních údajů není možné smlouvu uzavřít či
-          jí ze strany správce plnit, dále zasílání obchodních sdělení a činění
-          dalších marketingových aktivit. Ze strany správce dochází k
-          automatickému individuálnímu rozhodování ve smyslu čl. 22 GDPR. S
-          takovým zpracováním jste poskytl/a svůj výslovný souhlas.
+          Právním základem zpracování je zejména jednání o uzavření smlouvy a
+          plnění smlouvy, plnění právních povinností, například účetních a
+          daňových povinností, a oprávněný zájem správce na ochraně právních
+          nároků, bezpečnosti webu a běžné komunikaci se zákazníky.
+        </p>
+        <p className="pgraph">
+          Pokud bychom v budoucnu zpracovávali osobní údaje pro účely, které
+          vyžadují souhlas, například zasílání marketingových sdělení osobám,
+          u kterých k tomu nebude jiný zákonný důvod, vyžádáme si samostatný
+          souhlas. Souhlas je možné kdykoliv odvolat.
         </p>
       </div>
 
       <div className="privacy-policy-storage">
         <h2 className="privacy-policy-storage-title">
-          IV. Doba uchovávání údajů
+          IV. Doba uchovávání osobních údajů
         </h2>
         <p className="pgraph">
-          Správce uchovává osobní údaje po dobu nezbytnou k výkonu práv a
-          povinností vyplývajících ze smluvního vztahu mezi Vámi a správcem a
-          uplatňování nároků z těchto smluvních vztahů (po dobu 15 let od
-          ukončení smluvního vztahu), dále po dobu, než je odvolán souhlas se
-          zpracováním osobních údajů pro účely marketingu, nejdéle 10 let,
-          jsou-li osobní údaje zpracovávány na základě souhlasu. Po uplynutí
-          doby uchovávání osobních údajů správce osobní údaje vymaže.
+          Údaje z poptávek uchováváme po dobu nezbytnou k vyřízení poptávky a
+          následné komunikaci, zpravidla nejdéle 2 roky, pokud z komunikace
+          nevznikne objednávka nebo jiný smluvní vztah.
+        </p>
+        <p className="pgraph">
+          Údaje související s objednávkami, účetními a daňovými doklady
+          uchováváme po dobu stanovenou právními předpisy. Údaje potřebné k
+          ochraně právních nároků můžeme uchovávat po dobu nezbytnou k jejich
+          uplatnění nebo obraně.
         </p>
       </div>
 
       <div className="privacy-policy-suppliers">
         <h2 className="privacy-policy-suppliers-title">
-          V. Příjemci osobních údajů (subdodavatelé správce)
+          V. Příjemci a zpracovatelé osobních údajů
         </h2>
         <p className="pgraph">
-          Příjemci osobních údajů jsou osoby podílející se na dodání zboží /
-          služeb / realizaci plateb na základě smlouvy, dále jsou to osoby
-          zajišťující služby provozování e-shopu a další služby v souvislosti s
-          provozováním e-shopu a osoby zajišťující marketingové a účetní služby.
-          Správce má v úmyslu předat osobní údaje do třetí země (do země mimo
-          EU) nebo mezinárodní organizaci. Příjemci osobních údajů ve třetích
-          zemích jsou poskytovatelé mailingových služeb / cloudových služeb.
+          Osobní údaje nepředáváme třetím stranám pro jejich vlastní marketing.
+          K údajům však mohou mít přístup naši smluvní dodavatelé, kteří nám
+          pomáhají s provozem webu, hostingem, emailovou komunikací, IT
+          podporou, účetnictvím, dopravou zboží nebo právními a daňovými
+          službami.
+        </p>
+        <p className="pgraph">
+          Tito dodavatelé zpracovávají osobní údaje pouze v rozsahu nezbytném
+          pro poskytnutí dané služby a na základě odpovídajícího právního
+          titulu nebo smluvního vztahu.
         </p>
       </div>
 
       <div className="privacy-policy-rights">
-        <h2 className="privacy-policy-rights-title">VI. Vaše práva</h2>
+        <h2 className="privacy-policy-rights-title">
+          VI. Předávání údajů mimo Evropskou unii
+        </h2>
         <p className="pgraph">
-          Za podmínek stanovených v GDPR máte právo na přístup ke svým osobním
-          údajům dle čl. 15 GDPR, právo na opravu osobních údajů dle čl. 16
-          GDPR, popřípadě omezení zpracování dle čl. 18 GDPR, právo na výmaz
-          osobních údajů dle čl. 17 GDPR, právo vznést námitku proti zpracování
-          dle čl. 21 GDPR, právo na přenositelnost údajů dle čl. 20 GDPR, právo
-          odvolat souhlas se zpracováním písemně nebo elektronicky na adresu
-          nebo email správce uvedený v čl. I těchto podmínek. Dále máte právo
-          podat stížnost u Úřadu pro ochranu osobních údajů v případě, že se
-          domníváte, že bylo porušeno Vaší právo na ochranu osobních údajů.
+          Osobní údaje záměrně nepředáváme mimo Evropskou unii za účelem jejich
+          samostatného využití třetími stranami. Při používání běžných
+          technických služeb, například emailových, cloudových nebo hostingových
+          služeb, však může v některých případech dojít ke zpracování údajů
+          mimo EU. V takovém případě postupujeme pouze při splnění podmínek
+          GDPR, zejména na základě odpovídajících záruk podle právních předpisů.
         </p>
       </div>
 
       <div className="privacy-policy-security">
         <h2 className="privacy-policy-security-title">
-          VII. Podmínky zabezpečení osobních údajů
+          VII. Cookies a technické ukládání dat
         </h2>
         <p className="pgraph">
-          Správce prohlašuje, že přijal veškerá vhodná technická a organizační
-          opatření k zabezpečení osobních údajů. Správce přijal technická
-          opatření k zabezpečení datových úložišť a úložišť osobních údajů v
-          listinné podobě. Správce prohlašuje, že k osobním údajům mají přístup
-          pouze jím pověřené osoby.
+          Web aktuálně nepoužívá marketingové ani analytické cookies, které by
+          vyžadovaly samostatný souhlas návštěvníka. Pro funkčnost košíku může
+          web využívat lokální úložiště prohlížeče, aby si prohlížeč zapamatoval
+          vybrané položky v košíku. Tyto údaje slouží pouze k technické funkci
+          košíku.
+        </p>
+        <p className="pgraph">
+          Pokud bychom v budoucnu nasadili analytické nebo marketingové nástroje
+          vyžadující souhlas, zobrazíme návštěvníkům odpovídající cookie lištu a
+          umožníme volbu podle platných pravidel.
+        </p>
+      </div>
+
+      <div className="privacy-policy-rights">
+        <h2 className="privacy-policy-rights-title">VIII. Vaše práva</h2>
+        <p className="pgraph">
+          Máte právo požadovat přístup ke svým osobním údajům, jejich opravu,
+          výmaz, omezení zpracování, přenositelnost údajů a právo vznést námitku
+          proti zpracování založenému na oprávněném zájmu. Pokud je zpracování
+          založeno na souhlasu, máte právo souhlas kdykoliv odvolat, aniž by tím
+          byla dotčena zákonnost zpracování před jeho odvoláním.
+        </p>
+        <p className="pgraph">
+          Své právo můžete uplatnit prostřednictvím kontaktních údajů uvedených
+          v tomto dokumentu. Pokud máme pochybnosti o totožnosti žadatele,
+          můžeme požádat o doplnění informací nezbytných k ověření totožnosti.
+        </p>
+        <p className="pgraph">
+          Máte také právo podat stížnost u Úřadu pro ochranu osobních údajů,
+          Pplk. Sochora 27, 170 00 Praha 7, web: www.uoou.gov.cz.
+        </p>
+      </div>
+
+      <div className="privacy-policy-security">
+        <h2 className="privacy-policy-security-title">
+          IX. Zabezpečení osobních údajů
+        </h2>
+        <p className="pgraph">
+          Přijímáme přiměřená technická a organizační opatření k ochraně
+          osobních údajů před neoprávněným přístupem, ztrátou, zneužitím nebo
+          neoprávněným zveřejněním. Přístup k osobním údajům mají pouze osoby,
+          které jej potřebují pro vyřízení poptávky, objednávky, reklamace nebo
+          pro plnění zákonných povinností.
         </p>
       </div>
 
       <div className="privacy-policy-conclusions">
         <h2 className="privacy-policy-conclusions-title">
-          VIII. Závěrečná ustanovení
+          X. Automatizované rozhodování
         </h2>
         <p className="pgraph">
-          Odesláním poptávky z internetového poptávkového formuláře potvrzujete,
-          že jste seznámen/a s podmínkami ochrany osobních údajů a že je v celém
-          rozsahu přijímáte. S těmito podmínkami souhlasíte odesláním
-          internetového poptávkového formuláře. Odesláním potvrzujete, že jste
-          seznámen/a s podmínkami ochrany osobních údajů a že je v celém rozsahu
-          přijímáte. Správce je oprávněn tyto podmínky změnit. Novou verzi
-          podmínek ochrany osobních údajů zveřejní na svých internetových
-          stránkách a zároveň Vám zašle novou verzi těchto podmínek Vaši
-          e-mailovou adresu, kterou jste správci poskytl/a.
+          Při zpracování osobních údajů nedochází k automatizovanému
+          individuálnímu rozhodování ani profilování, které by pro Vás mělo
+          právní účinky nebo se Vás obdobným způsobem významně dotýkalo.
         </p>
+      </div>
+
+      <div className="privacy-policy-conclusions">
+        <h2 className="privacy-policy-conclusions-title">
+          XI. Závěrečná ustanovení
+        </h2>
         <p className="pgraph">
-          <strong>Tyto podmínky nabývají účinnosti dnem 09.06.2022</strong>
+          Tato pravidla ochrany osobních údajů jsou účinná ode dne 25.04.2026.
+          Správce je může v přiměřeném rozsahu aktualizovat, zejména při změně
+          webu, používaných služeb nebo právních požadavků.
         </p>
       </div>
     </div>

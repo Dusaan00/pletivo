@@ -16,10 +16,18 @@ const ALLOWED_IMAGE_TYPES = [
   "image/heic",
   "image/heif",
 ];
-const ALLOWED_IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif"];
+const ALLOWED_IMAGE_EXTENSIONS = [
+  ".jpg",
+  ".jpeg",
+  ".png",
+  ".webp",
+  ".heic",
+  ".heif",
+];
 const COMPRESSIBLE_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
-const formatMegabytes = (bytes) => `${Math.round((bytes / 1024 / 1024) * 10) / 10} MB`;
+const formatMegabytes = (bytes) =>
+  `${Math.round((bytes / 1024 / 1024) * 10) / 10} MB`;
 
 const getFileExtension = (fileName = "") =>
   fileName.slice(fileName.lastIndexOf(".")).toLowerCase();
@@ -30,7 +38,8 @@ const isAllowedImageFile = (file) =>
 
 const getCompressedFileName = (fileName = "obrazek") => {
   const extensionIndex = fileName.lastIndexOf(".");
-  const baseName = extensionIndex > 0 ? fileName.slice(0, extensionIndex) : fileName;
+  const baseName =
+    extensionIndex > 0 ? fileName.slice(0, extensionIndex) : fileName;
 
   return `${baseName}.jpg`;
 };
@@ -67,10 +76,14 @@ const compressImageFile = (file) => {
             return;
           }
 
-          const compressedFile = new File([blob], getCompressedFileName(file.name), {
-            type: "image/jpeg",
-            lastModified: Date.now(),
-          });
+          const compressedFile = new File(
+            [blob],
+            getCompressedFileName(file.name),
+            {
+              type: "image/jpeg",
+              lastModified: Date.now(),
+            },
+          );
 
           resolve(compressedFile.size < file.size ? compressedFile : file);
         },
@@ -230,8 +243,12 @@ function Form() {
       return;
     }
 
-    if (files.reduce((total, file) => total + file.size, 0) > MAX_TOTAL_IMAGE_SIZE) {
-      alert(`Celková velikost příloh může být maximálně ${formatMegabytes(MAX_TOTAL_IMAGE_SIZE)}.`);
+    if (
+      files.reduce((total, file) => total + file.size, 0) > MAX_TOTAL_IMAGE_SIZE
+    ) {
+      alert(
+        `Celková velikost příloh může být maximálně ${formatMegabytes(MAX_TOTAL_IMAGE_SIZE)}.`,
+      );
       return;
     }
 
@@ -271,7 +288,9 @@ function Form() {
       }
     } catch (error) {
       console.error("Fetch error:", error);
-      alert(error.message || "Došlo k chybě při odesílání. Zkuste to prosím znovu.");
+      alert(
+        error.message || "Došlo k chybě při odesílání. Zkuste to prosím znovu.",
+      );
     } finally {
       setIsSubmitting(false); // Vypneme loading stav
     }
@@ -483,13 +502,16 @@ function Form() {
                 disabled={isSubmitting || isProcessingImages}
                 style={{
                   opacity: isSubmitting || isProcessingImages ? 0.7 : 1,
-                  cursor: isSubmitting || isProcessingImages ? "not-allowed" : "pointer",
+                  cursor:
+                    isSubmitting || isProcessingImages
+                      ? "not-allowed"
+                      : "pointer",
                 }}
               />
             </div>
             <p className="privacy-text">
-              Vaše údaje nesdílíme s třetími stranami. Vaše údaje jsou použity
-              pouze pro zpracování odpovědi na Vaši poptávku.
+              Vaše údaje používáme pouze pro zpracování odpovědi na Vaši
+              poptávku.
               <br />
               <Link href="/PrivacyPolicy" className="privacy-link">
                 <u>Ochrana osobních údajů</u>
