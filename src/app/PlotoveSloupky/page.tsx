@@ -1,35 +1,43 @@
 import PlotoveSloupky from "../Components/PlotoveSloupky";
+import CategoryStructuredData from "../Components/CategoryStructuredData";
+import { buildCategoryMetadata } from "../functions/categoryPageMetadata";
+import { sloupkyplotoveProducts } from "../../data/products/collections";
 
-export const metadata = {
-  title: "Pletivo Grygov - Plotové Sloupky",
-  description:
-    "Pletiva skladem: poplastovaná pletiva v zelené a antracitové barvě, odolné pletivo Bezinal ze zinku a hliníku, a žeberkové pletivo. Pletivo od českého výrobce.",
-  keywords:
-    "plotové sloupky, pletivo, poplastované pletivo, pletivo Bezinal, žeberkové pletivo, drátěné pletivo",
-  openGraph: {
-    title: "Pletivo Grygov - Plotové Sloupky",
-    description:
-      "Kvalitní pletivo od českého výrobce: poplastované pletivo zelené/antracit, pletivo Bezinal a žeberková pletiva. Rychlé dodání.",
-    images: [{ url: "/opengraph-image.png" }], // Add a relevant image
-    url: "https://pletivogrygov.cz/Pletivo",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pletivo Grygov - Plotové Sloupky",
-    description:
-      "Pletivo skladem: poplastovaná pletiva, pletivo Bezinal a žeberková pletiva od českého výrobce.",
-    images: ["/opengraph-image.png"],
-  },
-  alternates: {
-    canonical: "https://pletivogrygov.cz/PlotoveSloupky",
-  },
-  robots: "index, follow",
-};
+const title = "Plotové sloupky PVC a vzpěry k pletivu | Pletivo Grygov";
+const description =
+  "Plotové sloupky PVC Ø48 a vzpěry PVC Ø38 v zelené a antracitové barvě pro stavbu pletivového plotu. Varianty podle výšky, ceny s DPH a objednávka online.";
+
+export const metadata = buildCategoryMetadata({
+  categoryId: "sloupky",
+  canonicalPath: "/PlotoveSloupky",
+  title,
+  description,
+  keywords: [
+    "plotové sloupky",
+    "sloupky k pletivu",
+    "sloupek PVC 48",
+    "vzpěra PVC 38",
+    "vzpěry k pletivu",
+    "pletivový plot",
+    "Pletivo Grygov",
+  ],
+});
 
 export default function Page() {
   return (
     <>
+      <CategoryStructuredData
+        categoryId="sloupky"
+        canonicalPath="/PlotoveSloupky"
+        title={title}
+        description={description}
+        products={sloupkyplotoveProducts}
+        breadcrumbItems={[
+          { label: "Domů", href: "/" },
+          { label: "Sloupky a příslušenství", href: "/SloupkyPrislusenstvi" },
+          { label: "Plotové sloupky a vzpěry" },
+        ]}
+      />
       <PlotoveSloupky />
     </>
   );

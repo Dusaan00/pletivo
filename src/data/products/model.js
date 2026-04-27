@@ -3,6 +3,30 @@ import {
   productCatalog as baseProductCatalog,
 } from "./catalog";
 
+const roundPostVariantIds = [
+  "sloupek-pvc-48-1500-zeleny",
+  "sloupek-pvc-48-1750-zeleny",
+  "sloupek-pvc-48-2000-zeleny",
+  "sloupek-pvc-48-2300-zeleny",
+  "sloupek-pvc-48-2500-zeleny",
+  "sloupek-pvc-48-1500-antracit",
+  "sloupek-pvc-48-1750-antracit",
+  "sloupek-pvc-48-2000-antracit",
+  "sloupek-pvc-48-2300-antracit",
+  "sloupek-pvc-48-2500-antracit",
+];
+
+const braceVariantIds = [
+  "vzpera-pvc-38-1750-zelena",
+  "vzpera-pvc-38-2000-zelena",
+  "vzpera-pvc-38-2300-zelena",
+  "vzpera-pvc-38-2500-zelena",
+  "vzpera-pvc-38-1750-antracit",
+  "vzpera-pvc-38-2000-antracit",
+  "vzpera-pvc-38-2300-antracit",
+  "vzpera-pvc-38-2500-antracit",
+];
+
 export const productCategories = {
   pletiva: {
     id: "pletiva",
@@ -158,30 +182,30 @@ export const productFamilies = {
   "sloupky-kulate": {
     id: "sloupky-kulate",
     slug: "plotove-sloupky-kulate",
-    name: "Plotové sloupky kulaté",
-    shortName: "Plotové sloupky",
+    name: "Plotové sloupky PVC Ø48",
+    shortName: "Plotové sloupky PVC",
     category: "sloupky",
     route: "/PlotoveSloupky",
     productKind: "variant-product",
-    buyingMode: "inquiry",
-    variantAxes: ["typ", "barva"],
-    variantIds: ["Sloupek antracit 48", "Sloupek Zink 48", "Sloupek Zeleny 48"],
-    defaultVariantId: "Sloupek Zeleny 48",
-    badges: ["Na poptávku"],
+    buyingMode: "buy",
+    variantAxes: ["barva", "vyska"],
+    variantIds: roundPostVariantIds,
+    defaultVariantId: "sloupek-pvc-48-1500-zeleny",
+    badges: ["Pletivové ploty"],
   },
   vzpery: {
     id: "vzpery",
     slug: "vzpery-k-plotum",
-    name: "Vzpěry k plotům",
-    shortName: "Vzpěry",
+    name: "Vzpěry PVC Ø38",
+    shortName: "Vzpěry PVC",
     category: "sloupky",
     route: "/PlotoveSloupky",
     productKind: "variant-product",
-    buyingMode: "inquiry",
-    variantAxes: ["barva"],
-    variantIds: ["Vzpera antracit 38", "Vzpera Zinkova 38", "Vzpera Zelena 38"],
-    defaultVariantId: "Vzpera Zelena 38",
-    badges: ["Na poptávku"],
+    buyingMode: "buy",
+    variantAxes: ["barva", "vyska"],
+    variantIds: braceVariantIds,
+    defaultVariantId: "vzpera-pvc-38-1750-zelena",
+    badges: ["Pletivové ploty"],
   },
   "objimky-panelove": {
     id: "objimky-panelove",
@@ -317,6 +341,44 @@ export const productFamilies = {
   },
 };
 
+const roundPostVariantOptions = Object.fromEntries(
+  roundPostVariantIds.map((id) => {
+    const parts = id.split("-");
+    const vyska = parts[3];
+    const barva = parts[4] === "antracit" ? "antracit" : "zelená";
+
+    return [
+      id,
+      {
+        barva,
+        vyska: `${vyska} mm`,
+        prumer: "48 mm",
+        material: "PVC",
+        typ: "sloupek",
+      },
+    ];
+  }),
+);
+
+const braceVariantOptions = Object.fromEntries(
+  braceVariantIds.map((id) => {
+    const parts = id.split("-");
+    const vyska = parts[3];
+    const barva = parts[4] === "antracit" ? "antracit" : "zelená";
+
+    return [
+      id,
+      {
+        barva,
+        vyska: `${vyska} mm`,
+        prumer: "38 mm",
+        material: "PVC",
+        typ: "vzpěra",
+      },
+    ];
+  }),
+);
+
 const productVariantOptions = {
   "pletivo-pvc-green": {
     barva: "zelená",
@@ -394,6 +456,8 @@ const productVariantOptions = {
     barva: "antracit",
     pouziti: "panely 3D",
   },
+  ...roundPostVariantOptions,
+  ...braceVariantOptions,
   "Sloupek antracit 48": {
     barva: "antracit",
     prumer: "48 mm",

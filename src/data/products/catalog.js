@@ -1,3 +1,94 @@
+const roundPostHeights = [
+  { value: "1500", price: 170 },
+  { value: "1750", price: 195 },
+  { value: "2000", price: 215 },
+  { value: "2300", price: 250 },
+  { value: "2500", price: 285 },
+];
+
+const braceHeights = [
+  { value: "1750", greenPrice: 185, anthracitePrice: 195 },
+  { value: "2000", greenPrice: 205, anthracitePrice: 205 },
+  { value: "2300", greenPrice: 230, anthracitePrice: 250 },
+  { value: "2500", greenPrice: 250, anthracitePrice: 250 },
+];
+
+const pvcColors = {
+  zeleny: {
+    label: "Zelený",
+    labelLower: "zelené",
+    slug: "zeleny",
+    braceSlug: "zelena",
+    image: "/sloupky/sloupekgreen.webp",
+    braceImage: "/sloupky/vzperagreen.webp",
+    priceOffset: 0,
+  },
+  antracit: {
+    label: "Antracit",
+    labelLower: "antracitové",
+    slug: "antracit",
+    braceSlug: "antracit",
+    image: "/sloupky/sloupekantracit.webp",
+    braceImage: "/sloupky/vzperantracit.webp",
+    priceOffset: 10,
+  },
+};
+
+const roundPostProducts = Object.fromEntries(
+  Object.entries(pvcColors).flatMap(([colorKey, color]) =>
+    roundPostHeights.map(({ value, price }) => {
+      const priceValue = price + color.priceOffset;
+      const id = `sloupek-pvc-48-${value}-${color.slug}`;
+
+      return [
+        id,
+        {
+          id,
+          slug: id,
+          category: "sloupky",
+          ctaType: "buy",
+          availability: "in_stock",
+          priceValue,
+          priceCurrency: "CZK",
+          name: `Sloupek PVC 48/${value} ${color.label} + Ucpávka`,
+          image: color.image,
+          description: `Plotový sloupek PVC ⌀48 mm, výška ${value} mm, ${color.labelLower} provedení. Vhodný pro stavbu pletivového plotu.`,
+          price: `${priceValue},-`,
+          link: `/PlotoveSloupky/${id}`,
+        },
+      ];
+    }),
+  ),
+);
+
+const braceProducts = Object.fromEntries(
+  Object.entries(pvcColors).flatMap(([colorKey, color]) =>
+    braceHeights.map(({ value, greenPrice, anthracitePrice }) => {
+      const priceValue =
+        colorKey === "antracit" ? anthracitePrice : greenPrice;
+      const id = `vzpera-pvc-38-${value}-${color.braceSlug}`;
+
+      return [
+        id,
+        {
+          id,
+          slug: id,
+          category: "sloupky",
+          ctaType: "buy",
+          availability: "in_stock",
+          priceValue,
+          priceCurrency: "CZK",
+          name: `Vzpěra PVC 38/${value} ${color.label} + krytka + objímka`,
+          image: color.braceImage,
+          description: `Plotová vzpěra PVC ⌀38 mm, délka ${value} mm, ${color.labelLower} provedení. Vhodná pro zpevnění pletivového plotu.`,
+          price: `${priceValue},-`,
+          link: `/PlotoveSloupky/${id}`,
+        },
+      ];
+    }),
+  ),
+);
+
 export const productCatalog = {
   "pletivo-pvc-green": {
     id: "pletivo-pvc-green",
@@ -207,6 +298,8 @@ export const productCatalog = {
     price: "55,-",
     link: "/Objimky",
   },
+  ...roundPostProducts,
+  ...braceProducts,
   "Sloupek antracit 48": {
     id: "Sloupek antracit 48",
     slug: "sloupek-antracit-48",

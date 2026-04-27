@@ -1,5 +1,72 @@
 import { allProducts, selectFamilyProducts, selectProducts } from "./model";
 
+const plotoveSloupkyOverviewProducts = selectProducts([
+  {
+    id: "sloupek-pvc-48-1500-zeleny",
+    name: "Sloupek PVC Ø48 zelený + ucpávka",
+    description:
+      "Plotový sloupek PVC Ø48 mm v zelené barvě. Dostupné výšky 1500 až 2500 mm.",
+    price: "od 170,-",
+    pricing: {
+      type: "fixed",
+      amount: 170,
+      currency: "CZK",
+      display: "od 170,-",
+      priceWithVatLabel: "od 170,- s DPH",
+    },
+    searchText:
+      "sloupek pvc 48 zelený ucpávka plotový sloupek pletivo 1500 1750 2000 2300 2500",
+  },
+  {
+    id: "sloupek-pvc-48-1500-antracit",
+    name: "Sloupek PVC Ø48 antracit + ucpávka",
+    description:
+      "Plotový sloupek PVC Ø48 mm v antracitové barvě. Dostupné výšky 1500 až 2500 mm.",
+    price: "od 180,-",
+    pricing: {
+      type: "fixed",
+      amount: 180,
+      currency: "CZK",
+      display: "od 180,-",
+      priceWithVatLabel: "od 180,- s DPH",
+    },
+    searchText:
+      "sloupek pvc 48 antracit ucpávka plotový sloupek pletivo 1500 1750 2000 2300 2500",
+  },
+  {
+    id: "vzpera-pvc-38-1750-zelena",
+    name: "Vzpěra PVC Ø38 zelená + krytka + objímka",
+    description:
+      "Plotová vzpěra PVC Ø38 mm v zelené barvě. Dostupné výšky 1750 až 2500 mm.",
+    price: "od 185,-",
+    pricing: {
+      type: "fixed",
+      amount: 185,
+      currency: "CZK",
+      display: "od 185,-",
+      priceWithVatLabel: "od 185,- s DPH",
+    },
+    searchText:
+      "vzpěra pvc 38 zelená krytka objímka pletivo 1750 2000 2300 2500",
+  },
+  {
+    id: "vzpera-pvc-38-1750-antracit",
+    name: "Vzpěra PVC Ø38 antracit + krytka + objímka",
+    description:
+      "Plotová vzpěra PVC Ø38 mm v antracitové barvě. Dostupné výšky 1750 až 2500 mm.",
+    price: "od 195,-",
+    pricing: {
+      type: "fixed",
+      amount: 195,
+      currency: "CZK",
+      display: "od 195,-",
+      priceWithVatLabel: "od 195,- s DPH",
+    },
+    searchText:
+      "vzpěra pvc 38 antracit krytka objímka pletivo 1750 2000 2300 2500",
+  },
+]);
+
 export const pletivaProducts = [
   ...selectFamilyProducts(["pletivo-pvc", "pletivo-bezinal", "pletivo-zeberkove"]),
   ...selectFamilyProducts([
@@ -22,7 +89,8 @@ export const deskyProducts = [
 ];
 
 export const sloupkyProducts = [
-  ...selectFamilyProducts(["sloupky-jekl", "sloupky-kulate", "vzpery"]),
+  ...selectFamilyProducts(["sloupky-jekl"]),
+  ...plotoveSloupkyOverviewProducts,
   ...selectFamilyProducts([
     "vazaci-drat",
     "napinaci-drat-pvc",
@@ -36,10 +104,10 @@ export const sloupkyProducts = [
 export const kladkyProducts = [
   ...selectFamilyProducts(["pletivo-pvc"]),
   ...selectProducts([
-    "Sloupek antracit 48",
-    "Vzpera antracit 38",
-    "Sloupek Zeleny 48",
-    "Vzpera Zelena 38",
+    "sloupek-pvc-48-2000-antracit",
+    "vzpera-pvc-38-2000-antracit",
+    "sloupek-pvc-48-2000-zeleny",
+    "vzpera-pvc-38-2000-zelena",
   ]),
   ...selectFamilyProducts(["podhrabove-desky", "drzaky-desek"]),
   ...selectFamilyProducts(["vazaci-drat", "napinaci-drat-pvc", "prichytky-sroubky"]),
@@ -53,22 +121,7 @@ export const kladkyznProducts = [
   ...selectFamilyProducts(["podhrabove-desky", "drzaky-desek"]),
 ];
 
-export const sloupkyplotoveProducts = selectProducts([
-  "Sloupek antracit 48",
-  "Vzpera antracit 38",
-  "Sloupek Zeleny 48",
-  "Vzpera Zelena 38",
-  {
-    id: "Sloupek Zink 48",
-    description:
-      "Sloupek zinkový, používá se při montážích plotů z pletiva bezinal.",
-  },
-  {
-    id: "Vzpera Zinkova 38",
-    description:
-      "Vzpěra zinková, používá se při montážích oplocení z pletiva bezinal.",
-  },
-]);
+export const sloupkyplotoveProducts = plotoveSloupkyOverviewProducts;
 
 export const prichytkyProducts = [
   ...selectFamilyProducts(["pletivo-pvc", "pletivo-bezinal"]),
@@ -87,28 +140,10 @@ export const recpletivaProducts = selectProducts([
   "Podhrabové desky 2.90m",
   "Držáky na desky",
   "vazaci-draty",
-  {
-    id: "Sloupek Zeleny 48",
-    name: "Plotový Sloupek zelený ⌀48mm",
-    description:
-      "Plotový sloupek zelený pvc, používá se při stavbě plotu z pletiva.",
-  },
-  {
-    id: "Vzpera Zelena 38",
-    description:
-      "Plotová vzpěra zelená pvc, používá se při stavbě plotu z pletiva.",
-  },
-  {
-    id: "Sloupek antracit 48",
-    name: "Plotový Sloupek antracit – ⌀48mm",
-    description:
-      "Plotový sloupek ⌀48mm v antracitové barvě. Pro montáže pletivových plotů.",
-  },
-  {
-    id: "Vzpera antracit 38",
-    description:
-      "Plotová vzpěra v barvě antracit. Pro montáže pletivových plotů.",
-  },
+  "sloupek-pvc-48-2000-zeleny",
+  "vzpera-pvc-38-2000-zelena",
+  "sloupek-pvc-48-2000-antracit",
+  "vzpera-pvc-38-2000-antracit",
   "napinak-zeleny-78",
   "napinak-zeleny-52",
   "napinak-zeleny-26",
@@ -179,10 +214,10 @@ export const recnapinaciProducts = selectProducts([
   "Podhrabové desky 2.50m",
   "Podhrabové desky 2.90m",
   "Držáky na desky",
-  "Sloupek antracit 48",
-  "Vzpera antracit 38",
-  "Sloupek Zeleny 48",
-  "Vzpera Zelena 38",
+  "sloupek-pvc-48-2000-antracit",
+  "vzpera-pvc-38-2000-antracit",
+  "sloupek-pvc-48-2000-zeleny",
+  "vzpera-pvc-38-2000-zelena",
   "vazaci-draty",
   "napinak-zeleny-78",
   "napinak-zeleny-52",
@@ -215,11 +250,11 @@ export const recvazaciProducts = selectProducts([
   "Podhrabové desky 2.50m",
   "Podhrabové desky 2.90m",
   "Držáky na desky",
-  "Sloupek antracit 48",
-  "Vzpera antracit 38",
+  "sloupek-pvc-48-2000-antracit",
+  "vzpera-pvc-38-2000-antracit",
   "Sloupek Zink 48",
-  "Sloupek Zeleny 48",
-  "Vzpera Zelena 38",
+  "sloupek-pvc-48-2000-zeleny",
+  "vzpera-pvc-38-2000-zelena",
   "Vzpera Zinkova 38",
   "napinak-zeleny-78",
   "napinak-zeleny-52",

@@ -11,10 +11,9 @@ function Sloupky() {
       <p>
         Následující sloupky a vzpěry se využívají jako plotové sloupky při
         stavbách oplocení z pleteného pletiva. Sloupky zakoupené u nás snadno
-        odolávají tlaku větru, dokážou tedy zajistit velice dlouhou trvanlivost
-        celého oplocení. U zinkových sloupků je jejich maximální odolnost
-        zajištěna procesem zinkování, který na nich vytváří silnou ochrannou
-        vrstvu, která tak sloupky chrání před korozí.
+        odolávají tlaku větru a pomáhají zajistit dlouhou trvanlivost celého
+        oplocení. V nabídce najdete zelené a antracitové PVC sloupky Ø48 i
+        odpovídající vzpěry Ø38 pro pletivové ploty.
       </p>
       <ProductSearch products={sloupkyplotoveProducts} />
     </section>
