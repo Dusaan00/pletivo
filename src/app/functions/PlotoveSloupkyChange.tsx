@@ -11,6 +11,7 @@ import {
 } from "../Components/ProductDetailShell";
 import { getFamilyProducts, getProductById } from "../../data/products/model";
 
+type ProductModelItem = NonNullable<ReturnType<typeof getProductById>>;
 type ProductKind = "sloupek" | "vzpěra";
 type Color = "zelená" | "antracit";
 
@@ -25,12 +26,12 @@ interface PlotoveSloupkyChangeProps {
   initialProductId: string;
 }
 
-const familyByKind = {
+const familyByKind: Record<ProductKind, string> = {
   sloupek: "sloupky-kulate",
   vzpěra: "vzpery",
 };
 
-const heightOptions = {
+const heightOptions: Record<ProductKind, string[]> = {
   sloupek: ["1500", "1750", "2000", "2300", "2500"],
   vzpěra: ["1750", "2000", "2300", "2500"],
 };
@@ -56,7 +57,7 @@ function getInitialOptions(productId: string): SelectedOptions {
 
 function findProduct({ kind, color, height }: SelectedOptions) {
   return getFamilyProducts(familyByKind[kind]).find(
-    (product) =>
+    (product: ProductModelItem) =>
       product.variantOptions?.typ === kind &&
       product.variantOptions?.barva === color &&
       product.variantOptions?.vyska === `${height} mm`,
