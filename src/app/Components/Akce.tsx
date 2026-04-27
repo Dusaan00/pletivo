@@ -6,7 +6,7 @@ function Akce() {
     <div className="akce">
       <h2 className="akce-heading">MOMENTÁLNĚ MÁME PANELY A SLOUPKY V AKCI!</h2>
       <Link href="/AkcePanely">
-        <p className="akce-cenik">Zobrazit ceník</p>
+        <p className="akce-cenik">Zobrazit akční nabídku</p>
       </Link>
     </div>
   );

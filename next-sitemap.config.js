@@ -3,9 +3,9 @@ module.exports = {
   siteUrl: "https://pletivogrygov.cz", // ✅ your real domain
   generateRobotsTxt: true, // ✅ also generates robots.txt
   outDir: "./public", // Output the sitemap in the public folder
-  exclude: ["/PanelyZinkove"],
+  exclude: ["/PanelyZinkove", "/Cenik"],
   transform: async (config, path) => {
-    if (path === "/PanelyZinkove") {
+    if (path === "/PanelyZinkove" || path === "/Cenik") {
       return null;
     }
 

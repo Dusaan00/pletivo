@@ -1,4 +1,4 @@
-import Cenik from "../Components/Cenik";
+import { notFound } from "next/navigation";
 
 export const metadata = {
   title: "Pletivo Grygov - Ceník",
@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://pletivogrygov.cz/Cenik",
   },
-  robots: "index, follow",
+  robots: "noindex, nofollow",
 };
 
 export default function Page() {
-  return <Cenik />;
+  notFound();
 }
