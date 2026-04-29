@@ -4,9 +4,19 @@ import { basePath } from "../functions/Env";
 import "../Sass/_pletiva.scss";
 
 function ProductCard({ product }) {
-  const primaryBadge = product.badges?.[0];
   const inventoryLabel = product.inventory?.label;
   const inventoryNote = product.inventory?.note;
+  const availabilityBadges = new Set([
+    inventoryLabel,
+    inventoryNote,
+    "Skladem",
+    "Skladem od 4.5.2026",
+    "Na poptávku",
+    "Na nezávaznou poptávku",
+  ]);
+  const primaryBadge =
+    product.badges?.find((badge) => badge && !availabilityBadges.has(badge)) ||
+    product.categoryMeta?.name;
   const inventoryClassName =
     product.inventory?.status === "in_stock"
       ? "pletivo-product-stock pletivo-product-stock--in-stock"
@@ -51,7 +61,9 @@ function ProductCard({ product }) {
               {inventoryNote}
             </p>
           )}
-          {primaryBadge && <p>{primaryBadge}</p>}
+          {primaryBadge && (
+            <p className="pletivo-product-badge">{primaryBadge}</p>
+          )}
         </div>
       </div>
 

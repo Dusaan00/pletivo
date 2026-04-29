@@ -291,7 +291,7 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0 0px 40px;
   border-radius: 5px;
   transition:
@@ -404,6 +404,10 @@
 
 .pletivo-product-price .pletivo-product-stock--inquiry {
   color: #b8860b;
+}
+
+.pletivo-product-price .pletivo-product-badge {
+  margin-top: 0.35rem;
 }
 
 .btn-buy {
