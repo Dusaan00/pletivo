@@ -69,6 +69,7 @@ const plotoveSloupkyOverviewProducts = selectProducts([
 
 export const pletivaProducts = [
   ...selectFamilyProducts(["pletivo-pvc", "pletivo-bezinal", "pletivo-zeberkove"]),
+  ...plotoveSloupkyOverviewProducts,
   ...selectFamilyProducts([
     "vazaci-drat",
     "napinaci-drat-pvc",
