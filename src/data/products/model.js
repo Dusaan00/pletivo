@@ -103,7 +103,7 @@ export const productFamilies = {
     variantAxes: ["barva"],
     variantIds: ["pletivo-pvc-green", "pletivo-pvc-antracit"],
     defaultVariantId: "pletivo-pvc-green",
-    badges: ["Český výrobce", "Skladem"],
+    badges: ["Vyrobeno u nás", "Skladem"],
   },
   "pletivo-bezinal": {
     id: "pletivo-bezinal",
@@ -117,7 +117,7 @@ export const productFamilies = {
     variantAxes: ["prumerDratu"],
     variantIds: ["pletivo-bezinal-20", "pletivo-bezinal-21"],
     defaultVariantId: "pletivo-bezinal-20",
-    badges: ["Odolné řešení", "Skladem"],
+    badges: ["Vyrobeno u nás", "Skladem"],
   },
   "pletivo-zeberkove": {
     id: "pletivo-zeberkove",
@@ -159,7 +159,7 @@ export const productFamilies = {
     variantAxes: ["typPanelu"],
     variantIds: ["panel-3d-zinc", "panel-2d-zinc"],
     defaultVariantId: "panel-3d-zinc",
-    badges: ["Průmyslové použití", "Skladem"],
+    badges: ["Průmyslové využití", "Skladem"],
   },
   "sloupky-jekl": {
     id: "sloupky-jekl",
@@ -267,7 +267,7 @@ export const productFamilies = {
     variantAxes: [],
     variantIds: ["napinak-zinc"],
     defaultVariantId: "napinak-zinc",
-    badges: ["Bezinal příslušenství"],
+    badges: ["Montážní příslušenství"],
   },
   "napinaci-kladka-pvc": {
     id: "napinaci-kladka-pvc",
@@ -295,7 +295,7 @@ export const productFamilies = {
     variantAxes: [],
     variantIds: ["kladka-zinc"],
     defaultVariantId: "kladka-zinc",
-    badges: ["Bezinal příslušenství"],
+    badges: ["Montážní příslušenství"],
   },
   "prichytky-sroubky": {
     id: "prichytky-sroubky",
