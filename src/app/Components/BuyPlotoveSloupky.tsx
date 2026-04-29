@@ -23,19 +23,7 @@ function BuyPlotoveSloupky({ initialProductId }: BuyPlotoveSloupkyProps) {
           ]}
         />
         <div className="section-spletivo-product">
-          <PlotoveSloupkyChange initialProductId={initialProductId}>
-            <p>
-              Plotové sloupky PVC Ø48 a vzpěry PVC Ø38 se používají při stavbě
-              pletivového plotu. Zvolená varianta se přizpůsobí podle typu
-              produktu, barvy a výšky, aby bylo možné objednat přesně potřebný
-              materiál.
-            </p>
-            <br />
-            <p>
-              Produkt můžete jednoduše vložit do košíku a objednávku dokončit
-              online. Případně nám můžete zavolat nebo napsat email.
-            </p>
-          </PlotoveSloupkyChange>
+          <PlotoveSloupkyChange initialProductId={initialProductId} />
         </div>
       </div>
     </section>

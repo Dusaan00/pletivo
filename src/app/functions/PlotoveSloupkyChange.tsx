@@ -22,7 +22,7 @@ type SelectedOptions = {
 };
 
 interface PlotoveSloupkyChangeProps {
-  children: ReactNode;
+  children?: ReactNode;
   initialProductId: string;
 }
 
@@ -66,6 +66,14 @@ function findProduct({ kind, color, height }: SelectedOptions) {
 
 function formatHeightLabel(height: string) {
   return `${(Number(height) / 1000).toFixed(2)}m`;
+}
+
+function getDetailDescription(kind: ProductKind) {
+  if (kind === "vzpěra") {
+    return "Vzpěry pvc Ø38 se používají při montážích oplocení z pleteného pletiva. Každá zakoupená vzpěra přijde i s kompletním spojovacím materiálem - krytkou a objímkou.";
+  }
+
+  return "Plotové sloupky pvc Ø48 se společně se vzpěrami používají při stavbě plotu z pletiva. Každý sloupek obdržíte i s ucpávkou.";
 }
 
 const PlotoveSloupkyChange = ({
@@ -201,6 +209,12 @@ const PlotoveSloupkyChange = ({
         </>
       }
     >
+      <p>{getDetailDescription(selectedOptions.kind)}</p>
+      <br />
+      <p>
+        Produkt můžete jednoduše vložit do košíku a objednávku dokončit online.
+        Případně nám můžete zavolat nebo napsat email.
+      </p>
       {children}
     </ProductDetailShell>
   );
