@@ -14,15 +14,15 @@ const DrzakyChange = ({ children }: DrzakyChangeProps) => {
   return (
     <ProductDetailShell
       title="Držáky na podhrabové desky"
-      priceLabel="55,- / ks"
+      priceLabel="80,- / ks"
       imageSrc={`${basePath}/deskyy/drzaky.webp`}
       cartItem={{
         productId: "drzaky-desek",
         name: "Držáky na podhrabové desky",
         image: `${basePath}/deskyy/drzaky.webp`,
         href: "/DrzakyNaPodhraboveDesky",
-        unitPrice: 55,
-        unitLabel: "55,- / ks",
+        unitPrice: 80,
+        unitLabel: "80,- / ks",
         options: [{ name: "Typ", value: "Držák na podhrabové desky" }],
         checkoutMode: "gateway-ready",
       }}
