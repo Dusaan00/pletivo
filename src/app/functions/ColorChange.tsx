@@ -32,7 +32,7 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
       ? "Pletivo Poplastované Zelené 25m"
       : "Pletivo Poplastované Antracit 25m";
   const selectedHeightLabel = `${selectedHeight} m`;
-  const title = `${baseTitle}, výška ${selectedHeightLabel}`;
+  const title = `${baseTitle}, ${selectedHeightLabel}`;
 
   const imgSrc =
     selectedColor === "zelená"

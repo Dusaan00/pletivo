@@ -29,7 +29,7 @@ const BezinalChange = ({ children, titleAs = "h1" }: BezinalChangeProps) => {
 
   const baseTitle = "Pletivo Zinkové Bezinal 25m";
   const selectedHeightLabel = `${selectedHeight} m`;
-  const title = `${baseTitle}, ${selectedDiameter} mm, výška ${selectedHeightLabel}`;
+  const title = `${baseTitle}, ${selectedHeightLabel}`;
   const imgSrc = `${basePath}/pletivaa/bezinai.webp`;
   const currentPrice = prices[selectedHeight]?.[selectedDiameter] || 1000;
 
