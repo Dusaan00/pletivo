@@ -27,10 +27,12 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
   const [selectedHeight, setSelectedHeight] = useState("1.00");
   const [quantity, setQuantity] = useState(1);
 
-  const title =
+  const baseTitle =
     selectedColor === "zelená"
       ? "Pletivo Poplastované Zelené 25m"
       : "Pletivo Poplastované Antracit 25m";
+  const selectedHeightLabel = `${selectedHeight} m`;
+  const title = `${baseTitle}, výška ${selectedHeightLabel}`;
 
   const imgSrc =
     selectedColor === "zelená"
@@ -64,7 +66,7 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
         unitPrice: currentPrice,
         unitLabel: `${currentPrice},-`,
         options: [
-          { name: "Výška", value: `${selectedHeight} m` },
+          { name: "Výška", value: selectedHeightLabel },
           { name: "Barva", value: selectedColor },
         ],
         checkoutMode: "gateway-ready",

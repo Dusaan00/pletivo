@@ -27,7 +27,9 @@ const BezinalChange = ({ children, titleAs = "h1" }: BezinalChangeProps) => {
   const [selectedDiameter, setSelectedDiameter] = useState("2.0");
   const [quantity, setQuantity] = useState(1);
 
-  const title = "Pletivo Zinkové Bezinal 25m";
+  const baseTitle = "Pletivo Zinkové Bezinal 25m";
+  const selectedHeightLabel = `${selectedHeight} m`;
+  const title = `${baseTitle}, ${selectedDiameter} mm, výška ${selectedHeightLabel}`;
   const imgSrc = `${basePath}/pletivaa/bezinai.webp`;
   const currentPrice = prices[selectedHeight]?.[selectedDiameter] || 1000;
 
@@ -43,13 +45,13 @@ const BezinalChange = ({ children, titleAs = "h1" }: BezinalChangeProps) => {
       orderLabel="Momentálně není skladem"
       cartItem={{
         productId: "pletivo-bezinal",
-        name: `${title}, ${selectedDiameter} mm`,
+        name: title,
         image: imgSrc,
         href: "/PletivaBezinal",
         unitPrice: currentPrice,
         unitLabel: `${currentPrice},-`,
         options: [
-          { name: "Výška", value: `${selectedHeight} m` },
+          { name: "Výška", value: selectedHeightLabel },
           { name: "Průměr drátu", value: `${selectedDiameter} mm` },
         ],
         checkoutMode: "gateway-ready",
