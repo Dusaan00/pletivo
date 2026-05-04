@@ -11,6 +11,7 @@ function ProductCard({ product }) {
     inventoryNote,
     "Skladem",
     "Skladem od 4.5.2026",
+    "Momentálně není skladem",
     "Na poptávku",
     "Na nezávaznou poptávku",
   ]);

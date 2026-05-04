@@ -37,11 +37,10 @@ const BezinalChange = ({ children, titleAs = "h1" }: BezinalChangeProps) => {
       titleAs={titleAs}
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
-      stockLabel="Skladem od 4.5.2026"
-      stockNote="Předobjednávka mailem a telefonicky"
+      stockLabel="Momentálně není skladem"
       stockClassName="stock-status available-from-stock"
       orderDisabled
-      orderLabel="Dostupné od 4.5.2026"
+      orderLabel="Momentálně není skladem"
       cartItem={{
         productId: "pletivo-bezinal",
         name: `${title}, ${selectedDiameter} mm`,

@@ -38,6 +38,7 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
       : `${basePath}/pletivaa/antracit.webp`;
 
   const currentPrice = prices[selectedHeight] || 1325;
+  const isTwoMeterUnavailable = selectedHeight === "2.00";
 
   return (
     <ProductDetailShell
@@ -45,11 +46,16 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
       titleAs={titleAs}
       priceLabel={`${currentPrice},-`}
       imageSrc={imgSrc}
-      stockLabel="Skladem od 4.5.2026"
-      stockNote="Předobjednávka mailem a telefonicky"
-      stockClassName="stock-status available-from-stock"
-      orderDisabled
-      orderLabel="Dostupné od 4.5.2026"
+      stockLabel={isTwoMeterUnavailable ? "Momentálně není skladem" : "Skladem"}
+      stockClassName={
+        isTwoMeterUnavailable
+          ? "stock-status available-from-stock"
+          : "stock-status in-stock"
+      }
+      orderDisabled={isTwoMeterUnavailable}
+      orderLabel={
+        isTwoMeterUnavailable ? "Momentálně není skladem" : "Přidat do košíku"
+      }
       cartItem={{
         productId: "pletivo-pvc",
         name: title,

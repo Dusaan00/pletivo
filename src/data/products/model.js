@@ -615,11 +615,9 @@ const normalizeProduct = (product) => {
         product.availability === "in_stock"
           ? "Skladem"
           : isAvailableFrom
-            ? "Skladem od 4.5.2026"
+            ? "Momentálně není skladem"
             : "Na nezávaznou poptávku",
-      note: isAvailableFrom
-        ? "Předobjednávka mailem a telefonicky"
-        : null,
+      note: null,
       canBuyOnline: !isInquiry && !isAvailableFrom,
     },
     purchase: {
@@ -637,7 +635,7 @@ const normalizeProduct = (product) => {
       ...(product.availability === "in_stock"
         ? ["Skladem"]
         : isAvailableFrom
-          ? ["Skladem od 4.5.2026"]
+          ? ["Momentálně není skladem"]
           : ["Na poptávku"]),
     ],
     searchText: buildSearchText(product, family, category),
