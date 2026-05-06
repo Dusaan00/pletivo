@@ -96,13 +96,13 @@ export const productCatalog = {
     category: "pletiva",
     ctaType: "buy",
     availability: "in_stock",
-    priceValue: 1325,
+    priceValue: 1400,
     priceCurrency: "CZK",
     name: "Pletivo Poplastované Zelené 25m",
     image: "/pletivaa/zelenep.webp",
     description:
       "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
-    price: "1325,-",
+    price: "1400,-",
     link: "/PletivaPVC",
   },
   "pletivo-pvc-antracit": {
@@ -111,13 +111,13 @@ export const productCatalog = {
     category: "pletiva",
     ctaType: "buy",
     availability: "in_stock",
-    priceValue: 1325,
+    priceValue: 1400,
     priceCurrency: "CZK",
     name: "Pletivo Poplastované Antracit 25m",
     image: "/pletivaa/antracitv.webp",
     description:
       "Kvalitní pletivo PVC s průměrem drátu 2.5mm a rozměrem oka 55mm. Dostupné výšky pletiva od 100 do 200cm.",
-    price: "1325,-",
+    price: "1400,-",
     link: "/PletivaPVC",
   },
   "pletivo-bezinal-20": {

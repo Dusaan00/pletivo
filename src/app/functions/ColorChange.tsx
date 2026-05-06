@@ -14,12 +14,12 @@ interface ColorChangeProps {
 }
 
 const prices: Record<string, number> = {
-  "1.00": 1325,
-  "1.25": 1650,
-  "1.50": 1975,
-  "1.60": 2100,
-  "1.80": 2350,
-  "2.00": 2625,
+  "1.00": 1400,
+  "1.25": 1700,
+  "1.50": 2100,
+  "1.60": 2200,
+  "1.80": 2475,
+  "2.00": 2875,
 };
 
 const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
@@ -39,7 +39,7 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
       ? `${basePath}/pletivaa/green.webp`
       : `${basePath}/pletivaa/antracit.webp`;
 
-  const currentPrice = prices[selectedHeight] || 1325;
+  const currentPrice = prices[selectedHeight] || 1400;
   const isTwoMeterUnavailable = selectedHeight === "2.00";
 
   return (
