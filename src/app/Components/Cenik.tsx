@@ -334,14 +334,14 @@ const Cenik = () => {
     },
     {
       name: "Objímka zelená PVC 60x40 mm průběžná",
-      unitPrice: 55.0,
-      totalDPH: 55.0,
+      unitPrice: 50.0,
+      totalDPH: 50.0,
       dph: "21%",
     },
     {
       name: "Objímka antracit PVC 60x40 mm průběžná",
-      unitPrice: 55.0,
-      totalDPH: 55.0,
+      unitPrice: 50.0,
+      totalDPH: 50.0,
       dph: "21%",
     },
     {

@@ -27,7 +27,7 @@ const ObjimkyChange = ({ children }: ObjimkyChangeProps) => {
   return (
     <ProductDetailShell
       title={title}
-      priceLabel="55,- / ks"
+      priceLabel="50,- / ks"
       imageSrc={imgSrc}
       stockLabel={isInStock ? "Skladem, ihned k odběru" : "Momentálně nedostupné"}
       stockClassName={`stock-status ${isInStock ? "in-stock" : "out-stock"}`}
@@ -36,8 +36,8 @@ const ObjimkyChange = ({ children }: ObjimkyChangeProps) => {
         name: title,
         image: imgSrc,
         href: "/Objimky",
-        unitPrice: 55,
-        unitLabel: "55,- / ks",
+        unitPrice: 50,
+        unitLabel: "50,- / ks",
         options: [{ name: "Barva", value: selectedColor }],
         checkoutMode: "gateway-ready",
       }}
