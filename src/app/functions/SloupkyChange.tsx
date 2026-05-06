@@ -18,15 +18,23 @@ const prices: Record<string, number> = {
   "2600": 335,
 };
 
+const heightLabels: Record<string, string> = {
+  "2000": "2.00m",
+  "2300": "2.30m",
+  "2600": "2.60m",
+};
+
 const ColorChange = ({ children }: ColorChangeProps) => {
   const [selectedColor, setSelectedColor] = useState("zelená");
   const [selectedHeight, setSelectedHeight] = useState("2000");
   const [quantity, setQuantity] = useState(1);
+  const selectedHeightLabel = heightLabels[selectedHeight] || "2.00m";
 
-  const title =
+  const baseTitle =
     selectedColor === "zelená"
       ? "Sloupky pvc 60x40 zelené"
       : "Sloupky pvc 60x40 antracit";
+  const title = `${baseTitle}, ${selectedHeightLabel}`;
 
   const imgSrc =
     selectedColor === "zelená"
