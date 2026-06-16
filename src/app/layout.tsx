@@ -12,6 +12,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Scroller from "./Components/Scroller";
 import { CartProvider } from "./Components/CartProvider";
+import VacationNoticeModal from "./Components/VacationNoticeModal";
 import Head from "next/head";
 
 const josefinSans = Josefin_Sans({
@@ -273,6 +274,7 @@ export default function RootLayout({
       <body>
         <CartProvider>
           <Scroller />
+          <VacationNoticeModal />
           <Header />
           <main>{children}</main>
           <Footer />

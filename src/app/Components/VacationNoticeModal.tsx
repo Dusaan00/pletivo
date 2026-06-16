@@ -51,10 +51,10 @@ export default function VacationNoticeModal() {
           <span className="vacation-notice__title--space">Grygov</span>
         </h2>
         <p className="vacation-notice__subtitle">
-          Ve dnech 11.5. a 12.5. máme zavřeno z důvodu dovolené.
+          Ve dnech 16.6. až 22.6. máme zavřeno z důvodu dovolené.
         </p>
         <p className="vacation-notice__description">
-          Všechny objednávky a poptávky začneme zpracovávat 13.5. Děkujeme za
+          Všechny objednávky a poptávky začneme zpracovávat 23.6. Děkujeme za
           pochopení.
         </p>
 
