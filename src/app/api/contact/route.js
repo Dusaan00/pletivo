@@ -3,10 +3,18 @@ import {
   getMailConfigError,
   getMailErrorMessage,
 } from "../../../lib/mail";
+import {
+  ContactValidationError,
+  escapeHtml,
+  validateContactFormData,
+} from "../../../lib/contactValidation";
 
 const MAX_IMAGE_FILES = 5;
 const MAX_EMAIL_IMAGE_SIZE = 5 * 1024 * 1024;
 const MAX_TOTAL_IMAGE_SIZE = 15 * 1024 * 1024;
+const MAX_REQUEST_SIZE = 18 * 1024 * 1024;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
 const ALLOWED_IMAGE_TYPES = new Set([
   "image/jpeg",
   "image/png",
@@ -24,6 +32,45 @@ const ALLOWED_IMAGE_EXTENSIONS = new Set([
 ]);
 
 class AttachmentValidationError extends Error {}
+
+const rateLimitStore =
+  globalThis.__pletivoContactRateLimitStore ||
+  (globalThis.__pletivoContactRateLimitStore = new Map());
+
+const getClientIp = (request) =>
+  request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+  request.headers.get("x-real-ip")?.trim() ||
+  null;
+
+const isRateLimited = (request) => {
+  const clientIp = getClientIp(request);
+
+  if (!clientIp) {
+    return false;
+  }
+
+  const now = Date.now();
+  const recentRequests = (rateLimitStore.get(clientIp) || []).filter(
+    (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS,
+  );
+
+  if (recentRequests.length >= RATE_LIMIT_MAX_REQUESTS) {
+    rateLimitStore.set(clientIp, recentRequests);
+    return true;
+  }
+
+  rateLimitStore.set(clientIp, [...recentRequests, now]);
+
+  if (rateLimitStore.size > 1000) {
+    for (const [ip, timestamps] of rateLimitStore) {
+      if (timestamps.every((timestamp) => now - timestamp >= RATE_LIMIT_WINDOW_MS)) {
+        rateLimitStore.delete(ip);
+      }
+    }
+  }
+
+  return false;
+};
 
 const getFileExtension = (fileName = "") =>
   fileName.slice(fileName.lastIndexOf(".")).toLowerCase();
@@ -129,12 +176,44 @@ const validateAndBuildAttachments = async (files) => {
 
 export async function POST(req) {
   try {
-    const formData = await req.formData();
+    const contentLength = Number(req.headers.get("content-length") || 0);
+    const contentType = req.headers.get("content-type") || "";
 
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const phone = formData.get("phone");
-    const message = formData.get("message");
+    if (!contentType.toLowerCase().startsWith("multipart/form-data")) {
+      return Response.json(
+        { success: false, error: "Neplatný formát požadavku." },
+        { status: 415 },
+      );
+    }
+
+    if (contentLength > MAX_REQUEST_SIZE) {
+      return Response.json(
+        { success: false, error: "Odesílaný formulář je příliš velký." },
+        { status: 413 },
+      );
+    }
+
+    if (isRateLimited(req)) {
+      return Response.json(
+        {
+          success: false,
+          error: "Příliš mnoho pokusů o odeslání. Zkuste to prosím později.",
+        },
+        {
+          status: 429,
+          headers: { "Retry-After": "600" },
+        },
+      );
+    }
+
+    const formData = await req.formData();
+    const contact = validateContactFormData(formData);
+
+    if (contact.isSpam) {
+      return Response.json({ success: true });
+    }
+
+    const { name, email, phone, message } = contact;
 
     const files = formData.getAll("file");
 
@@ -166,13 +245,14 @@ ${message}
       attachments,
     });
 
-    await transporter.sendMail({
-      from: `"Pletivo Grygov" <${process.env.EMAIL_USER}>`,
-      to: email, // Odesíláme na email, který vyplnil návštěvník
-      subject: "Potvrzení přijetí vaší zprávy - Pletivo Grygov",
-      html: `
+    try {
+      await transporter.sendMail({
+        from: `"Pletivo Grygov" <${process.env.EMAIL_USER}>`,
+        to: email,
+        subject: "Potvrzení přijetí vaší zprávy - Pletivo Grygov",
+        html: `
         <div style="font-family: sans-serif; line-height: 1.6; color: #333;">
-          <h2>Dobrý den, pane/paní ${name},</h2>
+          <h2>Dobrý den, pane/paní ${escapeHtml(name)},</h2>
           <p>děkujeme za Vaši nezávaznou poptávku na webu <strong>PletivoGrygov.cz</strong>.</p>
           <p>Tímto potvrzujeme, že jsme Vaši zprávu v pořádku obdrželi. Brzy se vám ozveme.</p>
           <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
@@ -184,22 +264,31 @@ ${message}
           </p>
         </div>
       `,
-    });
+      });
+    } catch (confirmationError) {
+      console.error("CONFIRMATION EMAIL ERROR:", confirmationError);
+    }
 
     return Response.json({ success: true });
   } catch (error) {
     console.error("EMAIL ERROR:", error);
     const isAttachmentValidationError = error instanceof AttachmentValidationError;
+    const isContactValidationError = error instanceof ContactValidationError;
 
     return Response.json(
       {
         success: false,
-        error: getMailErrorMessage(
-          error,
-          "Poptávku se nepodařilo odeslat.",
-        ),
+        error: isContactValidationError
+          ? error.message
+          : getMailErrorMessage(
+              error,
+              "Poptávku se nepodařilo odeslat.",
+            ),
       },
-      { status: isAttachmentValidationError ? 400 : 500 },
+      {
+        status:
+          isAttachmentValidationError || isContactValidationError ? 400 : 500,
+      },
     );
   }
 }

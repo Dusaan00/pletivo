@@ -106,6 +106,7 @@ function Form() {
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
   const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState("");
   const [messageLength, setMessageLength] = useState(0);
   const [focused, setFocused] = useState({
     name: false,
@@ -220,6 +221,7 @@ function Form() {
     setEmail("");
     setPhoneNum("");
     setMessage("");
+    setWebsite("");
     setMessageLength(0);
     setFocused({
       name: false,
@@ -262,6 +264,7 @@ function Form() {
       formData.append("email", email);
       formData.append("phone", phoneNum);
       formData.append("message", message);
+      formData.append("website", website);
 
       // soubory ze state (NE z inputu)
       files.forEach((file) => {
@@ -374,6 +377,18 @@ function Form() {
             method="POST"
             encType="multipart/form-data"
           >
+            <div className="contact-honeypot" aria-hidden="true">
+              <label htmlFor="website">Webová stránka</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                value={website}
+                onChange={(event) => setWebsite(event.target.value)}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+            </div>
             {/* ... (Inputy zůstávají beze změny) ... */}
             <div className="input-box">
               <input
