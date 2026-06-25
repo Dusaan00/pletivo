@@ -134,6 +134,8 @@ export async function POST(req) {
         <p>
           Objednávka byla odeslána se souhlasem s obchodními podmínkami ve znění
           účinném ke dni ${escapeHtml(checkout.termsVersion)}.
+          Obchodní podmínky najdete na adrese
+          <a href="https://pletivogrygov.cz/ObchodniPodminky">https://pletivogrygov.cz/ObchodniPodminky</a>.
         </p>
         <p>
           Pokud bude potřeba cokoli upřesnit, ozveme se na váš uvedený email nebo

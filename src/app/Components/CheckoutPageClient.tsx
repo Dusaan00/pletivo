@@ -624,8 +624,9 @@ function CheckoutPageClient() {
                     <div>
                       <strong>Doprava</strong>
                       <p>
-                        Cena bude upřesněna po zpracování objednávky, cca
-                        20kč/km
+                        Cena za dopravu vám bude upřesněna po zpracování
+                        objednávky, orientačně se tato cena pohybuje kolem
+                        20kč/km.
                       </p>
                     </div>
                   </div>

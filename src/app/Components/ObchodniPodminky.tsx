@@ -142,7 +142,50 @@ function ObchodniPodminky() {
       </div>
 
       <div>
-        <h2>VII. Reklamace a práva z vadného plnění</h2>
+        <h2>VII. Vzorový formulář pro odstoupení od smlouvy</h2>
+        <p className="pgraph">
+          Tento formulář může spotřebitel použít v případě, že chce odstoupit od
+          kupní smlouvy uzavřené na dálku. Vyplněný formulář je možné zaslat na
+          email <strong>plotygrygov@gmail.com</strong> nebo poštou na adresu
+          prodávajícího.
+        </p>
+        <p className="pgraph">
+          Adresát: Pletivo Grygov s.r.o., Za Tratí 255, 783 73 Grygov, email:
+          plotygrygov@gmail.com
+          <br />
+          <br />
+          Oznamuji, že tímto odstupuji od smlouvy o koupi tohoto zboží:
+          <br />
+          Název zboží:
+          <br />
+          Číslo objednávky:
+          <br />
+          Datum objednání:
+          <br />
+          Datum převzetí:
+          <br />
+          <br />
+          Jméno a příjmení spotřebitele:
+          <br />
+          Adresa spotřebitele:
+          <br />
+          Email:
+          <br />
+          Telefon:
+          <br />
+          Číslo bankovního účtu pro vrácení peněz:
+          <br />
+          <br />
+          Datum:
+          <br />
+          Podpis spotřebitele:
+          <br />
+          /pouze pokud je formulář zasílán v listinné podobě/
+        </p>
+      </div>
+
+      <div>
+        <h2>VIII. Reklamace a práva z vadného plnění</h2>
         <p className="pgraph">
           Pokud je zboží vadné, poškozené nebo neodpovídá objednávce, může
           zákazník uplatnit reklamaci. Reklamaci je možné poslat na email
@@ -172,7 +215,7 @@ function ObchodniPodminky() {
       </div>
 
       <div>
-        <h2>VIII. Mimosoudní řešení spotřebitelských sporů</h2>
+        <h2>IX. Mimosoudní řešení spotřebitelských sporů</h2>
         <p className="pgraph">
           Spotřebitel má právo na mimosoudní řešení spotřebitelského sporu.
           Věcně příslušným subjektem mimosoudního řešení spotřebitelských sporů
@@ -181,7 +224,7 @@ function ObchodniPodminky() {
       </div>
 
       <div>
-        <h2>IX. Ochrana osobních údajů</h2>
+        <h2>X. Ochrana osobních údajů</h2>
         <p className="pgraph">
           Informace o zpracování osobních údajů jsou uvedeny v samostatném
           dokumentu Ochrana osobních údajů dostupném na webu prodávajícího.
@@ -189,7 +232,7 @@ function ObchodniPodminky() {
       </div>
 
       <div>
-        <h2>X. Závěrečná ustanovení</h2>
+        <h2>XI. Závěrečná ustanovení</h2>
         <p className="pgraph">
           Tyto obchodní podmínky jsou účinné ode dne 24.04.2026. Prodávající je
           oprávněn obchodní podmínky změnit. Pro konkrétní objednávku se použije
