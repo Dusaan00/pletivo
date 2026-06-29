@@ -11,6 +11,8 @@ import {
 interface ColorChangeProps {
   children: ReactNode;
   titleAs?: "h1" | "h2" | "h3";
+  availableDescription?: string;
+  unavailableDescription?: string;
 }
 
 const prices: Record<string, number> = {
@@ -22,7 +24,12 @@ const prices: Record<string, number> = {
   "2.00": 2875,
 };
 
-const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
+const ColorChange = ({
+  children,
+  titleAs = "h1",
+  availableDescription,
+  unavailableDescription,
+}: ColorChangeProps) => {
   const [selectedColor, setSelectedColor] = useState("zelená");
   const [selectedHeight, setSelectedHeight] = useState("1.00");
   const [quantity, setQuantity] = useState(1);
@@ -111,6 +118,16 @@ const ColorChange = ({ children, titleAs = "h1" }: ColorChangeProps) => {
       }
     >
       {children}
+      {(availableDescription || unavailableDescription) && (
+        <>
+          <br />
+          <p>
+            {isTwoMeterUnavailable
+              ? unavailableDescription
+              : availableDescription}
+          </p>
+        </>
+      )}
     </ProductDetailShell>
   );
 };
