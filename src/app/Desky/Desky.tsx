@@ -1,6 +1,5 @@
 import Image from "next/image";
 import "../Sass/_desky.scss";
-import Link from "next/link";
 import { basePath } from "../functions/Env";
 import ProductSearch from "../functions/ProductSearch";
 import { deskyProducts } from "../../data/products/collections";
@@ -32,11 +31,7 @@ function Desky() {
                 K oplocení Vašeho pozemku vám můžeme dodat i podhrabové betonové
                 desky, což přidává plotu odolnost a ochranu navíc, zároveň
                 dodají vašemu plotu i estetiku a upravený vzhled. Na usazování
-                desek jsou většinou potřeba 2 lidi. Podívej se i na{" "}
-                <Link href="/DeskyPodhrabove" className="category-inline-link">
-                  detail betonových podhrabových desek
-                </Link>
-                .
+                desek jsou většinou potřeba 2 lidi.
               </p>
             </div>
           </div>
@@ -54,19 +49,7 @@ function Desky() {
               <h3 className="antra">Držáky podhrabových desek</h3>
               <p>
                 Držáky na podhrabové desky se dávají mezi sloupky a do těchto
-                držáků se následně jednoduše vloží podhrabové desky. Pokud
-                potřebujete sestavit celé oplocení, podívejte se i na{" "}
-                <Link
-                  href="/DrzakyNaPodhraboveDesky"
-                  className="category-inline-link"
-                >
-                  detail držáků na podhrabové desky
-                </Link>{" "}
-                a navazující{" "}
-                <Link href="/SloupkyPrislusenstvi" className="category-inline-link">
-                  příslušenství ke sloupkům a montáži
-                </Link>
-                .
+                držáků se následně jednoduše vloží podhrabové desky.
               </p>
             </div>
           </div>
